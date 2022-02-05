@@ -14,8 +14,11 @@
     "@nrwl/tao": "13.7.3",
     "@nrwl/workspace": "13.7.3",
     "@nxext/react": "^13.0.3",
+    "@nxext/vitest": "^13.0.0-beta.0",
     "@types/node": "16.11.7",
+    "c8": "^7.10.0",
     "prettier": "^2.5.1",
-    "typescript": "~4.5.2"
+    "typescript": "~4.5.2",
+    "vitest": "^0.0.100"
   }
 }
