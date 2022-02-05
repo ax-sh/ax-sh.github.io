@@ -9,7 +9,7 @@
       "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/apps/portfolio",
-        "baseHref": "/",
+        "baseHref": "https://ax-sh.github.io/",
         "configFile": "@nxext/vite/plugins/vite",
         "frameworkConfigFile": "@nxext/react/plugins/vite"
       },
