@@ -2,8 +2,11 @@ import React from 'react';
 
 const View = () => {
   return (
-    <div className="grid place-items-center">
-      <h1 className="text-6xl">AX-SH</h1>
+    <div
+      className="grid place-items-center bg-cover bg-center"
+      style={{ backgroundImage: "url('./bg.jpg')" }}
+    >
+      <h1 className="text-8xl">AX-SH</h1>
     </div>
   );
 };
@@ -42,9 +45,7 @@ const Layout = ({
 }: React.AllHTMLAttributes<HTMLElement>) => {
   return (
     <div className={`Layout ${className}`} {...props}>
-      <header>
-        <Nav />
-      </header>
+      <header>{/* <Nav /> */}</header>
       <main className="min-h-screen flex children:flex-grow">{children}</main>
       <footer></footer>
     </div>
