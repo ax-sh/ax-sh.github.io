@@ -7,9 +7,15 @@ import 'virtual:windi.css';
 import App from './app/App';
 import ReactGA from 'react-ga';
 
-const { VITE_GOOGLE_ANALYTICS_TOKEN } = import.meta.env;
+const VITE_GOOGLE_ANALYTICS_TOKEN = import.meta.env.VITE_GOOGLE_ANALYTICS_TOKEN;
 
-ReactGA.initialize(VITE_GOOGLE_ANALYTICS_TOKEN as string, { debug: true });
+let debug = false;
+if (import.meta.env.DEV) {
+  debug = true;
+  console.log('env', import.meta.env);
+}
+
+ReactGA.initialize(VITE_GOOGLE_ANALYTICS_TOKEN as string, { debug });
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
