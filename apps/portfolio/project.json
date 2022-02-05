@@ -52,7 +52,7 @@
       "options": {
         "outputPath": "dist/apps/portfolio",
         "baseHref": "/",
-        "configFile": "@nxext/vite/plugins/vite",
+        "configFile": "apps/portfolio/vite.config.ts",
         "frameworkConfigFile": "@nxext/react/plugins/vite"
       },
       "configurations": {
