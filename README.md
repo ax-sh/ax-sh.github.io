@@ -1,10 +1,10 @@
-# ax-sh.github.io
+# https://ax-sh.github.io
 
 # Install commitlint cli and conventional config
 
 yarn add -D @commitlint/{config-conventional,cli}
 
-# For Windows:
+# For Windows: (optional)
 
 yarn add -D @commitlint/config-conventional @commitlint/cli
 
@@ -13,6 +13,8 @@ yarn add -D @commitlint/config-conventional @commitlint/cli
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 
 # To lint commits before they are created you can use Husky's commit-msg hook:
+
+## Note need to run this on every new repo clone and install as .husky doesnt commit to git
 
 yarn add -D husky
 yarn husky install
