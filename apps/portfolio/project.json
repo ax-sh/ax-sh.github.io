@@ -3,13 +3,29 @@
   "sourceRoot": "apps/portfolio/src",
   "projectType": "application",
   "targets": {
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "configurations": {
+        "github": {
+          "color": true,
+          "parallel": false,
+          "args": "--buildPath=dist/apps/portfolio",
+          "commands": [
+            "nx build portfolio",
+            "yarn gh-pages -d {args.buildPath}",
+            "echo ______________________",
+            "echo [DEPLOYED TO GITHUB] "
+          ]
+        }
+      }
+    },
     "build": {
       "executor": "@nxext/vite:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/apps/portfolio",
-        "baseHref": "https://ax-sh.github.io/",
+        "baseHref": "",
         "configFile": "@nxext/vite/plugins/vite",
         "frameworkConfigFile": "@nxext/react/plugins/vite"
       },
