@@ -47,7 +47,7 @@ export const HeroSection = () => {
           <Gnubash />
         </div>
         <h2>Stacks</h2>
-        <div className={''}>
+        <div className={'flex gap-2'}>
           <Nx />
           <Github />
           <Gitlab />
