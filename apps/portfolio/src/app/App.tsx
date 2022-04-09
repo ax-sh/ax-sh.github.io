@@ -15,7 +15,7 @@ const data = {
     LinkedIn: 'https://www.linkedin.com/in/axmin/',
     CodeSandbox: 'https://codesandbox.io/u/ax-sh',
     Twitter: 'https://twitter.com/ax___sh',
-    // Website: 'https://ax-sh.github.io/portfolio/',
+    Website: 'https://ax-sh.github.io/portfolio/',
     // CV: "",
   },
 };
@@ -38,13 +38,13 @@ function GetIcon({ name }: { name: string }) {
     case 'Github':
       return <Github {...props} />;
     default:
-      return name;
+      return <h1>{name}</h1>;
   }
 }
 
 export const ExternalLinks = () => (
   <div className="links">
-    <ul className="flex w-40 justify-around">
+    <ul className="flex w-50 justify-around">
       {Object.entries(data.links).map(([label, value]) => (
         <li key={label}>
           <Obfuscate target="_blank" href={value}>
