@@ -21,15 +21,22 @@ const data = {
 };
 
 function GetIcon({ name }: { name: string }) {
+  const [hovered, setHover] = React.useState(false);
+  const props = {
+    onMouseOver: () => setHover(true),
+    onMouseOut: () => setHover(false),
+    color: hovered ? 'gray' : 'white',
+  };
+
   switch (name) {
     case 'LinkedIn':
-      return <Linkedin />;
+      return <Linkedin {...props} />;
     case 'CodeSandbox':
-      return <Codesandbox />;
+      return <Codesandbox {...props} />;
     case 'Twitter':
-      return <Twitter />;
+      return <Twitter {...props} />;
     case 'Github':
-      return <Github />;
+      return <Github {...props} />;
     default:
       return name;
   }
