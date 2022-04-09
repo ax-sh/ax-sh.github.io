@@ -3,6 +3,7 @@ import Obfuscate from 'react-obfuscate';
 
 import { HeroSection } from './containers/HeroSection';
 import { GetIcon } from '@ax-sh.github.io/common';
+import { WorkSection } from './containersWorkSection';
 
 const data = {
   email: 'example@example.com',
@@ -52,6 +53,7 @@ function App() {
   return (
     <Layout className={`App bg-black text-white`}>
       <HeroSection />
+      <WorkSection />
     </Layout>
   );
 }
