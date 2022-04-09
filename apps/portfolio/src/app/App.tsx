@@ -1,11 +1,7 @@
 import React from 'react';
 import Obfuscate from 'react-obfuscate';
-import {
-  Linkedin,
-  Codesandbox,
-  Twitter,
-  Github,
-} from '@icons-pack/react-simple-icons';
+import { List } from './components/List';
+import { GetIcon } from './components/Icons';
 
 const data = {
   email: 'example@example.com',
@@ -19,28 +15,6 @@ const data = {
     // CV: "",
   },
 };
-
-function GetIcon({ name }: { name: string }) {
-  const [hovered, setHover] = React.useState(false);
-  const props = {
-    onMouseOver: () => setHover(true),
-    onMouseOut: () => setHover(false),
-    color: hovered ? 'gray' : 'white',
-  };
-
-  switch (name) {
-    case 'LinkedIn':
-      return <Linkedin {...props} />;
-    case 'CodeSandbox':
-      return <Codesandbox {...props} />;
-    case 'Twitter':
-      return <Twitter {...props} />;
-    case 'Github':
-      return <Github {...props} />;
-    default:
-      return <h1>{name}</h1>;
-  }
-}
 
 export const ExternalLinks = () => (
   <div className="links">
@@ -64,19 +38,6 @@ const View = () => {
     >
       <h1 className="text-8xl">AX-SH</h1>
     </div>
-  );
-};
-const List = ({
-  children,
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLElement>) => {
-  return (
-    <ul className={`list ${className}`} {...props}>
-      {React.Children.map(children, (child, index) => {
-        return <li key={index}>{child}</li>;
-      })}
-    </ul>
   );
 };
 
