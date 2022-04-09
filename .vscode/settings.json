@@ -8,5 +8,5 @@
     "**/Thumbs.db": true,
     "**/node_modules": true
   },
-  "cSpell.words": ["Codesandbox"]
+  "cSpell.words": ["Codesandbox", "nxext", "vite"]
 }
