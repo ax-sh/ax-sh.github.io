@@ -2,7 +2,7 @@ import React from 'react';
 
 import { HeroSection } from './containers/HeroSection';
 import { ExternalLinks } from '@ax-sh.github.io/common';
-import { WorkSection } from './containersWorkSection';
+import {WorkSection} from "./containers/WorkSection";
 
 const Layout = ({
   children,
