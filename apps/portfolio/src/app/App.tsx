@@ -1,7 +1,7 @@
 import React from 'react';
 import Obfuscate from 'react-obfuscate';
-import { List } from './components/List';
-import { GetIcon } from './components/Icons';
+import {GetIcon} from './components/Icons';
+import {HeroSection} from "./containers/HeroSection";
 
 const data = {
   email: 'example@example.com',
@@ -22,7 +22,7 @@ export const ExternalLinks = () => (
       {Object.entries(data.links).map(([label, value]) => (
         <li key={label}>
           <Obfuscate target="_blank" href={value}>
-            {<GetIcon name={label} />}
+            <GetIcon name={label} />
           </Obfuscate>
         </li>
       ))}
@@ -30,31 +30,6 @@ export const ExternalLinks = () => (
   </div>
 );
 
-const View = () => {
-  return (
-    <div
-      className="grid place-items-center bg-cover bg-center"
-      style={{ backgroundImage: "url('./bg.jpg')" }}
-    >
-      <h1 className="text-8xl">AX-SH</h1>
-    </div>
-  );
-};
-
-const Nav = () => {
-  const [items] = React.useState(['HOME', 'CONTACT', 'ABOUT']);
-  return (
-    <nav className="flex justify-end p-4 bg-white text-black">
-      <List className="flex w-56 justify-between ">
-        {items.map((item) => (
-          <a className="hover:text-red-500" href="#home">
-            {item}
-          </a>
-        ))}
-      </List>
-    </nav>
-  );
-};
 const Layout = ({
   children,
   className,
@@ -74,7 +49,7 @@ const Layout = ({
 function App() {
   return (
     <Layout className={`App bg-black text-white`}>
-      <View />
+      <HeroSection />
     </Layout>
   );
 }
