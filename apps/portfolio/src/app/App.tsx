@@ -1,7 +1,8 @@
 import React from 'react';
 import Obfuscate from 'react-obfuscate';
-import {GetIcon} from './components/Icons';
-import {HeroSection} from "./containers/HeroSection";
+
+import { HeroSection } from './containers/HeroSection';
+import { GetIcon } from '@ax-sh.github.io/common';
 
 const data = {
   email: 'example@example.com',
@@ -38,7 +39,8 @@ const Layout = ({
   return (
     <div className={`Layout ${className} relative`} {...props}>
       <header>{/* <Nav /> */}</header>
-      <main className="min-h-screen flex children:flex-grow">{children}</main>
+      {/*<main className="min-h-screen flex children:flex-grow">{children}</main>*/}
+      <main className="min-h-screen">{children}</main>
       <footer className="fixed bottom-0 right-0 p-10">
         <ExternalLinks />
       </footer>
