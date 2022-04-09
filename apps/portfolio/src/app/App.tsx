@@ -103,7 +103,7 @@ const Layout = ({
     <div className={`Layout ${className} relative`} {...props}>
       <header>{/* <Nav /> */}</header>
       <main className="min-h-screen flex children:flex-grow">{children}</main>
-      <footer className="absolute bottom-0 right-0 p-10">
+      <footer className="fixed bottom-0 right-0 p-10">
         <ExternalLinks />
       </footer>
     </div>
