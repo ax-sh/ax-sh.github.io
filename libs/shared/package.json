@@ -1,0 +1,12 @@
+{
+  "name": "@ax-sh.github.io/shared",
+  "version": "0.0.1",
+  "main": "./shared.umd.js",
+  "module": "./shared.es.js",
+  "exports": {
+    ".": {
+      "import": "./shared.es.js",
+      "require": "./shared.umd.js"
+    }
+  }
+}
