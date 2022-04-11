@@ -1,4 +1,4 @@
-import React, {ReactElement, ReactNode} from 'react';
+import React from 'react';
 import {
   Codesandbox,
   Github,
@@ -36,7 +36,7 @@ export interface IconsWrapperProps
 export function IconsWrapper({ children, size, ...props }: IconsWrapperProps) {
   return (
     <div {...props}>
-      {React.Children.map(children, (child) =>
+      {React.Children.map(children, (child:any) =>
         React.cloneElement(child, { size })
       )}
     </div>
