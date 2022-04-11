@@ -1,5 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn commitlint --edit $1
+
 yarn pretty-quick --staged
+yarn commitlint --edit $1
