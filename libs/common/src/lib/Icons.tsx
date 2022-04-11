@@ -22,3 +22,18 @@ export function GetIcon({name}: { name: string }) {
       return <h1>{name}</h1>;
   }
 }
+
+export interface IconsWrapperProps
+  extends React.HTMLAttributes<HTMLDivElement> {
+  size: number;
+}
+
+export function IconsWrapper({ children, size, ...props }: IconsWrapperProps) {
+  return (
+    <div {...props}>
+      {React.Children.map(children, (child: any) =>
+        React.cloneElement(child, { size })
+      )}
+    </div>
+  );
+}
