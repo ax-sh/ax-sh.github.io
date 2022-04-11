@@ -36,7 +36,7 @@ export interface IconsWrapperProps
 export function IconsWrapper({ children, size, ...props }: IconsWrapperProps) {
   return (
     <div {...props}>
-      {React.Children.map(children, (child:any) =>
+      {React.Children.map(children, (child: any) =>
         React.cloneElement(child, { size })
       )}
     </div>

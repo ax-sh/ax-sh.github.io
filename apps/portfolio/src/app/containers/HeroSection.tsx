@@ -5,8 +5,11 @@ import {
   Amp,
   Antdesign,
   Apollographql,
-  Archlinux, Auth0,
-  Awsamplify, Bootstrap, Buymeacoffee,
+  Archlinux,
+  Auth0,
+  Awsamplify,
+  Bootstrap,
+  Buymeacoffee,
   Docker,
   Git,
   Github,
@@ -96,19 +99,19 @@ export const HeroSection = () => {
           <Jira />
           <Puppeteer />
           <Tailwindcss />
-          <Bootstrap/>
+          <Bootstrap />
           <AmazonsThree />
           <Amp />
           <Awsamplify />
 
-          <Buymeacoffee/>
+          <Buymeacoffee />
 
           <Amazonaws />
           <Antdesign />
           <Threedotjs />
           <Archlinux />
           <Docker />
-          <Auth0/>
+          <Auth0 />
         </IconsContainer>
       </div>
     </section>
