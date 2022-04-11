@@ -69,7 +69,7 @@ export const HeroSection = () => {
       className="h-screen grid place-items-center bg-cover bg-center"
       style={{ backgroundImage: "url('./bg.jpg')" }}
     >
-      <div className={"w-1/2"}>
+      <div className={'w-1/2'}>
         <h1 className="text-8xl">AX-SH</h1>
         <IconsContainer header="Programming Languages">
           <Javascript />
