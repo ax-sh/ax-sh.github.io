@@ -1,6 +1,8 @@
 import React from 'react';
 import {
-  Apollographql,
+  Amazonaws,
+  AmazonsThree, Amp, Antdesign,
+  Apollographql, Archlinux, Awsamplify, Docker,
   Git,
   Github,
   Gitlab,
@@ -16,11 +18,11 @@ import {
   Nodedotjs,
   Nodemon,
   Notion,
-  Nx,
+  Nx, Puppeteer,
   Python,
   ReactJs,
   Redux,
-  Reduxsaga,
+  Reduxsaga, Tailwindcss, Threedotjs,
   Tsnode,
   Typescript,
 } from '@icons-pack/react-simple-icons';
@@ -34,12 +36,12 @@ const IconsContainer = ({
   return (
     <div
       className={
-        'bg-black bg-opacity-50 p-2 m-2 rounded-md flex flex-col flex-wrap gap-6 max-w-full'
+        'bg-black bg-opacity-50 p-2 m-2 rounded-md flex flex-col flex-wrap gap-6 w-full'
       }
     >
-      <h2 className="text-4xl">{header}</h2>
+      <h2 className="text-4xl text-center">{header}</h2>
       <div className={'flex justify-items-center flex-wrap gap-2'}>
-        <IconsWrapper size={size ? size : 48} className={'flex gap-4'}>
+        <IconsWrapper size={size ? size : 48} className={'grid  grid-cols-12 gap-4 m-auto'}>
           {children}
         </IconsWrapper>
       </div>{' '}
@@ -81,6 +83,16 @@ export const HeroSection = () => {
           <Reduxsaga />
           <Nodemon />
           <Jira />
+          <Puppeteer/>
+          <Tailwindcss/>
+          <AmazonsThree/>
+          <Amp/>
+          <Awsamplify/>
+          <Amazonaws/>
+          <Antdesign/>
+          <Threedotjs/>
+          <Archlinux/>
+          <Docker/>
         </IconsContainer>
       </div>
     </section>
