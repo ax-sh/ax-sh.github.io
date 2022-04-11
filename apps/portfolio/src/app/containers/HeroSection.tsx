@@ -66,7 +66,7 @@ const IconsContainer = ({
 export const HeroSection = () => {
   return (
     <section
-      className="h-screen grid place-items-center bg-cover bg-center"
+      className="min-h-screen grid place-items-center bg-cover bg-center"
       style={{ backgroundImage: "url('./bg.jpg')" }}
     >
       <div className={'w-1/2'}>
