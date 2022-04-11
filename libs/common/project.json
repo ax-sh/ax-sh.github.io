@@ -20,11 +20,11 @@
       }
     },
     "build": {
-      "executor": "@nxext/vite:build",
+      "executor": "@nxext/vite:package",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/common",
-        "configFile": "libs/common/vite.config.ts",
+        "configFile": "@nxext/vite/plugins/vite-package",
         "frameworkConfigFile": "@nxext/react/plugins/vite",
         "entryFile": "src/index.ts"
       }
