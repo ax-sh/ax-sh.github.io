@@ -19,7 +19,7 @@ const data = {
 
 export const ExternalLinks = () => (
   <div className="links">
-    <ul className="flex w-50 justify-around">
+    <ul className="flex w-50 justify-between">
       {Object.entries(data.links).map(([label, value]) => (
         <li key={label}>
           <Obfuscate target="_blank" href={value}>
