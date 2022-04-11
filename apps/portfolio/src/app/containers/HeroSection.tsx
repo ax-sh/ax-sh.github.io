@@ -54,7 +54,7 @@ const IconsContainer = ({
       <div className={'flex justify-items-center flex-wrap gap-2'}>
         <IconsWrapper
           size={size ?? 48}
-          className={'grid  grid-cols-12 gap-4 m-auto'}
+          className={'flex flex-wrap gap-4 m-auto'}
         >
           {children}
         </IconsWrapper>
@@ -69,7 +69,7 @@ export const HeroSection = () => {
       className="h-screen grid place-items-center bg-cover bg-center"
       style={{ backgroundImage: "url('./bg.jpg')" }}
     >
-      <div>
+      <div className={"w-1/2"}>
         <h1 className="text-8xl">AX-SH</h1>
         <IconsContainer header="Programming Languages">
           <Javascript />
