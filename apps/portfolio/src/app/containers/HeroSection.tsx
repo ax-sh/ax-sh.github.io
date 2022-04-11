@@ -53,7 +53,7 @@ const IconsContainer = ({
       <h2 className="text-4xl text-center">{header}</h2>
       <div className={'flex justify-items-center flex-wrap gap-2'}>
         <IconsWrapper
-          size={size ? size : 48}
+          size={size ?? 48}
           className={'grid  grid-cols-12 gap-4 m-auto'}
         >
           {children}
