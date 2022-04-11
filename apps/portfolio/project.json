@@ -6,6 +6,7 @@
     "deploy": {
       "executor": "@nrwl/workspace:run-commands",
       "configurations": {
+        "defaultConfiguration": "github",
         "github": {
           "color": true,
           "parallel": false,

@@ -47,7 +47,7 @@ const IconsContainer = ({
   return (
     <div
       className={
-        'bg-black bg-opacity-50 p-2 m-2 rounded-md flex flex-col flex-wrap gap-6 w-full'
+        'bg-black bg-opacity-50 p-2 m-2 rounded-md flex flex-col flex-wrap gap-6'
       }
     >
       <h2 className="text-4xl text-center">{header}</h2>
@@ -58,7 +58,7 @@ const IconsContainer = ({
         >
           {children}
         </IconsWrapper>
-      </div>{' '}
+      </div>
     </div>
   );
 };
@@ -69,7 +69,7 @@ export const HeroSection = () => {
       className="min-h-screen grid place-items-center bg-cover bg-center"
       style={{ backgroundImage: "url('./bg.jpg')" }}
     >
-      <div className={'w-1/2'}>
+      <div className={'md:w-1/2 p-2'}>
         <h1 className="text-8xl">AX-SH</h1>
         <IconsContainer header="Programming Languages">
           <Javascript />
