@@ -12,7 +12,7 @@
           "args": "--buildPath=dist/apps/portfolio",
           "commands": [
             "rm -rf {args.buildPath}",
-            "nx build portfolio",
+            "nx build portfolio --verbose",
             "yarn gh-pages -d {args.buildPath}",
             "echo ______________________",
             "echo [DEPLOYED TO GITHUB] "
