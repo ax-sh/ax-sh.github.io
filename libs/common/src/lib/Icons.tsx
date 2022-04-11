@@ -1,7 +1,12 @@
-import React from "react";
-import {Codesandbox, Github, Linkedin, Twitter} from "@icons-pack/react-simple-icons";
+import React from 'react';
+import {
+  Codesandbox,
+  Github,
+  Linkedin,
+  Twitter,
+} from '@icons-pack/react-simple-icons';
 
-export function GetIcon({name}: { name: string }) {
+export function GetIcon({ name }: { name: string }) {
   const [hovered, setHover] = React.useState(false);
   const props = {
     onMouseOver: () => setHover(true),
