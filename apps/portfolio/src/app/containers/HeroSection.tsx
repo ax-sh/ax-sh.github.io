@@ -9,7 +9,7 @@ import {
   Graphql,
   Java,
   Javascript,
-  Jinja,
+
   Jira,
   Nestjs,
   Netlify,
@@ -22,47 +22,62 @@ import {
   ReactJs,
   Redux,
   Reduxsaga,
-  Shell,
+ 
   Tsnode,
   Typescript,
 } from '@icons-pack/react-simple-icons';
+
+
+export interface IconsWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
+  size: number;
+}
+
+function IconsWrapper({children, size, ...props }: IconsWrapperProps) {
+  return <div {...props}>
+    {React.Children.map(children, (child: any) => React.cloneElement(child, {size})
+    )}
+  </div>;
+}
 
 export const HeroSection = () => {
   return (
     <section
       className="h-screen grid place-items-center bg-cover bg-center"
-      style={{ backgroundImage: "url('./bg.jpg')" }}
+      style={{backgroundImage: "url('./bg.jpg')"}}
     >
       <div>
         <h1 className="text-8xl">AX-SH</h1>
-        <h2>Languages</h2>
+        <h2 className="text-4xl">Languages</h2>
         <div className={'flex justify-items-center flex-wrap gap-2'}>
-          <Javascript />
-          <Typescript />
-          <Nodedotjs />
-          <Tsnode />
-          <Python />
-          <Java />
-          <Go />
-          <Gnubash />
+          <IconsWrapper size={48} className={"flex"}>
+            <Javascript />
+            <Typescript/>
+            <Nodedotjs />
+            <Tsnode />
+            <Python />
+            <Java />
+            <Go/>
+            <Gnubash />
+          </IconsWrapper>
+
         </div>
-        <h2>Stacks</h2>
+        <h2 className="text-4xl">Current Stacks I use</h2>
         <div className={'flex gap-2'}>
-          <Nx />
-          <Github />
-          <Gitlab />
-          <Netlify />
-          <Notion />
-          <Git />
-          <ReactJs />
-          <Nextdotjs />
-          <Nestjs />
-          <Apollographql />
-          <Graphql />
-          <Redux />
-          <Reduxsaga />
-          <Nodemon />
-          <Jira />
+          <Nx/>
+          <Github/>
+          <Gitlab/>
+          <Netlify/>
+          <Notion/>
+          <Git/>
+          <ReactJs/>
+          <Nextdotjs/>
+          <Nestjs/>
+          <Apollographql/>
+          <Graphql/>
+          <Redux/>
+          <Reduxsaga/>
+          <Nodemon/>
+          <Jira/>
         </div>
       </div>
     </section>
