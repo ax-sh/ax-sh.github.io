@@ -1,7 +1,7 @@
 const { createGlobPatternsForDependencies } = require('@nrwl/react/tailwind');
 
 module.exports = {
-  // presets: [require('../../tailwind-workspace-preset.js')],
+  presets: [require('../../tailwind-workspace-preset.js')],
   content: [
     'src/**/*.{js,jsx,ts,tsx}',
     'libs/common/src/**/*.{js,jsx,ts,tsx}',
