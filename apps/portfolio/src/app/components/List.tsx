@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 
 export const List = ({
   children,
@@ -6,10 +7,10 @@ export const List = ({
   ...props
 }: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <ul className={`list ${className}`} {...props}>
-      {React.Children.map(children, (child, index) => {
-        return <li key={index}>{child}</li>;
-      })}
+    <ul className={clsx(`list`, className)} {...props}>
+      {React.Children.map(children, (child, index) => (
+        <li key={index}>{child}</li>
+      ))}
     </ul>
   );
 };
