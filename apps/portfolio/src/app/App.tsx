@@ -1,8 +1,6 @@
 import React from 'react';
-
-import { HeroSection } from './containers/HeroSection';
 import { ExternalLinks } from '@ax-sh.github.io/common';
-import { WorkSection } from './containers/WorkSection';
+import { WineHeroSection } from './containers/WineHeroSection';
 
 const Layout = ({
   children,
@@ -21,11 +19,29 @@ const Layout = ({
   );
 };
 
+// function NavBar() {
+//   return (
+//     <nav className={'flex justify-around p-10 fixed w-full'}>
+//       TRAVEL
+//       <List className={'md:flex gap-4 hidden'}>
+//         <a>ABOUT</a>
+//         <a>CONTACT US</a>
+//         <a>WORKS</a>
+//       </List>
+//       <List className={'flex gap-4'}>
+//         <a>LOG IN</a> | <a>SIGN UP</a>
+//       </List>
+//     </nav>
+//   );
+// }
+
 function App() {
   return (
     <Layout className={`App bg-black text-white`}>
-      <HeroSection />
-      <WorkSection />
+      <WineHeroSection />
+
+      {/*<HeroSection />*/}
+      {/*<WorkSection />*/}
     </Layout>
   );
 }
