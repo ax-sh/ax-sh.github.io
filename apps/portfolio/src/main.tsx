@@ -11,8 +11,16 @@ import React from 'react';
 
 const VITE_GOOGLE_ANALYTICS_TOKEN = import.meta.env.VITE_GOOGLE_ANALYTICS_TOKEN;
 
-// eslint-disable-next-line no-console
-console.log(routes);
+let debug = false;
+if (import.meta.env.DEV) {
+  debug = true;
+  console.log('env', import.meta.env);
+  // eslint-disable-next-line no-console
+  console.log(routes);
+}
+
+ReactGA.initialize(VITE_GOOGLE_ANALYTICS_TOKEN as string, { debug });
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function Application() {
   return (
@@ -21,17 +29,6 @@ function Application() {
     </React.Suspense>
   );
 }
-
-let debug = false;
-if (import.meta.env.DEV) {
-  debug = true;
-  console.log('env', import.meta.env);
-}
-
-ReactGA.initialize(VITE_GOOGLE_ANALYTICS_TOKEN as string, { debug });
-ReactGA.pageview(window.location.pathname + window.location.search);
-
-
 
 ReactDOM.render(
   <StrictMode>
