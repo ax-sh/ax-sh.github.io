@@ -24,7 +24,7 @@ function NavBar() {
           {/*TWITTER*/}
         </a>
       </List>
-      <List className={'flex gap-4'}>ENGLISH</List>
+      <List className={'flex gap-4 text-sm'}>ENGLISH</List>
     </nav>
   );
 }
