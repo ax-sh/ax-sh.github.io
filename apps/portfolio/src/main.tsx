@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import 'virtual:windi.css';
 import 'virtual:windi-devtools';
 
@@ -18,10 +18,18 @@ if (import.meta.env.DEV) {
 ReactGA.initialize(VITE_GOOGLE_ANALYTICS_TOKEN as string, { debug });
 ReactGA.pageview(window.location.pathname + window.location.search);
 
+function About() {
+  return <section>About</section>;
+}
+
 ReactDOM.render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="about" element={<About />} />
+        {/*<Route path="contact" element={<Contact />} />*/}
+      </Routes>
     </BrowserRouter>
   </StrictMode>,
   document.getElementById('root')
