@@ -1,4 +1,8 @@
+import { useParams } from 'react-router-dom';
+
 const Page = () => {
-  return <div>nop</div>;
+  const p = useParams();
+  console.log(p);
+  return <div>404</div>;
 };
 export default Page;
