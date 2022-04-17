@@ -8,5 +8,16 @@
     "**/Thumbs.db": true,
     "**/node_modules": true
   },
-  "cSpell.words": ["Codesandbox", "nxext", "vite"]
+  "cSpell.words": [
+    "applypatch",
+    "clsx",
+    "Codesandbox",
+    "commitlint",
+    "nxext",
+    "tailwindcss",
+    "vite",
+    "vitejs",
+    "vitest",
+    "windicss"
+  ]
 }
