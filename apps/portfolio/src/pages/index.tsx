@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExternalLinks } from '@ax-sh.github.io/common';
 import Nav from '../app/components/Nav';
-import Hero from "../app/containers/Hero";
+import Hero from '../app/containers/Hero';
 
 const Layout = ({
   children,
@@ -21,7 +21,6 @@ const Layout = ({
     </div>
   );
 };
-
 
 function App() {
   return (

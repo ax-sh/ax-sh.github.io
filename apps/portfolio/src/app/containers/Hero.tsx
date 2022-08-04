@@ -1,7 +1,7 @@
-import clsx from "clsx";
-import React from "react";
+import clsx from 'clsx';
+import React from 'react';
 
-export  default function Hero() {
+export default function Hero() {
   return (
     <section className={clsx('container')}>
       <div className={' grid grid-span-1 md:grid-cols-2 '}>
