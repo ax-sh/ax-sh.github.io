@@ -32,7 +32,7 @@ function Hero() {
           <h1 className={'text-9xl'}>
             Axmin <span className={'text-8xl'}>Shrestha</span>
           </h1>
-          <strong className={'text-xl'}>// About Me</strong>
+          <strong className={'text-xl font-light'}>// About Me</strong>
           <h2 className={'text-3xl'}>
             Experienced Web Developer remotely from Nepal
           </h2>
@@ -42,7 +42,7 @@ function Hero() {
             that people want, need, or desire.
           </p>
         </div>
-        <div className={'col-span-1 bg-[#111] pt-30 order-first md:order-none'}>
+        <div className={'col-span-1 bg-[#111] pt-30 order-first md:order-none flex items-center'}>
           <button
             className={clsx(
               'hidden md:block md:h-30 md:w-30 w-full md:rounded-full bg-white text-black',
