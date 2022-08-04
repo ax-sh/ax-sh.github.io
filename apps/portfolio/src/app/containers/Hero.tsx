@@ -1,12 +1,20 @@
 import clsx from 'clsx';
 import React from 'react';
 import {
-  Apollographql, Bootstrap,
+  Antdesign,
+  Apollographql,
+  Bootstrap,
   Git,
-  Gnubash, Graphql,
-  Javascript, Nextdotjs,
-  Nodedotjs,
-  Python, ReactJs, Redux, Reduxsaga, Tailwindcss,
+  Gnubash,
+  Graphql,
+  Javascript, Mui,
+  Nextdotjs,
+  Nodedotjs, Nx,
+  Python,
+  ReactJs,
+  Redux,
+  Reduxsaga,
+  Tailwindcss, Threedotjs,
   Typescript,
 } from '@icons-pack/react-simple-icons';
 import { List } from '../components/List';
@@ -40,8 +48,6 @@ function IconWithToolTipWrapper({ children, name }: any) {
 }
 
 function IconWithToolTip({ name, ...iconProps }: { name: any }) {
-
-
   switch (name) {
     //
     // < />
@@ -51,6 +57,30 @@ function IconWithToolTip({ name, ...iconProps }: { name: any }) {
     //   <Nodemon />
     //   <Jira />
     //   <Puppeteer />
+    case 'mui':
+      return (
+        <IconWithToolTipWrapper name={name}>
+          <Mui {...iconProps} />
+        </IconWithToolTipWrapper>
+      );
+    case 'nx':
+      return (
+        <IconWithToolTipWrapper name={name}>
+          <Nx {...iconProps} />
+        </IconWithToolTipWrapper>
+      );
+    case 'ant.design':
+      return (
+        <IconWithToolTipWrapper name={name}>
+          <Antdesign {...iconProps} />
+        </IconWithToolTipWrapper>
+      );
+    case 'three.js':
+      return (
+        <IconWithToolTipWrapper name={name}>
+          <Threedotjs {...iconProps} />
+        </IconWithToolTipWrapper>
+      );
     case 'apollo.graphql':
       return (
         <IconWithToolTipWrapper name={name}>
@@ -95,12 +125,13 @@ function IconWithToolTip({ name, ...iconProps }: { name: any }) {
           <Git {...iconProps} />
         </IconWithToolTipWrapper>
       );
-      case 'next.js':
+    case 'next.js':
       return (
         <IconWithToolTipWrapper name={name}>
-          <Nextdotjs  {...iconProps} />
+          <Nextdotjs {...iconProps} />
         </IconWithToolTipWrapper>
-      );    case 'react.js':
+      );
+    case 'react.js':
       return (
         <IconWithToolTipWrapper name={name}>
           <ReactJs {...iconProps} />
@@ -130,38 +161,44 @@ function IconWithToolTip({ name, ...iconProps }: { name: any }) {
           <Typescript {...iconProps} />
         </IconWithToolTipWrapper>
       );
-    case "javascript":
-      return   <IconWithToolTipWrapper name={name}>
-        <Javascript {...iconProps} />
-      </IconWithToolTipWrapper>
-    default:
+    case 'javascript':
       return (
         <IconWithToolTipWrapper name={name}>
-          {name}
+          <Javascript {...iconProps} />
         </IconWithToolTipWrapper>
+      );
+    default:
+      return (
+        <IconWithToolTipWrapper name={name}>{name}</IconWithToolTipWrapper>
       );
   }
 }
 
+
+
+
 function Skills() {
   const iconProps = { size: 30 };
   return (
-    <div>
-    <div className={'skills flex flex-col gap-2 py-4'}>
-      <div>Proficient in</div>
-      <List className={'flex gap-4'}>
-        <IconWithToolTip name={'git'} {...iconProps} />
-        <IconWithToolTip name={'javascript'} {...iconProps} />
-        <IconWithToolTip name={'typescript'} {...iconProps} />
-        <IconWithToolTip name={'nodejs'} {...iconProps} />
-        <IconWithToolTip name={'python'} {...iconProps} />
-        <IconWithToolTip name={'bash'} {...iconProps} />
-      </List>
-    </div>
-      <List className={"flex gap-3"}>
+    <div
+      className={"bg-[#282635] p-3 rounded-md"}
+    >
+      <div className={'skills flex flex-col gap-2 py-4'}>
+        <div>Proficient in</div>
+        <List className={'flex gap-4'}>
+          <IconWithToolTip name={'git'} {...iconProps} />
+          <IconWithToolTip name={'javascript'} {...iconProps} />
+          <IconWithToolTip name={'typescript'} {...iconProps} />
+          <IconWithToolTip name={'nodejs'} {...iconProps} />
+          <IconWithToolTip name={'python'} {...iconProps} />
+          <IconWithToolTip name={'bash'} {...iconProps} />
+        </List>
+      </div>
+      <List className={'flex gap-3'}>
         <IconWithToolTip name={'react.js'} {...iconProps} />
         <IconWithToolTip name={'next.js'} {...iconProps} />
         <IconWithToolTip name={'tailwind'} {...iconProps} />
+        <IconWithToolTip name={'mui'} {...iconProps} />
         {/*<IconWithToolTip name={'bootstrap'} {...iconProps} />*/}
         <IconWithToolTip name={'redux'} {...iconProps} />
         <IconWithToolTip name={'redux.saga'} {...iconProps} />
@@ -170,8 +207,8 @@ function Skills() {
         <IconWithToolTip name={'three.js'} {...iconProps} />
         <IconWithToolTip name={'nx'} {...iconProps} />
         <IconWithToolTip name={'ant.design'} {...iconProps} />
-        </List>
-      </div>
+      </List>
+    </div>
   );
 }
 
