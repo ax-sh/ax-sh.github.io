@@ -15,7 +15,6 @@ function HireMeButton() {
   );
 }
 
-
 export default function Hero() {
   return (
     <section className={clsx('container')}>
@@ -26,7 +25,8 @@ export default function Hero() {
           </h1>
           <strong className={'text-xl font-light'}>// About Me</strong>
           <h2 className={'text-3xl'}>
-            <span className={"text-[#F71735]"}>Experienced Web Developer</span> Working Remotely from Nepal
+            <span className={'text-[#F71735]'}>Experienced Web Developer</span>{' '}
+            Working Remotely from Nepal
           </h2>
           <p>
             Im a Creative Web Developer. Expert in Responsive design,
@@ -43,7 +43,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }
