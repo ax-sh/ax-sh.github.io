@@ -4,7 +4,7 @@ import Nav from '../components/Nav';
 import Hero from '../containers/Hero';
 import Skills from '../containers/Skills';
 import { WorkSection } from '../containers/WorkSection';
-import {Contact} from "../containers/Contact";
+import { Contact } from '../containers/Contact';
 
 function Footer() {
   return (
@@ -37,7 +37,7 @@ function App() {
       <Hero />
       <Skills />
       {/*<WorkSection />*/}
-      <Contact/>
+      <Contact />
     </Layout>
   );
 }
