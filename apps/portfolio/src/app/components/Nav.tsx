@@ -4,7 +4,9 @@ import { List } from './List';
 export default function Nav() {
   const [items] = React.useState(['HOME', 'CONTACT', 'ABOUT']);
   return (
-    <nav className="flex justify-between p-10 fixed w-full">
+    <nav className="fixed w-full">
+      <div className={"container flex justify-between py-10"}>
+
       <div>Axmin Shrestha</div>
       <List className="flex w-56 justify-between ">
         {items.map((item) => (
@@ -13,6 +15,7 @@ export default function Nav() {
           </a>
         ))}
       </List>
+    </div>
     </nav>
   );
 }
