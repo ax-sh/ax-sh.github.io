@@ -4,7 +4,7 @@ import { BrowserRouter, useRoutes } from 'react-router-dom';
 import routes from '~react-pages';
 import 'virtual:windi.css';
 import 'virtual:windi-devtools';
-
+import './styles.scss'
 // import App from './app/App';
 import ReactGA from 'react-ga';
 import React from 'react';
