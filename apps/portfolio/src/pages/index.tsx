@@ -4,6 +4,7 @@ import Nav from '../components/Nav';
 import Hero from '../containers/Hero';
 import Skills from '../containers/Skills';
 import { WorkSection } from '../containers/WorkSection';
+import {Contact} from "../containers/Contact";
 
 function Footer() {
   return (
@@ -35,7 +36,8 @@ function App() {
     <Layout className={`App bg-black text-white`}>
       <Hero />
       <Skills />
-      <WorkSection />
+      {/*<WorkSection />*/}
+      <Contact/>
     </Layout>
   );
 }

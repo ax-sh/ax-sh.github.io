@@ -28,13 +28,13 @@ export function Form<T>({
   );
 }
 
-export function Field({ name }: any) {
+export function Field({ name, type ,className}: any) {
   const { register } = useFormContext(); // retrieve all hook methods
   return (
     <fieldset>
       <label>
-        <strong>{name}</strong>
-        <input {...register(name)} />
+        <strong className={"capitalize"}>{name}</strong>
+        <input {...register(name)} type={type} className={className} />
       </label>
       <p>
         <ErrorMessage name={name} />
@@ -43,9 +43,13 @@ export function Field({ name }: any) {
   );
 }
 
-export function Submit() {
+Field.Email = ({...props}:any)=>{
+  return <Field name={"email"} type={"email"} {...props}/>
+}
+
+export function Submit({...props}) {
   const {
     formState: { isSubmitting },
   } = useFormContext(); // retrieve all hook methods
-  return <input type="submit" disabled={isSubmitting} />;
+  return <input type="submit" disabled={isSubmitting} {...props} />;
 }

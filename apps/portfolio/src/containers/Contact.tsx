@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form } from '@ax-sh.github.io/common';
+import {Form, Submit, Field} from '@ax-sh.github.io/common';
 
 export function Contact() {
   function handleSubmit(data: any) {
@@ -8,7 +8,10 @@ export function Contact() {
 
   return (
     <section id={'contact'} className={'h-screen grid place-items-center'}>
-      <Form onSubmit={handleSubmit}></Form>
+      <Form onSubmit={handleSubmit}>
+        <Field.Email/>
+        <Submit/>
+      </Form>
     </section>
   );
 }
