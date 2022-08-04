@@ -1,13 +1,30 @@
 import React from 'react';
 import {
-  Antdesign, Apollographql, Bootstrap,
-  Codesandbox, Git,
-  Github, Gnubash, Graphql, Javascript,
-  Linkedin, Mui, Nextdotjs, Nodedotjs, Nx, Python, ReactJs, Redux, Reduxsaga, Tailwindcss, Threedotjs,
-  Twitter, Typescript,
+  Antdesign,
+  Apollographql,
+  Bootstrap,
+  Codesandbox,
+  Git,
+  Github,
+  Gnubash,
+  Graphql,
+  Javascript,
+  Linkedin,
+  Mui,
+  Nextdotjs,
+  Nodedotjs,
+  Nx,
+  Python,
+  ReactJs,
+  Redux,
+  Reduxsaga,
+  Tailwindcss,
+  Threedotjs,
+  Twitter,
+  Typescript,
 } from '@icons-pack/react-simple-icons';
-import {SiD3Dotjs} from "react-icons/all";
-import ReactTooltip from "react-tooltip";
+import { SiD3Dotjs } from 'react-icons/all';
+import ReactTooltip from 'react-tooltip';
 
 export function GetIcon({ name }: { name: string }) {
   const [hovered, setHover] = React.useState(false);
@@ -46,7 +63,6 @@ export function IconsWrapper({ children, size, ...props }: IconsWrapperProps) {
   );
 }
 
-
 function IconWithToolTipWrapper({ children, name }: any) {
   return (
     <div className={'cursor-pointer'}>
@@ -59,7 +75,6 @@ function IconWithToolTipWrapper({ children, name }: any) {
     </div>
   );
 }
-
 
 export function IconWithToolTip({ name, ...iconProps }: { name: any }) {
   switch (name) {

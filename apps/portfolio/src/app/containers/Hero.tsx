@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 
 import { List } from '../components/List';
-import {IconWithToolTip} from "@ax-sh.github.io/common";
+import { IconWithToolTip } from '@ax-sh.github.io/common';
 
 function HireMeButton() {
   return (
@@ -21,9 +21,9 @@ function HireMeButton() {
 function Skills() {
   const iconProps = { size: 30 };
   return (
-    <div className={'bg-[#282635] p-3 rounded-md'}>
+    <div className={'py-4 rounded-md'}>
       <div className={'skills flex flex-col gap-2 py-4'}>
-        <div>Proficient in</div>
+        <div>// Proficient in</div>
         <List className={'flex gap-4'}>
           <IconWithToolTip name={'git'} {...iconProps} />
           <IconWithToolTip name={'javascript'} {...iconProps} />
