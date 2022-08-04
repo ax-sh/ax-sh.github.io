@@ -1,9 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import { List } from '../components/List';
-import { IconWithToolTip } from '@ax-sh.github.io/common';
-
 function HireMeButton() {
   return (
     <button
@@ -18,39 +15,6 @@ function HireMeButton() {
   );
 }
 
-function Skills() {
-  const iconProps = { size: 30 };
-  return (
-    <div className={'py-4 rounded-md'}>
-      <div className={'skills flex flex-col gap-2 py-4'}>
-        <div>// Proficient in</div>
-        <List className={'flex gap-4'}>
-          <IconWithToolTip name={'git'} {...iconProps} />
-          <IconWithToolTip name={'javascript'} {...iconProps} />
-          <IconWithToolTip name={'typescript'} {...iconProps} />
-          <IconWithToolTip name={'nodejs'} {...iconProps} />
-          <IconWithToolTip name={'python'} {...iconProps} />
-          <IconWithToolTip name={'bash'} {...iconProps} />
-        </List>
-      </div>
-      <List className={'flex gap-3'}>
-        <IconWithToolTip name={'react.js'} {...iconProps} />
-        <IconWithToolTip name={'next.js'} {...iconProps} />
-        <IconWithToolTip name={'tailwind'} {...iconProps} />
-        <IconWithToolTip name={'mui'} {...iconProps} />
-        {/*<IconWithToolTip name={'bootstrap'} {...iconProps} />*/}
-        <IconWithToolTip name={'redux'} {...iconProps} />
-        <IconWithToolTip name={'redux.saga'} {...iconProps} />
-        <IconWithToolTip name={'graphql'} {...iconProps} />
-        <IconWithToolTip name={'apollo.graphql'} {...iconProps} />
-        <IconWithToolTip name={'three.js'} {...iconProps} />
-        <IconWithToolTip name={'nx'} {...iconProps} />
-        <IconWithToolTip name={'ant.design'} {...iconProps} />
-        <IconWithToolTip name={'d3'} {...iconProps} />
-      </List>
-    </div>
-  );
-}
 
 export default function Hero() {
   return (
@@ -62,7 +26,7 @@ export default function Hero() {
           </h1>
           <strong className={'text-xl font-light'}>// About Me</strong>
           <h2 className={'text-3xl'}>
-            Experienced Web Developer remotely from Nepal
+            <span className={"text-[#F71735]"}>Experienced Web Developer</span> Working Remotely from Nepal
           </h2>
           <p>
             Im a Creative Web Developer. Expert in Responsive design,
@@ -79,7 +43,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <Skills />
+
     </section>
   );
 }
