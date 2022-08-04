@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@icons-pack/react-simple-icons": "^4.6.1",
+    "@icons-pack/react-simple-icons": "^4.7.2",
     "@tailwindcss/typography": "^0.5.2",
     "clsx": "^1.1.1",
     "core-js": "^3.6.5",
