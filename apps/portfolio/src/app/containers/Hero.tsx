@@ -1,5 +1,9 @@
 import clsx from 'clsx';
 import React from 'react';
+import {Gnubash, Javascript, Nodedotjs, Python, Typescript} from "@icons-pack/react-simple-icons";
+import {List} from "../components/List";
+import ReactTooltip from 'react-tooltip';
+
 
 function HireMeButton() {
   return (
@@ -15,8 +19,44 @@ function HireMeButton() {
   );
 }
 
+function IconWithToolTipWrapper({children, name}: any) {
+  return <div className={"cursor-pointer"}>
+        <span data-tip data-for={name}>
+     {children}
+        </span>
+    <ReactTooltip id={name} type={"dark"} effect="solid">
+      <span className={"capitalize"}>{name}</span>
+    </ReactTooltip>
+  </div>
+}
+
+function IconWithToolTip({name, ...iconProps}: { name: any }) {
+  switch (name) {
+    case "nodejs":
+      return <IconWithToolTipWrapper name={name}><Nodedotjs {...iconProps}/></IconWithToolTipWrapper>   ;
+    case "bash":
+      return <IconWithToolTipWrapper name={name}><Gnubash {...iconProps}/></IconWithToolTipWrapper>   ;
+    case "python":
+      return <IconWithToolTipWrapper name={name}><Python {...iconProps}/></IconWithToolTipWrapper>
+    case "typescript":
+      return <IconWithToolTipWrapper name={name}><Typescript {...iconProps}/></IconWithToolTipWrapper>
+    default:
+      return <IconWithToolTipWrapper name={name}><Javascript  {...iconProps}/></IconWithToolTipWrapper>
+  }
+}
+
 function Skills() {
-  return <div className={"skills"}></div>;
+  const iconProps = {size: 50}
+  return <div className={"skills flex flex-col gap-2 py-4"}>
+    <div>Proficient in</div>
+    <List className={"flex gap-4"}>
+      <IconWithToolTip name={"javascript"} {...iconProps}/>
+      <IconWithToolTip name={"typescript"} {...iconProps}/>
+      <IconWithToolTip name={"nodejs"} {...iconProps}/>
+      <IconWithToolTip name={"python"} {...iconProps}/>
+      <IconWithToolTip name={"bash"} {...iconProps}/>
+    </List>
+  </div>;
 }
 
 export default function Hero() {
