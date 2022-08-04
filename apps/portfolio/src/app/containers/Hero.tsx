@@ -1,9 +1,15 @@
 import clsx from 'clsx';
 import React from 'react';
-import {Gnubash, Javascript, Nodedotjs, Python, Typescript} from "@icons-pack/react-simple-icons";
-import {List} from "../components/List";
+import {
+  Git,
+  Gnubash,
+  Javascript,
+  Nodedotjs,
+  Python,
+  Typescript,
+} from '@icons-pack/react-simple-icons';
+import { List } from '../components/List';
 import ReactTooltip from 'react-tooltip';
-
 
 function HireMeButton() {
   return (
@@ -19,44 +25,73 @@ function HireMeButton() {
   );
 }
 
-function IconWithToolTipWrapper({children, name}: any) {
-  return <div className={"cursor-pointer"}>
-        <span data-tip data-for={name}>
-     {children}
-        </span>
-    <ReactTooltip id={name} type={"dark"} effect="solid">
-      <span className={"capitalize"}>{name}</span>
-    </ReactTooltip>
-  </div>
+function IconWithToolTipWrapper({ children, name }: any) {
+  return (
+    <div className={'cursor-pointer'}>
+      <span data-tip data-for={name}>
+        {children}
+      </span>
+      <ReactTooltip id={name} type={'dark'} effect="solid">
+        <span className={'capitalize'}>{name}</span>
+      </ReactTooltip>
+    </div>
+  );
 }
 
-function IconWithToolTip({name, ...iconProps}: { name: any }) {
+function IconWithToolTip({ name, ...iconProps }: { name: any }) {
   switch (name) {
-    case "nodejs":
-      return <IconWithToolTipWrapper name={name}><Nodedotjs {...iconProps}/></IconWithToolTipWrapper>   ;
-    case "bash":
-      return <IconWithToolTipWrapper name={name}><Gnubash {...iconProps}/></IconWithToolTipWrapper>   ;
-    case "python":
-      return <IconWithToolTipWrapper name={name}><Python {...iconProps}/></IconWithToolTipWrapper>
-    case "typescript":
-      return <IconWithToolTipWrapper name={name}><Typescript {...iconProps}/></IconWithToolTipWrapper>
+    case 'git':
+      return       <IconWithToolTipWrapper name={name}>
+        <Git {...iconProps} />
+      </IconWithToolTipWrapper>
+    case 'nodejs':
+      return (
+        <IconWithToolTipWrapper name={name}>
+          <Nodedotjs {...iconProps} />
+        </IconWithToolTipWrapper>
+      );
+    case 'bash':
+      return (
+        <IconWithToolTipWrapper name={name}>
+          <Gnubash {...iconProps} />
+        </IconWithToolTipWrapper>
+      );
+    case 'python':
+      return (
+        <IconWithToolTipWrapper name={name}>
+          <Python {...iconProps} />
+        </IconWithToolTipWrapper>
+      );
+    case 'typescript':
+      return (
+        <IconWithToolTipWrapper name={name}>
+          <Typescript {...iconProps} />
+        </IconWithToolTipWrapper>
+      );
     default:
-      return <IconWithToolTipWrapper name={name}><Javascript  {...iconProps}/></IconWithToolTipWrapper>
+      return (
+        <IconWithToolTipWrapper name={name}>
+          <Javascript {...iconProps} />
+        </IconWithToolTipWrapper>
+      );
   }
 }
 
 function Skills() {
-  const iconProps = {size: 50}
-  return <div className={"skills flex flex-col gap-2 py-4"}>
-    <div>Proficient in</div>
-    <List className={"flex gap-4"}>
-      <IconWithToolTip name={"javascript"} {...iconProps}/>
-      <IconWithToolTip name={"typescript"} {...iconProps}/>
-      <IconWithToolTip name={"nodejs"} {...iconProps}/>
-      <IconWithToolTip name={"python"} {...iconProps}/>
-      <IconWithToolTip name={"bash"} {...iconProps}/>
-    </List>
-  </div>;
+  const iconProps = { size: 30 };
+  return (
+    <div className={'skills flex flex-col gap-2 py-4'}>
+      <div>Proficient in</div>
+      <List className={'flex gap-4'}>
+        <IconWithToolTip name={'git'} {...iconProps} />
+        <IconWithToolTip name={'javascript'} {...iconProps} />
+        <IconWithToolTip name={'typescript'} {...iconProps} />
+        <IconWithToolTip name={'nodejs'} {...iconProps} />
+        <IconWithToolTip name={'python'} {...iconProps} />
+        <IconWithToolTip name={'bash'} {...iconProps} />
+      </List>
+    </div>
+  );
 }
 
 export default function Hero() {
@@ -79,14 +114,14 @@ export default function Hero() {
         </div>
         <div className={'col-span-1 bg-[#111]  order-first md:order-none '}>
           <div
-            style={{backgroundImage: "url('./bg.jpg')"}}
+            style={{ backgroundImage: "url('./bg.jpg')" }}
             className={'w-full h-full pt-30 flex items-center'}
           >
-            <HireMeButton/>
+            <HireMeButton />
           </div>
         </div>
       </div>
-      <Skills/>
+      <Skills />
     </section>
   );
 }
