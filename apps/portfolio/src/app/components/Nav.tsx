@@ -1,7 +1,7 @@
-import React from "react";
-import {List} from "./List";
+import React from 'react';
+import { List } from './List';
 
-export default function Nav(){
+export default function Nav() {
   const [items] = React.useState(['HOME', 'CONTACT', 'ABOUT']);
   return (
     <nav className="flex justify-between p-10 fixed w-full">
@@ -15,4 +15,4 @@ export default function Nav(){
       </List>
     </nav>
   );
-};
+}

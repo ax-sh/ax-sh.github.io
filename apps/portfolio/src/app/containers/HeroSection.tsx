@@ -71,7 +71,9 @@ export const HeroSection = () => {
     >
       <div className={'md:w-1/2 p-2'}>
         <h1 className="text-8xl">Axmin Shrestha</h1>
-        <h2 className="text-2xl">Senior Creative Web Developer at Bottle Tech</h2>
+        <h2 className="text-2xl">
+          Senior Creative Web Developer at Bottle Tech
+        </h2>
         <IconsContainer header="Programming Languages">
           <Javascript />
           <Typescript />
