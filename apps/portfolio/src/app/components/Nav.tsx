@@ -9,9 +9,7 @@ export default function Nav() {
         <div>Axmin Shrestha</div>
         <List className="flex w-56 justify-between ">
           {items.map((item) => (
-            <a className="hover:text-red-500 cursor-pointer" >
-              {item}
-            </a>
+            <a className="hover:text-red-500 cursor-pointer">{item}</a>
           ))}
         </List>
       </div>
