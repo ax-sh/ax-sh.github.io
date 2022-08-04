@@ -4,9 +4,11 @@ import Nav from '../app/components/Nav';
 import Hero from '../app/containers/Hero';
 
 function Footer() {
-  return <footer className="fixed bottom-0 right-0 p-10">
-    <ExternalLinks/>
-  </footer>;
+  return (
+    <footer className="fixed bottom-0 right-0 p-10">
+      <ExternalLinks />
+    </footer>
+  );
 }
 
 const Layout = ({
@@ -17,11 +19,11 @@ const Layout = ({
   return (
     <div className={`Layout ${className} relative`} {...props}>
       <header>
-        <Nav/>
+        <Nav />
       </header>
       {/*<main className="min-h-screen flex children:flex-grow">{children}</main>*/}
       <main className="min-h-screen">{children}</main>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
