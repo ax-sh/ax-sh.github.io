@@ -22,6 +22,7 @@ import {
 } from '@icons-pack/react-simple-icons';
 import { List } from '../components/List';
 import ReactTooltip from 'react-tooltip';
+import {SiD3Dotjs} from "react-icons/all";
 
 function HireMeButton() {
   return (
@@ -56,6 +57,13 @@ function IconWithToolTip({ name, ...iconProps }: { name: any }) {
     //   <Nodemon />
     //   <Jira />
     //   <Puppeteer />
+
+    case 'd3':
+      return (
+        <IconWithToolTipWrapper name={name}>
+          <SiD3Dotjs {...iconProps} />
+        </IconWithToolTipWrapper>
+      );
     case 'mui':
       return (
         <IconWithToolTipWrapper name={name}>
@@ -201,6 +209,7 @@ function Skills() {
         <IconWithToolTip name={'three.js'} {...iconProps} />
         <IconWithToolTip name={'nx'} {...iconProps} />
         <IconWithToolTip name={'ant.design'} {...iconProps} />
+        <IconWithToolTip name={'d3'} {...iconProps} />
       </List>
     </div>
   );
