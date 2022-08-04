@@ -7,14 +7,17 @@ import {
   Git,
   Gnubash,
   Graphql,
-  Javascript, Mui,
+  Javascript,
+  Mui,
   Nextdotjs,
-  Nodedotjs, Nx,
+  Nodedotjs,
+  Nx,
   Python,
   ReactJs,
   Redux,
   Reduxsaga,
-  Tailwindcss, Threedotjs,
+  Tailwindcss,
+  Threedotjs,
   Typescript,
 } from '@icons-pack/react-simple-icons';
 import { List } from '../components/List';
@@ -49,11 +52,7 @@ function IconWithToolTipWrapper({ children, name }: any) {
 
 function IconWithToolTip({ name, ...iconProps }: { name: any }) {
   switch (name) {
-    //
-    // < />
-    //   < />
-    //   < />
-    //   < />
+
     //   <Nodemon />
     //   <Jira />
     //   <Puppeteer />
@@ -174,15 +173,10 @@ function IconWithToolTip({ name, ...iconProps }: { name: any }) {
   }
 }
 
-
-
-
 function Skills() {
   const iconProps = { size: 30 };
   return (
-    <div
-      className={"bg-[#282635] p-3 rounded-md"}
-    >
+    <div className={'bg-[#282635] p-3 rounded-md'}>
       <div className={'skills flex flex-col gap-2 py-4'}>
         <div>Proficient in</div>
         <List className={'flex gap-4'}>
