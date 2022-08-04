@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExternalLinks } from '@ax-sh.github.io/common';
-import Nav from '../app/components/Nav';
-import Hero from '../app/containers/Hero';
+import Nav from '../components/Nav';
+import Hero from '../containers/Hero';
 
 function Footer() {
   return (
