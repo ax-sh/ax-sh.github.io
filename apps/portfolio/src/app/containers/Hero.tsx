@@ -21,17 +21,23 @@ export default function Hero() {
         </div>
         <div
           className={
-            'col-span-1 bg-[#111] pt-30 order-first md:order-none flex items-center'
+            'col-span-1 bg-[#111]  order-first md:order-none '
           }
         >
-          <button
-            className={clsx(
-              'hidden md:block md:h-30 md:w-30 w-full md:rounded-full bg-white text-black',
-              ' text-xl font-bold transform md:-translate-x-1/2'
-            )}
-          >
-            Hire Me
-          </button>
+
+          <div style={{ backgroundImage: "url('./bg.jpg')" }} className={"w-full h-full pt-30 flex items-center"}>
+            <button
+              className={clsx(
+                'hidden md:block md:h-30 md:w-30 w-full md:rounded-full bg-white text-black',
+                'text-xl font-bold transform md:-translate-x-1/2 ',
+                "self-center"
+              )}
+            >
+              Hire Me
+            </button>
+
+          </div>
+
         </div>
       </div>
       <div className={'skills'}></div>
