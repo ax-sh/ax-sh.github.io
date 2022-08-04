@@ -1,6 +1,18 @@
 import clsx from 'clsx';
 import React from 'react';
 
+function HireMeButton() {
+  return <button
+    className={clsx(
+      "hidden md:block md:h-30 md:w-30 w-full md:rounded-full bg-white text-black",
+      "text-xl font-bold transform md:-translate-x-1/2 ",
+      "self-center"
+    )}
+  >
+    Hire Me
+  </button>;
+}
+
 export default function Hero() {
   return (
     <section className={clsx('container')}>
@@ -21,18 +33,10 @@ export default function Hero() {
         </div>
         <div className={'col-span-1 bg-[#111]  order-first md:order-none '}>
           <div
-            style={{ backgroundImage: "url('./bg.jpg')" }}
+            style={{backgroundImage: "url('./bg.jpg')"}}
             className={'w-full h-full pt-30 flex items-center'}
           >
-            <button
-              className={clsx(
-                'hidden md:block md:h-30 md:w-30 w-full md:rounded-full bg-white text-black',
-                'text-xl font-bold transform md:-translate-x-1/2 ',
-                'self-center'
-              )}
-            >
-              Hire Me
-            </button>
+            <HireMeButton/>
           </div>
         </div>
       </div>
