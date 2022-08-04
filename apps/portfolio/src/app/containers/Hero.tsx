@@ -2,15 +2,21 @@ import clsx from 'clsx';
 import React from 'react';
 
 function HireMeButton() {
-  return <button
-    className={clsx(
-      "hidden md:block md:h-30 md:w-30 w-full md:rounded-full bg-white text-black",
-      "text-xl font-bold transform md:-translate-x-1/2 ",
-      "self-center"
-    )}
-  >
-    Hire Me
-  </button>;
+  return (
+    <button
+      className={clsx(
+        'hidden md:block md:h-30 md:w-30 w-full md:rounded-full bg-white text-black',
+        'text-xl font-bold transform md:-translate-x-1/2 ',
+        'self-center'
+      )}
+    >
+      Hire Me
+    </button>
+  );
+}
+
+function Skills() {
+  return <div className={"skills"}></div>;
 }
 
 export default function Hero() {
@@ -40,7 +46,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className={'skills'}></div>
+      <Skills/>
     </section>
   );
 }
