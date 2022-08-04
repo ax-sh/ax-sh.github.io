@@ -5,6 +5,7 @@ import svgr from 'vite-plugin-svgr';
 // import react from '@vitejs/plugin-react';
 import WindiCSS from 'vite-plugin-windicss';
 import Pages from 'vite-plugin-pages';
+import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,6 +15,8 @@ export default defineConfig({
     svgr(),
     qrcode(), // only applies in dev mode
     viteCompression({ algorithm: 'brotliCompress' }),
+    // input https://www.npmjs.com/package/html-minifier-terser options
+    ViteMinifyPlugin({}),
   ],
   // plugins: [react(), WindiCSS()],
   server: { host: true },
