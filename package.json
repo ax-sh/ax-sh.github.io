@@ -11,6 +11,8 @@
   },
   "private": true,
   "dependencies": {
+    "@hookform/error-message": "^2.0.0",
+    "@hookform/resolvers": "^2.9.7",
     "@icons-pack/react-simple-icons": "^5.2.0",
     "@tailwindcss/typography": "^0.5.4",
     "clsx": "^1.2.1",
@@ -18,6 +20,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-ga": "^3.3.1",
+    "react-hook-form": "^7.34.0",
     "react-icons": "^4.4.0",
     "react-obfuscate": "^3.6.8",
     "react-router-dom": "6.3.0",
@@ -25,7 +28,8 @@
     "regenerator-runtime": "0.13.9",
     "simple-icons": "^7.5.0",
     "styled-components": "5.3.5",
-    "tslib": "^2.4.0"
+    "tslib": "^2.4.0",
+    "zod": "^3.17.10"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",

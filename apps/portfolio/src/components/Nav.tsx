@@ -11,7 +11,7 @@ export default function Nav() {
           <div className={'text-xl'}>
             <span className={'text-[#F71735]'}>Ax</span>min{' '}
             <span className={'text-[#03F7EB]'}>Sh</span>restha
-          </div>{' '}
+          </div>
         </Link>
         <List className="flex gap-3 justify-between p-4">
           {items.map((item) => (
