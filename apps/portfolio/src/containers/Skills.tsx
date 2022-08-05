@@ -18,7 +18,7 @@ export default function Skills() {
             <IconWithToolTip name={'bash'} {...iconProps} />
           </List>
         </div>
-        <List className={'flex gap-3'}>
+        <List className={'flex gap-3 flex-wrap'}>
           <IconWithToolTip name={'react.js'} {...iconProps} />
           <IconWithToolTip name={'next.js'} {...iconProps} />
           <IconWithToolTip name={'tailwind'} {...iconProps} />

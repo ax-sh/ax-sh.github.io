@@ -6,7 +6,11 @@ export default function Nav() {
   const [items] = React.useState(['SKILLS', 'CONTACT', 'ABOUT']);
   return (
     <nav className="fixed w-full">
-      <div className={'container flex justify-between items-center py-10'}>
+      <div
+        className={
+          'container flex flex-col md:flex-row justify-between items-center py-10'
+        }
+      >
         <Link to={'/'}>
           <div className={'text-xl'}>
             <span className={'text-[#F71735]'}>Ax</span>min{' '}
