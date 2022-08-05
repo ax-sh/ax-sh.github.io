@@ -6,6 +6,7 @@ import svgr from 'vite-plugin-svgr';
 import WindiCSS from 'vite-plugin-windicss';
 import Pages from 'vite-plugin-pages';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,6 +18,7 @@ export default defineConfig({
     viteCompression({ algorithm: 'brotliCompress' }),
     // input https://www.npmjs.com/package/html-minifier-terser options
     ViteMinifyPlugin({}),
+    VitePWA(),
   ],
   // plugins: [react(), WindiCSS()],
   server: { host: true },
