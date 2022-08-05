@@ -1,6 +1,5 @@
 import { List } from '../components/List';
 import { IconWithToolTip } from '@ax-sh.github.io/common';
-import React from 'react';
 
 export default function Skills() {
   const iconProps = { size: 30 };
@@ -8,7 +7,7 @@ export default function Skills() {
     <section className={'py-4 bg-[#0A0A0F]'}>
       <div className={'container'}>
         <div className={'skills flex flex-col gap-2 py-4'}>
-          <div>// Proficient in</div>
+          <div>Proficient in</div>
           <List className={'flex gap-4'}>
             <IconWithToolTip name={'git'} {...iconProps} />
             <IconWithToolTip name={'javascript'} {...iconProps} />

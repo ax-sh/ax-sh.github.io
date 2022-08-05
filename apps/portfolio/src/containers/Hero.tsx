@@ -23,7 +23,7 @@ export default function Hero() {
           <h1 className={'text-9xl'}>
             Axmin <span className={'text-8xl'}>Shrestha</span>
           </h1>
-          <strong className={'text-xl font-light'}>// About Me</strong>
+          {/* <strong className={'text-xl font-light'}>// About Me</strong> */}
           <h2 className={'text-3xl'}>
             <span className={'text-[#F71735]'}>Experienced Web Developer</span>{' '}
             {/*Working Remotely from Nepal*/}
@@ -36,7 +36,7 @@ export default function Hero() {
         </div>
         <div className={'col-span-1 bg-[#111]  order-first md:order-none '}>
           <div
-            style={{ backgroundImage: "url('./bg.jpg')" }}
+            // style={{ backgroundImage: "url('./bg.jpg')" }}
             className={'w-full h-full pt-30 flex items-center'}
           >
             <HireMeButton />

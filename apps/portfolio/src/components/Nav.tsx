@@ -2,6 +2,8 @@ import React from 'react';
 import { List } from './List';
 import { Link } from 'react-router-dom';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 export default function Nav() {
   const [items] = React.useState(['SKILLS', 'CONTACT', 'ABOUT']);
   return (
@@ -17,11 +19,17 @@ export default function Nav() {
             <span className={'text-[#03F7EB]'}>Sh</span>restha
           </div>
         </Link>
-        {/* <List className="flex gap-3 justify-between p-4">
+        <List className="flex gap-3 justify-between p-4">
           {items.map((item, index) => (
-            <a className="hover:text-red-500 cursor-pointer" key={index}>{item}</a>
+            <Link
+              className="hover:text-red-500 cursor-pointer"
+              key={index}
+              to={`#${item.toLowerCase()}`}
+            >
+              {item}
+            </Link>
           ))}
-        </List> */}
+        </List>
       </div>
     </nav>
   );
