@@ -17,11 +17,11 @@ export default function Nav() {
             <span className={'text-[#03F7EB]'}>Sh</span>restha
           </div>
         </Link>
-        <List className="flex gap-3 justify-between p-4">
-          {items.map((item) => (
-            <a className="hover:text-red-500 cursor-pointer">{item}</a>
+        {/* <List className="flex gap-3 justify-between p-4">
+          {items.map((item, index) => (
+            <a className="hover:text-red-500 cursor-pointer" key={index}>{item}</a>
           ))}
-        </List>
+        </List> */}
       </div>
     </nav>
   );
