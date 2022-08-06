@@ -3,10 +3,10 @@ const SEOConfig = {
 		type: 'website',
 		locale: 'en_IE',
 		url: 'https://ax-sh.netlify.app/',
-		site_name: 'SiteName',
+		site_name: 'Axmin Shrestha',
 	},
 	twitter: {
-		handle: '@handle',
+		handle: '@ax___sh',
 		site: '@site',
 		cardType: 'summary_large_image',
 	},
