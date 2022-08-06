@@ -37,15 +37,15 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@nrwl/cli": "14.5.2",
-    "@nrwl/eslint-plugin-nx": "14.5.2",
-    "@nrwl/jest": "14.5.2",
-    "@nrwl/linter": "14.5.2",
-    "@nrwl/next": "^14.5.4",
-    "@nrwl/react": "14.5.2",
-    "@nrwl/tao": "14.5.2",
-    "@nrwl/web": "14.5.2",
-    "@nrwl/workspace": "14.5.2",
+    "@nrwl/cli": "14.5.4",
+    "@nrwl/eslint-plugin-nx": "14.5.4",
+    "@nrwl/jest": "14.5.4",
+    "@nrwl/linter": "14.5.4",
+    "@nrwl/next": "14.5.4",
+    "@nrwl/react": "14.5.4",
+    "@nrwl/tao": "14.5.4",
+    "@nrwl/web": "14.5.4",
+    "@nrwl/workspace": "14.5.4",
     "@nxext/react": "^14.0.4",
     "@nxext/vitest": "^14.0.2",
     "@testing-library/react": "13.3.0",
@@ -98,3 +98,4 @@
     }
   }
 }
+
