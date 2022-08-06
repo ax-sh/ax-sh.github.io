@@ -102,5 +102,11 @@
 			"post-applypatch": "echo [Husky] post-applypatch",
 			"pre-commit": "echo [Husky] pre-commit"
 		}
+	},
+	"standard-version": {
+		"scripts": {
+			"prebump": "echo 9.9.9",
+			"prerelease": "echo release"
+		}
 	}
 }
