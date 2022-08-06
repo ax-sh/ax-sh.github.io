@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.9.9](https://github.com/ax-sh/ax-sh.github.io/compare/v0.0.3...v9.9.9) (2022-08-06)
+
+
+### Features
+
+* add build script ([77c256e](https://github.com/ax-sh/ax-sh.github.io/commit/77c256e7522c2763c66032dc6077102e1c18b542))
+* add changelog ([f253514](https://github.com/ax-sh/ax-sh.github.io/commit/f25351445ac724c200486fa0b191c590204f9040))
+* add standard version hooks ([a662709](https://github.com/ax-sh/ax-sh.github.io/commit/a6627098d623bfb562ed5c577f20f61b064dc3a8))
+
 ### 0.0.3 (2022-08-06)
 
 ### Features

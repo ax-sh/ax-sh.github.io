@@ -1,6 +1,6 @@
 {
 	"name": "ax-sh.github.io",
-	"version": "0.0.3",
+	"version": "9.9.9",
 	"license": "MIT",
 	"author": "ax-sh <axmin.shrestha@pm.me>",
 	"scripts": {
@@ -106,7 +106,7 @@
 	"standard-version": {
 		"scripts": {
 			"prebump": "echo 9.9.9",
-			"prerelease": "echo release>"
+			"prerelease": "echo release"
 		}
 	}
 }
