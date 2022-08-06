@@ -1,11 +1,12 @@
 {
 	"name": "ax-sh.github.io",
-	"version": "0.0.3",
+	"version": "9.9.9",
 	"license": "MIT",
 	"author": "ax-sh <axmin.shrestha@pm.me>",
 	"scripts": {
 		"start": "nx serve",
 		"build": "nx build",
+		"build:portfolio-next": "nx run portfolio-next:build:production",
 		"test": "nx test",
 		"prepare": "husky install",
 		"deploy": "yarn gh-pages -d dist/apps/portfolio",
@@ -105,7 +106,7 @@
 	"standard-version": {
 		"scripts": {
 			"prebump": "echo 9.9.9",
-			"prerelease": "echo release>"
+			"prerelease": "echo release"
 		}
 	}
 }
