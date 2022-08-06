@@ -1,5 +1,5 @@
 [build]
-publish = "apps/portfolio/public"
+publish = "apps/portfolio-next/.next"
 
 
 [[plugins]]
