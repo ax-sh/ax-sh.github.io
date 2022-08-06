@@ -1,6 +1,6 @@
 {
 	"name": "ax-sh.github.io",
-	"version": "9.9.9",
+	"version": "0.0.6",
 	"license": "MIT",
 	"author": "ax-sh <axmin.shrestha@pm.me>",
 	"scripts": {
@@ -101,6 +101,12 @@
 			"pre-applypatch": "echo [Husky] pre-applypatch",
 			"post-applypatch": "echo [Husky] post-applypatch",
 			"pre-commit": "echo [Husky] pre-commit"
+		}
+	},
+	"standard-version": {
+		"scripts": {
+			"prebump": "git flow release start `sh scripts/nextver.sh`",
+			"posttag": "git flow release finish -n $(cat package.json | json version)"
 		}
 	}
 }
