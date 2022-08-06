@@ -1,5 +1,7 @@
 # https://ax-sh.github.io
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/44c7f3bc-d97c-40ac-86a9-3a6a25646aff/deploy-status)](https://app.netlify.com/sites/ax-sh/deploys)
+
 # Install commitlint cli and conventional config
 
 yarn add -D @commitlint/{config-conventional,cli}
