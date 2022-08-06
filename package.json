@@ -6,6 +6,7 @@
 	"scripts": {
 		"start": "nx serve",
 		"build": "nx build",
+		"build:portfolio-next": "nx run portfolio-next:build:production",
 		"test": "nx test",
 		"prepare": "husky install",
 		"deploy": "yarn gh-pages -d dist/apps/portfolio",
