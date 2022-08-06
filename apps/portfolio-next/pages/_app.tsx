@@ -1,10 +1,13 @@
+import { DefaultSeo } from 'next-seo';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
+import './styles.scss';
+import SEO from '../next-seo.config';
 
 function PortfolioApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
+			<DefaultSeo {...SEO} />
 			<Head>
 				<title>Axmin Shrestha | Portfolio</title>
 			</Head>
