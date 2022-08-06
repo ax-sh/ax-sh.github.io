@@ -21,6 +21,7 @@
 		"core-js": "^3.24.1",
 		"next": "12.2.4",
 		"next-seo": "^5.5.0",
+		"next-useragent": "^2.8.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-ga": "^3.3.1",
