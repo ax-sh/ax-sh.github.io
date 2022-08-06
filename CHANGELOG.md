@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.10.0](https://github.com/ax-sh/ax-sh.github.io/compare/v9.9.9...v9.10.0) (2022-08-06)
+
+
+### Features
+
+* add change log ([6525797](https://github.com/ax-sh/ax-sh.github.io/commit/65257971a765dadd33b46141bf6d416b8556d746))
+* add netlify ([daa3ddb](https://github.com/ax-sh/ax-sh.github.io/commit/daa3ddb77ba5103b669f376b95091181da7db83e))
+* wip ([e1f82dc](https://github.com/ax-sh/ax-sh.github.io/commit/e1f82dc8373e4ff906856cf5b444275fe0be8e46))
+
 ### [9.9.9](https://github.com/ax-sh/ax-sh.github.io/compare/v0.0.3...v9.9.9) (2022-08-06)
 
 ### Features
