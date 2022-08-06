@@ -102,5 +102,11 @@
 			"post-applypatch": "echo [Husky] post-applypatch",
 			"pre-commit": "echo [Husky] pre-commit"
 		}
+	},
+	"standard-version": {
+		"scripts": {
+			"prebump": "git flow release start `sh scripts/nextver.sh`",
+			"posttag": "git flow release finish -n $(cat package.json | json version)"
+		}
 	}
 }
