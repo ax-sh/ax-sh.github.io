@@ -2,6 +2,8 @@
 const withNx = require('@nrwl/next/plugins/with-nx');
 const withPWA = require('next-pwa');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 /**
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
  **/
@@ -12,7 +14,7 @@ const nextConfig = withPWA({
 		// See: https://github.com/gregberge/svgr
 		svgr: true,
 	},
-	pwa: { dest: 'public' },
+	pwa: { disable: !isProduction, dest: 'public' },
 });
 
 module.exports = withNx(nextConfig);

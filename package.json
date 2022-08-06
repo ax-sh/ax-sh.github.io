@@ -2,6 +2,7 @@
 	"name": "ax-sh.github.io",
 	"version": "0.0.2",
 	"license": "MIT",
+	"author": "ax-sh <axmin.shrestha@pm.me>",
 	"scripts": {
 		"start": "nx serve",
 		"build": "nx build",
