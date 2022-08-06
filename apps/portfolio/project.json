@@ -1,0 +1,83 @@
+{
+  "root": "apps/portfolio",
+  "sourceRoot": "apps/portfolio/src",
+  "projectType": "application",
+  "targets": {
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "configurations": {
+        "defaultConfiguration": "github",
+        "github": {
+          "color": true,
+          "parallel": false,
+          "args": "--buildPath=dist/apps/portfolio",
+          "commands": [
+            "rm -rf {args.buildPath}",
+            "nx build portfolio --verbose",
+            "yarn gh-pages -d {args.buildPath}",
+            "echo ______________________",
+            "echo [DEPLOYED TO GITHUB] "
+          ]
+        }
+      }
+    },
+    "build": {
+      "executor": "@nxext/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/portfolio",
+        "baseHref": "",
+        "configFile": "apps/portfolio/vite.config.ts",
+        "frameworkConfigFile": "@nxext/react/plugins/vite"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/portfolio/src/environments/environment.ts",
+              "with": "apps/portfolio/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nxext/vite:dev",
+      "options": {
+        "outputPath": "dist/apps/portfolio",
+        "baseHref": "/",
+        "configFile": "apps/portfolio/vite.config.ts",
+        "frameworkConfigFile": "@nxext/react/plugins/vite"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "portfolio:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/portfolio/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/portfolio"],
+      "options": {
+        "jestConfig": "apps/portfolio/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["portfolio react vite"]
+}

@@ -1,0 +1,37 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true
+  },
+  "cSpell.words": [
+    "Antdesign",
+    "applypatch",
+    "Archlinux",
+    "Awsamplify",
+    "Axmin",
+    "Buildable",
+    "clsx",
+    "Codesandbox",
+    "commitlint",
+    "hookform",
+    "nocheck",
+    "nxext",
+    "qrcode",
+    "Reduxsaga",
+    "Shrestha",
+    "sonarjs",
+    "svgr",
+    "tailwindcss",
+    "Threedotjs",
+    "Tsnode",
+    "vite",
+    "vitejs",
+    "vitest",
+    "windicss"
+  ]
+}
