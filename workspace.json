@@ -1,8 +1,8 @@
 {
-  "version": 2,
-  "projects": {
-    "common": "libs/common",
-    "portfolio": "apps/portfolio",
-    "portfolio-next": "apps/portfolio-next"
-  }
+	"version": 2,
+	"projects": {
+		"common": "libs/common",
+		"portfolio": "apps/portfolio",
+		"portfolio-next": "apps/portfolio-next"
+	}
 }
