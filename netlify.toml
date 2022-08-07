@@ -1,9 +1,9 @@
 [build]
-publish = "./dist/apps/portfolio-next/exported"
+publish = "./dist/apps/portfolio-next/.next"
 command   = "npm run build:portfolio-next"
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
 
-[context.production]
-  environment = { NETLIFY_NEXT_PLUGIN_SKIP = "true" }
+# [context.production]
+  # environment = { NETLIFY_NEXT_PLUGIN_SKIP = "true" }
