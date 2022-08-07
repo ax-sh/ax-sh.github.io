@@ -23,6 +23,7 @@
     "nextjs",
     "nocheck",
     "nxext",
+    "pageview",
     "qrcode",
     "Reduxsaga",
     "Shrestha",
@@ -34,6 +35,7 @@
     "vite",
     "vitejs",
     "vitest",
+    "windi",
     "windicss"
   ]
 }

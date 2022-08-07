@@ -3,15 +3,9 @@ import React from 'react';
 
 function HireMeButton() {
 	return (
-		<button
-			className={clsx(
-				'hidden md:block md:h-30 md:w-30 w-full md:rounded-full bg-white text-black',
-				'text-xl font-bold transform md:-translate-x-1/2 ',
-				'self-center'
-			)}
-		>
-			Hire Me
-		</button>
+		<a className={clsx()} id="hire-me" href="#contact">
+			<span>Hire Me</span>
+		</a>
 	);
 }
 
@@ -45,7 +39,12 @@ export default function Hero() {
 					<p className="capitalize w-9/10">{summary}</p>
 					<h3 className="text-3xl">10+ years experience</h3>
 				</div>
-				<div className={'col-span-1 bg-[#111]  order-first md:order-none '}>
+				<div
+					className={
+						'col-span-1 bg -[#111]  order-first md:order-none bg-fill bg-bottom bg-no-repeat '
+					}
+					style={{ backgroundImage: 'url(https://source.unsplash.com/pVq6YhmDPtk)' }}
+				>
 					<div
 						// style={{ backgroundImage: "url('./bg.jpg')" }}
 						className={'w-full h-full pt-30 flex items-center'}

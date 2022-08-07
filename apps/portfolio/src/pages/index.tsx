@@ -1,18 +1,10 @@
 import React from 'react';
-import { ExternalLinks } from '@ax-sh.github.io/common';
 import Nav from '../components/Nav';
 import Hero from '../containers/Hero';
 import Skills from '../containers/Skills';
-import { WorkSection } from '../containers/WorkSection';
 import Projects from '../containers/Projects';
-
-function Footer() {
-	return (
-		<footer className="fixed bottom-0 right-0 p-10">
-			<ExternalLinks />
-		</footer>
-	);
-}
+import Contact from '../containers/Contact';
+import Footer from '../components/Footer';
 
 const Layout = ({ children, className, ...props }: React.AllHTMLAttributes<HTMLElement>) => {
 	return (
@@ -29,11 +21,12 @@ const Layout = ({ children, className, ...props }: React.AllHTMLAttributes<HTMLE
 
 function App() {
 	return (
-		<Layout className={`App bg-black text-white`}>
+		<Layout className={`App bg-black text-white flex flex-col gap-9`}>
 			<Hero />
 			<Skills />
 			<Projects />
 			{/* <WorkSection /> */}
+			<Contact />
 		</Layout>
 	);
 }
