@@ -12,6 +12,7 @@
 		"prepare": "husky install",
 		"deploy": "yarn gh-pages -d dist/apps/portfolio",
 		"deploy:portfolio": "nx run portfolio:deploy:github",
+		"deploy:portfolio:next":"netlify deploy --build --prod",
 		"release": "standard-version",
 		"publisht": "git flow release finish  $(cat package.json | json version)"
 	},
