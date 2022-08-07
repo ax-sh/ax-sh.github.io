@@ -33,7 +33,7 @@ function App() {
 			<Hero />
 			<Skills />
 			<Projects />
-			<WorkSection />
+			{/* <WorkSection /> */}
 		</Layout>
 	);
 }
