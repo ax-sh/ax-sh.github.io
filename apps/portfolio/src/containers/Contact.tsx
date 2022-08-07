@@ -845,9 +845,19 @@ function ContactForm() {
 	);
 }
 
+const scriptUrl =
+	'https://script.google.com/macros/s/AKfycbwB2VjzuoOadx0nUQJoPIgxOJTktjNjJkDcdYDCOnteFOcnOJrA2YYFCLysof2OXjDM/exec';
+
 export default function Contact() {
-	function handleSubmit(data: Data) {
+	async function handleSubmit(data: Data) {
 		console.log(data);
+		const headers = new Headers();
+		headers.append('Content-Type', 'application/json');
+		await fetch(scriptUrl, { method: 'POST', body: JSON.stringify(data), headers })
+			.then((res) => {
+				console.log('SUCCESSFULLY SUBMITTED');
+			})
+			.catch((err) => console.log(err));
 	}
 
 	return (
