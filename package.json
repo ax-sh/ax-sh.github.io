@@ -14,7 +14,8 @@
 		"deploy:portfolio": "nx run portfolio:deploy:github",
 		"deploy:portfolio:next": "netlify deploy --build --prod",
 		"release": "standard-version",
-		"publisht": "git flow release finish  $(cat package.json | json version)"
+		"publisht": "git flow release finish  $(cat package.json | json version)",
+		"new-release": "git flow release start `sh scripts/nextver.sh`"
 	},
 	"private": true,
 	"dependencies": {
