@@ -10,16 +10,16 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    WindiCSS(),
-    Pages(),
-    svgr(),
-    qrcode(), // only applies in dev mode
-    viteCompression({ algorithm: 'brotliCompress' }),
-    // input https://www.npmjs.com/package/html-minifier-terser options
-    ViteMinifyPlugin({}),
-    VitePWA(),
-  ],
-  // plugins: [react(), WindiCSS()],
-  server: { host: true },
+	plugins: [
+		WindiCSS(),
+		Pages(),
+		svgr(),
+		qrcode(), // only applies in dev mode
+		viteCompression({ algorithm: 'brotliCompress' }),
+		// input https://www.npmjs.com/package/html-minifier-terser options
+		ViteMinifyPlugin({}),
+		VitePWA({ registerType: 'autoUpdate' }),
+	],
+	// plugins: [react(), WindiCSS()],
+	server: { host: true },
 });
