@@ -1,5 +1,6 @@
 import Layout from '../components/layout';
-
+import Image from 'next/image';
+// import sign from './sign.png';
 function Hero() {
 	return (
 		<section>
@@ -20,8 +21,10 @@ function About() {
 export function Index() {
 	return (
 		<Layout>
-			<Hero />
-			<About />
+			{process.env.NODE_ENV}
+			{/* <Image src={sign} layout="responsive" alt="im" /> */}
+			{/* <Hero /> */}
+			{/* <About /> */}
 			{/* work
 			project 
 			contact 
