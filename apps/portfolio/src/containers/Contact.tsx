@@ -811,13 +811,37 @@ function SideImage() {
 	);
 }
 
-function Input({ ...props }) {
+function ContactForm() {
 	return (
-		<input
-			className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-			type="text"
-			{...props}
-		/>
+		<div>
+			<div>
+				{/* <span className="uppercase text-sm text-gray-600 font-bold">Full Name</span> */}
+				<Field.Name
+					className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+					placeholder="Full Name"
+				/>
+			</div>
+			<div className="mt-8">
+				{/* <span className="uppercase text-sm text-gray-600 font-bold">Email</span> */}
+				<Field.Email
+					className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+					placeholder="Email"
+				/>
+			</div>
+			<div className="mt-8">
+				<Field.Message
+					className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+					defaultValue={''}
+					placeholder="Message"
+				/>
+			</div>
+			<div className="mt-8">
+				<Submit
+					value="Send Message"
+					className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+				/>
+			</div>
+		</div>
 	);
 }
 
@@ -828,11 +852,6 @@ export default function Contact() {
 
 	return (
 		<section id={'contact'} className={'h-screen grid place-items-center'}>
-			{/* <Form onSubmit={handleSubmit}>
-				<Field.Email />
-				<Submit />
-			</Form> */}
-
 			<div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
 				<div className="flex flex-col justify-between">
 					<div>
@@ -852,27 +871,9 @@ export default function Contact() {
 					</div>
 				</div>
 				<div>
-					<div>
-						{/* <span className="uppercase text-sm text-gray-600 font-bold">Full Name</span> */}
-						<Input placeholder="Full Name" />
-					</div>
-					<div className="mt-8">
-						{/* <span className="uppercase text-sm text-gray-600 font-bold">Email</span> */}
-						<Input placeholder="Email" />
-					</div>
-					<div className="mt-8">
-						{/* <span className="uppercase text-sm text-gray-600 font-bold">Message</span> */}
-						<textarea
-							className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-							defaultValue={''}
-							placeholder="Message"
-						/>
-					</div>
-					<div className="mt-8">
-						<button className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-							Send Message
-						</button>
-					</div>
+					<Form<Data> onSubmit={handleSubmit}>
+						<ContactForm />
+					</Form>
 				</div>
 			</div>
 		</section>
