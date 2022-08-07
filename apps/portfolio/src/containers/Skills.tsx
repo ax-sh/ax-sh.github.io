@@ -3,7 +3,7 @@ import { IconWithToolTip, List } from '@ax-sh.github.io/common';
 export default function Skills() {
 	const iconProps = { size: 30 };
 	return (
-		<section className={'py-4 bg-[#0A0A0F]'}>
+		<section id="skills" className={'py-4 bg-[#0A0A0F]'}>
 			<div className={'container'}>
 				<div className={'skills flex flex-col gap-2 py-4'}>
 					<div>Proficient in</div>

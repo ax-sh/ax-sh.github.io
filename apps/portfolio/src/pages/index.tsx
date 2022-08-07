@@ -21,7 +21,7 @@ const Layout = ({ children, className, ...props }: React.AllHTMLAttributes<HTMLE
 
 function App() {
 	return (
-		<Layout className={`App bg-black text-white`}>
+		<Layout className={`App bg-black text-white flex flex-col gap-9`}>
 			<Hero />
 			<Skills />
 			<Projects />
