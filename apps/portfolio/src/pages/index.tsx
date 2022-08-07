@@ -5,6 +5,7 @@ import Hero from '../containers/Hero';
 import Skills from '../containers/Skills';
 import { WorkSection } from '../containers/WorkSection';
 import Projects from '../containers/Projects';
+import Contact from '../containers/Contact';
 
 function Footer() {
 	return (
@@ -34,6 +35,7 @@ function App() {
 			<Skills />
 			<Projects />
 			{/* <WorkSection /> */}
+			<Contact />
 		</Layout>
 	);
 }
