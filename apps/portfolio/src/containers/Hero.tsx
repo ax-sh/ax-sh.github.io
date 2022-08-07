@@ -39,7 +39,12 @@ export default function Hero() {
 					<p className="capitalize w-9/10">{summary}</p>
 					<h3 className="text-3xl">10+ years experience</h3>
 				</div>
-				<div className={'col-span-1 bg-[#111]  order-first md:order-none '}>
+				<div
+					className={
+						'col-span-1 bg -[#111]  order-first md:order-none bg-fill bg-bottom bg-no-repeat '
+					}
+					style={{ backgroundImage: 'url(https://source.unsplash.com/pVq6YhmDPtk)' }}
+				>
 					<div
 						// style={{ backgroundImage: "url('./bg.jpg')" }}
 						className={'w-full h-full pt-30 flex items-center'}
