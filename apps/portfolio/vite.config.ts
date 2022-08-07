@@ -17,7 +17,7 @@ export default defineConfig({
 		qrcode(), // only applies in dev mode
 		viteCompression({ algorithm: 'brotliCompress' }),
 		// input https://www.npmjs.com/package/html-minifier-terser options
-		ViteMinifyPlugin({}),
+		ViteMinifyPlugin({ minifyJS: true, minifyCSS: true, removeComments: true }),
 		VitePWA({ registerType: 'autoUpdate' }),
 	],
 	// plugins: [react(), WindiCSS()],
