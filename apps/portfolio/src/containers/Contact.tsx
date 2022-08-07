@@ -845,23 +845,39 @@ function ContactForm() {
 	);
 }
 
-const scriptUrl =
-	'https://script.google.com/macros/s/AKfycbwB2VjzuoOadx0nUQJoPIgxOJTktjNjJkDcdYDCOnteFOcnOJrA2YYFCLysof2OXjDM/exec';
+// const scriptUrl =
+// 	'https://script.google.com/macros/s/AKfycbwB2VjzuoOadx0nUQJoPIgxOJTktjNjJkDcdYDCOnteFOcnOJrA2YYFCLysof2OXjDM/exec';
 
 export default function Contact() {
 	async function handleSubmit(data: Data) {
-		console.log(data);
-		const headers = new Headers();
-		headers.append('Content-Type', 'application/json');
-		await fetch(scriptUrl, { method: 'POST', body: JSON.stringify(data), headers })
-			.then((res) => {
-				console.log('SUCCESSFULLY SUBMITTED');
-			})
-			.catch((err) => console.log(err));
+		const myHeaders = new Headers();
+		myHeaders.append('Content-Type', 'application/json');
+		const requestOptions = {
+			method: 'post',
+			headers: myHeaders,
+			redirect: 'follow',
+			body: JSON.stringify([data]),
+		};
+
+		fetch(
+			'https://v1.nocodeapi.com/axsh/airtable/TgwfOMgiYDDrDGhg?tableName=contacted',
+			requestOptions
+		)
+			.then((response) => response.text())
+			.then((result) => console.log(result))
+			.catch((error) => console.log('error', error));
+		// console.log(data);
+		// const headers = new Headers();
+		// headers.append('Content-Type', 'application/json');
+		// await fetch(scriptUrl, { method: 'POST', body: JSON.stringify(data), headers })
+		// 	.then((res) => {
+		// 		console.log('SUCCESSFULLY SUBMITTED');
+		// 	})
+		// 	.catch((err) => console.log(err));
 	}
 
 	return (
-		<section id={'contact'} className={'min-h-screen grid place-items-center'}>
+		<section id={'contact'} className={'contact-section min-h-screen grid place-items-center'}>
 			<div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
 				<div className="flex flex-col justify-between">
 					<div>
