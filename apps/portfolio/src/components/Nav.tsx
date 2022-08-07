@@ -29,6 +29,14 @@ export default function Nav() {
 							{item}
 						</a>
 					))}
+					<a
+						className="hover:text-red-500 cursor-pointer"
+						href="https://reinvented-gardenia-45c.notion.site/Projects-b61ea900922b48dfb4bb805606d7a37a"
+						target="_blank"
+						rel="noreferrer"
+					>
+						WORKS
+					</a>
 				</List>
 			</div>
 		</nav>
