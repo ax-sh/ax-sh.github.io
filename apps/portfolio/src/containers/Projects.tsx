@@ -17,9 +17,9 @@ function Project({ link, name }: ProjectProps) {
 	);
 }
 
-export function Projects() {
+export default function Projects() {
 	return (
-		<section className={'h-screen grid place-items-center'}>
+		<section className={'container min-h-screen'}>
 			<h2>Projects</h2>
 			<div>
 				{projects.map((i: ProjectProps, index) => (
