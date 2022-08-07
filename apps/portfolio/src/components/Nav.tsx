@@ -11,15 +11,15 @@ export default function Nav() {
 		//   'ABOUT',
 	]);
 	return (
-		<nav className="fixed w-full">
+		<nav className="fixed w-full pointer-events-none">
 			<div className={'container flex flex-col md:flex-row justify-between items-center py-10'}>
 				<Link to={'/'}>
-					<div className={'text-xl'}>
+					<div className={'text-xl pointer-events-auto'}>
 						<span className={'text-[#F71735]'}>Ax</span>min{' '}
 						<span className={'text-[#03F7EB]'}>Sh</span>restha
 					</div>
 				</Link>
-				<List className="flex gap-3 justify-between p-4">
+				<List className="flex gap-3 justify-between p-4 pointer-events-auto">
 					{items.map((item, index) => (
 						<a
 							className="hover:text-red-500 cursor-pointer"

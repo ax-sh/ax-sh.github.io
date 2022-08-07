@@ -838,7 +838,7 @@ function ContactForm() {
 			<div className="mt-8">
 				<Submit
 					value="Send Message"
-					className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+					className="cursor-pointer uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
 				/>
 			</div>
 		</div>
