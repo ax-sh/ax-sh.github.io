@@ -1,19 +1,10 @@
 import React from 'react';
-import { ExternalLinks } from '@ax-sh.github.io/common';
 import Nav from '../components/Nav';
 import Hero from '../containers/Hero';
 import Skills from '../containers/Skills';
-import { WorkSection } from '../containers/WorkSection';
 import Projects from '../containers/Projects';
 import Contact from '../containers/Contact';
-
-function Footer() {
-	return (
-		<footer className="fixed bottom-0 right-0 p-10">
-			<ExternalLinks />
-		</footer>
-	);
-}
+import Footer from '../components/Footer';
 
 const Layout = ({ children, className, ...props }: React.AllHTMLAttributes<HTMLElement>) => {
 	return (
