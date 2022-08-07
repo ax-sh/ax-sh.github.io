@@ -3,15 +3,9 @@ import React from 'react';
 
 function HireMeButton() {
 	return (
-		<button
-			className={clsx(
-				'hidden md:block md:h-30 md:w-30 w-full md:rounded-full bg-white text-black',
-				'text-xl font-bold transform md:-translate-x-1/2 ',
-				'self-center'
-			)}
-		>
-			Hire Me
-		</button>
+		<a className={clsx()} id="hire-me" href="#contact">
+			<span>Hire Me</span>
+		</a>
 	);
 }
 

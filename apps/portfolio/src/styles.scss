@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Josefin Sans', sans-serif;
 }
@@ -8,4 +12,11 @@ body {
 a {
 	all: unset;
 	cursor: pointer;
+}
+
+#hire-me {
+	@apply text-xl font-bold;
+	@apply md:rounded-full bg-white text-black p-5;
+	@apply transform  md:-translate-x-1/2 self-center;
+	// hidden md:block md:h-30 md:w-30 w-full ';
 }
