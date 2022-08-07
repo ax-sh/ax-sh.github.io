@@ -1,5 +1,5 @@
 [build]
-publish = "dist/apps/portfolio-next/"
+publish = "./dist/apps/portfolio-next/exported"
 command   = "npm run build:portfolio-next"
 
 [[plugins]]
