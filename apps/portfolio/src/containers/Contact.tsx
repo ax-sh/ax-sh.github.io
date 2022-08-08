@@ -3,15 +3,25 @@ import { Form, Submit, Field } from '@ax-sh.github.io/common';
 import { z } from 'zod';
 
 const ContactSchema = z.object({
-	name: z.string({
-		required_error: 'Name is required',
-	}),
-	email: z.string({
-		required_error: 'Email is required',
-	}),
-	message: z.string({
-		required_error: 'Message is required',
-	}),
+	name: z
+		.string({
+			required_error: 'Name is required',
+		})
+		.trim()
+		.nonempty({ message: "Name can't be empty" }),
+	email: z
+		.string({
+			required_error: 'Email is required',
+		})
+		.trim()
+		.email(),
+	message: z
+
+		.string({
+			required_error: 'Message is required',
+		})
+		.trim()
+		.nonempty({ message: "Message can't be empty" }),
 });
 type Data = z.infer<typeof ContactSchema>;
 function SideImage() {

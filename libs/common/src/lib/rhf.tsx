@@ -35,7 +35,7 @@ export function Field({ name, type, className }: any) {
 					<input {...register(name)} type={type} className={className} />
 				)}
 			</label>
-			<p>
+			<p className="text-red-400 pt-2">
 				<ErrorMessage name={name} />
 			</p>
 		</fieldset>
