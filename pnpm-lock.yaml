@@ -45,6 +45,7 @@ specifiers:
   eslint-plugin-react-hooks: 4.6.0
   eslint-plugin-sonarjs: ^0.14.0
   gh-pages: ^4.0.0
+  gsap: ^3.10.4
   husky: ^8.0.1
   jest: 28.1.3
   next: 12.2.4
@@ -88,6 +89,7 @@ dependencies:
   '@tailwindcss/typography': 0.5.4
   clsx: 1.2.1
   core-js: 3.24.1
+  gsap: 3.10.4
   next: 12.2.4_qn5eqpoej7on3nhyoj73scbypy
   next-pwa: 5.5.5_next@12.2.4
   next-seo: 5.5.0_vyccxgqxcnj5vudpssiumaxlme
@@ -6124,8 +6126,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      is-text-path: 1.0.1
       JSONStream: 1.3.5
+      is-text-path: 1.0.1
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
@@ -8403,6 +8405,10 @@ packages:
   /grapheme-splitter/1.0.4:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
     dev: true
+
+  /gsap/3.10.4:
+    resolution: {integrity: sha512-6QatdkKxXCMfvCW4rM++0RqyLQAzFX5nwl3yHS0XPgkZBkiSEY3VZVbMltrdtsbER/xZonLtyHt684wRp4erlQ==}
+    dev: false
 
   /h3/0.2.12:
     resolution: {integrity: sha512-M3Ot1J5emIyafibkzGtqlZMQimTf3OMgSR2tv3TSbOHlssEktp3HlzuzWGvRCaX7XhpbmgDjgYpOC/ml9h5xug==}

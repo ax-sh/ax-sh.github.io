@@ -29,6 +29,7 @@
 		"@tailwindcss/typography": "^0.5.4",
 		"clsx": "^1.2.1",
 		"core-js": "^3.24.1",
+		"gsap": "^3.10.4",
 		"next": "12.2.4",
 		"next-pwa": "^5.5.5",
 		"next-seo": "^5.5.0",
