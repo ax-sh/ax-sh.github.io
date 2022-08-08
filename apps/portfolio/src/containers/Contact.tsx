@@ -1,10 +1,19 @@
 import React from 'react';
 import { Form, Submit, Field } from '@ax-sh.github.io/common';
+import { z } from 'zod';
 
-type Data = {
-	email: string;
-};
-
+const ContactSchema = z.object({
+	name: z.string({
+		required_error: 'Name is required',
+	}),
+	email: z.string({
+		required_error: 'Email is required',
+	}),
+	message: z.string({
+		required_error: 'Message is required',
+	}),
+});
+type Data = z.infer<typeof ContactSchema>;
 function SideImage() {
 	return (
 		<svg
@@ -895,7 +904,7 @@ export default function Contact() {
 					</div>
 				</div>
 				<div>
-					<Form<Data> onSubmit={handleSubmit}>
+					<Form<Data> schema={ContactSchema} onSubmit={handleSubmit}>
 						<ContactForm />
 					</Form>
 				</div>
