@@ -3,7 +3,7 @@ import React from 'react';
 
 function HireMeButton() {
 	return (
-		<a className={clsx()} id="hire-me" href="#contact">
+		<a className={clsx('ml-auto px-10')} id="hire-me" href="#contact">
 			<span>Hire Me</span>
 		</a>
 	);
