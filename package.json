@@ -1,6 +1,6 @@
 {
 	"name": "ax-sh.github.io",
-	"version": null,
+	"version": "0.0.8",
 	"license": "MIT",
 	"author": "ax-sh <axmin.shrestha@pm.me>",
 	"scripts": {
@@ -15,7 +15,10 @@
 		"deploy:portfolio:next": "netlify deploy --build --prod",
 		"release": "standard-version",
 		"publisht": "git flow release finish  $(cat package.json | json version)",
-		"new-release": "git flow release start `sh scripts/nextver.sh`"
+		"new-release-old": "git flow release start `sh scripts/nextver.sh`",
+		"new-release": "git flow release start `node ./get-next-version.js`",
+		"p": "echo `cat package.json | jq .version`",
+		"get-next-version": "node ./get-next-version.js"
 	},
 	"private": true,
 	"dependencies": {
@@ -71,6 +74,7 @@
 		"@vitejs/plugin-react": "^2.0.0",
 		"babel-jest": "28.1.3",
 		"c8": "^7.12.0",
+		"conventional-recommended-bump": "^6.1.0",
 		"eslint": "8.21.0",
 		"eslint-config-airbnb-typescript": "^17.0.0",
 		"eslint-config-next": "12.2.4",
