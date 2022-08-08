@@ -15,6 +15,7 @@
     "Awsamplify",
     "Axmin",
     "Buildable",
+    "cacheable",
     "clsx",
     "Codesandbox",
     "commitlint",
