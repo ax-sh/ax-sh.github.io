@@ -3,7 +3,11 @@ import React from 'react';
 
 function HireMeButton() {
 	return (
-		<a className={clsx('ml-auto px-10')} id="hire-me" href="#contact">
+		<a
+			className={clsx('inline-block justify-self-end md:justify-self-auto px-10 w-30 text-center')}
+			id="hire-me"
+			href="#contact"
+		>
 			<span>Hire Me</span>
 		</a>
 	);
@@ -26,10 +30,10 @@ utility.`,
 export default function Hero() {
 	return (
 		<section className={clsx('container', '')}>
-			<div className={' grid grid-span-1 md:grid-cols-2 h-[80vh]'}>
+			<div className={'grid grid-span-1 md:grid-cols-2 h-[80vh]'}>
 				<div className={'flex flex-col gap-3 col-span-1 pt-30'}>
-					<h1 className={'text-9xl'}>
-						Axmin <span className={'text-8xl'}>Shrestha</span>
+					<h1 className={'text-8xl sm:text-8xl'}>
+						Axmin <span className={'text-7xl'}>Shrestha</span>
 					</h1>
 					{/* <strong className={'text-xl font-light'}>// About Me</strong> */}
 					<h2 className={'text-3xl'}>
@@ -47,7 +51,7 @@ export default function Hero() {
 				>
 					<div
 						// style={{ backgroundImage: "url('./bg.jpg')" }}
-						className={'w-full h-full pt-30 flex items-center'}
+						className={'w-full h-full pt-30 grid items-center'}
 					>
 						<HireMeButton />
 					</div>
