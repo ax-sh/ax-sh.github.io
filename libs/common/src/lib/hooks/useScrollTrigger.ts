@@ -1,28 +1,20 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const useScrollTrigger = (elements: any) => {
-	const scrollTriggerAnimation = () => {
-		elements.current.forEach((el: any) => {
-			gsap.fromTo(
-				el,
-				{ autoAlpha: 0 },
-				{
-					duration: 2,
-					autoAlpha: 1,
-					ease: 'none',
-					scrollTrigger: {
-						trigger: el,
-						start: 'top bottom-=170',
-					},
-				}
-			);
-		});
-	};
+const useScrollTrigger = (vars: ScrollTrigger.StaticVars) => {
+	const scrollTriggerRef = React.useRef(new ScrollTrigger(vars));
+	useEffect(() => {
+		const trigger = scrollTriggerRef.current;
+		console.log(trigger);
+		return () => {
+			trigger.kill();
+		};
+	});
 
-	return { scrollTriggerAnimation };
+	return {};
 };
 
 export default useScrollTrigger;
