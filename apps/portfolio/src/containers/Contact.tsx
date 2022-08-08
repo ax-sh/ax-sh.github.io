@@ -850,12 +850,10 @@ function ContactForm() {
 
 export default function Contact() {
 	async function handleSubmit(data: Data) {
-		const myHeaders = new Headers();
-		myHeaders.append('Content-Type', 'application/json');
 		const requestOptions = {
 			method: 'post',
-			headers: myHeaders,
-			redirect: 'follow',
+			headers: { 'Content-Type': 'application/json' },
+			// redirect: 'follow',
 			body: JSON.stringify([data]),
 		};
 
