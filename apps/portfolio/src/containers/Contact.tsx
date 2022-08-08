@@ -859,7 +859,7 @@ export default function Contact() {
 			body: JSON.stringify([data]),
 		};
 
-		fetch(
+		await fetch(
 			'https://v1.nocodeapi.com/axsh/airtable/TgwfOMgiYDDrDGhg?tableName=contacted',
 			requestOptions
 		)
