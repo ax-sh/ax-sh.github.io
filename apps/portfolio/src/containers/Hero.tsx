@@ -14,9 +14,7 @@ function HireMeButton() {
 }
 
 const summary = [
-	`
-I develop creative websites. Specialize in Aesthetics, Responsive design, simplicity, and
-utility.`,
+	`I develop creative websites. Specialize in Aesthetics, Responsive design, simplicity, and utility.`,
 	// `
 
 	// // Knowledgeable and specialize in responsive design, utility,
