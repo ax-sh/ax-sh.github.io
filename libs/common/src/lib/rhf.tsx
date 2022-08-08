@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm, FormProvider, useFormContext, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ErrorMessage } from '@hookform/error-message';
+import { z } from 'zod';
 
 export function Form<T>({
 	children,
@@ -10,7 +11,7 @@ export function Form<T>({
 	...props
 }: React.PropsWithChildren<{
 	onSubmit: SubmitHandler<T>;
-	schema?: any;
+	schema?: z.Schema;
 }>) {
 	const methods = useForm<T>({
 		resolver: schema && zodResolver(schema),
@@ -23,16 +24,24 @@ export function Form<T>({
 	);
 }
 
-export function Field({ name, type, className }: any) {
+type FieldProps = {
+	name: string;
+	type: string;
+	className: string;
+};
+// | React.ComponentPropsWithoutRef<'input'>
+// | React.ComponentPropsWithoutRef<'textarea'>;
+
+export function Field({ name, type, className, ...props }: FieldProps) {
 	const { register } = useFormContext(); // retrieve all hook methods
 	return (
 		<fieldset>
 			<label>
 				<strong className={'capitalize'}>{name}</strong>
 				{type === 'textarea' ? (
-					<textarea {...register(name)} className={className} />
+					<textarea {...register(name)} className={className} {...props} />
 				) : (
-					<input {...register(name)} type={type} className={className} />
+					<input {...register(name)} type={type} className={className} {...props} />
 				)}
 			</label>
 			<p className="text-red-400 pt-2">
