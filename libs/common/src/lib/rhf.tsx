@@ -52,9 +52,17 @@ Field.Message = ({ ...props }: any) => {
 	return <Field name={'message'} type={'textarea'} {...props} />;
 };
 
-export function Submit({ ...props }) {
+export function Submit({ value, ...props }: any) {
 	const {
 		formState: { isSubmitting },
 	} = useFormContext(); // retrieve all hook methods
-	return <input type="submit" disabled={isSubmitting} {...props} />;
+
+	return (
+		<input
+			type="submit"
+			disabled={isSubmitting}
+			{...props}
+			value={isSubmitting ? 'Submitting' : value}
+		/>
+	);
 }
