@@ -15,6 +15,10 @@ const nextConfig = withPWA({
 		svgr: true,
 	},
 	pwa: { disable: !isProduction, dest: 'public' },
+	i18n: {
+		locales: ['en'],
+		defaultLocale: 'en',
+	},
 });
 
 module.exports = withNx(nextConfig);

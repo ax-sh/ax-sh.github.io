@@ -15,13 +15,16 @@
     "Awsamplify",
     "Axmin",
     "Buildable",
+    "cacheable",
     "clsx",
     "Codesandbox",
     "commitlint",
     "hookform",
+    "Innicement",
     "nextjs",
     "nocheck",
     "nxext",
+    "pageview",
     "qrcode",
     "Reduxsaga",
     "Shrestha",
@@ -33,6 +36,7 @@
     "vite",
     "vitejs",
     "vitest",
+    "windi",
     "windicss"
   ]
 }

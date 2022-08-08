@@ -1,10 +1,24 @@
+html {
+	scroll-behavior: smooth;
+	scroll-margin-block-start: 20rem;
+	scroll-margin-block-end: 110px;
+}
+
 body {
-  font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 }
 .container {
-  width: 90%;
-  margin: 0 auto;
+	width: 90%;
+	margin: 0 auto;
 }
 a {
-  all: unset;
+	all: unset;
+	cursor: pointer;
+}
+
+#hire-me {
+	@apply text-xl font-bold;
+	@apply md:rounded-full bg-white text-black p-5;
+	@apply transform  md:-translate-x-1/2 self-center;
+	// hidden md:block md:h-30 md:w-30 w-full ';
 }
