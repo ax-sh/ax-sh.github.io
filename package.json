@@ -18,7 +18,6 @@
 		"new-release-old": "git flow release start `sh scripts/nextver.sh`",
 		"new-release": "git flow release start `node ./get-next-version.js`",
 		"new-release-finish": "git flow release finish",
-		"p": "echo `cat package.json | jq .version`",
 		"get-next-version": "node ./get-next-version.js"
 	},
 	"private": true,
@@ -117,7 +116,7 @@
 	},
 	"standard-version": {
 		"scripts": {
-			"prebump": "git flow release start `yarn get-next-version`",
+			"prebump": "git flow release start `node ./get-next-version.js` && `node ./get-next-version.js`",
 			"posttag": "git flow release finish -n `cat ./package.json | jq .version`"
 		},
 		"skip": {
