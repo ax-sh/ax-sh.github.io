@@ -1,6 +1,6 @@
 {
 	"name": "ax-sh.github.io",
-	"version": "0.0.9",
+	"version": "0.1.0",
 	"license": "MIT",
 	"author": "ax-sh <axmin.shrestha@pm.me>",
 	"scripts": {
@@ -29,6 +29,7 @@
 		"@tailwindcss/typography": "^0.5.4",
 		"clsx": "^1.2.1",
 		"core-js": "^3.24.1",
+		"gsap": "^3.10.4",
 		"next": "12.2.4",
 		"next-pwa": "^5.5.5",
 		"next-seo": "^5.5.0",
@@ -117,6 +118,9 @@
 		"scripts": {
 			"prebump": "git flow release start `node ./get-next-version.js` && `node ./get-next-version.js`",
 			"posttag": "git flow release finish -n `cat ./package.json | jq .version`"
+		},
+		"skip": {
+			"tag": true
 		}
 	}
 }

@@ -1,5 +1,7 @@
 import Layout from '../components/layout';
 import Image from 'next/image';
+import useLayoutEffect from '../hooks/use-isomorphic-layout-effect';
+
 // import sign from './sign.png';
 function Hero() {
 	return (
@@ -19,6 +21,9 @@ function About() {
 }
 
 export function Index() {
+	useLayoutEffect(() => {
+		console.log('hello there');
+	}, []);
 	return (
 		<Layout>
 			{process.env.NODE_ENV}
