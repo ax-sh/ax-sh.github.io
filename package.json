@@ -117,7 +117,7 @@
 	},
 	"standard-version": {
 		"scripts": {
-			"prebump": "git flow release start `node ./get-next-version.js` && `node ./get-next-version.js`",
+			"prebump": "git flow release start `yarn get-next-version`",
 			"posttag": "git flow release finish -n `cat ./package.json | jq .version`"
 		},
 		"skip": {
