@@ -118,6 +118,9 @@
 		"scripts": {
 			"prebump": "git flow release start `node ./get-next-version.js` && `node ./get-next-version.js`",
 			"posttag": "git flow release finish -n `cat ./package.json | jq .version`"
+		},
+		"skip": {
+			"tag": true
 		}
 	}
 }
