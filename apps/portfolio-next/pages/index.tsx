@@ -1,6 +1,7 @@
 import Layout from '../components/layout';
 import Image from 'next/image';
 import useLayoutEffect from '../hooks/use-isomorphic-layout-effect';
+const isProduction = process.env.NODE_ENV === 'production';
 
 // import sign from './sign.png';
 function Hero() {
@@ -22,11 +23,10 @@ function About() {
 
 export function Index() {
 	useLayoutEffect(() => {
-		console.log('hello there');
+		console.log('Hello there');
 	}, []);
 	return (
 		<Layout>
-			{process.env.NODE_ENV}
 			{/* <Image src={sign} layout="responsive" alt="im" /> */}
 			{/* <Hero /> */}
 			{/* <About /> */}
