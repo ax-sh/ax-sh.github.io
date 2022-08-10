@@ -1,17 +1,13 @@
-import SVG from 'react-inlinesvg';
-import { siSimpleicons, siReact } from 'simple-icons/icons';
-
+// import { siSimpleicons, siReact } from 'simple-icons/icons';
+import SVG, { Props as SVGProps } from 'react-inlinesvg';
+import React from 'react';
 enum IconNames {
 	react,
 }
-
-type IconProps = { name?: string };
-export function Icon(name: IconProps) {
-	return 'hello';
-	// switch (name) {
-	// 	case 'react':
-	// 		return <SVG src={siReact.svg} />;
-	// 	default:
-	// 		return <SVG src={siSimpleicons.svg} />;
-	// }
-}
+type IconProps = { name?: keyof typeof IconNames; src: string };
+export const Icon = React.forwardRef<SVGElement, IconProps>(({ src, name, ...props }, ref) => {
+	switch (name) {
+		default:
+			return <SVG innerRef={ref} src={src} {...props} />;
+	}
+});
