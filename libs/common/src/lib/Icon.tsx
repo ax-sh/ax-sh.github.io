@@ -5,12 +5,13 @@ enum IconNames {
 	react,
 }
 
-type IconProps = { name: string };
-export default function Icon(name: IconProps) {
-	switch (name) {
-		case 'react':
-			return <SVG src={siReact.svg} />;
-		default:
-			return <SVG src={siSimpleicons.svg} />;
-	}
+type IconProps = { name?: string };
+export function Icon(name: IconProps) {
+	return 'hello';
+	// switch (name) {
+	// 	case 'react':
+	// 		return <SVG src={siReact.svg} />;
+	// 	default:
+	// 		return <SVG src={siSimpleicons.svg} />;
+	// }
 }
