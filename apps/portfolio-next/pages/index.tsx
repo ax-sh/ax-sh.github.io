@@ -2,8 +2,9 @@ import Layout from '../components/layout';
 import Image from 'next/image';
 import useLayoutEffect from '../hooks/use-isomorphic-layout-effect';
 import React from 'react';
-import { Icon } from '@ax-sh.github.io/common';
+// import { Icon } from '@ax-sh.github.io/common';
 import { siSimpleicons } from 'simple-icons/icons';
+import { Icon } from '../components/icon';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -25,6 +26,17 @@ function About() {
 	);
 }
 
+const Icons = () => {
+	return (
+		<div>
+			<Icon name="react" />
+			<Icon name="next" />
+			<Icon name="three" />
+			<Icon name="react_query" />
+		</div>
+	);
+};
+
 export function Index() {
 	useLayoutEffect(() => {
 		console.log('Hello there');
@@ -34,7 +46,7 @@ export function Index() {
 	}
 	return (
 		<Layout>
-			<Icon name="react" src={siSimpleicons.svg} />
+			<Icons />
 			{/* <Image src={sign} layout="responsive" alt="im" /> */}
 			{/* <Hero /> */}
 			{/* <About /> */}
