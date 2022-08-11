@@ -18,7 +18,11 @@ const nextConfig = withPWA({
 		// See: https://github.com/gregberge/svgr
 		svgr: true,
 	},
-	pwa: { disable: !isProduction, dest: 'public', runtimeCaching },
+	pwa: {
+		disable: !isProduction,
+		// dest: 'public',
+		runtimeCaching,
+	},
 	i18n: {
 		locales: ['en'],
 		defaultLocale: 'en',

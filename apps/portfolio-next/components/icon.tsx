@@ -17,16 +17,31 @@ enum IconNames {
 	typescript,
 }
 type IconProps = { name?: keyof typeof IconNames };
+
+function getIcon(name: keyof typeof IconNames) {
+	return;
+}
 const Icon = React.forwardRef<SVGElement, Omit<SVGProps, 'src'> & IconProps>(
 	({ name, ...props }, ref) => {
 		props.width = 62;
+
+		console.log(siTypescript);
+
 		switch (name) {
 			case 'react_query':
 				return <SVG innerRef={ref} src={siReactquery.svg} {...props} />;
 			case 'rhf':
 				return <SVG innerRef={ref} src={siReacthookform.svg} {...props} />;
 			case 'typescript':
-				return <SVG innerRef={ref} src={siTypescript.svg} {...props} />;
+				return (
+					<SVG
+						innerRef={ref}
+						src={siTypescript.svg}
+						color={`#${siTypescript.hex}`}
+						fill={`#${siTypescript.hex}`}
+						{...props}
+					/>
+				);
 			case 'three':
 				return <SVG innerRef={ref} src={siThreedotjs.svg} {...props} />;
 			case 'react':

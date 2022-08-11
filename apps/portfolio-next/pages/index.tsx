@@ -29,6 +29,7 @@ function About() {
 const Icons = () => {
 	return (
 		<div>
+			<Icon name="typescript" />
 			<Icon name="react" />
 			<Icon name="next" />
 			<Icon name="three" />
