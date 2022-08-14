@@ -63,7 +63,7 @@ export function Index() {
 	}
 	return (
 		<Layout className="container pt-10">
-			<Icons className={'grid bg-white gap-5'} />
+			<Icons className={clsx('flex flex-wrap p-5 rounded-md bg-white gap-5')} />
 			{/* <Image src={sign} layout="responsive" alt="im" /> */}
 			{/* <Hero /> */}
 			{/* <About /> */}
