@@ -2,27 +2,30 @@ import React from 'react';
 import { Form, Submit, Field } from '@ax-sh.github.io/common';
 import { z } from 'zod';
 
-const ContactSchema = z.object({
-	name: z
-		.string({
-			required_error: 'Name is required',
-		})
-		.trim()
-		.nonempty({ message: "Name can't be empty" }),
-	email: z
-		.string({
-			required_error: 'Email is required',
-		})
-		.trim()
-		.min(1, { message: 'Email is required' })
-		.email(),
-	message: z
+const name = z
+	.string({
+		required_error: 'Name is required',
+	})
+	.trim()
+	.min(1, { message: "Name can't be empty" });
 
+const email = z
+	.string({
+		required_error: 'Email is required',
+	})
+	.trim()
+	.min(1, { message: 'Email cant be empty' })
+	.email();
+
+const ContactSchema = z.object({
+	name,
+	email,
+	message: z
 		.string({
 			required_error: 'Message is required',
 		})
 		.trim()
-		.nonempty({ message: "Message can't be empty" }),
+		.min(1, { message: "Message can't be empty" }),
 });
 type Data = z.infer<typeof ContactSchema>;
 function SideImage() {
