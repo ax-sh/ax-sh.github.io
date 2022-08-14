@@ -45,9 +45,18 @@ export function Index() {
 	}, []);
 	if (isProduction) {
 		return (
-			<section>
-				<h1>coming soon</h1>
-				<Icons />
+			<section
+				className="container center"
+				style={{
+					backgroundColor: '#fff',
+					color: '#111',
+					height: '100vh',
+				}}
+			>
+				<div>
+					<h1>Coming Soon...</h1>
+					<Icons />
+				</div>
 			</section>
 		);
 	}
