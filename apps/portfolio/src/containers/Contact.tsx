@@ -878,14 +878,18 @@ async function postForm(data: Data) {
 		'https://v1.nocodeapi.com/axsh/airtable/TgwfOMgiYDDrDGhg?tableName=contacted',
 		requestOptions
 	)
-		.then((response) => response.text())
-		.then((result) => console.log(result))
+		.then((response) => response.json())
 		.catch((error) => console.log('error', error));
 }
 
 export default function Contact() {
 	async function handleSubmit(data: Data) {
-		await postForm(data);
+		try {
+			const result = await postForm(data);
+			console.table(result);
+		} catch (e) {
+			console.log('error:', 'posting data', e);
+		}
 	}
 
 	return (
