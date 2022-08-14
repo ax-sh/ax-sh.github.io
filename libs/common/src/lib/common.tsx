@@ -12,7 +12,8 @@ const data = {
 		LinkedIn: 'https://www.linkedin.com/in/axmin/',
 		CodeSandbox: 'https://codesandbox.io/u/ax-sh',
 		Twitter: 'https://twitter.com/ax___sh',
-		Website: 'https://ax-sh.github.io/portfolio/',
+		Email: 'mailto:axmin.shrestha@pm.me',
+		// Website: 'https://ax-sh.github.io/portfolio/',
 		// CV: "",
 	},
 };
