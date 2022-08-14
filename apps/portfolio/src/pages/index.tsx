@@ -5,6 +5,7 @@ import Skills from '../containers/Skills';
 import Projects from '../containers/Projects';
 import Contact from '../containers/Contact';
 import Footer from '../components/Footer';
+import { Toaster } from 'react-hot-toast';
 
 const Layout = ({ children, className, ...props }: React.AllHTMLAttributes<HTMLElement>) => {
 	return (
@@ -22,6 +23,9 @@ const Layout = ({ children, className, ...props }: React.AllHTMLAttributes<HTMLE
 function App() {
 	return (
 		<Layout className={`App bg-black text-white flex flex-col gap-9`}>
+			<div>
+				<Toaster />
+			</div>
 			<Hero />
 			<Skills />
 			<Projects />

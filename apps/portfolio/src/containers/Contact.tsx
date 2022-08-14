@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Submit, Field } from '@ax-sh.github.io/common';
 import { z } from 'zod';
+import toast from 'react-hot-toast';
 
 const name = z
 	.string({
@@ -890,9 +891,12 @@ export default function Contact() {
 	async function handleSubmit(data: Data) {
 		try {
 			const result = await postForm(data);
+			toast.success('Successfully sent!');
+
 			console.table(result);
 		} catch (e) {
 			console.log('error:', 'posting data', e);
+			toast.error('Error: submitting form!');
 		}
 	}
 
