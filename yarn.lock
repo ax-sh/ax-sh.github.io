@@ -3615,7 +3615,7 @@
     jiti "^1.14.0"
     windicss "^3.5.6"
 
-"@windicss/plugin-utils@1.8.7":
+"@windicss/plugin-utils@1.8.7", "@windicss/plugin-utils@^1.8.7":
   version "1.8.7"
   resolved "https://registry.yarnpkg.com/@windicss/plugin-utils/-/plugin-utils-1.8.7.tgz#0e3ad889974276fc00029e1a2d911bca16792a33"
   integrity sha512-dfj95olNZyGFDPFMBvE5oq8hA5f0ooUJZjVdWlthS4ek4W1/xNOHDxB6ygWR8LE9zCOXZykApjt1LOhy9Ky2QA==
@@ -7025,6 +7025,11 @@ get-port-please@^2.6.1:
   integrity sha512-4PDSrL6+cuMM1xs6w36ZIkaKzzE0xzfVBCfebHIJ3FE8iB9oic/ECwPw3iNiD4h1AoJ5XLLBhEviFAVrZsDC5A==
   dependencies:
     fs-memo "^1.2.0"
+
+get-port@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/get-port/-/get-port-6.1.2.tgz#c1228abb67ba0e17fb346da33b15187833b9c08a"
+  integrity sha512-BrGGraKm2uPqurfGVj/z97/zv8dPleC6x9JBNRTrDNtCkkRF4rPwrQXFgL7+I+q8QSdU4ntLQX2D7KIxSy8nGw==
 
 get-stream@^5.0.0:
   version "5.2.0"
@@ -13808,6 +13813,11 @@ webpack-subresource-integrity@^5.1.0:
   dependencies:
     typed-assert "^1.0.8"
 
+webpack-virtual-modules@^0.4.3:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/webpack-virtual-modules/-/webpack-virtual-modules-0.4.4.tgz#a19fcf371923c59c4712d63d7d194b1e4d8262cc"
+  integrity sha512-h9atBP/bsZohWpHnr+2sic8Iecb60GxftXsWNLLLSqewgIsGzByd2gcIID4nXcG+3tNe4GQG3dLcff3kXupdRA==
+
 "webpack@^4 || ^5", webpack@^5.58.1:
   version "5.74.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.74.0.tgz#02a5dac19a17e0bb47093f2be67c695102a55980"
@@ -13948,6 +13958,20 @@ wildcard@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/wildcard/-/wildcard-2.0.0.tgz#a77d20e5200c6faaac979e4b3aadc7b3dd7f8fec"
   integrity sha512-JcKqAHLPxcdb9KM49dufGXn2x3ssnfjbcaQdLlfZsL9rH9wgDQjUtDxbo8NE0F6SFvydeu1VhZe7hZuHsB2/pw==
+
+windicss-webpack-plugin@^1.7.5:
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/windicss-webpack-plugin/-/windicss-webpack-plugin-1.7.5.tgz#3fa1ed01389e897e96deb192ead16836bd04bdd5"
+  integrity sha512-+DwZwFcjgYrD/UU1UEs1TOTo4ijAwRkXEgJMttPd05NSC3ULvguvNKL5kNxrCTYs4OMJn68qbCfkjpI0mir4cQ==
+  dependencies:
+    "@windicss/plugin-utils" "^1.8.7"
+    debug "^4.3.4"
+    get-port "^6.1.2"
+    loader-utils "^2.0.0"
+    lodash "^4.17.21"
+    pathe "^0.2.0"
+    webpack-virtual-modules "^0.4.3"
+    windicss "^3.5.6"
 
 windicss@^3.5.6:
   version "3.5.6"
