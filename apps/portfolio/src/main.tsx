@@ -1,5 +1,7 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+
 import { BrowserRouter, useRoutes } from 'react-router-dom';
 import routes from '~react-pages';
 import 'virtual:windi.css';
@@ -34,11 +36,12 @@ function Application() {
 	return <React.Suspense fallback={<Loader />}>{useRoutes(routes)}</React.Suspense>;
 }
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container!); // createRoot(container!) if you use TypeScript
+root.render(
 	<StrictMode>
 		<BrowserRouter>
 			<Application />
 		</BrowserRouter>
-	</StrictMode>,
-	document.getElementById('root')
+	</StrictMode>
 );
