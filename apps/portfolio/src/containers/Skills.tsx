@@ -21,14 +21,14 @@ export default function Skills() {
 					<IconWithToolTip name={'next.js'} {...iconProps} />
 					<IconWithToolTip name={'tailwind'} {...iconProps} />
 					<IconWithToolTip name={'mui'} {...iconProps} />
+					<IconWithToolTip name={'ant.design'} {...iconProps} />
 					{/*<IconWithToolTip name={'bootstrap'} {...iconProps} />*/}
 					<IconWithToolTip name={'redux'} {...iconProps} />
 					<IconWithToolTip name={'redux.saga'} {...iconProps} />
 					<IconWithToolTip name={'graphql'} {...iconProps} />
-					<IconWithToolTip name={'apollo.graphql'} {...iconProps} />
+					{/* <IconWithToolTip name={'apollo.graphql'} {...iconProps} /> */}
 					<IconWithToolTip name={'three.js'} {...iconProps} />
-					<IconWithToolTip name={'nx'} {...iconProps} />
-					<IconWithToolTip name={'ant.design'} {...iconProps} />
+					{/* <IconWithToolTip name={'nx'} {...iconProps} /> */}
 					<IconWithToolTip name={'d3'} {...iconProps} />
 				</List>
 			</div>
