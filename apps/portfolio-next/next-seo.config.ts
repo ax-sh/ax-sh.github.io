@@ -1,4 +1,9 @@
+const title = 'Axmin Shrestha';
+
 const SEOConfig = {
+	title,
+	description: 'Axmin Shrestha(ax-sh) Portfolio',
+	canonical: 'https://ax-sh.netlify.app/',
 	openGraph: {
 		type: 'website',
 		locale: 'en_IE',
@@ -10,7 +15,7 @@ const SEOConfig = {
 		handle: '@ax___sh',
 		site: '@ax___sh',
 		cardType: 'summary_large_image',
-		title: 'Axmin Shrestha',
+		title,
 	},
 };
 export default SEOConfig;
