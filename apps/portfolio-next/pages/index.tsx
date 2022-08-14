@@ -32,6 +32,7 @@ const Icons = () => {
 			<Icon name="typescript" />
 			<Icon name="react" />
 			<Icon name="next" />
+			<Icon name="rhf" />
 			<Icon name="three" />
 			<Icon name="react_query" />
 		</div>
@@ -43,11 +44,15 @@ export function Index() {
 		console.log('Hello there');
 	}, []);
 	if (isProduction) {
-		return 'coming soon';
+		return (
+			<section>
+				<h1>coming soon</h1>
+				<Icons />
+			</section>
+		);
 	}
 	return (
-		<Layout>
-			<Icons />
+		<Layout className="container pt-10">
 			{/* <Image src={sign} layout="responsive" alt="im" /> */}
 			{/* <Hero /> */}
 			{/* <About /> */}

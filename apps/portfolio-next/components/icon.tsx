@@ -8,6 +8,7 @@ import {
 } from 'simple-icons/icons';
 import SVG, { Props as SVGProps } from 'react-inlinesvg';
 import React from 'react';
+
 enum IconNames {
 	react,
 	next,
@@ -38,10 +39,10 @@ function getIcon(name: keyof typeof IconNames) {
 }
 const Icon = React.forwardRef<SVGElement, Omit<SVGProps, 'src'> & IconProps>(
 	({ name, ...props }, ref) => {
-		props.width = 62;
+		props.width = 48;
 		const icon = getIcon(name);
 
-		console.log(icon);
+		console.log(icon.slug, icon.title);
 
 		return <SVG innerRef={ref} src={icon.svg} fill={`#${icon.hex}`} {...props} />;
 	}
