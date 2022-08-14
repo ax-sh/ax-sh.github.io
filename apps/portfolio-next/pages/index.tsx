@@ -5,6 +5,7 @@ import React from 'react';
 // import { Icon } from '@ax-sh.github.io/common';
 import { siSimpleicons } from 'simple-icons/icons';
 import { Icon } from '../components/icon';
+import clsx from 'clsx';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -26,9 +27,9 @@ function About() {
 	);
 }
 
-const Icons = () => {
+const Icons = ({ ...props }) => {
 	return (
-		<div>
+		<div {...props}>
 			<Icon name="typescript" />
 			<Icon name="react" />
 			<Icon name="next" />
@@ -62,6 +63,7 @@ export function Index() {
 	}
 	return (
 		<Layout className="container pt-10">
+			<Icons className={clsx('grid', 'gap-5')} />
 			{/* <Image src={sign} layout="responsive" alt="im" /> */}
 			{/* <Hero /> */}
 			{/* <About /> */}
