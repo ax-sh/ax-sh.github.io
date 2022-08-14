@@ -22,8 +22,16 @@ if (import.meta.env.DEV) {
 ReactGA.initialize(VITE_GOOGLE_ANALYTICS_TOKEN as string, { debug });
 ReactGA.pageview(window.location.pathname + window.location.search);
 
+function Loader() {
+	return (
+		<section className="loader h-screen grid place-content-center">
+			<p className="text-4xl">Loading...</p>
+		</section>
+	);
+}
+
 function Application() {
-	return <React.Suspense fallback={<p>Loading...</p>}>{useRoutes(routes)}</React.Suspense>;
+	return <React.Suspense fallback={<Loader />}>{useRoutes(routes)}</React.Suspense>;
 }
 
 ReactDOM.render(
