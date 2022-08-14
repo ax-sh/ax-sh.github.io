@@ -43,7 +43,7 @@ export default function Hero() {
 				</div>
 				<div
 					className={
-						'col-span-1 bg -[#111]  order-first md:order-none bg-fill bg-bottom bg-no-repeat '
+						'col-span-1 bg -[#111] order-first md:order-none bg-cover bg-bottom bg-no-repeat'
 					}
 					style={{ backgroundImage: 'url(https://source.unsplash.com/pVq6YhmDPtk)' }}
 				>
