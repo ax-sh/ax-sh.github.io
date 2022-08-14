@@ -8,6 +8,8 @@
     "**/Thumbs.db": true,
     "**/node_modules": true
   },
+  "scss.lint.unknownAtRules": "ignore",
+
   "cSpell.words": [
     "Antdesign",
     "applypatch",
