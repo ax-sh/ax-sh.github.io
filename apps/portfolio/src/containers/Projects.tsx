@@ -42,7 +42,7 @@ function Project({ link, name, external, image }: ProjectProps) {
 					)}
 					<img
 						className="h-full w-full aspect-video object-cover"
-						src={image ? image : 'https://source.unsplash.com/ZInLhWJCZTI'}
+						src={image || 'https://source.unsplash.com/ZInLhWJCZTI'}
 						alt="project"
 					/>
 				</div>
