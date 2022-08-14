@@ -867,30 +867,25 @@ function ContactForm() {
 // const scriptUrl =
 // 	'https://script.google.com/macros/s/AKfycbwB2VjzuoOadx0nUQJoPIgxOJTktjNjJkDcdYDCOnteFOcnOJrA2YYFCLysof2OXjDM/exec';
 
+async function postForm(data: Data) {
+	const requestOptions = {
+		method: 'post',
+		headers: { 'Content-Type': 'application/json' },
+		// redirect: 'follow',
+		body: JSON.stringify([data]),
+	};
+	return fetch(
+		'https://v1.nocodeapi.com/axsh/airtable/TgwfOMgiYDDrDGhg?tableName=contacted',
+		requestOptions
+	)
+		.then((response) => response.text())
+		.then((result) => console.log(result))
+		.catch((error) => console.log('error', error));
+}
+
 export default function Contact() {
 	async function handleSubmit(data: Data) {
-		const requestOptions = {
-			method: 'post',
-			headers: { 'Content-Type': 'application/json' },
-			// redirect: 'follow',
-			body: JSON.stringify([data]),
-		};
-
-		await fetch(
-			'https://v1.nocodeapi.com/axsh/airtable/TgwfOMgiYDDrDGhg?tableName=contacted',
-			requestOptions
-		)
-			.then((response) => response.text())
-			.then((result) => console.log(result))
-			.catch((error) => console.log('error', error));
-		// console.log(data);
-		// const headers = new Headers();
-		// headers.append('Content-Type', 'application/json');
-		// await fetch(scriptUrl, { method: 'POST', body: JSON.stringify(data), headers })
-		// 	.then((res) => {
-		// 		console.log('SUCCESSFULLY SUBMITTED');
-		// 	})
-		// 	.catch((err) => console.log(err));
+		await postForm(data);
 	}
 
 	return (
@@ -901,13 +896,13 @@ export default function Contact() {
 						<h2 className="text-4xl lg:text-5xl font-bold leading-tight">
 							Lets talk about everything!
 						</h2>
-						<div className="text-gray-700 mt-8">
+						{/* <div className="text-gray-700 mt-8">
 							Hate forms? Send me an{' '}
 							<a className="underline" href="mailto:">
 								email
 							</a>{' '}
 							instead.
-						</div>
+						</div> */}
 					</div>
 					<div className="mt-8 text-center">
 						<SideImage />
