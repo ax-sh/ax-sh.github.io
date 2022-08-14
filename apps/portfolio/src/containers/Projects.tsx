@@ -8,8 +8,16 @@ type ProjectProps = {
 };
 
 const projects: ProjectProps[] = [
-	{ name: 'Innicement', link: 'https://ax-sh.github.io/innicement/', image: null },
-	{ name: 'Xenovrs', link: 'https://statuesque-semolina-a1b399.netlify.app/', image: null },
+	{
+		name: 'Innicement',
+		link: 'https://ax-sh.github.io/innicement/',
+		image: 'projects/innicement.png',
+	},
+	{
+		name: 'Xenovrs',
+		link: 'https://statuesque-semolina-a1b399.netlify.app/',
+		image: 'projects/xenovrs.png',
+	},
 	{
 		name: 'Works',
 		link: 'https://reinvented-gardenia-45c.notion.site/Projects-b61ea900922b48dfb4bb805606d7a37a',
@@ -19,7 +27,7 @@ const projects: ProjectProps[] = [
 ];
 function Project({ link, name, external, image }: ProjectProps) {
 	return (
-		<div className="project hover:opacity-60 h-30 relative">
+		<div className="project hover:opacity-60 h-42 relative">
 			<a className="cursor-pointer text-3xl" target="_blank" rel="noreferrer" href={link}>
 				{external && (
 					<span className="absolute right-2 top-2">
@@ -39,8 +47,8 @@ function Project({ link, name, external, image }: ProjectProps) {
 
 export default function Projects() {
 	return (
-		<section className={'container min-h-screen  py-9'}>
-			<h2 className="text-5xl">Projects</h2>
+		<section className={'container min-h-screen py-9'}>
+			<h2 className="text-5xl py-9">Projects</h2>
 			<div className="grid grid-cols-3 gap-3">
 				{projects.map((i: ProjectProps, index) => (
 					<React.Fragment key={index}>
