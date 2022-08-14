@@ -14,7 +14,7 @@ const ContactSchema = z.object({
 			required_error: 'Email is required',
 		})
 		.trim()
-		.min(1)
+		.min(1, { message: 'Email is required' })
 		.email(),
 	message: z
 
