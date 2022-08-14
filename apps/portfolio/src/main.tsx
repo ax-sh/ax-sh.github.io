@@ -1,5 +1,4 @@
 import { StrictMode } from 'react';
-import * as ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client';
 
 import { BrowserRouter, useRoutes } from 'react-router-dom';
@@ -11,7 +10,7 @@ import './styles.scss';
 import ReactGA from 'react-ga';
 import React from 'react';
 
-const VITE_GOOGLE_ANALYTICS_TOKEN = import.meta.env.VITE_GOOGLE_ANALYTICS_TOKEN;
+const VITE_GOOGLE_ANALYTICS_TOKEN = 'G-N6207193QM'; //import.meta.env.VITE_GOOGLE_ANALYTICS_TOKEN;
 
 let debug = false;
 if (import.meta.env.DEV) {
