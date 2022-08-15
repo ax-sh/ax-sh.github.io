@@ -59,7 +59,7 @@ export interface IconsWrapperProps extends React.HTMLAttributes<HTMLDivElement> 
 export function IconsWrapper({ children, size, ...props }: IconsWrapperProps) {
 	return (
 		<div {...props}>
-			{React.Children.map(children, (child) => React.cloneElement(child, { size }))}
+			{React.Children.map(children, (child: any) => React.cloneElement(child, { size }))}
 		</div>
 	);
 }
