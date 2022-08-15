@@ -34,10 +34,12 @@ export const ExternalLinks = () => (
 );
 
 export function ClientSide({ children }: React.PropsWithChildren<Record<string, unknown>>) {
-	const mounted = React.useRef(false);
+	const [mounted, setMounted] = React.useState(false);
+
 	useIsomorphicLayoutEffect(() => {
-		mounted.current = true;
+		setMounted(true);
 	}, []);
-	if (!mounted.current) return;
-	return children;
+	if (!mounted) return null;
+
+	return children as React.ReactElement;
 }
