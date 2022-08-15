@@ -62,6 +62,7 @@ export function Index() {
 				<div>
 					<h1>Coming Soon...</h1>
 					<Icons />
+					{show && <Contact />}
 				</div>
 			</section>
 		);
