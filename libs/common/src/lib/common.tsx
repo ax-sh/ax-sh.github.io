@@ -3,6 +3,7 @@ import { GetIcon } from './Icons';
 import React from 'react';
 // @ts-ignore
 import Obfuscate from 'react-obfuscate';
+import { useIsomorphicLayoutEffect } from './hooks/use-isomorphic-layout-effect';
 
 const data = {
 	email: 'example@example.com',
@@ -31,3 +32,12 @@ export const ExternalLinks = () => (
 		</ul>
 	</div>
 );
+
+export function ClientSide({ children }: React.PropsWithChildren<Record<string, unknown>>) {
+	const mounted = React.useRef(false);
+	useIsomorphicLayoutEffect(() => {
+		mounted.current = true;
+	}, []);
+	if (!mounted.current) return;
+	return children;
+}
