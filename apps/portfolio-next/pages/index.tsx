@@ -2,10 +2,10 @@ import Layout from '../components/layout';
 import Image from 'next/image';
 import useLayoutEffect from '../hooks/use-isomorphic-layout-effect';
 import React from 'react';
-// import { Icon } from '@ax-sh.github.io/common';
-import { siSimpleicons } from 'simple-icons/icons';
 import { Icon } from '../components/icon';
 import clsx from 'clsx';
+import { Contact } from '@ax-sh.github.io/common';
+import useIsomorphicLayoutEffect from '../hooks/use-isomorphic-layout-effect';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -44,6 +44,11 @@ export function Index() {
 	useLayoutEffect(() => {
 		console.log('Hello there');
 	}, []);
+	const [show, setShow] = React.useState(false);
+
+	useIsomorphicLayoutEffect(() => {
+		setShow(true);
+	}, []);
 	if (isProduction) {
 		return (
 			<section
@@ -71,6 +76,7 @@ export function Index() {
 			project 
 			contact 
 			*/}
+			{show && <Contact />}
 		</Layout>
 	);
 }
