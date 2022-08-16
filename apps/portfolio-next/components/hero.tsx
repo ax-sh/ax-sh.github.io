@@ -10,9 +10,8 @@ function getTimeline() {
 	return gsap.timeline({
 		paused: true,
 		scrollTrigger: {
-			trigger: '.hero',
-			start: 'top bottom',
-			end: 'bottom +=20%',
+			start: 'top top',
+			end: 'bottom center',
 			markers: true,
 			invalidateOnRefresh: true,
 			scrub: true,
@@ -25,14 +24,15 @@ export default function Hero({ className, ...props }: HeroProps) {
 	const ref = React.useRef<HTMLDivElement>();
 
 	useIsomorphicLayoutEffect(() => {
-		tween.current.to(ref.current, { duration: 1, xPercent: 100, y: 100 });
+		// tween.current.to(ref.current, { duration: 1, xPercent: 100, y: 100 });
+		tween.current.to(ref.current, { duration: 1, x: 100, y: 100 });
 
 		return () => {
 			tween.current.kill();
 		};
 	}, []);
 	return (
-		<section className={clsx('hero overflow-hidden', className)} {...props}>
+		<section className={clsx('hero over flow-hidden', className)} {...props}>
 			<div ref={ref}>GSAP</div>
 		</section>
 	);
