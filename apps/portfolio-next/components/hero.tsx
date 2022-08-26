@@ -32,8 +32,10 @@ export default function Hero({ className, ...props }: HeroProps) {
 		};
 	}, []);
 	return (
-		<section className={clsx('hero over flow-hidden', className)} {...props}>
-			<div ref={ref}>GSAP</div>
+		<section className={clsx('hero overflow-hidden', className)} {...props}>
+			<div ref={ref} className="h-full w-full">
+				GSAP
+			</div>
 		</section>
 	);
 }
