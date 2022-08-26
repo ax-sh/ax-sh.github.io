@@ -14,6 +14,7 @@ export default function Skills() {
 						<IconWithToolTip name={'nodejs'} {...iconProps} />
 						<IconWithToolTip name={'python'} {...iconProps} />
 						<IconWithToolTip name={'bash'} {...iconProps} />
+						<IconWithToolTip name={'SEO'} {...iconProps} />
 					</List>
 				</div>
 				<List className={'flex gap-3 flex-wrap'}>
