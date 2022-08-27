@@ -3,6 +3,12 @@
 	"sourceRoot": "apps/portfolio-next",
 	"projectType": "application",
 	"targets": {
+		"deploy": {
+			"executor": "@nrwl/workspace:run-commands",
+			"configurations": {
+				"netlify": { "commands": ["netlify deploy --build --prod"] }
+			}
+		},
 		"build": {
 			"executor": "@nrwl/next:build",
 			"outputs": ["{options.outputPath}"],

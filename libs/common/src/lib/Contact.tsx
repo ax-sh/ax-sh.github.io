@@ -1,10 +1,8 @@
 import React from 'react';
-import { Form, Submit, Field } from '@ax-sh.github.io/common';
+import { Form, Submit, Field } from './rhf';
 import { z } from 'zod';
 import toast from 'react-hot-toast';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import Obfuscate from 'react-obfuscate';
+import { useIsomorphicLayoutEffect } from './hooks/use-isomorphic-layout-effect';
 
 const name = z
 	.string({
@@ -890,7 +888,7 @@ async function postForm(data: Data) {
 		.catch((error) => console.log('error', error));
 }
 
-export default function Contact() {
+export function Contact() {
 	async function handleSubmit(data: Data) {
 		try {
 			const result = await postForm(data);
@@ -911,13 +909,13 @@ export default function Contact() {
 						<h2 className="text-4xl lg:text-5xl font-bold leading-tight">
 							Lets talk about everything!
 						</h2>
-						<div className="text-gray-700 mt-8">
+						{/* <div className="text-gray-700 mt-8">
 							Hate forms? Send me an{' '}
-							<Obfuscate target="_blank" className="underline" href="mailto:axmin.shrestha@pm.me">
+							<a className="underline" href="mailto:">
 								email
-							</Obfuscate>{' '}
+							</a>{' '}
 							instead.
-						</div>
+						</div> */}
 					</div>
 					<div className="mt-8 text-center">
 						<SideImage />

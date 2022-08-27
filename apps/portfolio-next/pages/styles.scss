@@ -11,4 +11,16 @@ body {
 	font-family: inherit;
 	line-height: inherit;
 	margin: 0;
+	background-color: #111;
+	color: #fff;
+}
+
+.container {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.center {
+	display: grid;
+	place-content: center;
 }

@@ -3,6 +3,7 @@ import { GetIcon } from './Icons';
 import React from 'react';
 // @ts-ignore
 import Obfuscate from 'react-obfuscate';
+import { useIsomorphicLayoutEffect } from './hooks/use-isomorphic-layout-effect';
 
 const data = {
 	email: 'example@example.com',
@@ -12,7 +13,8 @@ const data = {
 		LinkedIn: 'https://www.linkedin.com/in/axmin/',
 		CodeSandbox: 'https://codesandbox.io/u/ax-sh',
 		Twitter: 'https://twitter.com/ax___sh',
-		Website: 'https://ax-sh.github.io/portfolio/',
+		Email: 'mailto:axmin.shrestha@pm.me',
+		// Website: 'https://ax-sh.github.io/portfolio/',
 		// CV: "",
 	},
 };
@@ -30,3 +32,14 @@ export const ExternalLinks = () => (
 		</ul>
 	</div>
 );
+
+export function ClientSide({ children }: React.PropsWithChildren<Record<string, unknown>>) {
+	const [mounted, setMounted] = React.useState(false);
+
+	useIsomorphicLayoutEffect(() => {
+		setMounted(true);
+	}, []);
+	if (!mounted) return null;
+
+	return children as React.ReactElement;
+}

@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+
 import { BrowserRouter, useRoutes } from 'react-router-dom';
 import routes from '~react-pages';
 import 'virtual:windi.css';
@@ -9,7 +10,7 @@ import './styles.scss';
 import ReactGA from 'react-ga';
 import React from 'react';
 
-const VITE_GOOGLE_ANALYTICS_TOKEN = import.meta.env.VITE_GOOGLE_ANALYTICS_TOKEN;
+const VITE_GOOGLE_ANALYTICS_TOKEN = 'G-N6207193QM'; //import.meta.env.VITE_GOOGLE_ANALYTICS_TOKEN;
 
 let debug = false;
 if (import.meta.env.DEV) {
@@ -22,15 +23,24 @@ if (import.meta.env.DEV) {
 ReactGA.initialize(VITE_GOOGLE_ANALYTICS_TOKEN as string, { debug });
 ReactGA.pageview(window.location.pathname + window.location.search);
 
-function Application() {
-	return <React.Suspense fallback={<p>Loading...</p>}>{useRoutes(routes)}</React.Suspense>;
+function Loader() {
+	return (
+		<section className="loader h-screen grid place-content-center">
+			<p className="text-4xl">Loading...</p>
+		</section>
+	);
 }
 
-ReactDOM.render(
+function Application() {
+	return <React.Suspense fallback={<Loader />}>{useRoutes(routes)}</React.Suspense>;
+}
+
+const container = document.getElementById('root');
+const root = createRoot(container!); // createRoot(container!) if you use TypeScript
+root.render(
 	<StrictMode>
 		<BrowserRouter>
 			<Application />
 		</BrowserRouter>
-	</StrictMode>,
-	document.getElementById('root')
+	</StrictMode>
 );

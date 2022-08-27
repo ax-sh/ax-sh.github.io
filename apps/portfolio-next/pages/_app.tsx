@@ -2,6 +2,8 @@ import { DefaultSeo } from 'next-seo';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.scss';
+import 'windi.css';
+import 'windi-devtools';
 import SEO from '../next-seo.config';
 
 function PortfolioApp({ Component, pageProps }: AppProps) {

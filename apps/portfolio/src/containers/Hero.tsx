@@ -28,8 +28,8 @@ const summary = [
 export default function Hero() {
 	return (
 		<section className={clsx('container', '')}>
-			<div className={'grid grid-span-1 md:grid-cols-2 h-[80vh]'}>
-				<div className={'flex flex-col gap-3 col-span-1 pt-30'}>
+			<div className={'grid grid-span-1 md:grid-cols-2 min-h-[80vh]'}>
+				<div className={'flex flex-col gap-3 col-span-1 md:pt-30'}>
 					<h1 className={'text-8xl sm:text-8xl'}>
 						Axmin <span className={'text-7xl'}>Shrestha</span>
 					</h1>
@@ -43,7 +43,7 @@ export default function Hero() {
 				</div>
 				<div
 					className={
-						'col-span-1 bg -[#111]  order-first md:order-none bg-fill bg-bottom bg-no-repeat '
+						'col-span-1 bg -[#111] order-first md:order-none bg-cover bg-bottom bg-no-repeat'
 					}
 					style={{ backgroundImage: 'url(https://source.unsplash.com/pVq6YhmDPtk)' }}
 				>

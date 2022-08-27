@@ -1,11 +1,13 @@
 html {
 	scroll-behavior: smooth;
-	scroll-margin-block-start: 20rem;
-	scroll-margin-block-end: 110px;
+}
+#skills {
+	scroll-margin-block-start: 6rem;
 }
 
 body {
 	font-family: 'Josefin Sans', sans-serif;
+	background-color: #111;
 }
 .container {
 	width: 90%;

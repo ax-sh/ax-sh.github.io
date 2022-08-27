@@ -8,6 +8,8 @@
     "**/Thumbs.db": true,
     "**/node_modules": true
   },
+  "scss.lint.unknownAtRules": "ignore",
+
   "cSpell.words": [
     "Antdesign",
     "applypatch",
@@ -21,14 +23,22 @@
     "commitlint",
     "gsap",
     "hookform",
+    "inlinesvg",
     "Innicement",
+    "jscutlery",
+    "Nextdotjs",
     "nextjs",
     "nocheck",
     "nxext",
     "pageview",
+    "posttag",
+    "prebump",
     "qrcode",
+    "Reacthookform",
+    "Reactquery",
     "Reduxsaga",
     "Shrestha",
+    "Simpleicons",
     "sonarjs",
     "svgr",
     "tailwindcss",
@@ -38,6 +48,7 @@
     "vitejs",
     "vitest",
     "windi",
-    "windicss"
+    "windicss",
+    "Xenovrs"
   ]
 }
