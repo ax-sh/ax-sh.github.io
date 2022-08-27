@@ -1,3 +1,1 @@
-export default function onClient(Component) {
-
-}
+export default function onClient(Component) {}
