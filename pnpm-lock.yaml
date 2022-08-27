@@ -5,7 +5,7 @@ specifiers:
   '@commitlint/config-conventional': ^17.1.0
   '@hookform/error-message': ^2.0.0
   '@hookform/resolvers': ^2.9.7
-  '@icons-pack/react-simple-icons': ^5.2.0
+  '@icons-pack/react-simple-icons': ^5.4.0
   '@jscutlery/semver': ^2.26.0
   '@netlify/plugin-nextjs': ^4.20.0
   '@nrwl/cli': 14.5.10
@@ -35,7 +35,7 @@ specifiers:
   c8: ^7.12.0
   clsx: ^1.2.1
   conventional-recommended-bump: ^6.1.0
-  core-js: ^3.24.1
+  core-js: ^3.25.0
   eslint: 8.21.0
   eslint-config-airbnb-typescript: ^17.0.0
   eslint-config-next: 12.2.4
@@ -46,11 +46,11 @@ specifiers:
   eslint-plugin-react-hooks: 4.6.0
   eslint-plugin-sonarjs: ^0.14.0
   gh-pages: ^4.0.0
-  gsap: ^3.10.4
+  gsap: ^3.11.0
   husky: ^8.0.1
   jest: 28.1.3
   next: 12.2.4
-  next-pwa: ^5.5.5
+  next-pwa: ^5.6.0
   next-seo: ^5.5.0
   next-useragent: ^2.8.0
   prettier: 2.7.1
@@ -58,10 +58,10 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   react-ga: ^3.3.1
-  react-hook-form: ^7.34.0
+  react-hook-form: ^7.34.2
   react-hot-toast: ^2.3.0
   react-icons: ^4.4.0
-  react-inlinesvg: ^3.0.0
+  react-inlinesvg: ^3.0.1
   react-obfuscate: ^3.6.8
   react-router-dom: 6.3.0
   react-test-renderer: 18.2.0
@@ -69,7 +69,7 @@ specifiers:
   regenerator-runtime: 0.13.9
   sass: 1.54.3
   semantic-release: ^19.0.5
-  simple-icons: ^7.5.0
+  simple-icons: ^7.8.0
   standard-version: ^9.5.0
   styled-components: 5.3.5
   ts-jest: 28.0.7
@@ -84,7 +84,7 @@ specifiers:
   vite-plugin-windicss: ^1.8.7
   vitest: ^0.21.1
   windicss-webpack-plugin: ^1.7.5
-  zod: ^3.17.10
+  zod: ^3.18.0
 
 dependencies:
   '@hookform/error-message': 2.0.0_hphx72akqbietbtf5qajzk3m6q
@@ -5414,7 +5414,6 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
-    dev: true
 
   /chalk/4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
@@ -5422,6 +5421,7 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+    dev: true
 
   /chalk/5.0.1:
     resolution: {integrity: sha512-Fo07WOYGqMfCWHOzSXOt2CxDbC6skS/jO9ynEcmpANMoPrD+W1r1K6Vx7iNm+AQmETU1Xr2t+n8nzkV9t6xh3w==}
@@ -9012,7 +9012,7 @@ packages:
     hasBin: true
     dependencies:
       async: 3.2.4
-      chalk: 4.1.2
+      chalk: 4.1.0
       filelist: 1.0.4
       minimatch: 3.1.2
 
