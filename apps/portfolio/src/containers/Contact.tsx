@@ -2,6 +2,9 @@ import React from 'react';
 import { Form, Submit, Field } from '@ax-sh.github.io/common';
 import { z } from 'zod';
 import toast from 'react-hot-toast';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import Obfuscate from 'react-obfuscate';
 
 const name = z
 	.string({
@@ -908,13 +911,13 @@ export default function Contact() {
 						<h2 className="text-4xl lg:text-5xl font-bold leading-tight">
 							Lets talk about everything!
 						</h2>
-						{/* <div className="text-gray-700 mt-8">
+						<div className="text-gray-700 mt-8">
 							Hate forms? Send me an{' '}
-							<a className="underline" href="mailto:">
+							<Obfuscate target="_blank" className="underline" href="mailto:axmin.shrestha@pm.me">
 								email
-							</a>{' '}
+							</Obfuscate>{' '}
 							instead.
-						</div> */}
+						</div>
 					</div>
 					<div className="mt-8 text-center">
 						<SideImage />
