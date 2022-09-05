@@ -48,7 +48,7 @@ export function GetIcon({ name }: { name: string }) {
 		case 'Email':
 			return <Maildotru {...props} />;
 		default:
-			return <h1>{name}</h1>;
+			return <h6>{name}</h6>;
 	}
 }
 

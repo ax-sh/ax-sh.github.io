@@ -39,7 +39,7 @@ export default function Hero() {
 						{/*Working Remotely from Nepal*/}
 					</h2>
 					<p className="capitalize w-9/10">{summary}</p>
-					<h3 className="text-3xl">10+ years experience</h3>
+					{/* <h3 className="text-3xl">10+ years experience</h3> */}
 				</div>
 				<div
 					className={
