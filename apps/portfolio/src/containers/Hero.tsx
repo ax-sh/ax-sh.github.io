@@ -27,7 +27,7 @@ const summary = [
 
 export default function Hero() {
 	return (
-		<section className={clsx('container', '')}>
+		<section id="about" className={clsx('container', '')}>
 			<div className={'grid grid-span-1 md:grid-cols-2 min-h-[80vh]'}>
 				<div className={'flex flex-col gap-3 col-span-1 md:pt-30'}>
 					<h1 className={'text-8xl sm:text-8xl'}>

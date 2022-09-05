@@ -54,7 +54,7 @@ function Project({ link, name, external, image }: ProjectProps) {
 
 export default function Projects() {
 	return (
-		<section className={'container min-h-screen py-9'}>
+		<section id="projects" className={'container min-h-screen py-9'}>
 			<h2 className="text-5xl py-9">Projects</h2>
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-3">
 				{projects.map((i: ProjectProps, index) => (
