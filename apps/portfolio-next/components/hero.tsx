@@ -23,6 +23,13 @@ function getTimeline() {
 // export function useTimeline(options) {
 // 	return React.useMemo<gsap.core.Timeline>(() => gsap.timeline(options), [options]);
 // }
+export const useTimeline = (options = {}) => {
+	const tl = React.useRef<gsap.core.Timeline>(gsap.timeline(options));
+
+	React.useEffect(() => () => tl.current && tl.current.kill(), []);
+
+	return tl.current;
+};
 
 export default function Hero({ className, ...props }: HeroProps) {
 	const tween = React.useRef<gsap.core.Timeline>(null);
