@@ -72,10 +72,12 @@ export default function Hero({ className, ...props }: HeroProps) {
 						markers: true,
 						id: 'ko',
 						start: 'top center',
+						end: 'bottom 20%',
 						// pin: true, //NOTE:Pin is wonky but works great
 					},
 				})
-				.fromTo(i, { x: 200 }, { x: 0 });
+				.to(i, { x: 200 });
+			// .fromTo(i, { x: 200 }, { x: 0 });
 		});
 	}, []);
 	return (
