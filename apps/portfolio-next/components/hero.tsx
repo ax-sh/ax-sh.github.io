@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import gsap from 'gsap';
+import { gsap } from 'gsap/dist/all';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useIsomorphicLayoutEffect } from '@ax-sh.github.io/common';
 gsap.registerPlugin(ScrollTrigger);
@@ -11,7 +11,8 @@ function getTimeline() {
 		paused: true,
 		scrollTrigger: {
 			start: 'top center',
-			end: 'bottom top',
+			end: 'bottom 20%',
+			// end: 'bottom top',
 			trigger: '#animate',
 			markers: true,
 			invalidateOnRefresh: true,
@@ -49,7 +50,7 @@ export default function Hero({ className, ...props }: HeroProps) {
 	useIsomorphicLayoutEffect(() => {
 		const tl = (tween.current = getTimeline());
 		// tween.current.to(ref.current, { duration: 1, xPercent: 100, y: 100 });
-		tl.to(ref.current, { duration: 1, xPercent: 30 });
+		tl.to(ref.current, { xPercent: 30 });
 
 		// return () => {
 		// 	tween.current.kill();
