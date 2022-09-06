@@ -20,23 +20,38 @@ function getTimeline() {
 	});
 }
 
+// export function useTimeline(options) {
+// 	return React.useMemo<gsap.core.Timeline>(() => gsap.timeline(options), [options]);
+// }
+
 export default function Hero({ className, ...props }: HeroProps) {
 	const tween = React.useRef<gsap.core.Timeline>(null);
 	const ref = React.useRef<HTMLDivElement>();
+	// const tl = useTimeline({
+	// 	paused: true,
+	// 	scrollTrigger: {
+	// 		start: 'top center',
+	// 		end: 'bottom top',
+	// 		trigger: '#animate',
+	// 		markers: true,
+	// 		invalidateOnRefresh: true,
+	// 		scrub: true,
+	// 	},
+	// });
 
 	useIsomorphicLayoutEffect(() => {
-		tween.current = getTimeline();
+		const tl = (tween.current = getTimeline());
 		// tween.current.to(ref.current, { duration: 1, xPercent: 100, y: 100 });
-		tween.current.to(ref.current, { duration: 1, x: 100, y: 100 });
+		tl.to(ref.current, { duration: 1, xPercent: 30 });
 
-		return () => {
-			tween.current.kill();
-		};
+		// return () => {
+		// 	tween.current.kill();
+		// };
 	}, []);
 	return (
 		<section className={clsx('hero overflow-hidden', className)} {...props}>
 			<div className="h-screen"></div>
-			<div ref={ref} id="animate" className="h-full w-full bg-blue-400">
+			<div ref={ref} id="animate" className="h-full w-full bg-blue-400 text-9xl">
 				GSAP
 			</div>
 		</section>
