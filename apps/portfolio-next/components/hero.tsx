@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { gsap } from 'gsap/dist/all';
+import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useIsomorphicLayoutEffect, useArrayRef } from '@ax-sh.github.io/common';
 gsap.registerPlugin(ScrollTrigger);
