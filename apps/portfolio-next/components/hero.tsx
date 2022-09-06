@@ -11,7 +11,7 @@ function getTimeline() {
 		paused: true,
 		scrollTrigger: {
 			start: 'top center',
-			end: 'bottom bottom',
+			end: 'bottom top',
 			trigger: '#animate',
 			markers: true,
 			invalidateOnRefresh: true,
