@@ -3,13 +3,13 @@ const withNx = require('@nrwl/next/plugins/with-nx');
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
 const WindiCSSWebpackPlugin = require('windicss-webpack-plugin');
-
+const withPlugins = require('next-compose-plugins');
 const isProduction = process.env.NODE_ENV === 'production';
 
 /**
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
  **/
-const nextConfig = withPWA({
+const nextConfig = {
 	swcMinify: true,
 	webpack: (config) => {
 		config.plugins.push(new WindiCSSWebpackPlugin());
@@ -32,6 +32,10 @@ const nextConfig = withPWA({
 		locales: ['en'],
 		defaultLocale: 'en',
 	},
-});
+};
 
-module.exports = withNx(nextConfig);
+// module.exports = withNx(nextConfig);
+
+const plugins = [[withPWA], [withNx]];
+
+module.exports = withPlugins(plugins, nextConfig);
