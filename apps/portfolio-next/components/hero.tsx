@@ -15,7 +15,7 @@ function getTimeline() {
 			end: 'bottom 20%',
 			// end: 'bottom top',
 			trigger: '#animate',
-			markers: true,
+			// markers: true,
 			invalidateOnRefresh: true,
 			scrub: true,
 		},
