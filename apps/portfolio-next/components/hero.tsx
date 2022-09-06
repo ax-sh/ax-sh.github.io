@@ -10,8 +10,9 @@ function getTimeline() {
 	return gsap.timeline({
 		paused: true,
 		scrollTrigger: {
-			start: 'top top',
-			end: 'bottom center',
+			start: 'top center',
+			end: 'bottom bottom',
+			trigger: '#animate',
 			markers: true,
 			invalidateOnRefresh: true,
 			scrub: true,
@@ -20,10 +21,11 @@ function getTimeline() {
 }
 
 export default function Hero({ className, ...props }: HeroProps) {
-	const tween = React.useRef<gsap.core.Timeline>(getTimeline());
+	const tween = React.useRef<gsap.core.Timeline>(null);
 	const ref = React.useRef<HTMLDivElement>();
 
 	useIsomorphicLayoutEffect(() => {
+		tween.current = getTimeline();
 		// tween.current.to(ref.current, { duration: 1, xPercent: 100, y: 100 });
 		tween.current.to(ref.current, { duration: 1, x: 100, y: 100 });
 
@@ -33,7 +35,8 @@ export default function Hero({ className, ...props }: HeroProps) {
 	}, []);
 	return (
 		<section className={clsx('hero overflow-hidden', className)} {...props}>
-			<div ref={ref} className="h-full w-full">
+			<div className="h-screen"></div>
+			<div ref={ref} id="animate" className="h-full w-full bg-blue-400">
 				GSAP
 			</div>
 		</section>
