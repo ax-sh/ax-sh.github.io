@@ -2,8 +2,9 @@ import React from 'react';
 import clsx from 'clsx';
 import { gsap } from 'gsap/dist/all';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useIsomorphicLayoutEffect } from '@ax-sh.github.io/common';
+import { useIsomorphicLayoutEffect, useArrayRef } from '@ax-sh.github.io/common';
 gsap.registerPlugin(ScrollTrigger);
+
 type HeroProps = React.ComponentPropsWithoutRef<'section'>;
 
 function getTimeline() {
@@ -21,6 +22,8 @@ function getTimeline() {
 	});
 }
 
+// sScrollTrigger.create();
+
 // export function useTimeline(options) {
 // 	return React.useMemo<gsap.core.Timeline>(() => gsap.timeline(options), [options]);
 // }
@@ -32,9 +35,14 @@ export const useTimeline = (options = {}) => {
 	return tl.current;
 };
 
+// function useScrollTriggerTimeline() {
+// 	React.useEffect();
+// }
+
 export default function Hero({ className, ...props }: HeroProps) {
 	const tween = React.useRef<gsap.core.Timeline>(null);
-	const ref = React.useRef<HTMLDivElement>();
+	const e = React.useRef<HTMLDivElement>();
+	const [refs, ref] = useArrayRef<HTMLElement>();
 	// const tl = useTimeline({
 	// 	paused: true,
 	// 	scrollTrigger: {
@@ -50,18 +58,37 @@ export default function Hero({ className, ...props }: HeroProps) {
 	useIsomorphicLayoutEffect(() => {
 		const tl = (tween.current = getTimeline());
 		// tween.current.to(ref.current, { duration: 1, xPercent: 100, y: 100 });
-		tl.to(ref.current, { xPercent: 30 });
+		tl.to(e.current, { xPercent: 30 });
 
 		// return () => {
 		// 	tween.current.kill();
 		// };
+		refs.current.forEach((i) => {
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: i,
+						scrub: true,
+						markers: true,
+						id: 'ko',
+						start: 'top center',
+						// pin: true, //NOTE:Pin is wonky but works great
+					},
+				})
+				.fromTo(i, { x: 200 }, { x: 0 });
+		});
 	}, []);
 	return (
 		<section className={clsx('hero overflow-hidden', className)} {...props}>
 			<div className="h-screen"></div>
-			<div ref={ref} id="animate" className="h-full w-full bg-blue-400 text-9xl">
+			<div ref={e} id="animate" className="h-full w-full bg-blue-400 text-9xl">
 				GSAP
 			</div>
+			{[1, 2, 3, 4, 5].map((i) => (
+				<div ref={ref} key={i}>
+					Hello {i}
+				</div>
+			))}
 		</section>
 	);
 }
