@@ -73,10 +73,13 @@ export default function Hero({ className, ...props }: HeroProps) {
 						id: 'ko',
 						start: 'top center',
 						end: 'bottom 20%',
+						reverse: true,
+						// yoyo: true,
 						// pin: true, //NOTE:Pin is wonky but works great
 					},
 				})
-				.to(i, { x: 200 });
+				.fromTo(i, { color: 'green' }, { color: 'red' })
+				.to(i, { x: 200 }, 0);
 			// .fromTo(i, { x: 200 }, { x: 0 });
 		});
 	}, []);
@@ -87,7 +90,7 @@ export default function Hero({ className, ...props }: HeroProps) {
 				GSAP
 			</div>
 			{[1, 2, 3, 4, 5].map((i) => (
-				<div ref={ref} key={i}>
+				<div ref={ref} key={i} className="text-6xl">
 					Hello {i}
 				</div>
 			))}
