@@ -1,7 +1,7 @@
 import React from 'react';
 
-export function useArrayRef(): [React.MutableRefObject<any[]>, (ref: any) => void] {
-	const refs = React.useRef<any[]>([]);
+export function useArrayRef<T = unknown>(): [React.MutableRefObject<T[]>, (ref: T) => void] {
+	const refs = React.useRef<T[]>([]);
 	refs.current = [];
-	return [refs, (ref: any) => ref && refs.current.push(ref)];
+	return [refs, (ref: T) => ref && refs.current.push(ref)];
 }
