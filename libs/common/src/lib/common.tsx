@@ -6,7 +6,6 @@ import React from 'react';
 import Obfuscate from 'react-obfuscate';
 import { useIsomorphicLayoutEffect } from './hooks/use-isomorphic-layout-effect';
 
-
 export type ProjectProps = {
 	name: string;
 	link: string;
@@ -27,7 +26,8 @@ export const PROJECTS: ProjectProps[] = [
 	},
 	{
 		name: 'Works',
-		link: 'https://ax-sh.notion.site/Projects-b61ea900922b48dfb4bb805606d7a37a',
+		link: 'bit.ly/4418VWz',
+		// link: 'https://ax-sh.notion.site/Projects-b61ea900922b48dfb4bb805606d7a37a',
 		image: null,
 		external: true,
 	},

@@ -31,7 +31,7 @@ export default function Nav() {
 					))}
 					<a
 						className="hover:text-red-500 cursor-pointer"
-						href="https://bit.ly/3PU5jOz"
+						href="bit.ly/4418VWz"
 						target="_blank"
 						rel="noreferrer"
 					>
