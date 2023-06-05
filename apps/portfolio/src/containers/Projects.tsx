@@ -20,7 +20,7 @@ const projects: ProjectProps[] = [
 	},
 	{
 		name: 'Works',
-		link: 'https://reinvented-gardenia-45c.notion.site/Projects-b61ea900922b48dfb4bb805606d7a37a',
+		link: 'https://ax-sh.notion.site/Projects-b61ea900922b48dfb4bb805606d7a37a',
 		image: null,
 		external: true,
 	},
