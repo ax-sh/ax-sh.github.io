@@ -1,9 +1,37 @@
 import './common.module.scss';
 import { GetIcon } from './Icons';
 import React from 'react';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import Obfuscate from 'react-obfuscate';
 import { useIsomorphicLayoutEffect } from './hooks/use-isomorphic-layout-effect';
+
+
+export type ProjectProps = {
+	name: string;
+	link: string;
+	image: string | null;
+	external?: boolean;
+};
+
+export const PROJECTS: ProjectProps[] = [
+	{
+		name: 'Innicement',
+		link: 'https://ax-sh.github.io/innicement/',
+		image: 'projects/innicement.png',
+	},
+	{
+		name: 'Xenovrs',
+		link: 'https://statuesque-semolina-a1b399.netlify.app/',
+		image: 'projects/xenovrs.png',
+	},
+	{
+		name: 'Works',
+		link: 'https://ax-sh.notion.site/Projects-b61ea900922b48dfb4bb805606d7a37a',
+		image: null,
+		external: true,
+	},
+];
 
 const data = {
 	email: 'example@example.com',

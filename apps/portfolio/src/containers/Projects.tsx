@@ -1,30 +1,7 @@
+import { ProjectProps, PROJECTS } from '@ax-sh.github.io/common';
 import React from 'react';
 import { TbExternalLink } from 'react-icons/tb';
-type ProjectProps = {
-	name: string;
-	link: string;
-	image: string | null;
-	external?: boolean;
-};
 
-const projects: ProjectProps[] = [
-	{
-		name: 'Innicement',
-		link: 'https://ax-sh.github.io/innicement/',
-		image: 'projects/innicement.png',
-	},
-	{
-		name: 'Xenovrs',
-		link: 'https://statuesque-semolina-a1b399.netlify.app/',
-		image: 'projects/xenovrs.png',
-	},
-	{
-		name: 'Works',
-		link: 'https://ax-sh.notion.site/Projects-b61ea900922b48dfb4bb805606d7a37a',
-		image: null,
-		external: true,
-	},
-];
 function Project({ link, name, external, image }: ProjectProps) {
 	return (
 		<a
@@ -57,7 +34,7 @@ export default function Projects() {
 		<section id="projects" className={'container min-h-screen py-9'}>
 			<h2 className="text-5xl py-9">Projects</h2>
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-				{projects.map((i: ProjectProps, index) => (
+				{PROJECTS.map((i: ProjectProps, index) => (
 					<React.Fragment key={index}>
 						<Project {...i} />
 					</React.Fragment>
