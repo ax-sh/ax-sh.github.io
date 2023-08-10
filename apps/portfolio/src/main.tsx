@@ -7,10 +7,14 @@ import 'virtual:windi.css';
 import 'virtual:windi-devtools';
 import './styles.scss';
 // import App from './app/App';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
+
 import React from 'react';
 
 const VITE_GOOGLE_ANALYTICS_TOKEN = 'G-N6207193QM'; //import.meta.env.VITE_GOOGLE_ANALYTICS_TOKEN;
+// const VITE_GOOGLE_ANALYTICS_TOKEN = 'G-N6207193QM'; //import.meta.env.VITE_GOOGLE_ANALYTICS_TOKEN;
+
+ReactGA.initialize(VITE_GOOGLE_ANALYTICS_TOKEN);
 
 let debug = false;
 if (import.meta.env.DEV) {
@@ -19,9 +23,6 @@ if (import.meta.env.DEV) {
 	// eslint-disable-next-line no-console
 	console.log(routes);
 }
-
-ReactGA.initialize(VITE_GOOGLE_ANALYTICS_TOKEN as string, { debug });
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 function Loader() {
 	return (
