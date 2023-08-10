@@ -18,7 +18,8 @@
 		"new-release-old": "git flow release start `sh scripts/nextver.sh`",
 		"new-release": "git flow release start `node ./get-next-version.js`",
 		"new-release-finish": "git flow release finish",
-		"get-next-version": "node ./get-next-version.js"
+		"get-next-version": "node ./get-next-version.js",
+		"update:interactive":"yarn upgrade-interactive --latest"
 	},
 	"private": true,
 	"dependencies": {
