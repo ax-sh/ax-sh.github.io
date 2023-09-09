@@ -4,6 +4,8 @@ module.exports = {
 		es2021: true,
 	},
 	extends: [
+		"next",
+		"next/core-web-vitals",
 		'xo',
 		'airbnb',
 		'airbnb-typescript',
@@ -42,5 +44,7 @@ module.exports = {
 		'react',
 	],
 	rules: {
+		'object-curly-spacing': ['off'],
+		'quotes': ['off'],
 	},
 };
