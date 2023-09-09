@@ -1,7 +1,11 @@
-import Image from 'next/image'
+import { HeroSection } from '@/app/hero-section'
+import { TimelineSection } from '@/app/timeline-section'
 
 export default function Home() {
-  return <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    asaa
-  </main>
+  return (
+    <main className="flex min-h-screen flex-col">
+      <HeroSection />
+      <TimelineSection />
+    </main>
+  )
 }
