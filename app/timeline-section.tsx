@@ -1,47 +1,62 @@
 import clsx from 'clsx'
+import { ComponentProps } from 'react'
+import { range } from 'lodash'
 
-function TimelineItem() {
+function TimelineItemContent({ className, ...props }: ComponentProps<'div'>) {
   return (
-    <div className="timeline-item w-full after:content-[''] after:block after:clear-both">
-      <div className="timeline-img"></div>
+    <div className={clsx('w-full', 'my-4 mr-auto p-4 border border-gray-300 rounded-xl', className)}>
+      <h3 className="font-semibold text-xl mb-1 text-gray-900">Title 2</h3>
+      <p className="text-gray-600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt maiores ipsa molestiae magnam libero
+        dolorem explicabo. Nobis veniam incidunt at, alias ipsam est suscipit maxime sunt quia. Consectetur, aut.
+      </p>
+    </div>
+  )
+}
 
-      <div className={clsx('timeline-content', 'even:float-right')}>
-        <h2>Title</h2>
-        <time className="date inline-block absolute top-0 right-0 p-3 bg-amber-500">1 MAY 2016</time>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe
-          atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.
-        </p>
-        <a className="bnt-more" href="javascript:void(0)">
-          More
-        </a>
+function TimelineItemLine() {
+  return (
+    <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+      <div className="h-full w-6 flex items-center justify-center">
+        <div className="h-full w-0.5 bg-gray-200 pointer-events-none"></div>
       </div>
+      <div className="w-6 h-6 absolute top-1/2 -mt-3 border-2 border-blue-500 rounded-full bg-gray-100 shadow"></div>
+    </div>
+  )
+}
+
+function TimelineItem({ odd }: { odd: boolean }) {
+  if (odd) {
+    return (
+      <div className="flex md:contents">
+        <TimelineItemLine />
+        <TimelineItemContent className={'col-start-6 col-end-10'} />
+      </div>
+    )
+  }
+  return (
+    <div className="flex flex-row-reverse md:contents">
+      <TimelineItemContent className={'col-start-1 col-end-5'} />
+      <TimelineItemLine />
     </div>
   )
 }
 
 export function TimelineSection() {
   return (
-    <section className={'prose max-w-none'}>
-      <section
-        className={clsx(
-          'timeline relative',
-          "before:content-[''] before:absolute before:left-1/2",
-          'before:transform before:-translate-x-1/2',
-          'before:bg-red-400 before:w-2 before:h-full before:rounded-2xl'
-        )}
-      >
-        <div className="timeline-container">
-          <TimelineItem />
-          <TimelineItem />
-          <TimelineItem />
-          <TimelineItem />
-          <TimelineItem />
-          <TimelineItem />
-          <TimelineItem />
-          <TimelineItem />
+    <section className={'prose max-w-none '}>
+      <div className={'container mx-auto'}>
+        <div className="min-h-screen flex items-center justify-center ">
+          <div className="flex flex-col md:grid grid-cols-9 mx-auto p-2">
+            {range(10).map((i) => (
+                <TimelineItem odd={i % 2 === 0} >
+
+                </TimelineItem>
+            ))}
+          </div>
         </div>
-      </section>
+        )
+      </div>
     </section>
   )
 }
