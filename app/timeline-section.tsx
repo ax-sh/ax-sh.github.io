@@ -1,20 +1,14 @@
 import clsx from 'clsx'
-import { ComponentProps } from 'react'
+import { ComponentProps, PropsWithChildren } from 'react'
 import { range } from 'lodash'
 
-function TimelineItemContent({ className, ...props }: ComponentProps<'div'>) {
+function TimelineItemContent({ className, children }: ComponentProps<'div'>) {
   return (
-    <div className={clsx('w-full', 'my-4 mr-auto p-4 border border-gray-300 rounded-xl', className)}>
-      <h3 className="font-semibold text-xl mb-1 text-gray-900">Title 2</h3>
-      <p className="text-gray-600">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt maiores ipsa molestiae magnam libero
-        dolorem explicabo. Nobis veniam incidunt at, alias ipsam est suscipit maxime sunt quia. Consectetur, aut.
-      </p>
-    </div>
+    <div className={clsx('w-full', 'my-4 mr-auto p-4 border border-gray-300 rounded-xl', className)}>{children}</div>
   )
 }
 
-function TimelineItemLine() {
+function TimelineItemLine({ children }: PropsWithChildren) {
   return (
     <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
       <div className="h-full w-6 flex items-center justify-center">
@@ -25,18 +19,18 @@ function TimelineItemLine() {
   )
 }
 
-function TimelineItem({ odd }: { odd: boolean }) {
+function TimelineItem({ odd, children }: PropsWithChildren<{ odd: boolean }>) {
   if (odd) {
     return (
       <div className="flex md:contents">
         <TimelineItemLine />
-        <TimelineItemContent className={'col-start-6 col-end-10'} />
+        <TimelineItemContent className={'col-start-6 col-end-10'}>{children}</TimelineItemContent>
       </div>
     )
   }
   return (
     <div className="flex flex-row-reverse md:contents">
-      <TimelineItemContent className={'col-start-1 col-end-5'} />
+      <TimelineItemContent className={'col-start-1 col-end-5'}>{children}</TimelineItemContent>
       <TimelineItemLine />
     </div>
   )
@@ -49,9 +43,14 @@ export function TimelineSection() {
         <div className="min-h-screen flex items-center justify-center ">
           <div className="flex flex-col md:grid grid-cols-9 mx-auto p-2">
             {range(10).map((i) => (
-                <TimelineItem odd={i % 2 === 0} >
-
-                </TimelineItem>
+              <TimelineItem odd={i % 2 === 0}>
+                <h3 className="font-semibold text-xl mb-1 text-gray-900">Title 2</h3>
+                <p className="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt maiores ipsa molestiae
+                  magnam libero dolorem explicabo. Nobis veniam incidunt at, alias ipsam est suscipit maxime sunt quia.
+                  Consectetur, aut.
+                </p>
+              </TimelineItem>
             ))}
           </div>
         </div>
