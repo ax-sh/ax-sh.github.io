@@ -7,7 +7,7 @@ export function HeroSection() {
       <div className={clsx('relative grow shrink-0 basis-1/2')}>
         <ImageContain objectPosition={'bottom'} src={'/hero-image.svg'} alt={'hero'} />
       </div>
-      <div className={clsx('flex flex-col w-full self-stretch basis-1/2', 'md:grow')}>
+      <div className={clsx('flex flex-col w-full self-stretch basis-1/2', 'md:grow duration-150')}>
         <div className={'shrink items-center justify-center prose'}>
           <h1>AX-SH</h1>
         </div>
