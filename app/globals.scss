@@ -26,31 +26,15 @@
 /*    rgb(var(--background-start-rgb));*/
 /*}*/
 
-$primary: #3F51B5;
-$dark-primary: #303F9F;
-$light-primary: #C5CAE9;
-$text: #FFFFFF;
+$primary: #3f51b5;
+$dark-primary: #303f9f;
+$light-primary: #c5cae9;
+$text: #ffffff;
 $primary-text: #212121;
 $secondary-text: #757575;
-$accent: #FF4081;
-
-.timeline {
-  position: relative;
-
-  &::before {
-    content: '';
-    background: $light-primary;
-    width: 5px;
-    height: 95%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
+$accent: #ff4081;
 
 .timeline-item {
-  width: 100%;
-  margin-bottom: 70px;
 
   &:nth-child(even) {
     .timeline-content {
@@ -76,11 +60,7 @@ $accent: #FF4081;
     }
   }
 
-  &::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
+
 }
 
 .timeline-content {
@@ -104,49 +84,49 @@ $accent: #FF4081;
   }
 }
 
-.timeline-img {
-  width: 30px;
-  height: 30px;
-  background: $primary;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  margin-top: 25px;
-  margin-left: -15px;
-}
+//.timeline-img {
+//  width: 30px;
+//  height: 30px;
+//  background: $primary;
+//  border-radius: 50%;
+//  position: absolute;
+//  left: 50%;
+//  margin-top: 25px;
+//  margin-left: -15px;
+//}
 
-a {
-  background: $primary;
-  color: $text;
-  padding: 8px 20px;
-  text-transform: uppercase;
-  font-size: 14px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  display: inline-block;
-  border-radius: 2px;
-  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
+//a {
+//  background: $primary;
+//  color: $text;
+//  padding: 8px 20px;
+//  text-transform: uppercase;
+//  font-size: 14px;
+//  margin-bottom: 20px;
+//  margin-top: 10px;
+//  display: inline-block;
+//  border-radius: 2px;
+//  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
+//
+//  &:hover,
+//  &:active,
+//  &:focus {
+//    background: darken($primary, 10%);
+//    color: $text;
+//    text-decoration: none;
+//  }
+//}
 
-  &:hover,
-  &:active,
-  &:focus {
-    background: darken($primary, 10%);
-    color: $text;
-    text-decoration: none;
-  }
-}
-
-.timeline-card {
-  padding: 0 !important;
-
-  p {
-    padding: 0 20px;
-  }
-
-  a {
-    margin-left: 20px;
-  }
-}
+//.timeline-card {
+//  padding: 0 !important;
+//
+//  p {
+//    padding: 0 20px;
+//  }
+//
+//  a {
+//    margin-left: 20px;
+//  }
+//}
 
 .timeline-item {
   .timeline-img-header {
@@ -175,16 +155,6 @@ blockquote {
   color: $secondary-text;
   border-left-color: $primary;
   padding: 0 20px;
-}
-
-.date {
-  background: $accent;
-  display: inline-block;
-  color: $text;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 @media screen and (max-width: 768px) {
