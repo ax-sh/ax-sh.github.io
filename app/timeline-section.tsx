@@ -52,7 +52,7 @@ export function TimelineSection() {
         <div className="min-h-screen flex items-center justify-center ">
           <ul className="flex flex-col md:grid grid-cols-9 mx-auto p-2 not-prose">
             {range(100).map((i) => (
-              <TimelineItem odd={i % 2 !== 0} className={'prose'}>
+              <TimelineItem odd={i % 2 !== 0} className={'prose py-4'}>
                 <article className="relative shadow-2xl max-w-lg w-full transform duration-500 hover:-translate-y-2 cursor-pointer rounded-md overflow-hidden">
                   <img
                     className="mx-auto object-fill h-full w-full not-prose"
