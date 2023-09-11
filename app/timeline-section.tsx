@@ -2,13 +2,7 @@ import clsx from 'clsx'
 import { ComponentProps, PropsWithChildren } from 'react'
 import { range } from 'lodash'
 
-function TimelineItemContent({ className, children }: ComponentProps<'div'>) {
-  return (
-    <div className={clsx('w-full', 'my-4 mr-auto p-4 border border-gray-300 rounded-xl', className)}>{children}</div>
-  )
-}
-
-function TimelineItemLine({ children }: PropsWithChildren) {
+function TimelineItemLine() {
   return (
     <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
       <div className="h-full w-6 flex items-center justify-center">
@@ -19,20 +13,35 @@ function TimelineItemLine({ children }: PropsWithChildren) {
   )
 }
 
+function TimelineItemContent({ className, children }: ComponentProps<'div'>) {
+  return (
+    <div
+      className={clsx(
+        // 'w-full',
+        // 'my-4 mr-auto',
+        // 'p-4 border border-gray-300 rounded-xl',
+        className
+      )}
+    >
+      {children}
+    </div>
+  )
+}
+
 function TimelineItem({ odd, children }: PropsWithChildren<{ odd: boolean }>) {
   if (odd) {
     return (
-      <div className="flex md:contents">
+      <li className="flex md:contents">
         <TimelineItemLine />
         <TimelineItemContent className={'col-start-6 col-end-10'}>{children}</TimelineItemContent>
-      </div>
+      </li>
     )
   }
   return (
-    <div className="flex flex-row-reverse md:contents">
+    <li className="flex flex-row-reverse md:contents">
       <TimelineItemContent className={'col-start-1 col-end-5'}>{children}</TimelineItemContent>
       <TimelineItemLine />
-    </div>
+    </li>
   )
 }
 
@@ -41,20 +50,40 @@ export function TimelineSection() {
     <section className={'prose max-w-none '}>
       <div className={'container mx-auto'}>
         <div className="min-h-screen flex items-center justify-center ">
-          <div className="flex flex-col md:grid grid-cols-9 mx-auto p-2">
-            {range(10).map((i) => (
-              <TimelineItem odd={i % 2 === 0}>
-                <h3 className="font-semibold text-xl mb-1 text-gray-900">Title 2</h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt maiores ipsa molestiae
-                  magnam libero dolorem explicabo. Nobis veniam incidunt at, alias ipsam est suscipit maxime sunt quia.
-                  Consectetur, aut.
-                </p>
+          <ul className="flex flex-col md:grid grid-cols-9 mx-auto p-2">
+            {range(100).map((i) => (
+              <TimelineItem c odd={i % 2 === 0}>
+                <article className="relative shadow-2xl max-w-lg w-full transform duration-500 hover:-translate-y-2 cursor-pointer rounded-md">
+                  <div className="flex absolute left-0 top-0 w-10 h-10 bg-orange-600 text-gray-100">
+                    <span className="mx-auto my-auto">
+                      {/*<img className="w-5 h-5" src="/assets/left-arrow.801ca37c.svg" />*/}
+                    </span>
+                  </div>
+                  <div
+                    className="bg-no-repeat bg-center overflow-hidden mt-10 min-h-96"
+                    // style="background-image: url('svgs/blob-blue.svg');"
+                  >
+                    <img
+                      className="mx-auto p-5"
+                      src="https://www.dropbox.com/s/1fav310i2eqkdz8/tool2.png?dl=1"
+                      alt=""
+                    />
+                  </div>
+                  <div className="p-8 mb-10 mt-2">
+                    <p className="text-xl text-gray-500">04.</p>
+                    <h2 className="text-3xl mt-2">Multipurpose Wooden Tool</h2>
+                  </div>
+                </article>
+                {/*<h3 className="font-semibold text-xl mb-1 text-gray-900">Title 2</h3>*/}
+                {/*<p className="text-gray-600">*/}
+                {/*  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt maiores ipsa molestiae*/}
+                {/*  magnam libero dolorem explicabo. Nobis veniam incidunt at, alias ipsam est suscipit maxime sunt quia.*/}
+                {/*  Consectetur, aut.*/}
+                {/*</p>*/}
               </TimelineItem>
             ))}
-          </div>
+          </ul>
         </div>
-        )
       </div>
     </section>
   )
