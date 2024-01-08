@@ -48,11 +48,20 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
-      - name: Setup Node
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8.6.1
+
+      - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: "lts/*"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          node-version: 18
+          cache: 'pnpm'
+
+
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Restore cache
@@ -66,9 +75,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: pnpm install --no-frozen-lockfile
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: pnpm next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
