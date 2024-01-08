@@ -1,4 +1,3 @@
-// import { describe, expect, it } from 'vitest';
 import { ComingSoonSection } from './coming-soon-section';
 
 describe(ComingSoonSection.name, () => {
