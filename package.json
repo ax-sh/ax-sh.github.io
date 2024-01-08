@@ -10,6 +10,7 @@
     "commitlint": "commitlint --edit"
   },
   "dependencies": {
+    "clsx": "^2.1.0",
     "next": "14.0.4",
     "nextjs-google-analytics": "^2.3.3",
     "react": "^18",
