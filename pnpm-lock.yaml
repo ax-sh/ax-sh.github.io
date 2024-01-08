@@ -8,6 +8,9 @@ dependencies:
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
+  nextjs-google-analytics:
+    specifier: ^2.3.3
+    version: 2.3.3(next@14.0.4)(react@18.2.0)
   react:
     specifier: ^18
     version: 18.2.0
@@ -1715,7 +1718,6 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /function-bind@1.1.2:
@@ -2555,6 +2557,18 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+    dev: false
+
+  /nextjs-google-analytics@2.3.3(next@14.0.4)(react@18.2.0):
+    resolution: {integrity: sha512-Y6sI6A7wt5dji8hYBnVkOh9LTyImSLFZXx3FpyQgVW7W4b4qEFHjH2u3fhDJsrRZeLlUGM8/RuHD/mhHc2Axfg==}
+    peerDependencies:
+      next: '>=11.0.0'
+      react: '>=17.0.0'
+    dependencies:
+      next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+    optionalDependencies:
+      fsevents: 2.3.3
     dev: false
 
   /node-releases@2.0.14:
