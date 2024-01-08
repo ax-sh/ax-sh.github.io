@@ -11,10 +11,12 @@ export const metadata: Metadata = {
   description: ''
 };
 
+const GOOGLE_ANALYTICS_ID = 'G-N6207193QM';
+
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='en'>
-      <Analytics measurementId={'test'} />
+      <Analytics measurementId={GOOGLE_ANALYTICS_ID} />
       <body className={inter.className}>{children}</body>
     </html>
   );
