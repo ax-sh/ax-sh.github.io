@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   // Add basePath
-  basePath: '/ax-sh.github.io',
+  basePath: '',
   images: {
     unoptimized: true
   }
