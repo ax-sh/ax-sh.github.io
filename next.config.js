@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  reactStrictMode: true,
 
-module.exports = nextConfig
+  // Add basePath
+  basePath: '/https://ax-sh.github.io'
+};
+
+module.exports = nextConfig;
