@@ -8,12 +8,7 @@ export function ImageContain(props: ComponentProps<typeof Image>) {
 
 export function HeroSection({ children }: PropsWithChildren) {
   return (
-    <section
-      className={clsx(
-        'flex min-h-screen',
-        'mt-4 md:mt-0 flex-col-reverse md:flex-row duration-150'
-      )}
-    >
+    <section className={clsx('flex min-h-screen', 'flex-col-reverse md:flex-row duration-150')}>
       <div className={clsx('relative grow shrink-0 basis-1/2')}>
         <ImageContain objectPosition={'bottom'} src={'/hero-image.svg'} alt={'hero'} />
       </div>

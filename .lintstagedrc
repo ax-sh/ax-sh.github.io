@@ -1,6 +1,6 @@
 {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --quiet --fix",
+      "eslint --quiet --fix  --format=pretty",
       "pnpm prettier --write --ignore-unknown"
     ],
     "*.{json,html}": [
