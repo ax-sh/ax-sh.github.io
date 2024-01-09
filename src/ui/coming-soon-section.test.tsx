@@ -1,4 +1,4 @@
-import { ComingSoonSection } from './coming-soon-section';
+import { ComingSoonSection } from '@/ui/coming-soon-section';
 
 describe(ComingSoonSection.name, () => {
   it('should load', () => {
