@@ -7,8 +7,9 @@ import Analytics, { FontProvider } from '@/app/Providers';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: '',
-  description: ''
+  title: 'Axmin Shrestha | Portfolio',
+  description:
+    'I Develop Creative Websites. Specialize In Aesthetics, Responsive Design, Simplicity, And Utility.'
 };
 
 const GOOGLE_ANALYTICS_ID = 'G-N6207193QM';
