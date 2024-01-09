@@ -1,3 +1,6 @@
+
+[![Deploy Next.js site to Pages](https://github.com/ax-sh/ax-sh.github.io/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/ax-sh/ax-sh.github.io/actions/workflows/deploy.yml)
+
 ## Getting Started
 
 First, run the development server:
