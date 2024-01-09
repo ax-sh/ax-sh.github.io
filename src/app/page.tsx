@@ -7,9 +7,11 @@ export default function Home() {
   return (
     <main className='min-h-screen w-full'>
       <HeroSection>
-        <ComingSoonSection />
+        <section className={'h-full w-full grid place-content-center prose'}>
+          <ComingSoonSection />
+          <ExternalLinksSection />
+        </section>
       </HeroSection>
-      <ExternalLinksSection />
     </main>
   );
 }

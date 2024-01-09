@@ -1,8 +1,3 @@
-// import './common.module.scss';
-// import { GetIcon } from './Icons';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-
 export type ProjectProps = {
   name: string;
   link: string;
