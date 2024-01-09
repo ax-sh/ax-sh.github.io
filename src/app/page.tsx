@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <main className='min-h-screen w-full'>
       <HeroSection>
-        <section className={'h-full w-full grid place-content-center prose'}>
+        <section
+          className={' box-border p-4 md:p-4  h-full w-full grid place-content-center prose'}
+        >
           <ComingSoonSection />
           <ExternalLinksSection />
         </section>
