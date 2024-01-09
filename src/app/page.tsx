@@ -5,12 +5,15 @@ import { type ComponentProps, PropsWithChildren } from 'react';
 import Image from 'next/image';
 import { HeroSection } from '@/ui';
 
+import { ExternalLinksSection } from '@/ui/external-links-section';
+
 export default function Home() {
   return (
     <main className='min-h-screen w-full'>
       <HeroSection>
         <ComingSoonSection />
       </HeroSection>
+      <ExternalLinksSection />
     </main>
   );
 }
