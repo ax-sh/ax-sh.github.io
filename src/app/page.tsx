@@ -1,8 +1,4 @@
 import { ComingSoonSection } from '@/ui/coming-soon-section';
-import clsx from 'clsx';
-
-import { type ComponentProps, PropsWithChildren } from 'react';
-import Image from 'next/image';
 import { HeroSection } from '@/ui';
 
 import { ExternalLinksSection } from '@/ui/external-links-section';

@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import { data } from '@/ui/common';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-// eslint-disable-next-line
 import Obfuscate from 'react-obfuscate';
 export const ExternalLinksSection = () => (
   <div className='links'>
