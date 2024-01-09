@@ -37,8 +37,8 @@ export function GetIcon({ name }: { name: string }) {
 }
 
 export const ExternalLinksSection = () => (
-  <div className='links'>
-    <ul className='flex w-60 justify-between pointer-events-auto'>
+  <nav className='links'>
+    <ul className='flex w-60 justify-between pointer-events-auto list-none	'>
       {Object.entries(data.links).map(([label, value]) => (
         <li key={label}>
           <Obfuscate target='_blank' href={value}>
@@ -47,5 +47,5 @@ export const ExternalLinksSection = () => (
         </li>
       ))}
     </ul>
-  </div>
+  </nav>
 );
