@@ -10,7 +10,8 @@
     "lint:fix": "pnpm lint --fix",
     "lint:types": "pnpm tsc",
     "test": "vitest",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "release": "tsx watch ./scripts/release.ts"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^9.2.0",
