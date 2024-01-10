@@ -2,6 +2,20 @@
   "extends": ["next/core-web-vitals", "next", "airbnb", "prettier"],
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "@typescript-eslint/ban-ts-comment": "warn"
-  }
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "no-shadow": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.test.{ts,tsx}"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
 }

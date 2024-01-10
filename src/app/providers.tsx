@@ -1,4 +1,5 @@
 'use client';
+
 import { GoogleAnalytics } from 'nextjs-google-analytics';
 import { GoogleFonts } from 'next-google-fonts';
 
