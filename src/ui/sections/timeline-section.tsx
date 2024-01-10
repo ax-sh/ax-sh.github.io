@@ -51,10 +51,7 @@ export function TimelineSection() {
   }, []);
   return (
     <section>
-      <section className='w-screen h-64 bg-gray-900 text-white flex items-center justify-center text-3xl'>
-        Header
-      </section>
-      <main data-wrap>
+      <div data-wrap>
         <section
           data-section-1
           className='w-screen h-screen bg-teal-400 text-white flex items-center justify-center text-3xl'
@@ -73,7 +70,7 @@ export function TimelineSection() {
         >
           Content Section 3
         </section>
-      </main>
+      </div>
       <section className='fixed inset-0'>
         <div data-scrub className='w-20 h-20 rounded-full bg-white text-gray-900 text-xs'>
           Scrubbing
