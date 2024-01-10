@@ -5,14 +5,16 @@ import { GoogleFonts } from 'next-google-fonts';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useLayoutEffect } from 'react';
 
-// import { hotjar } from 'react-hotjar';
+import { hotjar } from 'react-hotjar';
 
 export default function Analytics({ measurementId }: { measurementId: string }) {
-  // useEffect(() => {
-  //   hotjar.initialize(HJID, HJSV);
-  // }, []);
+  useLayoutEffect(() => {
+    const HJID = 3099426;
+    const HJSV = 6;
+    hotjar.initialize(HJID, HJSV);
+  }, []);
   return <GoogleAnalytics gaMeasurementId={measurementId} trackPageViews />;
 }
 
