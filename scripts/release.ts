@@ -15,7 +15,7 @@ const Release = {
     // await this.finishReleaseBranch();
   },
   async switchToDefaultBranch() {
-    const cmd = await $`git branch --show-current`;
+    const cmd = await $`git checkout develop`;
     console.log(cmd.stdout);
   },
   async startReleaseBranch() {
