@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { PropsWithChildren } from 'react';
-import Analytics, { FontProvider } from '@/app/Providers';
+import Analytics, { FontProvider, Providers } from '@/app/Providers';
 import {
   useQuery,
   useMutation,
@@ -21,16 +21,14 @@ export const metadata: Metadata = {
 
 const GOOGLE_ANALYTICS_ID = 'G-N6207193QM';
 
-const queryClient = new QueryClient();
-
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='en'>
       <FontProvider />
       <Analytics measurementId={GOOGLE_ANALYTICS_ID} />
-      <QueryClientProvider client={queryClient}>
+      <Providers>
         <body className={inter.className}>{children}</body>
-      </QueryClientProvider>
+      </Providers>
     </html>
   );
 }
