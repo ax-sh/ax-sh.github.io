@@ -2,15 +2,17 @@ import { PropsWithChildren } from 'react';
 
 import type { Metadata } from 'next';
 
-import { Lato } from 'next/font/google';
+// eslint-disable-next-line camelcase
+import { Josefin_Sans } from 'next/font/google';
 
 import Analytics, { Providers } from '@/app/providers';
 
 import './globals.css';
 
-// 👇 Configure our font object
-const LatoFont = Lato({
-  weight: ['100', '300', '400', '700', '900'],
+// eslint-disable-next-line camelcase
+
+const JosefinFont = Josefin_Sans({
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
   subsets: ['latin']
 });
 
@@ -24,8 +26,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='en'>
       <Analytics />
-      <body className={LatoFont.className}>
-        <Providers>{children} </Providers>
+      <body className={JosefinFont.className}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -1,4 +1,6 @@
-import { ComingSoonSection } from '@/ui/sections/coming-soon-section';
+import React from 'react';
+
+import { BannerSection } from '@/ui/sections/banner-section';
 import { ExternalLinksSection } from '@/ui/sections/external-links-section';
 import { HeroSection } from '@/ui/sections/hero-section';
 
@@ -15,10 +17,21 @@ export default function Home() {
             'grid place-content-center prose'
           )}
         >
-          <ComingSoonSection />
+          <BannerSection />
           <ExternalLinksSection />
+          <div>
+            <a
+              className='text-green-500 hover:text-red-500 cursor-pointer'
+              href='https://bit.ly/4418VWz'
+              target='_blank'
+              rel='noreferrer'
+            >
+              WORKS
+            </a>
+          </div>
         </section>
       </HeroSection>
+      <div />
     </main>
   );
 }
