@@ -1,12 +1,13 @@
 'use client';
 
 import React from 'react';
-import { data } from '@/ui/common';
+import { data, IconType } from '@/ui/common';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import Obfuscate from 'react-obfuscate';
 import {
   SiCodesandbox,
+  SiDevdotto,
   SiGithub,
   SiLinkedin,
   SiMaildotru,
@@ -20,7 +21,7 @@ console.error = (...args: any) => {
   error(...args);
 };
 
-export function GetIcon({ name }: { name: string }) {
+export function GetIcon({ name }: { name: IconType }) {
   const [hovered, setHover] = React.useState(false);
   const props = {
     onMouseOver: () => setHover(true),
@@ -39,6 +40,8 @@ export function GetIcon({ name }: { name: string }) {
       return <SiGithub {...props} />;
     case 'Email':
       return <SiMaildotru {...props} />;
+    case 'Dev':
+      return <SiDevdotto {...props} />;
     default:
       return <h6>{name}</h6>;
   }
@@ -51,7 +54,7 @@ export function ExternalLinksSection() {
         {Object.entries(data.links).map(([label, value]) => (
           <li key={label}>
             <Obfuscate target='_blank' href={value}>
-              <GetIcon name={label} />
+              <GetIcon name={label as IconType} />
             </Obfuscate>
           </li>
         ))}
