@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { data } from '@/ui/common';
+import { data, IconType } from '@/ui/common';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import Obfuscate from 'react-obfuscate';
@@ -20,8 +20,6 @@ console.error = (...args: any) => {
   if (/defaultProps/.test(args[0])) return;
   error(...args);
 };
-
-type IconType = keyof (typeof data)['links'];
 
 export function GetIcon({ name }: { name: IconType }) {
   const [hovered, setHover] = React.useState(false);
@@ -56,7 +54,7 @@ export function ExternalLinksSection() {
         {Object.entries(data.links).map(([label, value]) => (
           <li key={label}>
             <Obfuscate target='_blank' href={value}>
-              <GetIcon name={label} />
+              <GetIcon name={label as IconType} />
             </Obfuscate>
           </li>
         ))}

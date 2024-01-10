@@ -39,3 +39,4 @@ export const data = {
     // CV: "",
   }
 } as const;
+export type IconType = keyof (typeof data)['links'];
