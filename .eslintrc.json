@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals", "next", "prettier"],
+  "extends": ["next/core-web-vitals", "next", "airbnb", "prettier"],
   "plugins": ["@typescript-eslint"],
   "rules": {
     "@typescript-eslint/ban-ts-comment": "warn"
