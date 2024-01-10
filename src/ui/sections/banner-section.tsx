@@ -8,12 +8,12 @@ function useData() {
   return useQuery({ queryKey: ['data'], queryFn: () => fetch('/data.json').then((x) => x.json()) });
 }
 
-export function ComingSoonSection() {
+export function BannerSection() {
   const { data, isLoading } = useData();
   if (isLoading)
     return (
-      <div>
-        <h1 className='text-4xl text-white m-0 p-0'>
+      <div className='prose prose-xl prose-stone text-white prose-headings:text-white/30'>
+        <h1>
           <PlaceholderSkeleton length='Axmin Shrestha | Portfolio' />
         </h1>
         <p>
@@ -22,8 +22,8 @@ export function ComingSoonSection() {
       </div>
     );
   return (
-    <div>
-      <h1 className='text-4xl text-white m-0 p-0'>{data.title}</h1>
+    <div className='prose prose-xl prose-stone text-white prose-headings:text-white/30'>
+      <h1>{data.title}</h1>
       <p>{data.description}</p>
     </div>
   );
