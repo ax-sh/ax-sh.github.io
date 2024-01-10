@@ -12,9 +12,9 @@ describe('Verify home page', () => {
   it('should have link to past work', () => {
     render(<Home />, { wrapper: QueryClientProviderWrapper });
 
-    // const link = 'https://bit.ly/4418VWz';
-    const workLink = screen.getByRole('link', { name: /works/gi });
+    const link = 'https://bit.ly/4418VWz';
+    const workLink = screen.getByRole('link', { name: /works/i });
     expect(workLink).toBeInTheDocument();
-    expect(workLink.attributes);
+    expect(workLink).toHaveAttribute('href', link);
   });
 });
