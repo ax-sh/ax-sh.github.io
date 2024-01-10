@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+
 import './globals.css';
 import { PropsWithChildren } from 'react';
 import Analytics, { FontProvider, Providers } from '@/app/providers';
+import { Lato } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+// 👇 Configure our font object
+const LatoFont = Lato({
+  weight: ['100', '300', '400', '700', '900'],
+  subsets: ['latin']
+});
 
 export const metadata: Metadata = {
   title: 'Axmin Shrestha | Portfolio',
@@ -19,9 +24,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang='en'>
       <FontProvider />
       <Analytics measurementId={GOOGLE_ANALYTICS_ID} />
-      <Providers>
-        <body className={inter.className}>{children}</body>
-      </Providers>
+      <body className={LatoFont.className}>
+        <Providers>{children} </Providers>
+      </body>
     </html>
   );
 }
