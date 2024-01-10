@@ -7,6 +7,7 @@ import { data } from '@/ui/common';
 import Obfuscate from 'react-obfuscate';
 import {
   SiCodesandbox,
+  SiDevdotto,
   SiGithub,
   SiLinkedin,
   SiMaildotru,
@@ -20,7 +21,9 @@ console.error = (...args: any) => {
   error(...args);
 };
 
-export function GetIcon({ name }: { name: string }) {
+type IconType = keyof (typeof data)['links'];
+
+export function GetIcon({ name }: { name: IconType }) {
   const [hovered, setHover] = React.useState(false);
   const props = {
     onMouseOver: () => setHover(true),
@@ -39,6 +42,8 @@ export function GetIcon({ name }: { name: string }) {
       return <SiGithub {...props} />;
     case 'Email':
       return <SiMaildotru {...props} />;
+    case 'Dev':
+      return <SiDevdotto {...props} />;
     default:
       return <h6>{name}</h6>;
   }
