@@ -6,7 +6,7 @@ import { GoogleFonts } from 'next-google-fonts';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-import { PropsWithChildren, useLayoutEffect } from 'react';
+import { PropsWithChildren, useLayoutEffect, useState } from 'react';
 
 import { hotjar } from 'react-hotjar';
 
@@ -25,9 +25,8 @@ export function FontProvider() {
   );
 }
 
-const queryClient = new QueryClient();
-
 export function Providers({ children }: PropsWithChildren) {
+  const [queryClient] = useState(new QueryClient());
   return (
     <QueryClientProvider client={queryClient}>
       {children}
