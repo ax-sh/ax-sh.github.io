@@ -15,7 +15,9 @@ import {
 } from '@icons-pack/react-simple-icons';
 
 // temp hotfix fot warning on console because of
+// eslint-disable-next-line no-console
 const { error } = console;
+// eslint-disable-next-line no-console
 console.error = (...args: any) => {
   if (/defaultProps/.test(args[0])) return;
   error(...args);
