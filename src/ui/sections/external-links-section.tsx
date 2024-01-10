@@ -1,10 +1,12 @@
 'use client';
 
 import React from 'react';
-import { data, IconType } from '@/ui/common';
+
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import Obfuscate from 'react-obfuscate';
+
+import { IconType, data } from '@/ui/common';
 import {
   SiCodesandbox,
   SiDevdotto,

@@ -8,8 +8,26 @@
   "trailingComma": "none",
   "bracketSpacing": true,
   "bracketSameLine": false,
+
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "plugins": ["@trivago/prettier-plugin-sort-imports"],
-  "importOrder": ["^@core/(.*)$", "^clsx", "^@ui/(.*)$", "^[./]"]
+
+  "importOrder": [
+    "^react$",
+    "^next$",
+    "^react",
+    "^next/(.*)$",
+
+    "<THIRD_PARTY_MODULES>",
+
+    "^@core/(.*)$",
+    "^@app/(.*)$",
+    "^@ui/(.*)$",
+    "^clsx",
+    "^@tanstack",
+    "^icon(.*)",
+
+    "^[./]"
+  ]
 }

@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   color: #fff;
   background: #000;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }

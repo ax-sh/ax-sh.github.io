@@ -1,5 +1,6 @@
-
 [![Deployed](https://github.com/ax-sh/ax-sh.github.io/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/ax-sh/ax-sh.github.io/actions/workflows/deploy.yml)
+
+[Website](https://ax-sh.github.io)
 
 ## Getting Started
 
