@@ -11,5 +11,14 @@
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
-  "importOrder": ["^@core/(.*)$", "^clsx", "^@ui/(.*)$", "^[./]"]
+  "importOrder": [
+    "^react",
+    "^next/(.*)$",
+    "@tanstack",
+    "^@core/(.*)$",
+    "^clsx",
+    "^@ui/(.*)$",
+    "^[./]",
+    "^icon(.*)"
+  ]
 }

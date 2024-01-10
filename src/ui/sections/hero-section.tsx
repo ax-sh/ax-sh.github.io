@@ -1,4 +1,5 @@
-import { ImageContain } from '@/ui/index';
+import { ImageContain } from '@/ui';
+
 import { PropsWithChildren } from 'react';
 
 import clsx from 'clsx';

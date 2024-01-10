@@ -1,6 +1,7 @@
 'use client';
 
 import { PlaceholderSkeleton } from '@/ui/placeholder-skeleton';
+
 import { useQuery } from '@tanstack/react-query';
 
 function useData() {
