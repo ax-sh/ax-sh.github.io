@@ -16,6 +16,7 @@
     "@icons-pack/react-simple-icons": "^9.2.0",
     "@tanstack/react-query": "^5.17.9",
     "@tanstack/react-query-devtools": "^5.17.9",
+    "@testing-library/jest-dom": "^6.2.0",
     "clsx": "^2.1.0",
     "next": "14.0.4",
     "next-google-fonts": "^2.2.0",

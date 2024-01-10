@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { PastProjectsLink } from '@/ui/past-projects-link';
 import { BannerSection } from '@/ui/sections/banner-section';
 import { ExternalLinksSection } from '@/ui/sections/external-links-section';
 import { HeroSection } from '@/ui/sections/hero-section';
@@ -20,14 +21,7 @@ export default function Home() {
           <BannerSection />
           <ExternalLinksSection />
           <div>
-            <a
-              className='text-green-500 hover:text-red-500 cursor-pointer'
-              href='https://bit.ly/4418VWz'
-              target='_blank'
-              rel='noreferrer'
-            >
-              WORKS
-            </a>
+            <PastProjectsLink>WORKS</PastProjectsLink>
           </div>
         </section>
       </HeroSection>
