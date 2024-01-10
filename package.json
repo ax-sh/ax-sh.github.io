@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^9.2.0",
+    "@tanstack/react-query": "^5.17.9",
+    "@tanstack/react-query-devtools": "^5.17.9",
     "clsx": "^2.1.0",
     "next": "14.0.4",
     "next-google-fonts": "^2.2.0",
@@ -26,6 +28,7 @@
     "@commitlint/config-conventional": "^18.4.4",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
+    "@tanstack/eslint-plugin-query": "^5.17.7",
     "@testing-library/react": "^14.1.2",
     "@types/node": "^20",
     "@types/react": "^18",
