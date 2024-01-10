@@ -3,7 +3,7 @@ import Image from 'next/image';
 import clsx from 'clsx';
 
 export function ImageContain({ alt, ...props }: ComponentProps<typeof Image>) {
-  return <Image alt={alt} fill objectFit='contain' {...props} />;
+  return <Image alt={alt} fill {...props} />;
 }
 
 export function HeroSection({ children }: PropsWithChildren) {
