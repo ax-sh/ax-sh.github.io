@@ -1,7 +1,7 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
 import { PlaceholderSkeleton } from '@/ui/placeholder-skeleton';
+import { useQuery } from '@tanstack/react-query';
 
 function useData() {
   return useQuery({ queryKey: ['data'], queryFn: () => fetch('/data.json').then((x) => x.json()) });

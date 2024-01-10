@@ -1,6 +1,7 @@
-import { PropsWithChildren } from 'react';
-import clsx from 'clsx';
 import { ImageContain } from '@/ui/index';
+import { PropsWithChildren } from 'react';
+
+import clsx from 'clsx';
 
 export function HeroSection({ children }: PropsWithChildren) {
   return (

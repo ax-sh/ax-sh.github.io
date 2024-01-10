@@ -1,9 +1,7 @@
 {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --quiet --fix  --format=pretty",
-      "pnpm prettier --write --ignore-unknown"
-    ],
-    "*.{json,html}": [
-      "pnpm prettier --write --ignore-unknown"
-    ]
+  "*.{js,jsx,ts,tsx}": [
+    "eslint --quiet --fix  --format=pretty",
+    "pnpm prettier --write --ignore-unknown"
+  ],
+  "*.{json,html}": ["pnpm prettier --write --ignore-unknown"]
 }

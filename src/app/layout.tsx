@@ -1,9 +1,9 @@
+import Analytics, { Providers } from '@/app/providers';
 import type { Metadata } from 'next';
+import { Lato } from 'next/font/google';
+import { PropsWithChildren } from 'react';
 
 import './globals.css';
-import { PropsWithChildren } from 'react';
-import Analytics, { Providers } from '@/app/providers';
-import { Lato } from 'next/font/google';
 
 // 👇 Configure our font object
 const LatoFont = Lato({

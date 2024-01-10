@@ -1,7 +1,8 @@
-import clsx from 'clsx';
-import { HeroSection } from '@/ui/sections/hero-section';
 import { ComingSoonSection } from '@/ui/sections/coming-soon-section';
 import { ExternalLinksSection } from '@/ui/sections/external-links-section';
+import { HeroSection } from '@/ui/sections/hero-section';
+
+import clsx from 'clsx';
 
 export default function Home() {
   return (

@@ -1,10 +1,6 @@
 'use client';
 
-import React from 'react';
-import { data, IconType } from '@/ui/common';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import Obfuscate from 'react-obfuscate';
+import { IconType, data } from '@/ui/common';
 import {
   SiCodesandbox,
   SiDevdotto,
@@ -13,6 +9,10 @@ import {
   SiMaildotru,
   SiTwitter
 } from '@icons-pack/react-simple-icons';
+import React from 'react';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import Obfuscate from 'react-obfuscate';
 
 // temp hotfix fot warning on console because of
 // eslint-disable-next-line no-console

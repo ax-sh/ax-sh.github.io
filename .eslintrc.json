@@ -8,13 +8,20 @@
     "react/jsx-props-no-spreading": "off",
     "import/extensions": "off",
     "import/prefer-default-export": "off",
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "import/no-extraneous-dependencies": "off"
   },
   "overrides": [
     {
       "files": ["*.test.{ts,tsx}"],
       "rules": {
-        "no-undef": "off"
+        "no-undef": "off",
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": ["**/*.test.ts", "**/*.test.tsx"]
+          }
+        ]
       }
     }
   ]
