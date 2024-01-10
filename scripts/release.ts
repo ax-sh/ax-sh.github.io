@@ -4,30 +4,35 @@ import path from 'path';
 
 const Release = {
   async run(): Promise<void> {
-    await this.switchToDefaultBranch();
+    // await this.switchToDefaultBranch();
 
     await this.startReleaseBranch();
-
-    // await standardVersion({
-    //     silent: true,
-    // });
-    //
-    // await this.finishReleaseBranch();
+    await this.finishReleaseBranch();
   },
   async switchToDefaultBranch() {
     const cmd = await $`git checkout develop`;
-    console.log(cmd.stdout);
+    return cmd.stdout;
   },
   async startReleaseBranch() {
     const nextVersion = await this.getNextVersion();
+    const cmd = await $`git flow release start v${nextVersion}`;
+    return cmd.stdout;
+  },
+  async finishReleaseBranch() {
+    const cmd = await $`git flow release finish --notag`;
+    return cmd.stdout;
   },
   async getNextVersion() {
     const currentVersion = await this.getCurrentVersion();
-    console.log(currentVersion.version);
+    // const recommendation = await this.getReleaseType();
+    // const version = new SemVer(currentVersion);
+    // version.inc(recommendation.releaseType ?? 'minor');
+    return currentVersion.version;
   },
   getCurrentVersion() {
     return fs.readJson(path.join(process.cwd(), 'package.json'));
-  }
+  },
+  getReleaseType() {}
 };
 
 void Release.run();
