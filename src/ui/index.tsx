@@ -1,7 +1,6 @@
-import { ComponentProps } from 'react';
-import Image from 'next/image';
+import Image, { ImageProps } from 'next/image';
 
-export function ImageContain({ alt, ...props }: ComponentProps<typeof Image>) {
+export function ImageContain({ alt, ...props }: ImageProps) {
   return (
     <Image style={{ objectFit: 'contain', objectPosition: 'bottom' }} alt={alt} fill {...props} />
   );
