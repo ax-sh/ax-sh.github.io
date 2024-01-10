@@ -21,7 +21,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hotjar": "^6.2.0",
-    "react-obfuscate": "^3.6.9"
+    "react-obfuscate": "^3.6.9",
+    "remeda": "^1.36.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
