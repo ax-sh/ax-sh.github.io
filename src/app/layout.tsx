@@ -3,13 +3,6 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { PropsWithChildren } from 'react';
 import Analytics, { FontProvider, Providers } from '@/app/Providers';
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider
-} from '@tanstack/react-query';
 
 const inter = Inter({ subsets: ['latin'] });
 
