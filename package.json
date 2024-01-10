@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint --format=pretty",
     "lint:fix": "pnpm lint --fix",
+    "lint:types": "pnpm tsc",
     "test": "vitest",
     "commitlint": "commitlint --edit"
   },
