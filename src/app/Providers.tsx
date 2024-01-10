@@ -1,10 +1,12 @@
 'use client';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
 import { GoogleFonts } from 'next-google-fonts';
+
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 import { PropsWithChildren } from 'react';
+
 // import { hotjar } from 'react-hotjar';
 
 export default function Analytics({ measurementId }: { measurementId: string }) {
