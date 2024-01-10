@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { PropsWithChildren } from 'react';
-import Analytics, { FontProvider } from '@/app/Providers';
+import Analytics, { FontProvider, Providers } from '@/app/Providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,7 +19,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang='en'>
       <FontProvider />
       <Analytics measurementId={GOOGLE_ANALYTICS_ID} />
-      <body className={inter.className}>{children}</body>
+      <Providers>
+        <body className={inter.className}>{children}</body>
+      </Providers>
     </html>
   );
 }
