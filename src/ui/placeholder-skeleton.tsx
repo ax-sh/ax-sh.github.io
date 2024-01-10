@@ -1,3 +1,4 @@
+'use client';
 import { useMemo } from 'react';
 
 // WARNING: This is not a drop in replacement solution and
