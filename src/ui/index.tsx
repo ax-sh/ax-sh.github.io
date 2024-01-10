@@ -2,8 +2,8 @@ import { ComponentProps, PropsWithChildren } from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 
-export function ImageContain(props: ComponentProps<typeof Image>) {
-  return <Image fill={true} objectFit={'contain'} {...props} />;
+export function ImageContain({ alt, ...props }: ComponentProps<typeof Image>) {
+  return <Image alt={alt} fill={true} objectFit={'contain'} {...props} />;
 }
 
 export function HeroSection({ children }: PropsWithChildren) {
