@@ -14,13 +14,20 @@
   "importOrderSortSpecifiers": true,
 
   "importOrder": [
+    "^react$",
+    "^next$",
     "^react",
     "^next/(.*)$",
-    "@tanstack",
+
+    "<THIRD_PARTY_MODULES>",
+
     "^@core/(.*)$",
-    "^clsx",
+    "^@app/(.*)$",
     "^@ui/(.*)$",
-    "^[./]",
-    "^icon(.*)"
+    "^clsx",
+    "^@tanstack",
+    "^icon(.*)",
+
+    "^[./]"
   ]
 }

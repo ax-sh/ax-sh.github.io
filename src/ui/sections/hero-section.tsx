@@ -1,6 +1,6 @@
-import { ImageContain } from '@/ui';
-
 import { PropsWithChildren } from 'react';
+
+import { ImageContain } from '@/ui';
 
 import clsx from 'clsx';
 

@@ -1,9 +1,10 @@
-import Analytics, { Providers } from '@/app/providers';
-import type { Metadata } from 'next';
-
 import { PropsWithChildren } from 'react';
 
+import type { Metadata } from 'next';
+
 import { Lato } from 'next/font/google';
+
+import Analytics, { Providers } from '@/app/providers';
 
 import './globals.css';
 

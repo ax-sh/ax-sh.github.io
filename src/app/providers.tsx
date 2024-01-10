@@ -1,9 +1,10 @@
 'use client';
 
-import { GoogleAnalytics } from 'nextjs-google-analytics';
-
 import { PropsWithChildren, useLayoutEffect, useState } from 'react';
+
 import { hotjar } from 'react-hotjar';
+
+import { GoogleAnalytics } from 'nextjs-google-analytics';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
