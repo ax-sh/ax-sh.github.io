@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { HeroSection } from '@/ui/sections/hero-section';
 import { ComingSoonSection } from '@/ui/sections/coming-soon-section';
 import { ExternalLinksSection } from '@/ui/sections/external-links-section';
+import { TimelineSection } from '@/ui/sections/timeline-section';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <ExternalLinksSection />
         </section>
       </HeroSection>
+      <TimelineSection />
     </main>
   );
 }
