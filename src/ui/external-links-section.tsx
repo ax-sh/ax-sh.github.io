@@ -13,6 +13,13 @@ import {
   SiTwitter
 } from '@icons-pack/react-simple-icons';
 
+// temp hotfix fot warning on console because of
+const { error } = console;
+console.error = (...args: any) => {
+  if (/defaultProps/.test(args[0])) return;
+  error(...args);
+};
+
 export function GetIcon({ name }: { name: string }) {
   const [hovered, setHover] = React.useState(false);
   const props = {
