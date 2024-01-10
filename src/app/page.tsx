@@ -3,7 +3,6 @@ import { HeroSection } from '@/ui';
 
 import { ExternalLinksSection } from '@/ui/external-links-section';
 import clsx from 'clsx';
-import { useQuery } from '@tanstack/react-query';
 
 export default function Home() {
   return (
