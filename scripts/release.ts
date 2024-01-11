@@ -26,7 +26,7 @@ const Release = {
     const nextVersion = await this.getNextVersion();
 
     const cmd = await $`git flow release start ${nextVersion}`;
-    await $`git push -u `;
+    await $`git push -u  origin HEAD`;
     return cmd.stdout;
   },
   async finishReleaseBranch() {
