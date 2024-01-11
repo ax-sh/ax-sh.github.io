@@ -35,7 +35,7 @@ const Release = {
   async getNextVersion() {
     const currentVersion = await this.getCurrentVersion();
     const releaseType = await this.getReleaseType();
-    const nextVersionCmd = await $`pnpm release-it ${releaseType} --ci --release-version --dry-run`;
+    const nextVersionCmd = await $`pnpm release-it ${releaseType} --ci --release-version`;
     const nextVersion = nextVersionCmd;
     console.log(777, currentVersion, nextVersion.stdout);
 
