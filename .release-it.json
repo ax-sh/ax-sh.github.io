@@ -1,10 +1,13 @@
 {
   "hooks": {
     "before:init": "pnpm test run",
-    "before:beforeBump": ["git flow release start v${version}"],
+    "before:beforeBump": [
+      "git flow release start v${version}",
+      "echo \uD83D\uDC4A before:bump version=v${version} latestVersion=v${latestVersion}"
+    ],
     "after:bump": [
       "pnpx auto-changelog -p && git add CHANGELOG.md",
-      "echo \uD83D\uDC4A after:bump v${version} v${latestVersion} "
+      "echo \uD83D\uDC4A after:bump version=v${version} latestVersion=v${latestVersion}"
     ],
     "after:release": [
       "git flow release finish --notag",
