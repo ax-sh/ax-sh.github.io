@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "init": "pnpm test",
+    "init": "pnpm test"
 
   },
   "git": {
