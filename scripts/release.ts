@@ -8,9 +8,13 @@ const Release = {
     // await this.switchToDefaultBranch();
 
     // await this.startReleaseBranch();
-    const o = await $`pnpm release-it --ci -i minor --release-version`;
-    console.log(o);
+    const prepare = await this.prepareRelease();
+    console.log(prepare);
     // await this.finishReleaseBranch();
+  },
+  async prepareRelease() {
+    const cmd = await $`pnpm release-it --ci -i minor --release-version`;
+    return cmd.stdout;
   },
   async switchToDefaultBranch() {
     const cmd = await $`git checkout develop`;
