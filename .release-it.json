@@ -13,7 +13,7 @@
   },
   "git": {
     "commitMessage": "chore: release v${version}",
-    "push": false
+    "push": true
   },
   "github": {
     "release": false
