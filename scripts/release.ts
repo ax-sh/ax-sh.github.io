@@ -7,7 +7,8 @@ const Release = {
     // await this.switchToDefaultBranch();
 
     await this.startReleaseBranch();
-    await this.finishReleaseBranch();
+    await $`pnpm release-it`;
+    // await this.finishReleaseBranch();
   },
   async switchToDefaultBranch() {
     const cmd = await $`git checkout develop`;
@@ -31,8 +32,10 @@ const Release = {
   },
   getCurrentVersion() {
     return fs.readJson(path.join(process.cwd(), 'package.json'));
-  },
-  getReleaseType() {}
+  }
+  // getReleaseType() {}
 };
 
-void Release.run();
+(async function () {
+  await Release.run();
+})();
