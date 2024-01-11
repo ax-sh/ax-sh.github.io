@@ -1,6 +1,6 @@
 {
   "name": "ax-sh.github.io",
-  "version": "0.6.0",
+  "version": "0.23.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,7 +11,8 @@
     "lint:types": "pnpm tsc",
     "test": "vitest",
     "commitlint": "commitlint --edit",
-    "release": "tsx ./scripts/release.ts"
+    "release": "tsx ./scripts/release.ts",
+    "release:minor": "release-it minor"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^9.2.0",

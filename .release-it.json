@@ -1,12 +1,12 @@
 {
   "hooks": {
-    "init": "pnpm test",
-    "after:bump": "pnpx auto-changelog -p"
+    "before:beforeBump": ["echo beforeBump v${latestVersion}"],
+    "after:bump": ["echo after:bump v${version} v${latestVersion} "],
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
     "commitMessage": "chore: release v${version}",
-    "push": true,
-    "changelog": "pnpx auto-changelog --stdout --commit-limit false --unreleased --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
+    "push": false
   },
   "github": {
     "release": false
