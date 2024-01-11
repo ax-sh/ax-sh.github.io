@@ -1,7 +1,7 @@
 {
   "hooks": {
     "init": ["echo doo"],
-    "after:bump": ["echo foo"],
+    "after:bump": ["echo foo v${version} "],
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
