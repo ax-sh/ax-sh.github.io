@@ -1,7 +1,7 @@
 {
   "hooks": {
-    "init": "pnpm test"
-
+    "init": "pnpm test",
+    "after:bump": "pnpx auto-changelog -p"
   },
   "git": {
     "commitMessage": "chore: release v${version}",
