@@ -31,7 +31,7 @@ const Release = {
   },
   async finishReleaseBranch() {
     const cmd = await $`git flow release finish --notag`;
-    $`git push`;
+    await $`git push`;
     return cmd.stdout;
   },
   async getNextVersion() {
