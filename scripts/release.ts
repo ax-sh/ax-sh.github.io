@@ -8,7 +8,8 @@ const Release = {
     // await this.switchToDefaultBranch();
 
     // await this.startReleaseBranch();
-    await $`pnpm release-it --ci`;
+    const o = await $`pnpm release-it --ci -i minor --release-version`;
+    console.log(o);
     // await this.finishReleaseBranch();
   },
   async switchToDefaultBranch() {
