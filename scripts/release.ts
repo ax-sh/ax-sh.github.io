@@ -28,7 +28,7 @@ const Release = {
     // const recommendation = await this.getReleaseType();
     // const version = new SemVer(currentVersion);
     // version.inc(recommendation.releaseType ?? 'minor');
-    return currentVersion.version;
+    return currentVersion.version as string;
   },
   getCurrentVersion() {
     return fs.readJson(path.join(process.cwd(), 'package.json'));
