@@ -7,7 +7,7 @@
       "echo \uD83D\uDC4A after:bump v${version} v${latestVersion} "
     ],
     "after:release": [
-      "git flow release finish",
+      "git flow release finish --notag",
       "echo \uD83D\uDE4C Successfully released ${name} v${version} to ${repo.repository}."
     ]
   },
