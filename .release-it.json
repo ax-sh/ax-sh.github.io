@@ -3,7 +3,7 @@
     "init": "pnpm test",
     "before:beforeBump": ["git flow release start v${version}"],
     "after:bump": [ "pnpx auto-changelog -p && git add CHANGELOG.md", "echo \uD83D\uDC4A after:bump v${version} v${latestVersion} "],
-    "after:release":["git flow release finish", "echo \uD83D\uDE80 Successfully released ${name} v${version} to ${repo.repository}."]
+    "after:release":["git flow release finish", "echo \uD83D\uDE4C Successfully released ${name} v${version} to ${repo.repository}."]
   },
   "git": {
     "commitMessage": "chore: release v${version}",
