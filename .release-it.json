@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "before:beforeBump": ["echo beforeBump v${latestVersion}"],
+    "before:beforeBump": ["echo beforeBump v${version} v${latestVersion}"],
     "after:bump": ["echo after:bump v${version} v${latestVersion} "],
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
