@@ -1,4 +1,4 @@
-import { $ } from 'execa';
+import { $, ExecaSyncError } from 'execa';
 import fs from 'fs-extra';
 import path from 'path';
 
@@ -40,6 +40,9 @@ const Release = {
   try {
     await Release.run();
   } catch (e) {
-    console.log(e, 66);
+    const { message, shortMessage, escapedCommand, signal, signalDescription, ...rest } =
+      e as ExecaSyncError;
+    console.error(shortMessage);
+    console.table(rest);
   }
 })();
