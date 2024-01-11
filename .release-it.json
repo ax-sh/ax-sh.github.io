@@ -2,7 +2,7 @@
   "hooks": {
     "init": "pnpm test",
     "before:beforeBump": ["git flow release start v${version}"],
-    "after:bump": [ "pnpx auto-changelog -p", "echo after:bump v${version} v${latestVersion} "],
+    "after:bump": [ "pnpx auto-changelog -p", "git add CHANGELOG.md", "echo after:bump v${version} v${latestVersion} "],
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
