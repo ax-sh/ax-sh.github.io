@@ -1,6 +1,6 @@
 {
   "name": "ax-sh.github.io",
-  "version": "0.33.0",
+  "version": "0.34.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,7 +12,7 @@
     "test": "vitest",
     "commitlint": "commitlint --edit",
     "release": "t sx ./scripts/release.ts",
-    "release:minor": "dotenv  release-it minor  --ci"
+    "release:minor": "dotenv  release-it minor -- --ci"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^9.2.0",
