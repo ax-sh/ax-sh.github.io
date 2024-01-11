@@ -8,10 +8,10 @@ const Release = {
     await this.switchToDefaultBranch();
 
     await this.startReleaseBranch();
-    const prepare = await this.prepareRelease();
-    console.log(chalk.green(prepare));
-    const finish = await this.finishReleaseBranch();
-    console.log(finish);
+    // const prepare = await this.prepareRelease();
+    // console.log(chalk.green(prepare));
+    // const finish = await this.finishReleaseBranch();
+    // console.log(finish);
   },
   async prepareRelease() {
     const releaseType = await this.getReleaseType();
