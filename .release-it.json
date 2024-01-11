@@ -8,6 +8,9 @@
   "github": {
     "release": false
   },
+  "git": {
+    "push": false
+  },
   "npm": {
     "publish": false
   }
