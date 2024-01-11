@@ -6,7 +6,7 @@ const Release = {
   async run(): Promise<void> {
     // await this.switchToDefaultBranch();
 
-    await this.startReleaseBranch();
+    // await this.startReleaseBranch();
     await $`pnpm release-it`;
     // await this.finishReleaseBranch();
   },
@@ -40,9 +40,9 @@ const Release = {
   try {
     await Release.run();
   } catch (e) {
-    const { message, shortMessage, escapedCommand, signal, signalDescription, ...rest } =
+    const { stderr, message, shortMessage, escapedCommand, signal, signalDescription, ...rest } =
       e as ExecaSyncError;
-    console.error(shortMessage);
+    console.error(shortMessage, stderr);
     console.table(rest);
   }
 })();
