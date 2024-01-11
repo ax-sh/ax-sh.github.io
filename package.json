@@ -11,7 +11,7 @@
     "lint:types": "pnpm tsc",
     "test": "vitest",
     "commitlint": "commitlint --edit",
-    "release": "tsx  ./scripts/release.ts"
+    "release": "tsx ./scripts/release.ts"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^9.2.0",
