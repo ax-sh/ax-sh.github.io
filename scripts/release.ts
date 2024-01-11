@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import { $, ExecaSyncError } from 'execa';
 import fs from 'fs-extra';
 import path from 'path';
@@ -42,7 +43,7 @@ const Release = {
   } catch (e) {
     const { stderr, message, shortMessage, escapedCommand, signal, signalDescription, ...rest } =
       e as ExecaSyncError;
-    console.error(shortMessage, stderr);
+    console.error(chalk.red(shortMessage, stderr));
     console.table(rest);
   }
 })();
