@@ -5,12 +5,13 @@ import path from 'path';
 
 const Release = {
   async run(): Promise<void> {
-    // await this.switchToDefaultBranch();
+    await this.switchToDefaultBranch();
 
-    // await this.startReleaseBranch();
+    await this.startReleaseBranch();
     const prepare = await this.prepareRelease();
     console.log(chalk.green(prepare));
-    // await this.finishReleaseBranch();
+    const finish = await this.finishReleaseBranch();
+    console.log(finish);
   },
   async prepareRelease() {
     const releaseType = await this.getReleaseType();
