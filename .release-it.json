@@ -5,7 +5,7 @@
   },
   "git": {
     "commitMessage": "chore: release v${version}",
-    "push": true,
+    "push": false,
     "changelog": "pnpx auto-changelog --stdout --commit-limit false --unreleased --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
   },
   "github": {
