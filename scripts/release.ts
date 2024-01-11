@@ -9,7 +9,7 @@ const Release = {
 
     // await this.startReleaseBranch();
     const prepare = await this.prepareRelease();
-    console.log(prepare);
+    console.log(chalk.green(prepare));
     // await this.finishReleaseBranch();
   },
   async prepareRelease() {
