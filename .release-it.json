@@ -3,14 +3,13 @@
     "init": "pnpm test"
   },
   "git": {
-    "commitMessage": "chore: release v${version}"
+    "commitMessage": "chore: release v${version}",
+    "push": false
   },
   "github": {
     "release": false
   },
-  "git": {
-    "push": false
-  },
+
   "npm": {
     "publish": false
   }
