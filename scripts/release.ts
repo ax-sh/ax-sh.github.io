@@ -8,7 +8,7 @@ const Release = {
     // await this.switchToDefaultBranch();
 
     // await this.startReleaseBranch();
-    await $`pnpm release-it`;
+    await $`pnpm release-it --ci`;
     // await this.finishReleaseBranch();
   },
   async switchToDefaultBranch() {
