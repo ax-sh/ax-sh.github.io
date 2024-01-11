@@ -1,4 +1,7 @@
 {
+  "hooks": {
+    "init": "pnpm test"
+  },
   "git": {
     "commitMessage": "chore: release v${version}"
   },
