@@ -26,12 +26,12 @@ const Release = {
     const nextVersion = await this.getNextVersion();
 
     const cmd = await $`git flow release start ${nextVersion}`;
-
+    await $`git push`;
     return cmd.stdout;
   },
   async finishReleaseBranch() {
     const cmd = await $`git flow release finish --notag`;
-    await $`git push`;
+
     return cmd.stdout;
   },
   async getNextVersion() {
