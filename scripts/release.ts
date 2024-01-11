@@ -13,7 +13,7 @@ const Release = {
     // await this.finishReleaseBranch();
   },
   async prepareRelease() {
-    const cmd = await $`pnpm release-it --ci -i minor --release-version --dry-run`;
+    const cmd = await $`pnpm release-it minor --ci  --release-version --dry-run`;
     return cmd.stdout;
   },
   async switchToDefaultBranch() {
