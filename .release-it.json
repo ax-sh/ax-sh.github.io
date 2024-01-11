@@ -1,7 +1,7 @@
 {
   "hooks": {
-    "before:beforeBump": ["echo doooo v${version}"],
-    "after:bump": ["echo foo v${version} v${latestVersion} "],
+    "before:beforeBump": ["echo beforeBump v${version}"],
+    "after:bump": ["echo after:bump v${version} v${latestVersion} "],
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
