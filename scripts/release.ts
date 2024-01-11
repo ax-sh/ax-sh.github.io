@@ -13,7 +13,8 @@ const Release = {
     // await this.finishReleaseBranch();
   },
   async prepareRelease() {
-    const cmd = await $`pnpm release-it minor --ci --release-version`;
+    const releaseType = await this.getReleaseType();
+    const cmd = await $`pnpm release-it ${releaseType} --ci`;
     return cmd.stdout;
   },
   async switchToDefaultBranch() {
@@ -31,7 +32,7 @@ const Release = {
   },
   async getNextVersion() {
     const currentVersion = await this.getCurrentVersion();
-    const releaseType = 'minor';
+    const releaseType = await this.getReleaseType();
 
     const nextVersion = await $`pnpm release-it ${releaseType} --ci --release-version --dry-run`;
 
@@ -44,8 +45,10 @@ const Release = {
   async getCurrentVersion() {
     const data = await this.getPackageJson();
     return data.version as string;
+  },
+  async getReleaseType() {
+    return 'minor';
   }
-  // getReleaseType() {}
 };
 
 (async function () {
