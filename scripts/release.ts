@@ -24,6 +24,7 @@ const Release = {
   },
   async startReleaseBranch() {
     const nextVersion = await this.getNextVersion();
+    console.log(nextVersion, 9999);
     const cmd = await $`git flow release start v${nextVersion}`;
     return cmd.stdout;
   },
@@ -34,8 +35,8 @@ const Release = {
   async getNextVersion() {
     const currentVersion = await this.getCurrentVersion();
     const releaseType = await this.getReleaseType();
-
-    const nextVersion = await $`pnpm release-it ${releaseType} --ci --release-version --dry-run`;
+    const nextVersionCmd = await $`pnpm release-it ${releaseType} --ci --release-version --dry-run`;
+    const nextVersion = nextVersionCmd.stdout;
 
     console.table({ currentVersion, nextVersion });
     return nextVersion;
