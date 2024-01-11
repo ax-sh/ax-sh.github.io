@@ -37,5 +37,9 @@ const Release = {
 };
 
 (async function () {
-  await Release.run();
+  try {
+    await Release.run();
+  } catch (e) {
+    console.log(e, 66);
+  }
 })();
