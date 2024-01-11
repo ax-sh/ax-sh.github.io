@@ -12,7 +12,7 @@
     "test": "vitest",
     "commitlint": "commitlint --edit",
     "release": "tsx ./scripts/release.ts",
-    "release:minor": "release-it"
+    "release:minor": "release-it minor"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^9.2.0",
