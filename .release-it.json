@@ -16,10 +16,10 @@
   },
   "git": {
     "commitMessage": "chore: release v${version}",
-    "push": true
+    "push": false
   },
   "github": {
-    "release": false
+    "release": true
   },
 
   "npm": {
