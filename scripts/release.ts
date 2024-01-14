@@ -1,8 +1,11 @@
-import chalk from 'chalk';
-import { $, ExecaSyncError } from 'execa';
-import fs from 'fs-extra';
-import path from 'path';
+import chalk from "chalk";
+import { $, ExecaSyncError } from "execa";
+import fs from "fs-extra";
+import path from "path";
 
+// @deprecated but works
+// use below for running it as cli
+//  "release": "tsx ./scripts/release.ts",
 const Release = {
   async run(): Promise<void> {
     await this.switchToDefaultBranch();
@@ -44,18 +47,18 @@ const Release = {
     return nextVersion;
   },
   async getPackageJson() {
-    return fs.readJson(path.join(process.cwd(), 'package.json'));
+    return fs.readJson(path.join(process.cwd(), "package.json"));
   },
   async getCurrentVersion() {
     const data = await this.getPackageJson();
     return data.version as string;
   },
   async getReleaseType() {
-    return 'minor';
+    return "minor";
   }
 };
 
-(async function () {
+(async () => {
   try {
     await Release.run();
   } catch (e) {

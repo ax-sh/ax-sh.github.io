@@ -1,7 +1,18 @@
-import { BannerSection } from '@/ui/sections/banner-section';
+import { QueryClientProviderWrapper } from "@/ui/query-client-provider.wrapper";
+import { BannerSection } from "@/ui/sections/banner-section";
+import { render, screen } from "@testing-library/react";
 
 describe(BannerSection.name, () => {
-  it('should load', () => {
-    expect(1).toBe(1);
+  it("should match classname", () => {
+    const e = render(
+      <main>
+        <BannerSection />
+      </main>,
+      { wrapper: QueryClientProviderWrapper }
+    );
+    expect(screen.getByRole("main").firstChild).toHaveAttribute(
+      "class",
+      "prose prose-xl prose-stone text-white prose-headings:text-green-500"
+    );
   });
 });
