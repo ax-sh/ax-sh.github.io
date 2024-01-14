@@ -25,8 +25,9 @@ module.exports = {
     release: true,
     releaseNotes(context) {
       // Remove the first, redundant line with version and date.
-      const notes = context.changelog.split("\n").slice(1);
-      notes.unshift(":rocket: (https://ax-sh.github.io/)[https://ax-sh.github.io/]");
+      // const notes = context.changelog.split("\n").slice(1);
+      const notes = context.changelog.split("\n")
+      notes.unshift(":rocket: [https://ax-sh.github.io/](https://ax-sh.github.io/)");
       return notes.join("\n");
     }
   },
