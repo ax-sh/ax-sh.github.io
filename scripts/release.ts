@@ -3,6 +3,9 @@ import { $, ExecaSyncError } from 'execa';
 import fs from 'fs-extra';
 import path from 'path';
 
+// @depricated but works
+// use below for running it as cli
+//  "release": "tsx ./scripts/release.ts",
 const Release = {
   async run(): Promise<void> {
     await this.switchToDefaultBranch();

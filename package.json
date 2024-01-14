@@ -11,7 +11,6 @@
     "lint:types": "pnpm tsc",
     "test": "vitest",
     "commitlint": "commitlint --edit",
-    "release": "t sx ./scripts/release.ts",
     "release:minor": "dotenv  release-it minor -- --ci",
     "lighthouse:local": "lighthouse http://localhost:3000/ --output-path=./report.json --output json --quiet --chrome-flags=\"--headless\" --view   --only-categories=performance,color-contrast   "
   },
