@@ -32,5 +32,13 @@ module.exports = {
   },
   npm: {
     publish: false
+  },
+  plugins: {
+    "@release-it/conventional-changelog": {
+      preset: {
+        name: "angular"
+      },
+      infile: "CHANGELOG.md"
+    }
   }
 };
