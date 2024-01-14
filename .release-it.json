@@ -17,10 +17,11 @@
     ]
   },
   "git": {
-    "commitMessage": "chore: release v${version}",
+    "commitMessage": "chore: release v${version} https://ax-sh.github.io/",
     "push": false
   },
   "github": {
+    "releaseName": "Release ${version} ax-sh.github.io",
     "release": true
   },
   "npm": {
