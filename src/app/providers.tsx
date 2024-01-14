@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { PropsWithChildren, useLayoutEffect, useState } from 'react';
+import { PropsWithChildren, useLayoutEffect, useState } from "react";
 
-import { hotjar } from 'react-hotjar';
+import { hotjar } from "react-hotjar";
 
-import { GoogleAnalytics } from 'nextjs-google-analytics';
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-const GOOGLE_ANALYTICS_ID = 'G-N6207193QM';
+const GOOGLE_ANALYTICS_ID = "G-N6207193QM";
 const HOTJAR_ID = 3099426;
 const HOTJAR_VERSION = 6;
 

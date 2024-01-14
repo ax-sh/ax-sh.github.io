@@ -1,7 +1,7 @@
-import { BannerSection } from '@/ui/sections/banner-section';
+import { BannerSection } from "@/ui/sections/banner-section";
 
 describe(BannerSection.name, () => {
-  it('should load', () => {
+  it("should load", () => {
     expect(1).toBe(1);
   });
 });

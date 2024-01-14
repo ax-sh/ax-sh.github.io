@@ -3,7 +3,7 @@ import { $, ExecaSyncError } from 'execa';
 import fs from 'fs-extra';
 import path from 'path';
 
-// @depricated but works
+// @deprecated but works
 // use below for running it as cli
 //  "release": "tsx ./scripts/release.ts",
 const Release = {
@@ -58,7 +58,7 @@ const Release = {
   }
 };
 
-(async function () {
+(async () => {
   try {
     await Release.run();
   } catch (e) {
