@@ -1,5 +1,5 @@
-{
-  "hooks": {
+module.exports = {
+  hooks: {
     "before:init": "pnpm test run",
     "before:beforeBump": [
       "git flow release start v${version}",
@@ -16,15 +16,29 @@
       "git push origin refs/heads/master:master"
     ]
   },
-  "git": {
-    "commitMessage": "chore: release v${version} https://ax-sh.github.io/",
-    "push": false
+  git: {
+    commitMessage: "chore: release v${version} https://ax-sh.github.io/",
+    push: false
   },
-  "github": {
-    "releaseName": "Release ${version} ax-sh.github.io",
-    "release": true
+  github: {
+    releaseName: "Release ${version} ax-sh.github.io",
+    release: true,
+    releaseNotes(context) {
+      // Remove the first, redundant line with version and date.
+      const notes = context.changelog.split("\n").slice(1);
+      notes.unshift("rocket");
+      return notes.join("\n");
+    }
   },
-  "npm": {
-    "publish": false
+  npm: {
+    publish: false
+  },
+  plugins: {
+    "@release-it/conventional-changelog": {
+      preset: {
+        name: "angular"
+      },
+      infile: "CHANGELOG.md"
+    }
   }
-}
+};
