@@ -1,13 +1,7 @@
-import { PropsWithChildren } from "react";
-
 import Home from "@/app/page";
+import { QueryClientProviderWrapper } from "@/ui/query-client-provider.wrapper";
 import { render, screen } from "@testing-library/react";
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-function QueryClientProviderWrapper({ children }: PropsWithChildren) {
-  return <QueryClientProvider client={new QueryClient()}>{children}</QueryClientProvider>;
-}
 describe("Verify home page", () => {
   it("should have link to past work", () => {
     render(<Home />, { wrapper: QueryClientProviderWrapper });
