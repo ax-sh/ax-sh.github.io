@@ -14,6 +14,7 @@
     "check": "biome check --apply ./",
     "formatter": "pnpm prettier --write --ignore-unknown .",
     "release:minor": "dotenv  release-it minor -- --ci",
+    "release:major": "dotenv  release-it major -- --ci",
     "lighthouse:local": "lighthouse http://localhost:3000/ --output-path=./report.json --output json --quiet --chrome-flags=\"--headless\" --view   --only-categories=performance,color-contrast   "
   },
   "dependencies": {
