@@ -21,7 +21,7 @@
     "push": false
   },
   "github": {
-    "releaseName": "Release ${version} https://ax-sh.github.io/ [${releaseName}](${https://ax-sh.github.io/})",
+    "releaseName": "Release ${version} ax-sh.github.io [${releaseName}](${https://ax-sh.github.io/})",
     "release": true
   },
   "npm": {
