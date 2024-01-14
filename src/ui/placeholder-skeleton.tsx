@@ -12,10 +12,10 @@ function pad(str: string, pad: number, custom = "_") {
 export function PlaceholderSkeleton({ length }: { length: string | number }) {
   const placeholder = useMemo(
     () => pad("", typeof length === "string" ? length.length : length),
-    [length],
+    [length]
   );
   return (
-    <span className="pointer-events-none text-transparent bg-gray-200 animate-pulse rounded break-all m-2">
+    <span className='pointer-events-none text-transparent bg-gray-200 animate-pulse rounded break-all m-2'>
       {placeholder}
     </span>
   );

@@ -9,13 +9,13 @@ import clsx from "clsx";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full">
+    <main className='min-h-screen w-full'>
       <HeroSection>
         <section
           className={clsx(
             "h-full w-full",
             "box-border p-4 md:p-4",
-            "grid place-content-center prose",
+            "grid place-content-center prose"
           )}
         >
           <BannerSection />

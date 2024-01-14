@@ -13,7 +13,7 @@ import {
   SiGithub,
   SiLinkedin,
   SiMaildotru,
-  SiTwitter,
+  SiTwitter
 } from "@icons-pack/react-simple-icons";
 
 // temp hotfix fot warning on console because of
@@ -30,7 +30,7 @@ export function GetIcon({ name }: { name: IconType }) {
   const props = {
     onMouseOver: () => setHover(true),
     onMouseOut: () => setHover(false),
-    color: hovered ? "gray" : "white",
+    color: hovered ? "gray" : "white"
   };
 
   switch (name) {
@@ -53,11 +53,11 @@ export function GetIcon({ name }: { name: IconType }) {
 
 export function ExternalLinksSection() {
   return (
-    <nav className="links">
-      <ul className="flex w-60 justify-between pointer-events-auto list-none	">
+    <nav className='links'>
+      <ul className='flex w-60 justify-between pointer-events-auto list-none	'>
         {Object.entries(data.links).map(([label, value]) => (
           <li key={label}>
-            <Obfuscate target="_blank" href={value}>
+            <Obfuscate target='_blank' href={value}>
               <GetIcon name={label as IconType} />
             </Obfuscate>
           </li>

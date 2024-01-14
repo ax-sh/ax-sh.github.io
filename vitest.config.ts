@@ -10,13 +10,13 @@ export default defineConfig({
     tsconfigPaths(),
     AutoImport({
       imports: ["vitest"],
-      dts: true, // generate TypeScript declaration
-    }),
+      dts: true // generate TypeScript declaration
+    })
   ],
   test: {
     environment: "jsdom",
     include: ["**/*.test.{ts,tsx}"],
     globals: true,
-    setupFiles: ["./vitest-setup.ts"],
-  },
+    setupFiles: ["./vitest-setup.ts"]
+  }
 });

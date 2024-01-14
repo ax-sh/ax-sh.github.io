@@ -6,8 +6,8 @@ module.exports = {
       "error",
       {},
       {
-        usePrettierrc: true,
-      },
-    ],
-  },
+        usePrettierrc: true
+      }
+    ]
+  }
 };

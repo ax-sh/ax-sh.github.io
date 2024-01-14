@@ -1,7 +1,7 @@
-import path from "path";
 import chalk from "chalk";
 import { $, ExecaSyncError } from "execa";
 import fs from "fs-extra";
+import path from "path";
 
 // @deprecated but works
 // use below for running it as cli
@@ -55,7 +55,7 @@ const Release = {
   },
   async getReleaseType() {
     return "minor";
-  },
+  }
 };
 
 (async () => {

@@ -9,20 +9,20 @@ export const PROJECTS: ProjectProps[] = [
   {
     name: "Innicement",
     link: "https://ax-sh.github.io/innicement/",
-    image: "projects/innicement.png",
+    image: "projects/innicement.png"
   },
   {
     name: "Xenovrs",
     link: "https://statuesque-semolina-a1b399.netlify.app/",
-    image: "projects/xenovrs.png",
+    image: "projects/xenovrs.png"
   },
   {
     name: "Works",
     link: "https://bit.ly/4418VWz",
     // link: 'https://ax-sh.notion.site/Projects-b61ea900922b48dfb4bb805606d7a37a',
     image: null,
-    external: true,
-  },
+    external: true
+  }
 ];
 
 export const data = {
@@ -34,9 +34,9 @@ export const data = {
     CodeSandbox: "https://codesandbox.io/u/ax-sh",
     Twitter: "https://twitter.com/ax___sh",
     Dev: "https://dev.to/axsh/",
-    Email: "mailto:axmin.shrestha@pm.me",
+    Email: "mailto:axmin.shrestha@pm.me"
     // Website: 'https://ax-sh.github.io/portfolio/',
     // CV: "",
-  },
+  }
 } as const;
 export type IconType = keyof (typeof data)["links"];

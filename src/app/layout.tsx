@@ -13,18 +13,18 @@ import "./globals.css";
 
 const JosefinFont = Josefin_Sans({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
   title: "Axmin Shrestha | Portfolio",
   description:
-    "I Develop Creative Websites. Specialize In Aesthetics, Responsive Design, Simplicity, And Utility.",
+    "I Develop Creative Websites. Specialize In Aesthetics, Responsive Design, Simplicity, And Utility."
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <Analytics />
       <body className={JosefinFont.className}>
         <Providers>{children}</Providers>

@@ -8,11 +8,11 @@ describe(BannerSection.name, () => {
       <main>
         <BannerSection />
       </main>,
-      { wrapper: QueryClientProviderWrapper },
+      { wrapper: QueryClientProviderWrapper }
     );
     expect(screen.getByRole("main").firstChild).toHaveAttribute(
       "class",
-      "prose prose-xl prose-stone text-white prose-headings:text-green-500",
+      "prose prose-xl prose-stone text-white prose-headings:text-green-500"
     );
   });
 });
