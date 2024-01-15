@@ -8,12 +8,13 @@ function useData() {
   return useQuery({ queryKey: ["data"], queryFn: () => fetch("/data.json").then((x) => x.json()) });
 }
 
-export function BannerSection({
-  className = "prose prose-xl prose-stone text-white prose-headings:text-green-500"
-}: {
+type BannerSectionProps = {
   // eslint-disable-next-line react/require-default-props
   className?: string;
-}) {
+};
+export function BannerSection({
+  className = "prose prose-xl prose-stone text-white prose-headings:text-green-500"
+}: BannerSectionProps) {
   const { data, isLoading } = useData();
   if (isLoading)
     return (
