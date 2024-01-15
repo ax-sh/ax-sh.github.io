@@ -11,6 +11,7 @@ function useData() {
 export function BannerSection({
   className = "prose prose-xl prose-stone text-white prose-headings:text-green-500"
 }: {
+  // eslint-disable-next-line react/require-default-props
   className?: string;
 }) {
   const { data, isLoading } = useData();
