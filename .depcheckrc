@@ -1,0 +1,2 @@
+ignores: ["@commitlint/config-conventional","eslint", "@trivago/prettier-plugin-sort-imports", "husky", "eslint-*", "depcheck", "@tanstack/eslint-plugin-query", "@release-it/conventional-changelog", "postcss", "autoprefixer"]
+skip-missing: true

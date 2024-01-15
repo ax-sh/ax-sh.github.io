@@ -1,12 +1,12 @@
 {
   "name": "ax-sh.github.io",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --format=table",
+    "lint": "next lint --format=stylish",
     "lint:fix": "pnpm lint --fix",
     "lint:types": "pnpm tsc",
     "test": "vitest",
@@ -49,6 +49,7 @@
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.0.1",
+    "depcheck": "^1.4.7",
     "dotenv-cli": "^7.3.0",
     "eslint": "^8",
     "eslint-config-airbnb": "^19.0.4",
