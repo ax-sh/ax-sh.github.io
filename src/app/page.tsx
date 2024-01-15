@@ -20,8 +20,14 @@ export default function Home() {
         >
           <BannerSection />
           <ExternalLinksSection />
-          <div>
+          <div className='flex gap-2'>
             <PastProjectsLink>WORKS</PastProjectsLink>
+            <a
+              className='text-green-500 hover:text-red-500 cursor-pointer'
+              href='https://codesandbox.io/u/ax-sh'
+            >
+              SHOW CASE
+            </a>
           </div>
         </section>
       </HeroSection>
