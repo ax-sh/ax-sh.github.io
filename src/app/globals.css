@@ -7,3 +7,51 @@ body {
   background: #000;
   font-family: "Inter", sans-serif;
 }
+
+@keyframes fade-left {
+  from {
+    scale: 1;
+    translate: 0;
+    opacity: 1;
+  }
+
+  to {
+    scale: 0.8;
+    translate: -30%;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-right {
+  from {
+    scale: 1;
+    translate: 0;
+    opacity: 1;
+  }
+
+  to {
+    scale: 0.8;
+    translate: 30%;
+    opacity: 0;
+  }
+}
+
+.card-fader:nth-child(odd) {
+  animation: fade-left 3s linear infinite;
+
+}
+.card-fader:nth-child(even) {
+  animation: fade-right 3s linear infinite;
+}
+
+.card-fader:is(:nth-child(3), :nth-child(4)) {
+  animation-delay: 750ms;
+}
+
+.card-fader:is(:nth-child(5), :nth-child(6)) {
+  animation-delay: 1500ms;
+}
+
+.card-fader:is(:nth-child(7), :nth-child(8)) {
+  animation-delay: 2250ms;
+}
