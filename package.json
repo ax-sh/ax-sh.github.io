@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --format=table",
+    "lint": "next lint --format=stylish",
     "lint:fix": "pnpm lint --fix",
     "lint:types": "pnpm tsc",
     "test": "vitest",
