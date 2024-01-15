@@ -26,7 +26,7 @@ export default function Home() {
               className='text-green-500 hover:text-red-500 cursor-pointer'
               href='https://codesandbox.io/u/ax-sh'
             >
-              SHOW CASE
+              SHOWCASE
             </a>
           </div>
         </section>

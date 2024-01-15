@@ -25,7 +25,7 @@ console.error = (...args: unknown[]) => {
   error(...args);
 };
 
-export function GetIcon({ name }: { name: IconType }) {
+export function GetIcon({ name }: { name: IconType | string }) {
   const [hovered, setHover] = React.useState(false);
   const props = {
     onMouseOver: () => setHover(true),
@@ -58,7 +58,7 @@ export function ExternalLinksSection() {
         {Object.entries(data.links).map(([label, value]) => (
           <li key={label}>
             <Obfuscate target='_blank' href={value}>
-              <GetIcon name={label as IconType} />
+              <GetIcon name={label} />
             </Obfuscate>
           </li>
         ))}
