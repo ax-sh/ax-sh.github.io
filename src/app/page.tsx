@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ExternalWorkLink, PastProjectsLink } from "@/ui/past-projects-link";
+import { CTALinks } from "@/app/cta-links";
 import { BannerSection } from "@/ui/sections/banner-section";
 import { ExternalLinksSection } from "@/ui/sections/external-links-section";
 import { HeroSection } from "@/ui/sections/hero-section";
@@ -20,10 +20,7 @@ export default function Home() {
         >
           <BannerSection />
           <ExternalLinksSection />
-          <div className='flex gap-2'>
-            <PastProjectsLink>Projects</PastProjectsLink>
-            <ExternalWorkLink href='https://codesandbox.io/u/ax-sh'>Works</ExternalWorkLink>
-          </div>
+          <CTALinks />
         </section>
       </HeroSection>
       <div />

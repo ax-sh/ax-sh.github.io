@@ -10,7 +10,10 @@ export function ExternalLink({ children, ...props }: ComponentProps<"a">) {
 
 export function ExternalWorkLink({ children, ...props }: ComponentProps<"a">) {
   return (
-    <ExternalLink className='text-green-500 hover:text-red-500 cursor-pointer' {...props}>
+    <ExternalLink
+      className='text-green-500 hover:underline cursor-pointer no-underline uppercase'
+      {...props}
+    >
       {children}
     </ExternalLink>
   );
