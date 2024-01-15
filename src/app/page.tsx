@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PastProjectsLink } from "@/ui/past-projects-link";
+import { ExternalWorkLink, PastProjectsLink } from "@/ui/past-projects-link";
 import { BannerSection } from "@/ui/sections/banner-section";
 import { ExternalLinksSection } from "@/ui/sections/external-links-section";
 import { HeroSection } from "@/ui/sections/hero-section";
@@ -21,13 +21,8 @@ export default function Home() {
           <BannerSection />
           <ExternalLinksSection />
           <div className='flex gap-2'>
-            <PastProjectsLink>WORKS</PastProjectsLink>
-            <a
-              className='text-green-500 hover:text-red-500 cursor-pointer'
-              href='https://codesandbox.io/u/ax-sh'
-            >
-              SHOWCASE
-            </a>
+            <PastProjectsLink>Projects</PastProjectsLink>
+            <ExternalWorkLink href='https://codesandbox.io/u/ax-sh'>Works</ExternalWorkLink>
           </div>
         </section>
       </HeroSection>
