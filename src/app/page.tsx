@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PastProjectsLink } from "@/ui/past-projects-link";
+import { CTALinks } from "@/ui/cta-links";
 import { BannerSection } from "@/ui/sections/banner-section";
 import { ExternalLinksSection } from "@/ui/sections/external-links-section";
 import { HeroSection } from "@/ui/sections/hero-section";
@@ -20,9 +20,7 @@ export default function Home() {
         >
           <BannerSection />
           <ExternalLinksSection />
-          <div>
-            <PastProjectsLink>WORKS</PastProjectsLink>
-          </div>
+          <CTALinks />
         </section>
       </HeroSection>
       <div />

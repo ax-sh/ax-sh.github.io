@@ -1,14 +1,24 @@
-import React, { PropsWithChildren } from "react";
+import React, { ComponentProps, PropsWithChildren } from "react";
 
-export function PastProjectsLink({ children }: PropsWithChildren) {
+export function ExternalLink({ children, ...props }: ComponentProps<"a">) {
   return (
-    <a
-      className='text-green-500 hover:text-red-500 cursor-pointer'
-      href='https://bit.ly/4418VWz'
-      target='_blank'
-      rel='noreferrer'
-    >
+    <a {...props} target='_blank' rel='noreferrer'>
       {children}
     </a>
   );
+}
+
+export function ExternalWorkLink({ children, ...props }: ComponentProps<"a">) {
+  return (
+    <ExternalLink
+      className='text-green-500 hover:underline cursor-pointer no-underline uppercase'
+      {...props}
+    >
+      {children}
+    </ExternalLink>
+  );
+}
+
+export function PastProjectsLink({ children }: PropsWithChildren) {
+  return <ExternalWorkLink href='https://bit.ly/4418VWz'>{children}</ExternalWorkLink>;
 }
