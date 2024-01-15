@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 
 describe(BannerSection.name, () => {
   it("should match classname", () => {
-    const e = render(
+    render(
       <main>
         <BannerSection />
       </main>,

@@ -38,7 +38,6 @@ body {
 
 .card-fader:nth-child(odd) {
   animation: fade-left 3s linear infinite;
-
 }
 .card-fader:nth-child(even) {
   animation: fade-right 3s linear infinite;

@@ -1,17 +1,14 @@
-
-
 # [1.4.0](https://github.com/ax-sh/ax-sh.github.io/compare/v1.3.0...v1.4.0) (2024-01-15)
-
 
 ### Features
 
-* add animated hero image ([42153cd](https://github.com/ax-sh/ax-sh.github.io/commit/42153cd21c1b1b6caaa35340936dc7432fd74ae3))
-* add external links component ([c86592a](https://github.com/ax-sh/ax-sh.github.io/commit/c86592ad6984cd271d843b619f3c77abbab75400))
-* add external links component ([375589f](https://github.com/ax-sh/ax-sh.github.io/commit/375589f0a8cecdc790b53f3d0311efcb1f9a318d))
-* add links to experiments ([52c2cdb](https://github.com/ax-sh/ax-sh.github.io/commit/52c2cdb10c6e419029ab3b50013dfa315fbdaa33))
-* add links to experiments ([d096b1d](https://github.com/ax-sh/ax-sh.github.io/commit/d096b1d55af35da2d9686e5f9c161b013d603718))
-* add links to experiments ([e937acc](https://github.com/ax-sh/ax-sh.github.io/commit/e937accfa76336628b46cd65c401a83037afa33a))
-* add links to experiments ([fa63a43](https://github.com/ax-sh/ax-sh.github.io/commit/fa63a43cb95dbb02aca32954fa6f9e2cd669d988))
+- add animated hero image ([42153cd](https://github.com/ax-sh/ax-sh.github.io/commit/42153cd21c1b1b6caaa35340936dc7432fd74ae3))
+- add external links component ([c86592a](https://github.com/ax-sh/ax-sh.github.io/commit/c86592ad6984cd271d843b619f3c77abbab75400))
+- add external links component ([375589f](https://github.com/ax-sh/ax-sh.github.io/commit/375589f0a8cecdc790b53f3d0311efcb1f9a318d))
+- add links to experiments ([52c2cdb](https://github.com/ax-sh/ax-sh.github.io/commit/52c2cdb10c6e419029ab3b50013dfa315fbdaa33))
+- add links to experiments ([d096b1d](https://github.com/ax-sh/ax-sh.github.io/commit/d096b1d55af35da2d9686e5f9c161b013d603718))
+- add links to experiments ([e937acc](https://github.com/ax-sh/ax-sh.github.io/commit/e937accfa76336628b46cd65c401a83037afa33a))
+- add links to experiments ([fa63a43](https://github.com/ax-sh/ax-sh.github.io/commit/fa63a43cb95dbb02aca32954fa6f9e2cd669d988))
 
 ### Changelog
 
