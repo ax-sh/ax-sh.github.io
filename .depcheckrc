@@ -1,0 +1,2 @@
+ignores: ["eslint", "babel-*", "husky", "eslint-*", "depcheck", "@tanstack/eslint-plugin-query", "@release-it/conventional-changelog", "postcss", "autoprefixer"]
+skip-missing: true
