@@ -20,9 +20,9 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["vitest/globals"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "./vitest-setup.ts"],
-  "exclude": ["node_modules"],
-  "types": ["vitest/globals"]
+  "exclude": ["node_modules"]
 }
