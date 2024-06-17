@@ -20,7 +20,7 @@ function HeroImage() {
   );
 }
 
-export function HeroSection({ children }: PropsWithChildren) {
+export default function HeroSection({ children }: PropsWithChildren) {
   return (
     <section
       className={clsx(

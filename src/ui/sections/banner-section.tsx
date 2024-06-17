@@ -1,12 +1,7 @@
 "use client";
 
+import { useDataQuery } from "@/hooks/use-data-query";
 import { PlaceholderSkeleton } from "@/ui/placeholder-skeleton";
-
-import { useQuery } from "@tanstack/react-query";
-
-function useData() {
-  return useQuery({ queryKey: ["data"], queryFn: () => fetch("/data.json").then((x) => x.json()) });
-}
 
 type BannerSectionProps = {
   // eslint-disable-next-line react/require-default-props
@@ -15,7 +10,7 @@ type BannerSectionProps = {
 export function BannerSection({
   className = "prose prose-xl prose-stone text-white prose-headings:text-green-500"
 }: BannerSectionProps) {
-  const { data, isLoading } = useData();
+  const { data, isLoading } = useDataQuery();
   if (isLoading)
     return (
       <div className={className}>
