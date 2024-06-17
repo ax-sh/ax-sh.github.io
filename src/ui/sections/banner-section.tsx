@@ -4,7 +4,6 @@ import { useDataQuery } from "@/hooks/use-data-query";
 import { PlaceholderSkeleton } from "@/ui/placeholder-skeleton";
 
 type BannerSectionProps = {
-  // eslint-disable-next-line react/require-default-props
   className?: string;
 };
 export function BannerSection({
