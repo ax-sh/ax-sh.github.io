@@ -118,7 +118,8 @@ jobs:
         uses: actions/configure-pages@v4
         with:
           static_site_generator: next
-
+      - name: Install dependencies
+        run: bun install --no-frozen-lockfile
       - name: Build with Next.js 🏗️
         run: bun run build
       - name: Upload artifact 📡
