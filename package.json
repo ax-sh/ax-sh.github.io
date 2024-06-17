@@ -16,6 +16,8 @@
     "release:minor": "dotenv  release-it minor -- --ci",
     "release:major": "dotenv  release-it major -- --ci",
     "upp": "bunx npm-check-updates -i",
+    "pretty": "pretty-quick",
+    "prettier:fix": "prettier --write . ",
     "lighthouse:local": "lighthouse http://localhost:3000/ --output-path=./report.json --output json --quiet --chrome-flags=\"--headless\" --view   --only-categories=performance,color-contrast   "
   },
   "dependencies": {
@@ -35,6 +37,7 @@
     "remeda": "^2.0.10"
   },
   "devDependencies": {
+    "pretty-quick": "^4.0.0",
     "@biomejs/biome": "1.8.1",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
