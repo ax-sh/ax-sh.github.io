@@ -20,7 +20,7 @@
     "prettier:fix": "prettier --write . ",
     "clean": "rimraf .next",
     "bump": "changeset version",
-    "pr:deploy": "gh pr create -H develop -B master --fill",
+    "pr:deploy": "git push origin develop && gh pr create -H develop -B master --fill",
     "lighthouse:local": "lighthouse http://localhost:3000/ --output-path=./report.json --output json --quiet --chrome-flags=\"--headless\" --view   --only-categories=performance,color-contrast   "
   },
   "dependencies": {
