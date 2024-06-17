@@ -139,6 +139,8 @@ jobs:
     needs:
       - build
     steps:
+      - name: "Listing dir"
+        run: "ls"
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v1
         with:
