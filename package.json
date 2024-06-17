@@ -2,6 +2,7 @@
   "name": "ax-sh.github.io",
   "version": "1.6.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,6 +19,7 @@
     "upp": "bunx npm-check-updates -i",
     "pretty": "pretty-quick",
     "prettier:fix": "prettier --write . ",
+    "clean": "rimraf .next",
     "lighthouse:local": "lighthouse http://localhost:3000/ --output-path=./report.json --output json --quiet --chrome-flags=\"--headless\" --view   --only-categories=performance,color-contrast   "
   },
   "dependencies": {
