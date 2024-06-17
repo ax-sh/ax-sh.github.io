@@ -49,6 +49,7 @@ export default function WorkSection() {
           return <WorkCard {...i} />;
         })}
       </div>
+      <div className={'py-[10rem]'}></div>
     </section>
   );
 }
