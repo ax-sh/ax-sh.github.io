@@ -1,4 +1,5 @@
-import React, { ComponentProps, PropsWithChildren } from "react";
+import type { ComponentProps, PropsWithChildren } from "react";
+import React from "react";
 
 export function ExternalLink({ children, ...props }: ComponentProps<"a">) {
   return (

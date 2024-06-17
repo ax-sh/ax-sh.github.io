@@ -1,15 +1,12 @@
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 
 import type { Metadata } from "next";
 
-// eslint-disable-next-line camelcase
 import { Josefin_Sans } from "next/font/google";
 
 import Analytics, { Providers } from "@/app/providers";
 
 import "./globals.css";
-
-// eslint-disable-next-line camelcase
 
 const JosefinFont = Josefin_Sans({
   weight: ["100", "200", "300", "400", "500", "600", "700"],

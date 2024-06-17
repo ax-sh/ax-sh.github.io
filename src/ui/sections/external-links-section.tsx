@@ -6,7 +6,8 @@ import React from "react";
 // @ts-ignore
 import Obfuscate from "react-obfuscate";
 
-import { IconType, data } from "@/ui/common";
+import type { IconType } from "@/ui/common";
+import { data } from "@/ui/common";
 import {
   SiCodesandbox,
   SiDevdotto,
@@ -17,9 +18,9 @@ import {
 } from "@icons-pack/react-simple-icons";
 
 // temp hotfix fot warning on console because of
-// eslint-disable-next-line no-console
+
 const { error } = console;
-// eslint-disable-next-line no-console
+
 console.error = (...args: unknown[]) => {
   if (/defaultProps/.test(args[0] as string)) return;
   error(...args);
