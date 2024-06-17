@@ -18,9 +18,9 @@ const works = faker.helpers.multiple(makeMockWork, { count: 10 });
 
 function WorkCard({ src, label, url }: WorkCardProps) {
   return (
-    <a href={url}>
-      <div className={"bg-[#101010] flex flex-col relative aspect-[21/9] overflow-hidden"}>
-        <div className={clsx("flex-grow flex flex-col items-center", 'absolute inset-0 bg-black/60')}>
+    <a href={url} className={'group'}>
+      <div className={" bg-[#101010] flex flex-col relative aspect-[21/9] overflow-hidden"}>
+        <div className={clsx("flex-grow flex flex-col items-center", 'absolute inset-0', 'group-hover:bg-black/30 bg-black/60')}>
           <div className={'p-1 [text-shadow:_0_3px_0_rgb(0_0_0_/_40%)] absolute right-0 bottom-0'}>
 
           <span className={"text-6xl"}>{label}</span>
