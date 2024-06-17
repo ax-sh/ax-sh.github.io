@@ -19,6 +19,7 @@
     "pretty": "pretty-quick",
     "prettier:fix": "prettier --write . ",
     "clean": "rimraf .next",
+    "pr:deploy": "gh pr create -H develop -B master --fill",
     "lighthouse:local": "lighthouse http://localhost:3000/ --output-path=./report.json --output json --quiet --chrome-flags=\"--headless\" --view   --only-categories=performance,color-contrast   "
   },
   "dependencies": {
