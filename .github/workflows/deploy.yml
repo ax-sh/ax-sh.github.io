@@ -114,7 +114,13 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Bun.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: oven-sh/setup-bun@v1
+      - name: Setup Pages ⚙️
+        uses: actions/configure-pages@v4
+        with:
+          static_site_generator: next
 
+      - name: Build with Next.js 🏗️
+        run: bunx next build
       # run any `bun` or `bunx` command
       - run: bun install
       - run: bun vitest run
