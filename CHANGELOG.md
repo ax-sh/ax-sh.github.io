@@ -1,5 +1,11 @@
 ## 1.7.0
 
+## 1.8.0
+
+### Minor Changes
+
+- add work section in data
+
 ### Minor Changes
 
 - 7db8fd8: Add wok section

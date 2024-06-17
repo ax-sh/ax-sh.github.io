@@ -1,6 +1,6 @@
 {
   "name": "ax-sh.github.io",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -19,6 +19,7 @@
     "pretty": "pretty-quick",
     "prettier:fix": "prettier --write . ",
     "clean": "rimraf .next",
+    "bump": "changeset version",
     "pr:deploy": "gh pr create -H develop -B master --fill",
     "lighthouse:local": "lighthouse http://localhost:3000/ --output-path=./report.json --output json --quiet --chrome-flags=\"--headless\" --view   --only-categories=performance,color-contrast   "
   },
