@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 
 import { ImageContain } from "@/ui";
 
@@ -20,7 +20,7 @@ function HeroImage() {
   );
 }
 
-export function HeroSection({ children }: PropsWithChildren) {
+export default function HeroSection({ children }: PropsWithChildren) {
   return (
     <section
       className={clsx(

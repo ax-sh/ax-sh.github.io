@@ -3,7 +3,8 @@ import React from "react";
 import { CTALinks } from "@/ui/cta-links";
 import { BannerSection } from "@/ui/sections/banner-section";
 import { ExternalLinksSection } from "@/ui/sections/external-links-section";
-import { HeroSection } from "@/ui/sections/hero-section";
+import HeroSection from "@/ui/sections/hero-section";
+import WorksSection from "@/ui/sections/work-section";
 
 import clsx from "clsx";
 
@@ -23,7 +24,7 @@ export default function Home() {
           <CTALinks />
         </section>
       </HeroSection>
-      <div />
+      <WorksSection />
     </main>
   );
 }

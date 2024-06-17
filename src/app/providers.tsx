@@ -1,6 +1,7 @@
 "use client";
 
-import { PropsWithChildren, useLayoutEffect, useState } from "react";
+import type { PropsWithChildren } from "react";
+import { useLayoutEffect, useState } from "react";
 
 import { hotjar } from "react-hotjar";
 
@@ -15,7 +16,7 @@ const HOTJAR_VERSION = 6;
 
 export default function Analytics() {
   useLayoutEffect(() => {
-    hotjar.initialize(HOTJAR_ID, HOTJAR_VERSION);
+    hotjar.initialize({ sv: HOTJAR_VERSION, id: HOTJAR_ID });
   }, []);
   return <GoogleAnalytics gaMeasurementId={GOOGLE_ANALYTICS_ID} trackPageViews />;
 }
