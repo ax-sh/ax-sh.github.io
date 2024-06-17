@@ -120,7 +120,7 @@ jobs:
           static_site_generator: next
 
       - name: Build with Next.js 🏗️
-        run: bunx next build
+        run: bun run build
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
