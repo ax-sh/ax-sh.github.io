@@ -122,11 +122,4 @@
 #        with:
 #          path: ./out
 ##          overwrite: true
-##  test:
-##    runs-on: ubuntu-latest
-##    needs: [build]
-##    steps:
-###    # run any `bun` or `bunx` command
-##      - run: bun install
-##      - run: bun vitest run
 ##```

@@ -61,6 +61,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+  test:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+    #    # run any `bun` or `bunx` command
+          - run: bun install
+          - run: bun vitest run
 
   # Deployment job
   deploy:
