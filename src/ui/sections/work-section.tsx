@@ -16,8 +16,8 @@ const works = faker.helpers.multiple(makeMockWork, { count: 10 });
 function WorkCard({ src, label }: WorkCardProps) {
   return (
     <div className={"bg-gray-900 flex flex-col relative"}>
-      <img alt={label} src={src}  className={'object-contain flex-grow'}/>
-      <div className={'flex-grow absolute w-full flex justify-center items-end'}>
+      <img alt={label} src={src}  className={'object-contain flex-grow aspect-[4/3] items-stretch'}/>
+      <div className={'flex-grow      flex justify-center justify-items-center bg-red-500 items-stretch'}>
         <span className={'text-6xl'}>{label}</span></div>
     </div>
   );
@@ -31,7 +31,8 @@ export default function WorkSection() {
     <section id={"work"} className={"min-h-screen flex flex-col "}>
       <div
         className={clsx(
-          "container mx-auto py-8 grid gap-3 flex-grow",
+          "container mx-auto py-8",
+          "grid gap-3",
           "grid-cols-1 px-4 md:grid-cols-2 lg:grid-cols-4 "
         )}
       >
