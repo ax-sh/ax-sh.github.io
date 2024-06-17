@@ -2,7 +2,6 @@
 
 import { useDataQuery } from "@/hooks/use-data-query";
 import { faker } from "@faker-js/faker";
-import { className } from "postcss-selector-parser";
 
 import clsx from "clsx";
 
@@ -10,15 +9,16 @@ type WorkCardProps = Readonly<{ label: string; src: string; url: string }>;
 function makeMockWork() {
   return {
     label: faker.person.firstName(),
-    src: faker.image.urlLoremFlickr({ category: "nature" })
+    src: faker.image.urlLoremFlickr({ category: "nature" }),
+    url:'#'
   } as WorkCardProps;
 }
 
 const works = faker.helpers.multiple(makeMockWork, { count: 10 });
 
-function WorkCard({ src, label }: WorkCardProps) {
+function WorkCard({ src, label, url }: WorkCardProps) {
   return (
-    <a href={""}>
+    <a href={url}>
       <div className={"bg-[#101010] flex flex-col relative aspect-[21/9] overflow-hidden"}>
         <div className={clsx("flex-grow flex flex-col items-center", 'absolute inset-0 bg-black/60')}>
           <div className={'p-1 [text-shadow:_0_3px_0_rgb(0_0_0_/_40%)] absolute right-0 bottom-0'}>
@@ -27,8 +27,6 @@ function WorkCard({ src, label }: WorkCardProps) {
           </div>
         </div>
         <img alt={label} src={src} className={clsx("object-contain", "flex-grow")} />
-        {/*<div className={'flex-grow      flex justify-center justify-items-center bg-red-500 items-stretch'}>*/}
-        {/*  </div>*/}
       </div>
     </a>
   );
