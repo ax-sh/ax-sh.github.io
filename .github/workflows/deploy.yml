@@ -125,7 +125,7 @@ jobs:
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./outt
+          path: ./out
 #          overwrite: true
   test:
     runs-on: ubuntu-latest
