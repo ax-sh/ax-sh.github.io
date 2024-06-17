@@ -41,7 +41,7 @@ const eslintConfigs = [
       ".*.js",
       "node_modules",
       "public",
-
+      ".next",
       "CHANGELOG.md"
     ]
   }
