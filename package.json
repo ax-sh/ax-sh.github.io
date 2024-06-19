@@ -21,6 +21,9 @@
     "clean": "rimraf .next out",
     "bump": "changeset version",
     "pr:deploy": "git push origin develop && gh pr create -H develop -B master --fill",
+    "gh:workflows": "gh workflow view",
+    "gh:workflow:deploy": "gh run list --workflow deploy.yml",
+    "gh:status": "gh run watch --exit-status",
     "lighthouse:local": "lighthouse http://localhost:3000/ --output-path=./report.json --output json --quiet --chrome-flags=\"--headless\" --view   --only-categories=performance,color-contrast   "
   },
   "dependencies": {
