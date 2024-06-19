@@ -24,6 +24,7 @@
     "gh:workflows": "gh workflow view",
     "gh:workflow:deploy": "gh run list --workflow deploy.yml",
     "gh:status": "gh run watch --exit-status",
+    "gh:actionslogs": "gh run view 9553155963 --log",
     "lighthouse:local": "lighthouse http://localhost:3000/ --output-path=./report.json --output json --quiet --chrome-flags=\"--headless\" --view   --only-categories=performance,color-contrast   "
   },
   "dependencies": {
