@@ -7,7 +7,6 @@ import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
-
 const unicorn = {
   languageOptions: {
     ecmaVersion: 2024,
