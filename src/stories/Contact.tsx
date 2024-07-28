@@ -1,35 +1,33 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+
 export type ContactFormProps = {};
 
-type Inputs = {
-  email: string;
-  exampleRequired: string;
-};
-
+const contactFormSchema = z.object({
+  name: z.string().min(1, { message: "Required" })
+  // age: z.number().min(10),
+});
 export function ContactForm() {
   const {
     register,
-    handleSubmit
-    // watch,
-    // formState: { errors }
-  } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(contactFormSchema),
+  });
 
-  // console.log(watch("example")); // watch input value by passing the name of it
+  const onSubmit:SubmitHandler<typeof contactFormSchema.i> = (data: ContactFormProps) => {
+    console.log(d)}
 
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form onSubmit={handleSubmit(onSubmit)}>
-      {/*/!* register your input into the hook by invoking the "register" function *!/*/}
-      {/*<input defaultValue='email' type={'email'} {...register("email")} />*/}
-
-      {/*/!* include validation with required or other standard HTML validation rules *!/*/}
-      <input {...register("exampleRequired", { required: true })} />
-      {/*/!* errors will return when field validation fails  *!/*/}
-      {/*{errors.exampleRequired && <span>This field is required</span>}*/}
-
-      <input type='submit' />
+      <input {...register('name')} />
+      {errors.name?.message && <p>{errors.name?.message}</p>}
+      <input type="number" {...register('age', { valueAsNumber: true })} />
+      {errors.age?.message && <p>{errors.age?.message}</p>}
+      <input type="submit" />
     </form>
   );
 }

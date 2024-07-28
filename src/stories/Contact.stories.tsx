@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ContactForm } from "./Contact";
 
 const meta: Meta<typeof ContactForm> = {
-  title: "Contact/sds",
+  title: "AX_SH/CONTACT ",
   component: ContactForm
 };
 
