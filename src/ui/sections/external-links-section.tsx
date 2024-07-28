@@ -14,7 +14,7 @@ import {
   SiGithub,
   SiLinkedin,
   SiMaildotru,
-  SiTwitter
+  SiX as SiTwitter
 } from "@icons-pack/react-simple-icons";
 
 // temp hotfix fot warning on console because of
