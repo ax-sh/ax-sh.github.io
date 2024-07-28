@@ -76,3 +76,29 @@ body {
   border-radius: 100vh;
   background: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));
 }
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.loop-animation {
+  animation: 3s linear 0s infinite normal none running loop;
+}
+
+@keyframes inf_scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: 10s linear 0s infinite normal none running inf_scroll;
+}
