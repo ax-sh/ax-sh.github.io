@@ -96,6 +96,15 @@ export function MainStacksSection() {
             alt={"git"}
             src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg'
           />
+
+          {/*<img alt={"rust"} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" />*/}
+
+          {/*<img alt={"go"} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />*/}
+
+          <img
+            alt={"go"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg'
+          />
         </MarqueeContainer>
       </InfiniteStacksLoopMarquee>
     </section>
