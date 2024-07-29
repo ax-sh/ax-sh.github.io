@@ -7,6 +7,8 @@ import sonarjs from "eslint-plugin-sonarjs";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 import tseslint from "typescript-eslint";
+import eslintPluginStorybook from "eslint-plugin-storybook"
+
 
 const unicorn = {
   languageOptions: {
@@ -41,6 +43,7 @@ const eslintConfigs = [
     // .eslintignore is not supported with flat config, make sure to ignore also other build and test folders
     ignorePatterns: ["!.storybook", "storybook-static"]
   }),
+  ...eslintPluginStorybook.configs["flat/recommended"],
   {
     ignores: [
       ".config/*",

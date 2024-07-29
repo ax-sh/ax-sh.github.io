@@ -29,7 +29,7 @@ export type ContactFormProps = { onSubmit: SubmitHandler<contactFormFields> };
 
 export function ContactForm(props: ContactFormProps) {
   const { register, handleSubmit, isLoading, errors } = useContactForm();
-
+  console.log(errors);
   return (
     <form className={"flex flex-col gap-2"} onSubmit={handleSubmit(props.onSubmit)}>
       <label className={"block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"}>
