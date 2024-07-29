@@ -21,7 +21,7 @@ const contactFormSchema = z.object({
   // phone: z.string().min(1, { message: "Phone is Required" }),
   // business: z.string().min(1, { message: "Business is Required" }),
   // budget: z.string().min(1, { message: "Required" }),
-  // details: z.string().min(1, { message: "Required" })
+  // message: z.string().min(1, { message: "Message is Required" })
   // age: z.number().min(10),
 });
 export type contactFormFields = z.infer<typeof contactFormSchema>; // string

@@ -50,8 +50,6 @@ export function ContactForm(props: ContactFormProps) {
         <span className='ml-2 leading-5'>{isSubmitting ? "Submitting" : "Send"}</span>
       </Button>
 
-
-
       {/*<div className='sm:col-span-2'>*/}
       {/*  <label*/}
       {/*    htmlFor='message'*/}
@@ -71,7 +69,7 @@ export function ContactForm(props: ContactFormProps) {
           <ErrorMessage
             errors={errors}
             name={name}
-            render={({ message, ...p }) => <p className={"text-red-500"}>{message}</p>}
+            render={({ message }) => <p className={"text-red-500"}>{message}</p>}
           />
         );
       })}
