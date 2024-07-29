@@ -16,10 +16,8 @@
 
 ### Features
 
-- add depcheck ([4184f50](https://github.com/ax-sh/ax-sh.github.io/commit/4184f507c9fb5f61c8d4f365df192080055dd0b8))
-- add depcheck ([a06c8da](https://github.com/ax-sh/ax-sh.github.io/commit/a06c8da5db36f2b8e8487ad92c1771ac18468e72))
-- add depcheck ([ce6172e](https://github.com/ax-sh/ax-sh.github.io/commit/ce6172e8e7d83d83e473acab75c6d1f222f253f9))
-- remove depricated functions ([9622aaa](https://github.com/ax-sh/ax-sh.github.io/commit/9622aaaa806c22e341cc82db2c8427e34a041a6f))
+- add dep-check ([4184f50](https://github.com/ax-sh/ax-sh.github.io/commit/4184f507c9fb5f61c8d4f365df192080055dd0b8))
+- remove deprecated functions ([9622aaa](https://github.com/ax-sh/ax-sh.github.io/commit/9622aaaa806c22e341cc82db2c8427e34a041a6f))
 - update script ([089aaac](https://github.com/ax-sh/ax-sh.github.io/commit/089aaaceb003ba3c01b413db6d9788a1f95b8620))
 - update script ([bf8fd31](https://github.com/ax-sh/ax-sh.github.io/commit/bf8fd317ad4fac95de69c256b2fb90cfdeef4a5d))
 

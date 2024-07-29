@@ -14,10 +14,10 @@ import {
   SiGithub,
   SiLinkedin,
   SiMaildotru,
-  SiTwitter
+  SiX as SiTwitter
 } from "@icons-pack/react-simple-icons";
 
-// temp hotfix fot warning on console because of
+// temp hotfix for warning on console because of
 
 const { error } = console;
 

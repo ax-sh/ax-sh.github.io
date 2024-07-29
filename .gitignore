@@ -40,3 +40,5 @@ next-env.d.ts
 auto-imports.d.ts
 .env
 /report.json
+
+*storybook.log
