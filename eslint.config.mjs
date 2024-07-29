@@ -1,4 +1,4 @@
-import { FlatCompat } from "@eslint/eslintrc";
+// import { FlatCompat } from "@eslint/eslintrc";
 import eslint from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
