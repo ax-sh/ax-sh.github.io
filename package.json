@@ -1,6 +1,6 @@
 {
   "name": "ax-sh.github.io",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -114,6 +114,8 @@
     "vitest": "^2.0.4"
   },
   "eslintConfig": {
-    "extends": ["plugin:storybook/recommended"]
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
