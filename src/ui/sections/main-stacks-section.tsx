@@ -36,21 +36,66 @@ export function MainStacksSection() {
     >
       <InfiniteStacksLoopMarquee>
         <MarqueeContainer>
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/storybook/storybook-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitest/vitest-original.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' />
-          <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' />
+          <img
+            alt={"typescript"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'
+          />
+          <img
+            alt={"javascript"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'
+          />
+          <img
+            alt='react'
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
+          />
+          <img
+            alt={"nextjs"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg'
+          />
+          <img
+            alt={"nestjs"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg'
+          />
+          <img
+            alt={"storybook"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/storybook/storybook-original.svg'
+          />
+          <img
+            alt={"docker"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg'
+          />
+          <img
+            alt={"graphql"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg'
+          />
+          <img
+            alt={"python"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'
+          />
+          <img
+            alt={"postgresql"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg'
+          />
+          <img
+            alt={"vitejs"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg'
+          />
+          <img
+            alt={"prisma"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg'
+          />
+          <img
+            alt={"vitest"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitest/vitest-original.svg'
+          />
+          <img
+            alt={"amazon web services"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'
+          />
+          <img
+            alt={"git"}
+            src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg'
+          />
         </MarqueeContainer>
       </InfiniteStacksLoopMarquee>
     </section>
