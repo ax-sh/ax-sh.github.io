@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   hooks: {
     "before:init": "pnpm test run",
     "before:beforeBump": [
