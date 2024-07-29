@@ -1,12 +1,11 @@
-import { SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler } from "react-hook-form";
 
 import Button from "@/ui/button";
 import { ErrorMessage } from "@hookform/error-message";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { StarIcon } from "@storybook/icons";
-import { z } from "zod";
 
 import clsx from "clsx";
+import { contactFormForm, useContactForm } from "@/stories/use-contact-form";
 
 export type ContactFormProps = { onSubmit: SubmitHandler<contactFormForm> };
 
@@ -28,27 +27,7 @@ export type ContactFormProps = { onSubmit: SubmitHandler<contactFormForm> };
 //   <option>$100,000 +</option>
 // </select>
 
-const contactFormSchema = z.object({
-  name: z.string().min(1, { message: "Name is Required" }),
-  email: z.string().min(1, { message: "Email is Required" })
-  // phone: z.string().min(1, { message: "Phone is Required" }),
-  // business: z.string().min(1, { message: "Business is Required" }),
-  // budget: z.string().min(1, { message: "Required" }),
-  // details: z.string().min(1, { message: "Required" })
-  // age: z.number().min(10),
-});
-type contactFormForm = z.infer<typeof contactFormSchema>; // string
 
-function useContactForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm({
-    resolver: zodResolver(contactFormSchema)
-  });
-  return { register, handleSubmit, errors };
-}
 
 export function ContactForm(props: ContactFormProps) {
   const { register, handleSubmit, errors } = useContactForm();
@@ -80,7 +59,7 @@ export function ContactForm(props: ContactFormProps) {
           )}
         />
       </label>{" "}
-      <Button type='submit'>
+      <Button type='submit' disabled={isPending}>
         {isPending ? <StarIcon className='h-4 w-4 text-yellow-400' /> : <StarIcon />}
         <span className='ml-2 leading-5'>{isPending ? "Sending" : "Send"}</span>
       </Button>
