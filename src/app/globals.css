@@ -122,5 +122,5 @@ body {
 }
 
 .animate-infinite-scroll {
-  animation: 10s linear 0s infinite normal none running inf_scroll;
+  animation: 8s linear 0s infinite normal none running inf_scroll;
 }

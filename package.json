@@ -1,6 +1,6 @@
 {
   "name": "ax-sh.github.io",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,6 +13,7 @@
     "test": "vitest",
     "commitlint": "commitlint --edit",
     "check": "biome check --apply ./",
+    "biome:migrate": "biome migrate prettier --write",
     "formatter": "nr prettier --write --ignore-unknown .",
     "release:minor": "dotenv release-it minor -- --ci",
     "release:major": "dotenv release-it major -- --ci",
@@ -32,9 +33,7 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.27.7",
-    "@hookform/resolvers": "^3.9.0",
     "@icons-pack/react-simple-icons": "^9.6.0",
-    "@storybook/builder-vite": "^8.2.6",
     "@tanstack/react-query": "^5.51.15",
     "@tanstack/react-query-devtools": "^5.51.15",
     "@testing-library/jest-dom": "^6.4.8",
@@ -113,8 +112,6 @@
     "vitest": "^2.0.4"
   },
   "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
+    "extends": ["plugin:storybook/recommended"]
   }
 }
