@@ -5,7 +5,7 @@ import { ErrorMessage } from "@hookform/error-message";
 import { StarIcon } from "@storybook/icons";
 
 import clsx from "clsx";
-import { contactFormForm, useContactForm } from "@/stories/use-contact-form";
+import { contactFormForm, useContactForm } from "@/hooks/use-contact-form";
 
 export type ContactFormProps = { onSubmit: SubmitHandler<contactFormForm> };
 
