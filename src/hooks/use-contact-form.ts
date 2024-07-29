@@ -30,9 +30,10 @@ export function useContactForm() {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors, isSubmitting }
   } = useForm({
     resolver: zodResolver(contactFormSchema)
   });
-  return { register, handleSubmit, errors, isSubmitting };
+  return { control, register, handleSubmit, errors, isSubmitting };
 }
