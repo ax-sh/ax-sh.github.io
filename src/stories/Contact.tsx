@@ -1,7 +1,9 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 
+import Button from "@/ui/button";
 import { ErrorMessage } from "@hookform/error-message";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { StarIcon } from "@storybook/icons";
 import { z } from "zod";
 
 import clsx from "clsx";
@@ -36,7 +38,8 @@ const contactFormSchema = z.object({
   // age: z.number().min(10),
 });
 type contactFormForm = z.infer<typeof contactFormSchema>; // string
-export function ContactForm(props: ContactFormProps) {
+
+function useContactForm() {
   const {
     register,
     handleSubmit,
@@ -44,16 +47,25 @@ export function ContactForm(props: ContactFormProps) {
   } = useForm({
     resolver: zodResolver(contactFormSchema)
   });
+  return { register, handleSubmit, errors };
+}
+
+export function ContactForm(props: ContactFormProps) {
+  const { register, handleSubmit, errors } = useContactForm();
+  const isPending = false;
 
   return (
-    <form className={"flex flex-col gap-4"} onSubmit={handleSubmit(props.onSubmit)}>
+    <form className={"flex flex-col gap-2"} onSubmit={handleSubmit(props.onSubmit)}>
       <label className={"block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"}>
         <span>Name</span>
         <input
           {...register("name")}
-          className={
-            "shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-          }
+          className={clsx(
+            "mt-1 block w-full rounded-md",
+            "text-sm text-gray-700 placeholder:text-gray-500 dark:text-gray-400 dark:placeholder:text-gray-600",
+            "border border-gray-400 focus-visible:border-transparent dark:border-gray-700 dark:bg-gray-800",
+            "focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
+          )}
         />
       </label>
       <label className={"block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"}>
@@ -67,7 +79,12 @@ export function ContactForm(props: ContactFormProps) {
             "focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
           )}
         />
-      </label>
+      </label>{" "}
+      <Button type='submit'>
+        {isPending ? <StarIcon className='h-4 w-4 text-yellow-400' /> : <StarIcon />}
+        <span className='ml-2 leading-5'>{isPending ? "Sending" : "Send"}</span>
+      </Button>
+      <ErrorMessage errors={errors} name='name' render={({ message, ...p }) => <p>{message}</p>} />
       {/*{errors.name?.message && <p>{errors.name?.message}</p>}*/}
       {/*<input type="number" {...register("age", { valueAsNumber: true })} />*/}
       {/*{errors.age?.message && <p>{errors.age?.message}</p>}*/}
@@ -85,18 +102,6 @@ export function ContactForm(props: ContactFormProps) {
       {/*    placeholder='Leave a comment...'*/}
       {/*  ></textarea>*/}
       {/*</div>*/}
-      <button
-        type='submit'
-        className={clsx(
-          "inline-flex select-none justify-center rounded-md px-4 py-2 text-sm font-medium",
-          "bg-purple-600 text-white hover:bg-purple-700 dark:bg-purple-700 dark:text-gray-100 dark:hover:bg-purple-600",
-          "border border-transparent",
-          "focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
-        )}
-      >
-        Send
-      </button>
-      <ErrorMessage errors={errors} name='name' render={({ message, ...p }) => <p>{message}</p>} />
     </form>
   );
 }
