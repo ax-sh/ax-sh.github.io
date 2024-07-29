@@ -4,11 +4,10 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import pluginSecurity from "eslint-plugin-security";
 import sonarjs from "eslint-plugin-sonarjs";
+import eslintPluginStorybook from "eslint-plugin-storybook";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import eslintPluginStorybook from "eslint-plugin-storybook"
-
 
 const unicorn = {
   languageOptions: {

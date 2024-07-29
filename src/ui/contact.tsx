@@ -28,7 +28,7 @@ export type ContactFormProps = { onSubmit: SubmitHandler<contactFormFields> };
 // </select>
 
 export function ContactForm(props: ContactFormProps) {
-  const { register, handleSubmit, isLoading, errors } = useContactForm();
+  const { register, handleSubmit, isSubmitting, errors } = useContactForm();
   console.log(errors);
   return (
     <form className={"flex flex-col gap-2"} onSubmit={handleSubmit(props.onSubmit)}>
@@ -56,9 +56,9 @@ export function ContactForm(props: ContactFormProps) {
           )}
         />
       </label>
-      <Button type='submit' disabled={isLoading}>
-        {isLoading ? <StarIcon className='h-4 w-4 text-yellow-400' /> : <StarIcon />}
-        <span className='ml-2 leading-5'>{isLoading ? "Sending" : "Send"}</span>
+      <Button type='submit' disabled={isSubmitting}>
+        {isSubmitting ? <StarIcon className='h-4 w-4 text-yellow-400' /> : <StarIcon />}
+        <span className='ml-2 leading-5'>{isSubmitting ? "Submitting" : "Send"}</span>
       </Button>
       <ErrorMessage errors={errors} name='name' render={({ message, ...p }) => <p>{message}</p>} />
       {/*{errors.name?.message && <p>{errors.name?.message}</p>}*/}
