@@ -67,6 +67,7 @@ export function ContactForm(props: ContactFormProps) {
       {Object.keys(errors).map((name) => {
         return (
           <ErrorMessage
+            key={name}
             errors={errors}
             name={name}
             render={({ message }) => <p className={"text-red-500"}>{message}</p>}
