@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 function InfiniteStacksLoopMarquee({ children }: PropsWithChildren) {
   return (
-    <div className='overflow-hidden w-full inline-flex flex-nowrap'>
+    <div className='overflow-hidden w-full inline-flex flex-nowrap justify-around'>
       {children}
       {children}
     </div>
@@ -15,9 +15,9 @@ function MarqueeContainer({ children }: PropsWithChildren) {
   return (
     <ul
       className={clsx(
-        "list-none [&_li]:mx -1 ",
-        "flex items-center justify-center md:justify-start",
-        "[&_img]:max-w-none [&_img]:w-8 animate-infinite-scroll"
+        "list-none m-0 p-0 [&_li]:m-0 [&_li]:p-0",
+        "flex ",
+        "[&_img]:max-w-none [&_img]:w-8 [&_img]:mx-1 animate-infinite-scroll"
       )}
     >
       {Children.map(children, (child, i) => (
