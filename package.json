@@ -1,6 +1,6 @@
 {
   "name": "ax-sh.github.io",
-  "version": "1.8.0",
+  "version": "1.10.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -32,7 +32,9 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.27.7",
+    "@hookform/resolvers": "^3.9.0",
     "@icons-pack/react-simple-icons": "^9.6.0",
+    "@storybook/builder-vite": "^8.2.6",
     "@tanstack/react-query": "^5.51.15",
     "@tanstack/react-query-devtools": "^5.51.15",
     "@testing-library/jest-dom": "^6.4.8",
@@ -42,9 +44,12 @@
     "nextjs-google-analytics": "^2.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.1",
     "react-hotjar": "^6.3.1",
     "react-obfuscate": "^3.6.9",
-    "remeda": "^2.6.0"
+    "remeda": "^2.6.0",
+    "validator": "^13.12.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
