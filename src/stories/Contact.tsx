@@ -1,11 +1,11 @@
 import { SubmitHandler } from "react-hook-form";
 
+import { contactFormFields, useContactForm } from "@/hooks/use-contact-form";
 import Button from "@/ui/button";
 import { ErrorMessage } from "@hookform/error-message";
 import { StarIcon } from "@storybook/icons";
 
 import clsx from "clsx";
-import { contactFormFields, useContactForm } from "@/hooks/use-contact-form";
 
 export type ContactFormProps = { onSubmit: SubmitHandler<contactFormFields> };
 
@@ -27,11 +27,8 @@ export type ContactFormProps = { onSubmit: SubmitHandler<contactFormFields> };
 //   <option>$100,000 +</option>
 // </select>
 
-
-
 export function ContactForm(props: ContactFormProps) {
-  const { register, handleSubmit, errors } = useContactForm();
-  const isPending = false;
+  const { register, handleSubmit, isLoading, errors } = useContactForm();
 
   return (
     <form className={"flex flex-col gap-2"} onSubmit={handleSubmit(props.onSubmit)}>
@@ -58,10 +55,10 @@ export function ContactForm(props: ContactFormProps) {
             "focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
           )}
         />
-      </label>{" "}
-      <Button type='submit' disabled={isPending}>
-        {isPending ? <StarIcon className='h-4 w-4 text-yellow-400' /> : <StarIcon />}
-        <span className='ml-2 leading-5'>{isPending ? "Sending" : "Send"}</span>
+      </label>
+      <Button type='submit' disabled={isLoading}>
+        {isLoading ? <StarIcon className='h-4 w-4 text-yellow-400' /> : <StarIcon />}
+        <span className='ml-2 leading-5'>{isLoading ? "Sending" : "Send"}</span>
       </Button>
       <ErrorMessage errors={errors} name='name' render={({ message, ...p }) => <p>{message}</p>} />
       {/*{errors.name?.message && <p>{errors.name?.message}</p>}*/}
@@ -86,8 +83,11 @@ export function ContactForm(props: ContactFormProps) {
 }
 
 export default function ContactSection() {
-  const handleSubmit: SubmitHandler<contactFormFields> = (data) => {
+  const handleSubmit: SubmitHandler<contactFormFields> = async (data) => {
+    console.time("work");
+    await new Promise((r) => setTimeout(r, 2000));
     console.log("Contact Form", data);
+    console.timeEnd("work");
   };
   return (
     <section>

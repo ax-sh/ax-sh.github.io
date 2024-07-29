@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-
 
 const contactFormSchema = z.object({
   name: z.string().min(1, { message: "Name is Required" }),
@@ -18,9 +18,9 @@ export function useContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors, isLoading }
   } = useForm({
     resolver: zodResolver(contactFormSchema)
   });
-  return { register, handleSubmit, errors };
+  return { register, handleSubmit, errors, isLoading };
 }
