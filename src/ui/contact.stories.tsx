@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ContactForm } from "./Contact";
+import { ContactForm } from "./contact";
+import { fn } from "@storybook/test";
 
 const meta = {
   title: "AX_SH/CONTACT",
@@ -8,7 +9,8 @@ const meta = {
   parameters: {
     layout: "centered"
   },
-  tags: ["autodocs"]
+  tags: ["autodocs"],
+  args: { onSubmit: fn() }
 } satisfies Meta<typeof ContactForm>;
 
 export default meta;
