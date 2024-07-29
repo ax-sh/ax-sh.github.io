@@ -16,20 +16,9 @@ export type ContactFormProps = { onSubmit: SubmitHandler<contactFormFields> };
 // Call Us:
 // Email:
 
-// <select Budget >
-//   <option>What is your project budget?</option>
-//   <option>Maintenance / Ongoing</option>
-//   <option>$2,000 - $6,000</option>
-//   <option>$6,000 - $18,000</option>
-//   <option>$18,000 - $35,000</option>
-//   <option>$35,000 - $70,000</option>
-//   <option>$70,000 - $100,000</option>
-//   <option>$100,000 +</option>
-// </select>
-
 export function ContactForm(props: ContactFormProps) {
   const { register, handleSubmit, isSubmitting, errors } = useContactForm();
-  console.log(errors);
+
   return (
     <form className={"flex flex-col gap-2"} onSubmit={handleSubmit(props.onSubmit)}>
       <label className={"block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"}>
@@ -60,10 +49,9 @@ export function ContactForm(props: ContactFormProps) {
         {isSubmitting ? <StarIcon className='h-4 w-4 text-yellow-400' /> : <StarIcon />}
         <span className='ml-2 leading-5'>{isSubmitting ? "Submitting" : "Send"}</span>
       </Button>
-      <ErrorMessage errors={errors} name='name' render={({ message, ...p }) => <p>{message}</p>} />
-      {/*{errors.name?.message && <p>{errors.name?.message}</p>}*/}
-      {/*<input type="number" {...register("age", { valueAsNumber: true })} />*/}
-      {/*{errors.age?.message && <p>{errors.age?.message}</p>}*/}
+
+
+
       {/*<div className='sm:col-span-2'>*/}
       {/*  <label*/}
       {/*    htmlFor='message'*/}
@@ -75,9 +63,18 @@ export function ContactForm(props: ContactFormProps) {
       {/*    id='message'*/}
       {/*    rows='6'*/}
       {/*    className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'*/}
-      {/*    placeholder='Leave a comment...'*/}
+      {/*    placeholder='Write a message...'*/}
       {/*  ></textarea>*/}
       {/*</div>*/}
+      {Object.keys(errors).map((name) => {
+        return (
+          <ErrorMessage
+            errors={errors}
+            name={name}
+            render={({ message, ...p }) => <p className={"text-red-500"}>{message}</p>}
+          />
+        );
+      })}
     </form>
   );
 }
