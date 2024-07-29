@@ -1,43 +1,43 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.5.1/schema.json",
-	"files": {
-		"ignore": [".next", "./**/*config.js", "./**/*.d.ts"],
-		"ignoreUnknown": true
-	},
-	"formatter": {
-		"enabled": true,
-		"formatWithErrors": false,
-		"indentStyle": "space",
-		"indentWidth": 2,
-		"lineEnding": "lf",
-		"lineWidth": 100,
-		"attributePosition": "auto",
-		"ignore": [
-			"node_modules",
-			".next",
-			"dist",
-			"**/node_modules",
-			"**/public",
-			"**/build",
-			"**/dist",
-			"**/CHANGELOG.md"
-		]
-	},
-	"organizeImports": { "enabled": true },
-	"linter": { "enabled": true, "rules": { "recommended": true } },
-	"javascript": {
-		"formatter": {
-			"jsxQuoteStyle": "single",
-			"quoteProperties": "asNeeded",
-			"trailingComma": "none",
-			"semicolons": "always",
-			"arrowParentheses": "always",
-			"bracketSpacing": true,
-			"bracketSameLine": false,
-			"indentWidth": 2,
-			"lineEnding": "lf",
-			"quoteStyle": "double",
-			"attributePosition": "auto"
-		}
-	}
+  "$schema": "https://biomejs.dev/schemas/1.5.1/schema.json",
+  "files": {
+    "ignore": [".next", "./**/*config.js", "./**/*.d.ts"],
+    "ignoreUnknown": true
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 100,
+    "attributePosition": "auto",
+    "ignore": [
+      "node_modules",
+      ".next",
+      "dist",
+      "**/node_modules",
+      "**/public",
+      "**/build",
+      "**/dist",
+      "**/CHANGELOG.md"
+    ]
+  },
+  "organizeImports": { "enabled": true },
+  "linter": { "enabled": true, "rules": { "recommended": true } },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "single",
+      "quoteProperties": "asNeeded",
+      "trailingComma": "none",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "bracketSpacing": true,
+      "bracketSameLine": false,
+      "indentWidth": 2,
+      "lineEnding": "lf",
+      "quoteStyle": "double",
+      "attributePosition": "auto"
+    }
+  }
 }

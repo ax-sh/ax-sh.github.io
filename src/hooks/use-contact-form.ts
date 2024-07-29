@@ -1,6 +1,6 @@
-import { useForm } from "react-hook-form";
 // import isMobilePhone from 'validator/lib/isMobilePhone';
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 // <select Budget >
@@ -16,7 +16,7 @@ import { z } from "zod";
 
 const contactFormSchema = z.object({
   name: z.string().min(1, { message: "Name is Required" }),
-  email: z.string().min(1, { message: "Email is Required" }),
+  email: z.string().min(1, { message: "Email is Required" })
   // .email("This is not a valid email.")
   // phone: z.string().min(1, { message: "Phone is Required" }).refine(isMobilePhone),
   // business: z.string().min(1, { message: "Business is Required" }),
