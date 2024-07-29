@@ -5,9 +5,9 @@ import { ErrorMessage } from "@hookform/error-message";
 import { StarIcon } from "@storybook/icons";
 
 import clsx from "clsx";
-import { contactFormForm, useContactForm } from "@/hooks/use-contact-form";
+import { contactFormFields, useContactForm } from "@/hooks/use-contact-form";
 
-export type ContactFormProps = { onSubmit: SubmitHandler<contactFormForm> };
+export type ContactFormProps = { onSubmit: SubmitHandler<contactFormFields> };
 
 // Street
 // Suite 100
@@ -86,7 +86,7 @@ export function ContactForm(props: ContactFormProps) {
 }
 
 export default function ContactSection() {
-  const handleSubmit: SubmitHandler<contactFormForm> = (data) => {
+  const handleSubmit: SubmitHandler<contactFormFields> = (data) => {
     console.log("Contact Form", data);
   };
   return (

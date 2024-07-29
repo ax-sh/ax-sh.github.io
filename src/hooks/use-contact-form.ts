@@ -12,7 +12,7 @@ const contactFormSchema = z.object({
   // details: z.string().min(1, { message: "Required" })
   // age: z.number().min(10),
 });
-export type contactFormForm = z.infer<typeof contactFormSchema>; // string
+export type contactFormFields = z.infer<typeof contactFormSchema>; // string
 
 export function useContactForm() {
   const {
