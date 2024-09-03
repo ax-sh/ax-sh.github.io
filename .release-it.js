@@ -1,6 +1,6 @@
 module.exports = {
   hooks: {
-    "before:init": "nr test",
+    "before:init": "nr test run",
     "before:beforeBump": [
       "git flow release start v${version}",
       "echo \uD83D\uDC4A before:bump version=v${version} latestVersion=v${latestVersion}"
