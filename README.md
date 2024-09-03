@@ -4,14 +4,14 @@
 
 ## Getting Started
 
-First, run the development server:
+For running development server locally:
 
 ```bash
+bun dev
+# or
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
