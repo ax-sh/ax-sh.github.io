@@ -18,7 +18,7 @@ export default meta;
 type Story = StoryObj<typeof ContactForm>;
 export const Default: Story = {
   args: {
-    onSubmit: async (data: any) => {
+    onSubmit: async (data: unknown) => {
       await delay(2000);
       console.log("Form submitted with data:", data);
       // You can add any logic here
