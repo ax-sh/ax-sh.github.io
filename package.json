@@ -3,8 +3,8 @@
   "version": "1.14.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev:turbo": "next dev --turbo",
+    "dev:old": "next dev",
+    "dev": "next dev --turbo",
     "bun:dev": "bun --bun run dev",
     "build": "next build",
     "start": "next start",
