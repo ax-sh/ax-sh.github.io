@@ -25,7 +25,7 @@ const contactFormSchema = z.object({
   // message: z.string().min(1, { message: "Message is Required" })
   // age: z.number().min(10),
 });
-export type contactFormFields = z.infer<typeof contactFormSchema>; // string
+export type ContactFormFields = z.infer<typeof contactFormSchema>; // string
 
 export function useContactForm() {
   const {
@@ -33,8 +33,8 @@ export function useContactForm() {
     handleSubmit,
     control,
     formState: { errors, isSubmitting }
-  } = useForm({
+  } = useForm<ContactFormFields>({
     resolver: zodResolver(contactFormSchema)
   });
-  return { control, register, handleSubmit, errors, isSubmitting };
+  return { control, register, handleSubmit, errors, isSubmitting } as const;
 }

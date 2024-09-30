@@ -1,13 +1,13 @@
 import type { SubmitHandler } from "react-hook-form";
 
-import { type contactFormFields, useContactForm } from "@/hooks/use-contact-form";
+import { type ContactFormFields, useContactForm } from "@/hooks/use-contact-form";
 import Button from "@/ui/button";
 import { ErrorMessage } from "@hookform/error-message";
 import { StarIcon } from "@storybook/icons";
 
 import clsx from "clsx";
 
-export type ContactFormProps = { onSubmit: SubmitHandler<contactFormFields> };
+export type ContactFormProps = { onSubmit: SubmitHandler<ContactFormFields> };
 
 // Street
 // Suite 100
@@ -79,7 +79,7 @@ export function ContactForm(props: ContactFormProps) {
 }
 
 export default function ContactSection() {
-  const handleSubmit: SubmitHandler<contactFormFields> = async (data) => {
+  const handleSubmit: SubmitHandler<ContactFormFields> = async (data) => {
     console.time("work");
     await new Promise((r) => setTimeout(r, 2000));
     console.log("Contact Form", data);
