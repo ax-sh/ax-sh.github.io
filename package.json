@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "next lint --format=stylish",
     "lint:fix": "pnpm lint --fix",
-    "lint:types": "pnpm tsc",
+    "lint:types": "nr tsc --noEmit",
     "test": "vitest",
     "commitlint": "commitlint --edit",
     "check": "biome check --apply ./",
@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.27.8",
+    "@hookform/resolvers": "^3.9.0",
     "@icons-pack/react-simple-icons": "^9.7.0",
     "@tanstack/react-query": "^5.56.2",
     "@tanstack/react-query-devtools": "^5.58.0",
