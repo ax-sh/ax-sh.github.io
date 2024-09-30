@@ -69,7 +69,7 @@ export function ContactForm(props: ContactFormProps) {
           <ErrorMessage
             key={name}
             errors={errors}
-            name={name}
+            name={name as keyof ContactFormFields}
             render={({ message }) => <p className={"text-red-500"}>{message}</p>}
           />
         );
