@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.5.1/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
   "files": {
     "ignore": [".next", "./**/*config.js", "./**/*.d.ts"],
     "ignoreUnknown": true
@@ -29,7 +29,7 @@
     "formatter": {
       "jsxQuoteStyle": "single",
       "quoteProperties": "asNeeded",
-      "trailingComma": "none",
+      "trailingCommas": "none",
       "semicolons": "always",
       "arrowParentheses": "always",
       "bracketSpacing": true,

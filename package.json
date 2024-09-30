@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev:old": "next dev",
+    "format": "biome format --write",
     "dev": "next dev --turbo",
     "bun:dev": "bun --bun run dev",
     "build": "next build",
@@ -115,8 +116,6 @@
     "vitest": "^2.1.1"
   },
   "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
+    "extends": ["plugin:storybook/recommended"]
   }
 }
