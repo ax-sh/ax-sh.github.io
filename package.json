@@ -30,6 +30,7 @@
     "ci:spelling": "act -j spelling",
     "ci:local": "act pull_request",
     "ci:graph": "act --graph",
+    "ff": "gh pr create --body '${nr git-cliff -l}' --title pr:deploy -d",
     "gh:workflow:deploy": "gh run list --workflow deploy.yml",
     "gh:status": "gh run watch --exit-status",
     "gh:actionslogs": "gh run view 9553155963 --log",
