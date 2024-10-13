@@ -26,7 +26,7 @@
     "clean": "rimraf .next out",
     "bump": "changeset version",
     "pr:deploy": "git push origin develop && gh pr create -H develop -B master --fill",
-    "pr:push": "gh pr create --body \"$(nr git-cliff -l)\" --title pr:deploy --base develop -d",
+    "pr:push": "gh pr create --body \"$(nr git-cliff -l)\" --title pr:deploy --base develop -d --dry-run",
     "pr:edit": "gh pr edit \"$(nr pr:number)\" --body \"$(nr git-cliff -l)\" --title pr:deploy --base develop",
     "pr:number": "gh pr view --json number --jq '.number'",
     "gh:workflows": "gh workflow view",
