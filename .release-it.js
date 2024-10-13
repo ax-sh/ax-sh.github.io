@@ -1,12 +1,12 @@
 module.exports = {
   hooks: {
-    "before:init": ["nr test run", "which git-cliff"],
+    "before:init": ["nr test run"],
     "before:beforeBump": [
       "git flow release start v${version}",
       "echo \uD83D\uDC4A before:bump version=v${version} latestVersion=v${latestVersion}"
     ],
     "after:bump": [
-      "git cliff -o CHANGELOG.md && git add CHANGELOG.md",
+      "nr git-cliff -o CHANGELOG.md && git add CHANGELOG.md",
       'git commit --allow-empty -am "ci: update CHANGELOG"',
       "echo \uD83D\uDC4A after:bump version=v${version} latestVersion=v${latestVersion}"
     ],
