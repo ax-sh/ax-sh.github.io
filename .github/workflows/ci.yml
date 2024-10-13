@@ -1,0 +1,11 @@
+name: CI
+
+on: pull_request
+
+jobs:
+  show:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Env
+       # run: echo "Env ${{ env.ENV_ID }}
+        run: echo "Env for ci website pr"
