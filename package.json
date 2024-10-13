@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --format=stylish",
-    "lint:fix": "pnpm lint --fix",
+    "lint:fix": "nr lint --fix",
     "lint:types": "nr tsc --noEmit",
     "test": "vitest",
     "commitlint": "commitlint --edit",
