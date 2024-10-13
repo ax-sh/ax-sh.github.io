@@ -1,0 +1,16 @@
+name: Check PR
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Env
+        # run: echo "Env ${{ env.ENV_ID }}
+        run: echo "Env for ci website pr"
