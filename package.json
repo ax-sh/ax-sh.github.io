@@ -14,6 +14,7 @@
     "lint:types": "nr tsc --noEmit",
     "test": "vitest",
     "commitlint": "commitlint --edit",
+    "changelog:latest": "nr git-cliff -l",
     "check": "biome check --apply ./",
     "biome:migrate": "biome migrate prettier --write",
     "formatter": "nr prettier --write --ignore-unknown .",
