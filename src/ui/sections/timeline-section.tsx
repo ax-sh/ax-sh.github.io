@@ -1,17 +1,17 @@
-import type { ComponentProps } from "react";
+import type { ComponentProps, PropsWithChildren } from "react";
 
 import { range } from "lodash";
 
 import clsx from "clsx";
 
-function TimelineItemLine() {
+function TimelineItemLine({ children }: PropsWithChildren) {
   return (
     <div className='col-start-5 col-end-6 mr-10 md:mx-auto relative'>
       <div className='h-full w-6 flex items-center justify-center'>
         <div className='h-full w-0.5 bg-gray-200 pointer-events-none'>a</div>
       </div>
       <div className='w-6 h-6 absolute top-1/2 -mt-3 border-2 border-blue-500 rounded-full bg-gray-100 shadow'>
-        b
+        {children}
       </div>
     </div>
   );
@@ -36,7 +36,7 @@ function TimelineItem({ odd, children, className }: ComponentProps<"div"> & { od
   if (odd) {
     return (
       <li className={"flex md:contents"}>
-        <TimelineItemLine />
+        <TimelineItemLine> </TimelineItemLine>
         <TimelineItemContent className={clsx("col-start-6 col-end-10", className)}>
           {children}
         </TimelineItemContent>
@@ -48,11 +48,11 @@ function TimelineItem({ odd, children, className }: ComponentProps<"div"> & { od
       <TimelineItemContent className={clsx("col-start-1 col-end-5", className)}>
         {children}
       </TimelineItemContent>
-      <TimelineItemLine />
+      <TimelineItemLine> </TimelineItemLine>
     </li>
   );
 }
-const READY = false;
+const READY = !false;
 export function TimelineSection() {
   if (!READY) {
     return <section> </section>;
@@ -66,6 +66,7 @@ export function TimelineSection() {
             {range(100).map((i) => (
               <TimelineItem key={i} odd={i % 2 !== 0} className={"prose py-4"}>
                 <article className='relative shadow-2xl max-w-lg w-full transform duration-500 hover:-translate-y-2 cursor-pointer rounded-md overflow-hidden'>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     className='mx-auto object-fill h-full w-full not-prose'
                     src={`https://picsum.photos/600/300?random=${i}`}
