@@ -29,6 +29,7 @@ const unicorn = {
 const storybookConfig = compat.config({
   extends: [
     "plugin:storybook/recommended",
+    "next",
     "next/core-web-vitals",
     "next/typescript"
     // other extends
@@ -38,7 +39,8 @@ const storybookConfig = compat.config({
     "storybook/no-uninstalled-addons": "off",
     "storybook/hierarchy-separator": "off",
     "storybook/prefer-pascal-case": "off",
-    "storybook/story-exports": "off"
+    "storybook/story-exports": "off",
+    "@next/next/no-duplicate-head": "off"
   },
   ignorePatterns: ["!.storybook", "storybook-static"]
 });
