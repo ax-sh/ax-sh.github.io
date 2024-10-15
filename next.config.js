@@ -5,6 +5,7 @@ const nextConfig = {
   // Add basePath
   // basePath: '',
   images: {
+    domains: ["picsum.photos", "cdn.jsdelivr.net"], // Add your CDN domain
     unoptimized: true
   },
   typescript: {
