@@ -52,8 +52,12 @@ function TimelineItem({ odd, children, className }: ComponentProps<"div"> & { od
     </li>
   );
 }
-
+const READY = false;
 export function TimelineSection() {
+  if (!READY) {
+    return <section> </section>;
+  }
+
   return (
     <section className={"prose max-w-none "}>
       <div className={"container mx-auto"}>

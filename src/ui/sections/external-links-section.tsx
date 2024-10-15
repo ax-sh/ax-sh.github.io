@@ -27,10 +27,10 @@ console.error = (...args: unknown[]) => {
 };
 
 export function GetIcon({ name }: { name: IconType | string }) {
-  const [hovered, setHover] = React.useState(false);
+  const [hovered, setHovered] = React.useState(false);
   const props = {
-    onMouseOver: () => setHover(true),
-    onMouseOut: () => setHover(false),
+    onMouseOver: () => setHovered(true),
+    onMouseOut: () => setHovered(false),
     color: hovered ? "gray" : "white"
   };
 

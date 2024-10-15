@@ -21,7 +21,7 @@ function MarqueeContainer({ children }: PropsWithChildren) {
       )}
     >
       {Children.map(children, (child, i) => (
-        <li key={`marquee-item-${i}`}>{child}</li>
+        <li key={`marquee-item-${i.toString()}`}>{child}</li>
       ))}
     </ul>
   );

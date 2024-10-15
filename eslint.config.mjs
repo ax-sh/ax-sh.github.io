@@ -53,6 +53,7 @@ const eslintConfigs = [
   eslintPluginPrettierRecommended,
   eslintConfigPrettier,
   ...storybookConfig,
+  { files: ["main-stacks-section.tsx"], rules: { "@next/next/no-img-element": "off" } },
 
   {
     ignores: [
