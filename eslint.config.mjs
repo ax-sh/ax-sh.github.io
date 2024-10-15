@@ -28,7 +28,9 @@ const unicorn = {
 
 const storybookConfig = compat.config({
   extends: [
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "next/core-web-vitals",
+    "next/typescript"
     // other extends
     // eslintPluginStorybook.configs.recommended,
   ],
