@@ -13,9 +13,9 @@ const config: StorybookConfig = {
     name: "@storybook/nextjs",
     options: {}
   },
-  staticDirs: ["..\\public"]
-  // core: {
-  //   builder: "@storybook/builder-vite" // 👈 The builder enabled here.
-  // }
+  staticDirs: ["..\\public"],
+  core: {
+    builder: "@storybook/builder-vite" // 👈 The builder enabled here.
+  }
 };
 export default config;

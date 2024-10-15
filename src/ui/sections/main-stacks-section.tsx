@@ -16,12 +16,12 @@ function MarqueeContainer({ children }: PropsWithChildren) {
     <ul
       className={clsx(
         "list-none m-0 p-0 [&_li]:m-0 [&_li]:p-0",
-        "flex ",
+        "flex",
         "[&_img]:max-w-none [&_img]:w-8 [&_img]:mx-1 animate-infinite-scroll"
       )}
     >
       {Children.map(children, (child, i) => (
-        <li key={`marquee-item-${i}`}>{child}</li>
+        <li key={`marquee-item-${i.toString()}`}>{child}</li>
       ))}
     </ul>
   );

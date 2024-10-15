@@ -27,10 +27,10 @@ console.error = (...args: unknown[]) => {
 };
 
 export function GetIcon({ name }: { name: IconType | string }) {
-  const [hovered, setHover] = React.useState(false);
+  const [hovered, setHovered] = React.useState(false);
   const props = {
-    onMouseOver: () => setHover(true),
-    onMouseOut: () => setHover(false),
+    onMouseOver: () => setHovered(true),
+    onMouseOut: () => setHovered(false),
     color: hovered ? "gray" : "white"
   };
 
@@ -58,7 +58,7 @@ export function ExternalLinksSection() {
       <ul className='flex w-60 justify-between pointer-events-auto list-none'>
         {Object.entries(data.links).map(([label, value]) => (
           <li key={label}>
-            {/* @ts-ignore */}
+            {/* @ts-expect-error skip error caused by types for non ts lib */}
             <Obfuscate target='_blank' href={value}>
               <GetIcon name={label} />
             </Obfuscate>

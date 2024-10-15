@@ -3,7 +3,6 @@
   "version": "1.14.0",
   "private": true,
   "scripts": {
-    "dev:old": "next dev",
     "format": "biome format --write",
     "dev": "next dev --turbo",
     "bun:dev": "bun --bun run dev",
@@ -42,15 +41,17 @@
     "lighthouse:local": "lighthouse http://localhost:3000/ --output-path=./report.json --output json --quiet --chrome-flags=\"--headless\" --view   --only-categories=performance,color-contrast   ",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "knip": "knip"
+    "knip": "knip",
+    "pr:ci": "act pull_request --container-architecture linux/amd64"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.9",
+    "@eslint/eslintrc": "^3.1.0",
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^3.9.0",
     "@icons-pack/react-simple-icons": "^10.0.0",
-    "@tanstack/react-query": "^5.59.13",
-    "@tanstack/react-query-devtools": "^5.59.13",
+    "@tanstack/react-query": "^5.59.14",
+    "@tanstack/react-query-devtools": "^5.59.14",
     "@testing-library/jest-dom": "^6.5.0",
     "chalk": "^5.3.0",
     "clsx": "^2.1.1",
@@ -74,6 +75,7 @@
     "@commitlint/config-conventional": "^19.5.0",
     "@eslint/js": "^9.12.0",
     "@faker-js/faker": "^9.0.3",
+    "@next/eslint-plugin-next": "^14.2.15",
     "@release-it/conventional-changelog": "^9.0.0",
     "@storybook/addon-essentials": "^8.3.5",
     "@storybook/addon-interactions": "^8.3.5",
@@ -92,7 +94,7 @@
     "@types/node": "^22.7.5",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
-    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/eslint-plugin": "^8.9.0",
     "@vitejs/plugin-react": "^4.3.2",
     "autoprefixer": "^10.4.20",
     "depcheck": "^1.4.7",
@@ -119,20 +121,15 @@
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "pretty-quick": "^4.0.0",
-    "release-it": "^17.8.2",
+    "release-it": "^17.9.0",
     "rimraf": "^6.0.1",
     "storybook": "^8.3.5",
     "tailwindcss": "^3.4.13",
     "tsx": "^4.19.1",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.8.1",
+    "typescript-eslint": "^8.9.0",
     "unplugin-auto-import": "^0.18.3",
     "vite-tsconfig-paths": "^5.0.1",
-    "vitest": "^2.1.2"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
+    "vitest": "^2.1.3"
   }
 }
