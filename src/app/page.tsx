@@ -5,7 +5,7 @@ import { BannerSection } from "@/ui/sections/banner-section";
 import { ExternalLinksSection } from "@/ui/sections/external-links-section";
 import HeroSection from "@/ui/sections/hero-section";
 import { MainStacksSection } from "@/ui/sections/main-stacks-section";
-import { TimelineSection } from "@/ui/sections/timeline-section";
+// import { TimelineSection } from "@/ui/sections/timeline-section";
 import WorksSection from "@/ui/sections/work-section";
 
 import clsx from "clsx";
