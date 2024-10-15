@@ -41,7 +41,8 @@
     "lighthouse:local": "lighthouse http://localhost:3000/ --output-path=./report.json --output json --quiet --chrome-flags=\"--headless\" --view   --only-categories=performance,color-contrast   ",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "knip": "knip"
+    "knip": "knip",
+    "pr:ci": "act pull_request --container-architecture linux/amd64"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.9",

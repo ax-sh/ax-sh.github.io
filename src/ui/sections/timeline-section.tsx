@@ -52,7 +52,7 @@ function TimelineItem({ odd, children, className }: ComponentProps<"div"> & { od
     </li>
   );
 }
-const READY = !false;
+const READY = false;
 export function TimelineSection() {
   if (!READY) {
     return <section> </section>;
@@ -77,7 +77,7 @@ export function TimelineSection() {
                     <h3
                       className={"absolute text-white right-10 bottom-0 text-3xl mix-blend-screen"}
                     >
-                      Amalgum
+                      ludicrous
                     </h3>
                   </div>
                 </article>
