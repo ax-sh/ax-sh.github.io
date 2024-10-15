@@ -8,18 +8,18 @@ on:
       - synchronize
 
 jobs:
-#  update-pr-description:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v4
-#      - name: Update PR Description
-#        uses: nefrob/pr-description@v1.1.2
-#        with:
-#          content: "Hello there!"
-#          regex: ".*"
-#          regexFlags: s
-#          token: ${{ secrets.GITHUB_TOKEN }}
+  #  update-pr-description:
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - name: Checkout
+  #        uses: actions/checkout@v4
+  #      - name: Update PR Description
+  #        uses: nefrob/pr-description@v1.1.2
+  #        with:
+  #          content: "Hello there!"
+  #          regex: ".*"
+  #          regexFlags: s
+  #          token: ${{ secrets.GITHUB_TOKEN }}
   pr:
     runs-on: ubuntu-latest
     steps:
