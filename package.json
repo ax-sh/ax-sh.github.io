@@ -3,7 +3,6 @@
   "version": "1.14.0",
   "private": true,
   "scripts": {
-    "dev:old": "next dev",
     "format": "biome format --write",
     "dev": "next dev --turbo",
     "bun:dev": "bun --bun run dev",
