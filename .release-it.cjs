@@ -24,7 +24,7 @@ module.exports = {
   },
   git: {
     // changelog: 'git log --pretty=format:"* %s (%h)" ${from}...${to}',
-    changelog: "nr git-cliff -l -s all",
+    changelog: "nr git-cliff -u --bump -s all",
     requireCleanWorkingDir: true,
     requireBranch: false,
     requireUpstream: true,
