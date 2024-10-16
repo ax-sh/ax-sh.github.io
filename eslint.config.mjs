@@ -54,6 +54,7 @@ const eslintConfigs = [
   eslintConfigPrettier,
   ...storybookConfig,
   { files: ["*/**/main-stacks-section.tsx"], rules: { "@next/next/no-img-element": "off" } },
+  { files: ["tailwind.config.ts"], rules: { "@typescript-eslint/no-require-imports": "off" } },
 
   {
     ignores: [

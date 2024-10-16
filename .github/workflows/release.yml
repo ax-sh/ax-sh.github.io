@@ -1,0 +1,65 @@
+name: Release
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main # or your default branch name
+
+jobs:
+  release:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.1
+        with:
+          fetch-depth: 0 # Needed for Release-It to generate changelogs
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Cache Bun packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Setup Git
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+      - name: Run Release-It
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bunx release-it minor --ci
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+#on:
+#  workflow_dispatch:
+#  push:
+#    # Pattern matched against refs/tags
+#    tags:
+#      - "*" # Push events to every tag not containing /
+#
+#jobs:
+#  release:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v4
+#        with:
+#          ref: main # Always checkout main even for tagged releases
+#          fetch-depth: 0
+#          token: ${{ secrets.GH_ACCESS_TOKEN }}
+#      - run: echo git push origin +main:production
