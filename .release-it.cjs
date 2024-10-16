@@ -24,7 +24,8 @@ module.exports = {
   },
   git: {
     // changelog: 'git log --pretty=format:"* %s (%h)" ${from}...${to}',
-    changelog: "nr git-cliff -u --tag ${version} -s all",
+    // changelog: "nr git-cliff -u --tag ${version} -s all",
+    changelog: "nr git-cliff --current -s all",
     requireCleanWorkingDir: true,
     requireBranch: false,
     requireUpstream: true,
