@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [[1.26.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.26.0)
+
+
+### ⚙️ Miscellaneous Tasks
+
+- *(release)* Update release workflow for pull requests [`8ec2597`](https://github.com/ax-sh/ax-sh.github.io/commit/8ec259789fc94e6a7d385d667c91bf47b6367a08)
+
 ## [[1.25.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.25.0)
 
 
@@ -12,6 +19,7 @@ All notable changes to this project will be documented in this file.
 ### ⚙️ Miscellaneous Tasks
 
 - Update lint:fix command to use .gitignore [`809a190`](https://github.com/ax-sh/ax-sh.github.io/commit/809a190ac450be72805b2e115b164a9ed9e12463)
+- Release v1.25.0 [`511c88d`](https://github.com/ax-sh/ax-sh.github.io/commit/511c88d93c1388e98ccb5fcecda67bc761c0b5ba)
 
 ## [[1.24.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.24.0)
 
