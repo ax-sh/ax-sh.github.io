@@ -2,11 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.23.0] - 2024-10-16
+
+### ⚙️ Miscellaneous Tasks
+
+- Update release notes format and eslint config
+
 ## [1.22.0] - 2024-10-16
 
 ### 🚜 Refactor
 
 - *(release notes)* Update format for deployment notes
+
+### ⚙️ Miscellaneous Tasks
+
+- Release v1.22.0
 
 ## [1.21.0] - 2024-10-16
 
