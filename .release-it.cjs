@@ -33,11 +33,11 @@ module.exports = {
     commitsPath: "",
     addUntrackedFiles: false,
     commit: true,
-    commitMessage: "Release ${version}",
+    commitMessage: "chore: release v${version}",
     commitArgs: [],
     tag: true,
     tagExclude: null,
-    tagName: null,
+    tagName: "v${version}",
     tagMatch: null,
     getLatestTagFromAllRefs: false,
     tagAnnotation: ":rocket: Release ${version}",
@@ -61,7 +61,7 @@ module.exports = {
       "nr git-cliff -o CHANGELOG.md && git add CHANGELOG.md",
       'git commit --allow-empty -am "ci: add CHANGELOG"',
       //   'git flow release finish -n',
-        // equivalent 'git flow release finish v${version} -m "Release v${version}" -n -p -F --keepremote',
+      // equivalent 'git flow release finish v${version} -m "Release v${version}" -n -p -F --keepremote',
       "echo \uD83D\uDC4A ${name} after:bump version=v${version} latestVersion=v${latestVersion}"
     ],
     "after:release": [
