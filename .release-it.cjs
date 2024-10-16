@@ -14,8 +14,8 @@ module.exports = {
     releaseNotes(context) {
       // Remove the first, redundant line with version and date.
       // const notes = context.changelog.split("\n").slice(1);
-      if(!context.changelog){
-        return "Release LOG N/A"
+      if (!context.changelog) {
+        return "Release LOG N/A";
       }
       const notes = context.changelog.replace("## [unreleased]", "").split("\n");
       notes.unshift("### [CHANGELOG]");

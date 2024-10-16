@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [closed]
     branches:
-      - main  # or your default branch name
+      - main # or your default branch name
 
 jobs:
   release:
@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.1
         with:
-          fetch-depth: 0  # Needed for Release-It to generate changelogs
+          fetch-depth: 0 # Needed for Release-It to generate changelogs
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -40,7 +40,12 @@ jobs:
       - name: Run Release-It
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: echo "bunx release-it --ci"
+        run: bunx release-it minor --ci
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
 #on:
 #  workflow_dispatch:
 #  push:
