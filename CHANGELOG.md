@@ -11,6 +11,8 @@ All notable changes to this project will be documented in this file.
 - Update changelog command in release-it config
 - *(release-it)* Update changelog command options
 - Update release commit and tag messages
+- Add CHANGELOG
+- Update changelog command in release config
 
 ## [1.15.0] - 2024-10-16
 
