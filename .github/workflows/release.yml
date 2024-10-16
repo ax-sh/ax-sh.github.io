@@ -11,17 +11,17 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 🛒 Checkout
         uses: actions/checkout@v4.2.1
         with:
           fetch-depth: 0 # Needed for Release-It to generate changelogs
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - name: 🍔Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
-      - name: Cache Bun packages
+      - name: 🗄️Cache Bun packages
         uses: actions/cache@v3
         with:
           path: ~/.bun/install/cache
@@ -29,7 +29,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-bun-
 
-      - name: Install dependencies
+      - name: 🔨Install dependencies
         run: bun install --frozen-lockfile
 
       - name: Setup Git
