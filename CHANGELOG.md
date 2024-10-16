@@ -2,12 +2,36 @@
 
 All notable changes to this project will be documented in this file.
 
+## [[1.28.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.28.0)
+
+
+### 🎨 Styling
+
+- *(ci)* Fix formatting in release workflow and scripts [`e1320da`](https://github.com/ax-sh/ax-sh.github.io/commit/e1320da67285f7020b11d24ea27f7886db1cab04)
+- *(workflow)* Update step names with emojis [`845c73a`](https://github.com/ax-sh/ax-sh.github.io/commit/845c73a2e36db1dd87082155ea92b71bdf99cf89)
+- Update job names in release workflow for clarity [`f7c513f`](https://github.com/ax-sh/ax-sh.github.io/commit/f7c513f021f404d825860223327d81c9da3cd6c5)
+
+### ⚙️ Miscellaneous Tasks
+
+- Add master branch to release workflow triggers [`5eeac96`](https://github.com/ax-sh/ax-sh.github.io/commit/5eeac96d25d5b20fd6ccd2c56e700c2fd1894311)
+- Update release workflow for manual trigger and cache [`359ac62`](https://github.com/ax-sh/ax-sh.github.io/commit/359ac6276d7843ac4298628ad688bdb6d18c023b)
+- Update Bun.js setup to version 2 in workflow [`7c27ddb`](https://github.com/ax-sh/ax-sh.github.io/commit/7c27ddba8dc8bf092bf4fd473f2863f82fed8e10)
+- Update CI workflow for spelling checks [`7957cec`](https://github.com/ax-sh/ax-sh.github.io/commit/7957cec3fa3e6c13c5c5bd66ec9545f164344114)
+- *(workflow)* Update deployment workflow names and permissions [`815d29b`](https://github.com/ax-sh/ax-sh.github.io/commit/815d29bcbe4ac33ada26963b34a4986d3957cc86)
+- Update release workflow permissions for write access [`6416baa`](https://github.com/ax-sh/ax-sh.github.io/commit/6416baaa3daceee03a74f5cb29640cb1d09bbe3b)
+- Update release workflow to install dependencies [`bbdec4a`](https://github.com/ax-sh/ax-sh.github.io/commit/bbdec4a12d2fc2dbb182ee4949b4f1c38d2a2ec3)
+- Update release workflow to include manual trigger [`9e8ddbb`](https://github.com/ax-sh/ax-sh.github.io/commit/9e8ddbbadd5a609b03bb02cbf246ed5d9219fc2a)
+
 ## [[1.27.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.27.0)
 
 
 ### 🚀 Features
 
 - *(release-it)* Handle missing changelog in release notes [`63b4784`](https://github.com/ax-sh/ax-sh.github.io/commit/63b47847d01dbb9b61b97c3d6c91e39ada18a5a4)
+
+### ⚙️ Miscellaneous Tasks
+
+- Release v1.27.0 [`b5424c7`](https://github.com/ax-sh/ax-sh.github.io/commit/b5424c773fe088a1c3ddba4870f7d2dabdd66410)
 
 ## [[1.26.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.26.0)
 
@@ -105,6 +129,7 @@ All notable changes to this project will be documented in this file.
 
 - Add TypeScript ignore comment for Obfuscate usage [`b1a21ef`](https://github.com/ax-sh/ax-sh.github.io/commit/b1a21efbb7374cd0c400ea32c38de95a3fb2fe9c)
 - Add manifest for portfolio app [`ae6dc95`](https://github.com/ax-sh/ax-sh.github.io/commit/ae6dc95319969374b65f7e809ca3148b4281a5a4)
+- Add default configuration for git-cliff [`1de2f1f`](https://github.com/ax-sh/ax-sh.github.io/commit/1de2f1fb27ade8a28d498923049b27a129cb8fb0)
 - Add default configuration for git-cliff [`b71485f`](https://github.com/ax-sh/ax-sh.github.io/commit/b71485f568cf12b85ab6a4c3f7bb1ae57d039be4)
 - Add TimelineSection component and update config files [`539d370`](https://github.com/ax-sh/ax-sh.github.io/commit/539d370687080618f30cba5f63620cfd6eb3489a)
 - Add nextjs eslint [`a283645`](https://github.com/ax-sh/ax-sh.github.io/commit/a28364553d23c59bb1b070111eaf249c1a20727e)
@@ -122,12 +147,15 @@ All notable changes to this project will be documented in this file.
 
 ### 📚 Documentation
 
+- Update TODO with release automation notes [`ce84525`](https://github.com/ax-sh/ax-sh.github.io/commit/ce84525cb26e5d4b3f779cc7f13ef6daab28c18f)
 - Update TODO with release automation notes [`fcf8871`](https://github.com/ax-sh/ax-sh.github.io/commit/fcf88710db1b5fc042feb9f287ff6c7e4a5db55e)
 - Update TODO with new tasks for automation [`47b231c`](https://github.com/ax-sh/ax-sh.github.io/commit/47b231ce6508c99bf7b22fcb2e568d2ba6d2c2aa)
 
 ### 🎨 Styling
 
 - Fix formatting inconsistencies in code files [`0403bb6`](https://github.com/ax-sh/ax-sh.github.io/commit/0403bb6617590f0b6d4eb1750be41b98402aa310)
+- *(package.json)* Fix quotes in pr:push script [`1d2eeae`](https://github.com/ax-sh/ax-sh.github.io/commit/1d2eeaea2d6cc8ab713a465e34ef85b0b861f8d5)
+- *(package.json)* Fix quote usage in pr:deploy script [`fb03862`](https://github.com/ax-sh/ax-sh.github.io/commit/fb038627ffa0cfe58a978ba0366ee182768a9874)
 - *(package.json)* Fix quotes in pr:push script [`4b7abaa`](https://github.com/ax-sh/ax-sh.github.io/commit/4b7abaaf5cb784567bf5e708abd0373f9d1c25dd)
 - *(package.json)* Fix quote usage in pr:deploy script [`183ee89`](https://github.com/ax-sh/ax-sh.github.io/commit/183ee89e6345a519ee6f745b329395c0286245ba)
 - Update comment for clarity on ts-expect-error [`6014359`](https://github.com/ax-sh/ax-sh.github.io/commit/6014359a5b631318e1bc60d20acdeb6921fb9f9b)
@@ -150,6 +178,20 @@ All notable changes to this project will be documented in this file.
 - Update CI configuration and script names [`0e7d3b5`](https://github.com/ax-sh/ax-sh.github.io/commit/0e7d3b597c178199185018dfad39734fa8622851)
 - Update release hooks in configuration file [`b4fe590`](https://github.com/ax-sh/ax-sh.github.io/commit/b4fe590381f07bdfeb05636c388785ea07fa8238)
 - Add new command for pull request creation [`139c4ab`](https://github.com/ax-sh/ax-sh.github.io/commit/139c4ab71554ff35fd155bc0caa2ef5608acb2fc)
+- Add CI workflow configuration and scripts updates [`3168834`](https://github.com/ax-sh/ax-sh.github.io/commit/31688348516a2f3e89f3d4a1b2a1309a46d11531)
+- Fix command substitution syntax in package.json [`530bce2`](https://github.com/ax-sh/ax-sh.github.io/commit/530bce2aaf5688dd712067446ad6139e09290b7f)
+- Update pr:push script in package.json [`c9ee325`](https://github.com/ax-sh/ax-sh.github.io/commit/c9ee32511202fccb8461301e3ee43a365950c876)
+- Add spell check workflow to CI configuration [`99c5912`](https://github.com/ax-sh/ax-sh.github.io/commit/99c59129352023764ee0ca43b2fda2b6d277c7ee)
+- *(package.json)* Update pr:edit command syntax [`985cd9d`](https://github.com/ax-sh/ax-sh.github.io/commit/985cd9d483e81faaa55eb1981cc2530b22437632)
+- *(package.json)* Update pr:push command for dry run [`10db8a2`](https://github.com/ax-sh/ax-sh.github.io/commit/10db8a209fb5ffebc4165beaf01a24df1b9535aa)
+- Update CI workflow for PR checks and remove show job [`a56865f`](https://github.com/ax-sh/ax-sh.github.io/commit/a56865f0e8fad2296ad3db16c4e4c2a5f5485b35)
+- Update biome schema version to 1.9.3 [`9fec426`](https://github.com/ax-sh/ax-sh.github.io/commit/9fec426ea35a2e15a2ffa19ee8f45353d709fccc)
+- Update GitHub Actions workflow and package.json scripts [`758884a`](https://github.com/ax-sh/ax-sh.github.io/commit/758884ac26ef2e6595025f6bc698d005acfc7750)
+- Update PR commands in package.json [`f11d171`](https://github.com/ax-sh/ax-sh.github.io/commit/f11d171e3edd679cc1285280124f75b9d98fb95e)
+- Add job to update PR description automatically [`1ae12ca`](https://github.com/ax-sh/ax-sh.github.io/commit/1ae12cad77f51cba3efb710332793868ab85d3ac)
+- *(package.json)* Update deploy script for GitHub PRs [`06f23d6`](https://github.com/ax-sh/ax-sh.github.io/commit/06f23d6de88c9cb2b3b613c1f352ee95ab3a6d57)
+- Update lint:fix command in package.json [`ebe95a0`](https://github.com/ax-sh/ax-sh.github.io/commit/ebe95a014f06ab8119310300ba4d07bf072f19c9)
+- Comment out update PR description job [`334b3be`](https://github.com/ax-sh/ax-sh.github.io/commit/334b3be58af1b32e36a6a0cf3ca3f52592d9edfd)
 - Fix command substitution syntax in package.json [`13bfd8f`](https://github.com/ax-sh/ax-sh.github.io/commit/13bfd8f35e148ae8c66309aba5c3f68836555e95)
 - Update pr:push script in package.json [`4daef52`](https://github.com/ax-sh/ax-sh.github.io/commit/4daef52a042cf7c238f873642b0bd262f91d6835)
 - Add spell check workflow to CI configuration [`5e34f80`](https://github.com/ax-sh/ax-sh.github.io/commit/5e34f805cf12eafff93f75eeae348b75cfe88963)
@@ -180,12 +222,23 @@ All notable changes to this project will be documented in this file.
 - Add git-cliff dependency to package.json [`4b61579`](https://github.com/ax-sh/ax-sh.github.io/commit/4b615798fefdfe79049c9e6bf9ec2c901f8915f3)
 - Add changelog command to package.json [`48d1d5c`](https://github.com/ax-sh/ax-sh.github.io/commit/48d1d5c73b6892e886026583e19103f153652bd7)
 - Add new GitHub command for PR creation [`eecd56a`](https://github.com/ax-sh/ax-sh.github.io/commit/eecd56ae0f51e7a4375ea8e870dff3f6b460e8a6)
+- Update pr:push command for correct base branch [`1c6aca5`](https://github.com/ax-sh/ax-sh.github.io/commit/1c6aca5410207711309a20d2f353af51e997a663)
+- Add new scripts for pull request handling [`5490f31`](https://github.com/ax-sh/ax-sh.github.io/commit/5490f31dcb3e37e8ad4708aaad4f4979041b82ff)
 - Update pr:push command for correct base branch [`b7af161`](https://github.com/ax-sh/ax-sh.github.io/commit/b7af16103c90f76c464fe14f08ee39ea80d52922)
 - Add new scripts for pull request handling [`9ef7776`](https://github.com/ax-sh/ax-sh.github.io/commit/9ef7776613283d28172f06ec1a7a429fa9f46d6b)
 - Update react-query dependencies to latest version [`0e7b843`](https://github.com/ax-sh/ax-sh.github.io/commit/0e7b84301a2ee5f2c038eb6cdc4a91d401ab3304)
 
 ## [[1.14.0] - 2024-09-03] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.14.0)
 
+
+### 🚀 Features
+
+- Add TypeScript ignore comment for Obfuscate usage [`fb4fa71`](https://github.com/ax-sh/ax-sh.github.io/commit/fb4fa71745547ba22a9c1a26956001a60c1b0171)
+
+### 🚜 Refactor
+
+- Change type from any to unknown in onSubmit [`ba770aa`](https://github.com/ax-sh/ax-sh.github.io/commit/ba770aac510a0a61df14b3d8b56f00014977297a)
+- Rename contactFormFields to ContactFormFields [`0170f46`](https://github.com/ax-sh/ax-sh.github.io/commit/0170f4654db905d7dc9ba276ae9b6bb5bdd90e03)
 
 ### ⚙️ Miscellaneous Tasks
 
@@ -199,6 +252,13 @@ All notable changes to this project will be documented in this file.
 - Update release-it hook command for testing [`694abc5`](https://github.com/ax-sh/ax-sh.github.io/commit/694abc57f8466e3c35b9ce8bbe7c1cf69e5c4f9d)
 - Update README for clarity on dev server command [`a530bd7`](https://github.com/ax-sh/ax-sh.github.io/commit/a530bd77b7a7052cf363b7ef3ca720e7d06ba4ca)
 - Release v1.14.0 https://ax-sh.github.io/ [`72d044d`](https://github.com/ax-sh/ax-sh.github.io/commit/72d044d848d1c2fa9ecf0fc5f369e3c2323799ba)
+- Update package dependencies and versions (#31) [`617bfa1`](https://github.com/ax-sh/ax-sh.github.io/commit/617bfa19bec8120f1bd482c28939724ed4b17f85)
+- Update package dependencies to latest versions [`7548be0`](https://github.com/ax-sh/ax-sh.github.io/commit/7548be064af1ba3ad0a33931d16cd4c26eceb4ff)
+- *(package.json)* Rename dev script and update command [`6c233e1`](https://github.com/ax-sh/ax-sh.github.io/commit/6c233e196ceb5ddb429ac767462a586d307320ce)
+- Update biome schema and add format script [`73214aa`](https://github.com/ax-sh/ax-sh.github.io/commit/73214aa8ce6769b7ff3cd1296876656f954b83ee)
+- Update lint script and add new dependency [`509114d`](https://github.com/ax-sh/ax-sh.github.io/commit/509114d1ff38df4f6e7e0814fcdd8b91e7514273)
+- Add @hookform/error-message dependency [`b9ee6eb`](https://github.com/ax-sh/ax-sh.github.io/commit/b9ee6ebec43ab2a32227e2f94e2cd745aec2d94b)
+- Update release hooks and ESLint config formatting [`63ba33e`](https://github.com/ax-sh/ax-sh.github.io/commit/63ba33eabae8d74870ecd3ca07560fe6e8184baf)
 
 ## [[1.13.0] - 2024-07-29] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.13.0)
 
