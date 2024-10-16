@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --format=stylish",
-    "lint:fix": "nr lint --fix",
+    "lint:fix": "nr lint --fix --ignore-path .gitignore",
     "lint:types": "nr tsc --noEmit",
     "test": "vitest run",
     "commitlint": "commitlint --edit",
