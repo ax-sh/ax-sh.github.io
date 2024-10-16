@@ -4,12 +4,12 @@ permissions:
   contents: write
 
 on:
-  workflow_dispatch:
   pull_request:
     types: [closed]
     branches:
       - main # or your default branch name
       - master
+  workflow_dispatch:
 
 jobs:
   release:
@@ -44,8 +44,11 @@ jobs:
 
       - name: 💨Run Release-It
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: bunx release-it minor --ci
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}'
+
+        run: |
+          bun i -g @antfu/ni
+          bunx release-it minor --ci
       - name: 👉Push changes
         uses: ad-m/github-push-action@master
         with:
