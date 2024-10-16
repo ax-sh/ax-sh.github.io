@@ -20,38 +20,39 @@ module.exports = {
     }
   },
   npm: {
-    publish: false,
+    publish: false
   },
   git: {
     // changelog: 'git log --pretty=format:"* %s (%h)" ${from}...${to}',
-    changelog: 'nr git-cliff -l',
+    changelog: "nr git-cliff -l",
     requireCleanWorkingDir: true,
     requireBranch: false,
     requireUpstream: true,
     requireCommits: false,
     requireCommitsFail: true,
-    commitsPath: '',
+    commitsPath: "",
     addUntrackedFiles: false,
     commit: true,
-    commitMessage: 'Release ${version}',
+    commitMessage: "Release ${version}",
     commitArgs: [],
     tag: true,
     tagExclude: null,
     tagName: null,
     tagMatch: null,
     getLatestTagFromAllRefs: false,
-    tagAnnotation: 'Release ${version}',
+    tagAnnotation: "Release ${version}",
     tagArgs: [],
     push: true,
-    pushArgs: ['--follow-tags'],
-    pushRepo: '',
+    pushArgs: ["--follow-tags"],
+    pushRepo: ""
   },
   hooks: {
-    'before:init': [
-    //   'nr prettier:fix',
-    //   'git commit --allow-empty -am "ci: format files before release"',
-    //   'nr lint',
-    ],
+    "before:init": [
+      "nr test",
+      "nr lint:types"
+      //   'nr prettier:fix',
+      //   'git commit --allow-empty -am "ci: format files before release"',
+    ]
     // 'before:beforeBump': [
     //   'git flow release start v${version}',
     //   'echo \uD83D\uDC4A ${name} before:bump latestVersion=v${version} previousVersion=v${latestVersion}',
@@ -69,5 +70,5 @@ module.exports = {
     //   // 'git push origin refs/heads/master:master',
     //   // 'git push origin refs/heads/develop:develop',
     // ],
-  },
-}
+  }
+};
