@@ -5,6 +5,7 @@ on:
     types: [closed]
     branches:
       - main # or your default branch name
+      - master
 
 jobs:
   release:
