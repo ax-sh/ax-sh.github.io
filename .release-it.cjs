@@ -24,7 +24,7 @@ module.exports = {
   },
   git: {
     // changelog: 'git log --pretty=format:"* %s (%h)" ${from}...${to}',
-    changelog: "nr git-cliff -l",
+    changelog: "nr git-cliff -l -s all",
     requireCleanWorkingDir: true,
     requireBranch: false,
     requireUpstream: true,
@@ -58,10 +58,10 @@ module.exports = {
       "echo \uD83D\uDC4A ${name} before:bump latestVersion=v${version} previousVersion=v${latestVersion}"
     ],
     "after:bump": [
-      //   'git cliff -o CHANGELOG.md && git add CHANGELOG.md',
-      //   'git commit  --allow-empty -am "ci: add CHANGELOG"',
+      "nr git-cliff -o CHANGELOG.md && git add CHANGELOG.md",
+      'git commit --allow-empty -am "ci: add CHANGELOG"',
       //   'git flow release finish -n',
-      //   // equivalent 'git flow release finish v${version} -m "Release v${version}" -n -p -F --keepremote',
+        // equivalent 'git flow release finish v${version} -m "Release v${version}" -n -p -F --keepremote',
       "echo \uD83D\uDC4A ${name} after:bump version=v${version} latestVersion=v${latestVersion}"
     ],
     "after:release": [
