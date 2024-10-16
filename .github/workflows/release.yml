@@ -1,6 +1,10 @@
 name: Release
 
+permissions:
+  contents: write
+
 on:
+  workflow_dispatch:
   pull_request:
     types: [closed]
     branches:
@@ -23,7 +27,7 @@ jobs:
           bun-version: latest
 
       - name: 🗄️Cache Bun packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.bun/install/cache
           key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
@@ -38,11 +42,11 @@ jobs:
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
-      - name: Run Release-It
+      - name: 💨Run Release-It
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bunx release-it minor --ci
-      - name: Push changes
+      - name: 👉Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
