@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [[1.29.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.29.0)
+
+
+### ⚙️ Miscellaneous Tasks
+
+- Fix syntax error in release workflow file [`fa63686`](https://github.com/ax-sh/ax-sh.github.io/commit/fa63686094caaa83f121c0a30288d36138a990f4)
+
 ## [[1.28.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.28.0)
 
 
@@ -21,6 +28,7 @@ All notable changes to this project will be documented in this file.
 - Update release workflow permissions for write access [`6416baa`](https://github.com/ax-sh/ax-sh.github.io/commit/6416baaa3daceee03a74f5cb29640cb1d09bbe3b)
 - Update release workflow to install dependencies [`bbdec4a`](https://github.com/ax-sh/ax-sh.github.io/commit/bbdec4a12d2fc2dbb182ee4949b4f1c38d2a2ec3)
 - Update release workflow to include manual trigger [`9e8ddbb`](https://github.com/ax-sh/ax-sh.github.io/commit/9e8ddbbadd5a609b03bb02cbf246ed5d9219fc2a)
+- Release v1.28.0 [`d35c3fb`](https://github.com/ax-sh/ax-sh.github.io/commit/d35c3fbff577f832247d1d3561e62de2adaf1dcb)
 
 ## [[1.27.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.27.0)
 
