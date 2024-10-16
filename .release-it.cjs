@@ -7,7 +7,7 @@
  **/
 
 /** @type {import('release-it').Config} */
-export default {
+module.exports = {
   github: {
     releaseName: "Release ${version} ax-sh.github.io",
     release: true,
