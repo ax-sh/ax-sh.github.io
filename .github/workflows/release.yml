@@ -44,7 +44,7 @@ jobs:
 
       - name: 💨Run Release-It
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         run: |
           bun i -g @antfu/ni
