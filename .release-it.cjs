@@ -52,18 +52,18 @@ module.exports = {
       "nr lint:types"
       //   'nr prettier:fix',
       //   'git commit --allow-empty -am "ci: format files before release"',
+    ],
+    "before:beforeBump": [
+      //   'git flow release start v${version}',
+      "echo \uD83D\uDC4A ${name} before:bump latestVersion=v${version} previousVersion=v${latestVersion}"
+    ],
+    "after:bump": [
+      //   'git cliff -o CHANGELOG.md && git add CHANGELOG.md',
+      //   'git commit  --allow-empty -am "ci: add CHANGELOG"',
+      //   'git flow release finish -n',
+      //   // equivalent 'git flow release finish v${version} -m "Release v${version}" -n -p -F --keepremote',
+      "echo \uD83D\uDC4A ${name} after:bump version=v${version} latestVersion=v${latestVersion}"
     ]
-    // 'before:beforeBump': [
-    //   'git flow release start v${version}',
-    //   'echo \uD83D\uDC4A ${name} before:bump latestVersion=v${version} previousVersion=v${latestVersion}',
-    // ],
-    // 'after:bump': [
-    //   'git cliff -o CHANGELOG.md && git add CHANGELOG.md',
-    //   'git commit  --allow-empty -am "ci: add CHANGELOG"',
-    //   'git flow release finish -n',
-    //   // equivalent 'git flow release finish v${version} -m "Release v${version}" -n -p -F --keepremote',
-    //   'echo \uD83D\uDC4A ${name} after:bump version=v${version} latestVersion=v${latestVersion}',
-    // ],
     // 'after:release': [
     //   'echo \uD83D\uDE4C Successfully released ${name} v${version} to ${repo.repository}.',
     //   // 'git push origin HEAD',
