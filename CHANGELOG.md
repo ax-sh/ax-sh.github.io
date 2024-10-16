@@ -2,12 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [[1.27.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.27.0)
+
+
+### 🚀 Features
+
+- *(release-it)* Handle missing changelog in release notes [`63b4784`](https://github.com/ax-sh/ax-sh.github.io/commit/63b47847d01dbb9b61b97c3d6c91e39ada18a5a4)
+
 ## [[1.26.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.26.0)
 
 
 ### ⚙️ Miscellaneous Tasks
 
 - *(release)* Update release workflow for pull requests [`8ec2597`](https://github.com/ax-sh/ax-sh.github.io/commit/8ec259789fc94e6a7d385d667c91bf47b6367a08)
+- Release v1.26.0 [`c0debb2`](https://github.com/ax-sh/ax-sh.github.io/commit/c0debb2611183a25357dd57a4e85cbaa0e4fa82d)
 
 ## [[1.25.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.25.0)
 
