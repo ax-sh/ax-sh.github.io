@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.22.0] - 2024-10-16
+
+### 🚜 Refactor
+
+- *(release notes)* Update format for deployment notes
+
 ## [1.21.0] - 2024-10-16
 
 ### ⚙️ Miscellaneous Tasks
 
 - Update changelog command in release config
+- Release v1.21.0
 
 ## [1.20.0] - 2024-10-16
 
