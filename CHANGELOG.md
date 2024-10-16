@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [1.18.0] - 2024-10-16
 
 ### ⚙️ Miscellaneous Tasks
 
@@ -13,6 +13,9 @@ All notable changes to this project will be documented in this file.
 - Update release commit and tag messages
 - Add CHANGELOG
 - Update changelog command in release config
+- Add CHANGELOG
+- Update changelog command formatting
+- Update CHANGELOG generation command in release-it config
 
 ## [1.15.0] - 2024-10-16
 
