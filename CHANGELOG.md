@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.24.0] - 2024-10-16
+
+### ⚙️ Miscellaneous Tasks
+
+- Update changelog deployment note formatting
+
 ## [1.23.0] - 2024-10-16
 
 ### ⚙️ Miscellaneous Tasks
 
 - Update release notes format and eslint config
+- Release v1.23.0
 
 ## [1.22.0] - 2024-10-16
 
