@@ -15,7 +15,7 @@ module.exports = {
       // Remove the first, redundant line with version and date.
       // const notes = context.changelog.split("\n").slice(1);
       const notes = context.changelog.split("\n");
-      notes.unshift(":rocket: [https://ax-sh.github.io/](https://ax-sh.github.io/)");
+      notes.unshift(":rocket: Deployed to [https://ax-sh.github.io/](https://ax-sh.github.io/)");
       return notes.join("\n");
     }
   },
@@ -40,7 +40,7 @@ module.exports = {
     tagName: null,
     tagMatch: null,
     getLatestTagFromAllRefs: false,
-    tagAnnotation: "Release ${version}",
+    tagAnnotation: ":rocket: Release ${version}",
     tagArgs: [],
     push: true,
     pushArgs: ["--follow-tags"],
@@ -63,12 +63,12 @@ module.exports = {
       //   'git flow release finish -n',
       //   // equivalent 'git flow release finish v${version} -m "Release v${version}" -n -p -F --keepremote',
       "echo \uD83D\uDC4A ${name} after:bump version=v${version} latestVersion=v${latestVersion}"
+    ],
+    "after:release": [
+      "echo \uD83D\uDE4C Successfully released ${name} v${version} to ${repo.repository}.",
+      //   // 'git push origin HEAD',
+      "git push origin refs/heads/master:master",
+      "git push origin refs/heads/develop:develop"
     ]
-    // 'after:release': [
-    //   'echo \uD83D\uDE4C Successfully released ${name} v${version} to ${repo.repository}.',
-    //   // 'git push origin HEAD',
-    //   // 'git push origin refs/heads/master:master',
-    //   // 'git push origin refs/heads/develop:develop',
-    // ],
   }
 };
