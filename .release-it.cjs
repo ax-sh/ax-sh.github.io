@@ -47,12 +47,11 @@ module.exports = {
     pushRepo: '',
   },
   hooks: {
-    // 'before:init': [
-    //   'which git-cliff',
+    'before:init': [
     //   'nr prettier:fix',
     //   'git commit --allow-empty -am "ci: format files before release"',
     //   'nr lint',
-    // ],
+    ],
     // 'before:beforeBump': [
     //   'git flow release start v${version}',
     //   'echo \uD83D\uDC4A ${name} before:bump latestVersion=v${version} previousVersion=v${latestVersion}',
