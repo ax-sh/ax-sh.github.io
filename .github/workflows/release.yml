@@ -1,6 +1,7 @@
 name: Release
 
 on:
+  workflow_dispatch:
   pull_request:
     types: [closed]
     branches:
@@ -23,7 +24,7 @@ jobs:
           bun-version: latest
 
       - name: 🗄️Cache Bun packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.bun/install/cache
           key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
