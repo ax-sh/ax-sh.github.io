@@ -2,12 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.21.0] - 2024-10-16
+
+### ⚙️ Miscellaneous Tasks
+
+- Update changelog command in release config
+
 ## [1.20.0] - 2024-10-16
 
 ### ⚙️ Miscellaneous Tasks
 
 - Update changelog command in release config
 - *(release)* Update changelog command for release-it
+- Release v1.20.0
 
 ## [1.19.0] - 2024-10-16
 
