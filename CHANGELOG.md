@@ -2,12 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [[1.30.0] - 2024-10-17] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.30.0)
+
+
+### ⚙️ Miscellaneous Tasks
+
+- Streamline deployment workflow and add tests [`b94338f`](https://github.com/ax-sh/ax-sh.github.io/commit/b94338f992b69e6e4b94f25e9dcdf3d1c0315a3b)
+
 ## [[1.29.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.29.0)
 
 
 ### ⚙️ Miscellaneous Tasks
 
 - Fix syntax error in release workflow file [`fa63686`](https://github.com/ax-sh/ax-sh.github.io/commit/fa63686094caaa83f121c0a30288d36138a990f4)
+- Release v1.29.0 [`156100e`](https://github.com/ax-sh/ax-sh.github.io/commit/156100e91b90b515bedbaea95e794a299bf6ba04)
 
 ## [[1.28.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.28.0)
 
