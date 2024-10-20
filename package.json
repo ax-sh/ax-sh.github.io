@@ -55,6 +55,7 @@
     "chalk": "^5.3.0",
     "clsx": "^2.1.1",
     "git-cliff": "^2.6.1",
+    "is-ci": "^3.0.1",
     "next": "14.2.15",
     "nextjs-google-analytics": "^2.3.7",
     "react": "^18.3.1",
