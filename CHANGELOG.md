@@ -2,12 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [[1.31.0] - 2024-10-20] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.31.0)
+
+
+### ⚙️ Miscellaneous Tasks
+
+- Update release script and add is-ci dependency [`36099b4`](https://github.com/ax-sh/ax-sh.github.io/commit/36099b43843a74b7ebcc20b3594786088658ef48)
+
 ## [[1.30.0] - 2024-10-17] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.30.0)
 
 
 ### ⚙️ Miscellaneous Tasks
 
 - Streamline deployment workflow and add tests [`b94338f`](https://github.com/ax-sh/ax-sh.github.io/commit/b94338f992b69e6e4b94f25e9dcdf3d1c0315a3b)
+- Release v1.30.0 [`6d4ed5a`](https://github.com/ax-sh/ax-sh.github.io/commit/6d4ed5ad2d92650d0ab9aeab46a025314d37f2cf)
 
 ## [[1.29.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.29.0)
 
