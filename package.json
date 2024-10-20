@@ -44,18 +44,13 @@
     "pr:ci": "act pull_request --container-architecture linux/amd64"
   },
   "dependencies": {
-    "@changesets/cli": "^2.27.9",
-    "@eslint/eslintrc": "^3.1.0",
+
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^3.9.0",
     "@icons-pack/react-simple-icons": "^10.0.0",
     "@tanstack/react-query": "^5.59.14",
     "@tanstack/react-query-devtools": "^5.59.14",
-    "@testing-library/jest-dom": "^6.5.0",
-    "chalk": "^5.3.0",
     "clsx": "^2.1.1",
-    "git-cliff": "^2.6.1",
-    "is-ci": "^3.0.1",
     "next": "14.2.15",
     "nextjs-google-analytics": "^2.3.7",
     "react": "^18.3.1",
@@ -69,6 +64,12 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@testing-library/jest-dom": "^6.5.0",
+    "chalk": "^5.3.0",
+    "git-cliff": "^2.6.1",
+    "is-ci": "^3.0.1",
+    "@changesets/cli": "^2.27.9",
     "@biomejs/biome": "1.9.3",
     "@chromatic-com/storybook": "2.0.2",
     "@commitlint/cli": "^19.5.0",
