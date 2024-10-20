@@ -44,7 +44,6 @@
     "pr:ci": "act pull_request --container-architecture linux/amd64"
   },
   "dependencies": {
-
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^3.9.0",
     "@icons-pack/react-simple-icons": "^10.0.0",
