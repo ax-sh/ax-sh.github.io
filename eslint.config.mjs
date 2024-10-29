@@ -35,15 +35,19 @@ export default [
     files: ["**/.storybook/*.{ts,js}"],
 
     rules: {
-      "import/no-mutable-exports": "off"
+      "import/no-mutable-exports": "off",
+      "import/newline-after-import": "off"
     }
   },
   {
-    files: ["**/*.config.{ts,js}", ".release-it.cjs"],
+    files: ["**/*.config.{ts,js}", ".release-it.cjs", "eslint.config.mjs", "postcss.config.cjs"],
 
     rules: {
       "global-require": "off",
-      "import/newline-after-import": "off"
+      "import/newline-after-import": "off",
+      "import/no-named-as-default": "off",
+      "import/no-named-as-default-member": "off",
+      "import/no-mutable-exports": "off"
     }
   },
   {
@@ -72,7 +76,8 @@ export default [
       ".next",
       "CHANGELOG.md",
       ".prettier.eslintrc.cjs",
-      "____eslint.config.mjs"
+      "____eslint.config.mjs",
+      "next-env.d.ts"
     ]
   }
 ];
