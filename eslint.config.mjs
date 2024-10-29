@@ -1,3 +1,4 @@
+import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
@@ -11,9 +12,10 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all
 });
+const patchedConfig = fixupConfigRules([...compat.extends("next/core-web-vitals", "next")]);
 
-export default [
-  ...compat.extends("next/core-web-vitals", "next", "airbnb", "./.prettier.eslintrc.cjs"),
+const config = [
+  ...patchedConfig,
   {
     plugins: {
       "@typescript-eslint": typescriptEslint
@@ -31,39 +33,7 @@ export default [
       "import/no-amd": "off"
     }
   },
-  {
-    files: ["**/.storybook/*.{ts,js}"],
-
-    rules: {
-      "import/no-mutable-exports": "off",
-      "import/newline-after-import": "off"
-    }
-  },
-  {
-    files: ["**/*.config.{ts,js}", ".release-it.cjs", "eslint.config.mjs", "postcss.config.cjs"],
-
-    rules: {
-      "global-require": "off",
-      "import/newline-after-import": "off",
-      "import/no-named-as-default": "off",
-      "import/no-named-as-default-member": "off",
-      "import/no-mutable-exports": "off"
-    }
-  },
-  {
-    files: ["**/*.test.{ts,tsx}"],
-
-    rules: {
-      "no-undef": "off",
-
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          devDependencies: ["**/*.test.ts", "**/*.test.tsx"]
-        }
-      ]
-    }
-  },
+  // Add more flat configs here
   {
     ignores: [
       ".config/*",
@@ -81,3 +51,44 @@ export default [
     ]
   }
 ];
+
+export default config;
+
+// export default [
+//   ...compat.extends("next/core-web-vitals", "next", "airbnb", "./.prettier.eslintrc.cjs"),
+
+//   {
+//     files: ["**/.storybook/*.{ts,js}"],
+//
+//     rules: {
+//       "import/no-mutable-exports": "off",
+//       "import/newline-after-import": "off"
+//     }
+//   },
+//   {
+//     files: ["**/*.config.{ts,js}", ".release-it.cjs", "eslint.config.mjs", "postcss.config.cjs"],
+//
+//     rules: {
+//       "global-require": "off",
+//       "import/newline-after-import": "off",
+//       "import/no-named-as-default": "off",
+//       "import/no-named-as-default-member": "off",
+//       "import/no-mutable-exports": "off"
+//     }
+//   },
+//   {
+//     files: ["**/*.test.{ts,tsx}"],
+//
+//     rules: {
+//       "no-undef": "off",
+//
+//       "import/no-extraneous-dependencies": [
+//         "error",
+//         {
+//           devDependencies: ["**/*.test.ts", "**/*.test.tsx"]
+//         }
+//       ]
+//     }
+//   },
+
+// ];
