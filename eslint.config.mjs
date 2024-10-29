@@ -2,6 +2,7 @@ import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
+import eslintConfigPrettier from "eslint-config-prettier";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -12,10 +13,13 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all
 });
-const patchedConfig = fixupConfigRules([...compat.extends("next/core-web-vitals", "next")]);
+const patchedConfig = fixupConfigRules([
+  ...compat.extends("next/core-web-vitals", "next", "prettier")
+]);
 
 const config = [
   ...patchedConfig,
+  { plugins: { eslintConfigPrettier } },
   {
     plugins: {
       "@typescript-eslint": typescriptEslint
@@ -33,6 +37,7 @@ const config = [
       "import/no-amd": "off"
     }
   },
+  { files: ["*/**/main-stacks-section.tsx"], rules: { "@next/next/no-img-element": "off" } },
   // Add more flat configs here
   {
     ignores: [
