@@ -7,6 +7,8 @@ const config: KnipConfig = {
     "git-cliff",
     "@faker-js/faker",
     "husky",
+    "is-ci",
+    "tsx",
     "oxlint",
     "@tanstack/react-query-devtool"
   ],
