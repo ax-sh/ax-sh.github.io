@@ -4,4 +4,4 @@ https://stackoverflow.com/questions/69893875/watch-gh-actions-workflow-output-in
 Migrate Your Config File
 To get started, use the configuration migrator on your existing configuration file (.eslintrc, .eslintrc.json, .eslintrc.yml), like this:
 
-npx @eslint/migrate-config .eslintrc.json
+bunx @eslint/migrate-config .eslintrc.json
