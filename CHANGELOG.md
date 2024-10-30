@@ -63,6 +63,7 @@ All notable changes to ax-sh webpage will be documented in this file.
 - Update tag:bump command in package.json [`45de8f1`](https://github.com/ax-sh/ax-sh.github.io/commit/45de8f152007baa90c8271513703298997471b06)
 - Add git-cliff command to package.json scripts [`51ab742`](https://github.com/ax-sh/ax-sh.github.io/commit/51ab742a78f660e970b8b88889629f8880b50372)
 - *(package.json)* Fix whitespace in scripts section [`7f17555`](https://github.com/ax-sh/ax-sh.github.io/commit/7f17555e986b637a7142bbaa3ef4a7d4ab1c6461)
+- Correct version number in CHANGELOG and scripts [`b87311b`](https://github.com/ax-sh/ax-sh.github.io/commit/b87311bb694cb826c0078e619ca14e5cd76a675b)
 
 ### Build
 
@@ -71,6 +72,7 @@ All notable changes to ax-sh webpage will be documented in this file.
 - Update tag bump script and add cross-env dependency [`9ed49a9`](https://github.com/ax-sh/ax-sh.github.io/commit/9ed49a922a53ba1bfc105608f970cd457585fc70)
 - Update tag:bump script to push tags to origin [`5977cd3`](https://github.com/ax-sh/ax-sh.github.io/commit/5977cd3aa913bad50ca829354b8a06d3bf55e2b3)
 - Update tag bump script to use new TypeScript file [`904ca68`](https://github.com/ax-sh/ax-sh.github.io/commit/904ca686ac37818f3bb7c81c32e80da6fa29bd2b)
+- *(package.json)* Update pr:deploy command for changelog generation [`99e996b`](https://github.com/ax-sh/ax-sh.github.io/commit/99e996bd1fe4c50b8f61d2ef7aaf96b534484c03)
 
 ## [[1.27.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.27.0)
 
