@@ -14,7 +14,7 @@ const GOOGLE_ANALYTICS_ID = "G-N6207193QM";
 const HOTJAR_ID = 3099426;
 const HOTJAR_VERSION = 6;
 
-export default function Analytics() {
+export function Analytics() {
   useLayoutEffect(() => {
     hotjar.initialize({ sv: HOTJAR_VERSION, id: HOTJAR_ID });
   }, []);

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 import { Josefin_Sans } from "next/font/google";
 
-import Analytics, { Providers } from "@/app/providers";
+import { Analytics, Providers } from "@/app/providers";
 
 import "./globals.css";
 

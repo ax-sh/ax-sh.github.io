@@ -1,61 +1,44 @@
+import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
-import eslint from "@eslint/js";
+import js from "@eslint/js";
+import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import eslintConfigPrettier from "eslint-config-prettier";
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
-import pluginSecurity from "eslint-plugin-security";
-import sonarjs from "eslint-plugin-sonarjs";
-import eslintPluginUnicorn from "eslint-plugin-unicorn";
-import globals from "globals";
-import * as tseslint from "typescript-eslint";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const compat = new FlatCompat();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all
+});
+const patchedConfig = fixupConfigRules([
+  ...compat.extends("next/core-web-vitals", "next", "prettier")
+]);
 
-const unicorn = {
-  languageOptions: {
-    ecmaVersion: 2024,
-    globals: {
-      ...globals.node
+const config = [
+  ...patchedConfig,
+  { plugins: { eslintConfigPrettier } },
+  {
+    plugins: {
+      "@typescript-eslint": typescriptEslint
+    },
+
+    rules: {
+      "@typescript-eslint/ban-ts-comment": "warn",
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-filename-extension": "off",
+      "react/jsx-props-no-spreading": "off",
+      "import/extensions": "off",
+      "import/prefer-default-export": "off",
+      "no-shadow": "off",
+      "import/no-extraneous-dependencies": "off",
+      "import/no-amd": "off"
     }
   },
-  plugins: {
-    unicorn: eslintPluginUnicorn
-  },
-  rules: {
-    "unicorn/better-regex": "error",
-    "@typescript-eslint/consistent-type-imports": "error"
-  }
-};
-
-const storybookConfig = compat.config({
-  extends: [
-    "plugin:storybook/recommended",
-    "next",
-    "next/core-web-vitals",
-    "next/typescript"
-    // other extends
-    // eslintPluginStorybook.configs.recommended,
-  ],
-  rules: {
-    "storybook/no-uninstalled-addons": "off",
-    "storybook/hierarchy-separator": "off",
-    "storybook/prefer-pascal-case": "off",
-    "storybook/story-exports": "off",
-    "@next/next/no-duplicate-head": "off"
-  },
-  ignorePatterns: ["!.storybook", "storybook-static"]
-});
-const eslintConfigs = [
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  sonarjs.configs.recommended,
-  pluginSecurity.configs.recommended,
-  unicorn,
-  eslintPluginPrettierRecommended,
-  eslintConfigPrettier,
-  ...storybookConfig,
   { files: ["*/**/main-stacks-section.tsx"], rules: { "@next/next/no-img-element": "off" } },
-  { files: ["tailwind.config.ts"], rules: { "@typescript-eslint/no-require-imports": "off" } },
-
+  // Add more flat configs here
   {
     ignores: [
       ".config/*",
@@ -66,9 +49,51 @@ const eslintConfigs = [
       "node_modules",
       "public",
       ".next",
-      "CHANGELOG.md"
+      "CHANGELOG.md",
+      ".prettier.eslintrc.cjs",
+      "____eslint.config.mjs",
+      "next-env.d.ts"
     ]
   }
 ];
 
-export default eslintConfigs;
+export default config;
+
+// export default [
+//   ...compat.extends("next/core-web-vitals", "next", "airbnb", "./.prettier.eslintrc.cjs"),
+
+//   {
+//     files: ["**/.storybook/*.{ts,js}"],
+//
+//     rules: {
+//       "import/no-mutable-exports": "off",
+//       "import/newline-after-import": "off"
+//     }
+//   },
+//   {
+//     files: ["**/*.config.{ts,js}", ".release-it.cjs", "eslint.config.mjs", "postcss.config.cjs"],
+//
+//     rules: {
+//       "global-require": "off",
+//       "import/newline-after-import": "off",
+//       "import/no-named-as-default": "off",
+//       "import/no-named-as-default-member": "off",
+//       "import/no-mutable-exports": "off"
+//     }
+//   },
+//   {
+//     files: ["**/*.test.{ts,tsx}"],
+//
+//     rules: {
+//       "no-undef": "off",
+//
+//       "import/no-extraneous-dependencies": [
+//         "error",
+//         {
+//           devDependencies: ["**/*.test.ts", "**/*.test.tsx"]
+//         }
+//       ]
+//     }
+//   },
+
+// ];
