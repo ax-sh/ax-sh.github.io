@@ -3,6 +3,7 @@ import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import eslintConfigPrettier from "eslint-config-prettier";
+import sonarjs from "eslint-plugin-sonarjs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -19,6 +20,7 @@ const patchedConfig = fixupConfigRules([
 
 const config = [
   ...patchedConfig,
+  sonarjs.configs.recommended,
   { plugins: { eslintConfigPrettier } },
   { files: ["tailwind.config.ts"], rules: { "@typescript-eslint/no-require-imports": "off" } },
   {

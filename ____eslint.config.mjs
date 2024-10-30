@@ -3,7 +3,6 @@ import eslint from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import pluginSecurity from "eslint-plugin-security";
-import sonarjs from "eslint-plugin-sonarjs";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 import * as tseslint from "typescript-eslint";
@@ -47,7 +46,6 @@ const storybookConfig = compat.config({
 const eslintConfigs = [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  sonarjs.configs.recommended,
   pluginSecurity.configs.recommended,
   unicorn,
   eslintPluginPrettierRecommended,
