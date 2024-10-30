@@ -1,11 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   reactStrictMode: true,
+  invalidOptions: true,
+  devIndicators: { buildActivity: true, appIsrStatus: true },
   output: "export",
+  experimental: {},
   // Add basePath
   // basePath: '',
   images: {
-    domains: ["picsum.photos", "cdn.jsdelivr.net"], // Add your CDN domain
+    remotePatterns: [{ hostname: "picsum.photos" }, { hostname: "cdn.jsdelivr.net" }], // Add your CDN domain
     unoptimized: true
   },
   typescript: {
@@ -17,4 +21,4 @@ const nextConfig = {
   }
 };
 
-module.exports = nextConfig;
+export default nextConfig;
