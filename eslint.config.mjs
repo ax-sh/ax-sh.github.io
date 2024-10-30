@@ -1,11 +1,14 @@
 import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
+import eslint from "@eslint/js";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import eslintConfigPrettier from "eslint-config-prettier";
+import pluginSecurity from "eslint-plugin-security";
 import sonarjs from "eslint-plugin-sonarjs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import * as tseslint from "typescript-eslint";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,11 +18,20 @@ const compat = new FlatCompat({
   allConfig: js.configs.all
 });
 const patchedConfig = fixupConfigRules([
-  ...compat.extends("next/core-web-vitals", "next", "prettier")
+  ...compat.extends(
+    "next/core-web-vitals",
+    "next",
+    "prettier",
+    "plugin:storybook/recommended"
+    // "next/typescript"
+  )
 ]);
 
 const config = [
   ...patchedConfig,
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+  pluginSecurity.configs.recommended,
   sonarjs.configs.recommended,
   { plugins: { eslintConfigPrettier } },
   { files: ["tailwind.config.ts"], rules: { "@typescript-eslint/no-require-imports": "off" } },
@@ -41,12 +53,27 @@ const config = [
     }
   },
   { files: ["*/**/main-stacks-section.tsx"], rules: { "@next/next/no-img-element": "off" } },
+  {
+    files: ["**/*.test.{ts,tsx}"],
+
+    rules: {
+      "no-undef": "off",
+
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          devDependencies: ["**/*.test.ts", "**/*.test.tsx"]
+        }
+      ]
+    }
+  },
   // Add more flat configs here
   {
     ignores: [
       ".config/*",
       "build/",
       "dist/",
+      "out/",
       ".xo-config.js",
       ".*.js",
       "node_modules",
@@ -82,20 +109,6 @@ export default config;
 //       "import/no-named-as-default": "off",
 //       "import/no-named-as-default-member": "off",
 //       "import/no-mutable-exports": "off"
-//     }
-//   },
-//   {
-//     files: ["**/*.test.{ts,tsx}"],
-//
-//     rules: {
-//       "no-undef": "off",
-//
-//       "import/no-extraneous-dependencies": [
-//         "error",
-//         {
-//           devDependencies: ["**/*.test.ts", "**/*.test.tsx"]
-//         }
-//       ]
 //     }
 //   },
 
