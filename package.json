@@ -28,7 +28,7 @@
     "bumped:version": "git cliff --bumped-version",
     "tag:bump": "bun run scripts/bump.ts",
     "pr:deploy-old": "git push origin develop && gh pr create -H develop -B master --fill",
-    "pr:deploy": "git push origin develop && gh pr create --head develop --base master --body \"$(git cliff -u --strip all)\" --title pr:deploy",
+    "pr:deploy": "git cliff -o CHANGELOG.md --bump && git push origin develop && gh pr create --head develop --base master --body \"$(git cliff -u --strip all)\" --title pr:deploy",
     "pr:push": "gh pr create --body \"$(nr git-cliff -l)\" --title pr:for-develop --base develop -d --dry-run",
     "pr:edit": "gh pr edit \"$(nr pr:number)\" --body \"$(nr git-cliff -l)\" --title pr:develop --base develop",
     "pr:list": "gh pr list --state open --json number,title | jq -r '.[] | [.number, .title] | @tsv'",
