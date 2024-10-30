@@ -20,6 +20,7 @@ const patchedConfig = fixupConfigRules([
 const config = [
   ...patchedConfig,
   { plugins: { eslintConfigPrettier } },
+  { files: ["tailwind.config.ts"], rules: { "@typescript-eslint/no-require-imports": "off" } },
   {
     plugins: {
       "@typescript-eslint": typescriptEslint
