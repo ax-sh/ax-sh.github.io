@@ -25,7 +25,7 @@
     "clean": "rimraf .next out",
     "bump": "changeset version",
     "bumpped:version": "git cliff --bumped-version",
-    "tag:bump": "VERSION=$(nr git-cliff --bumped-version) && git tag $VERSION && echo $VERSION",
+    "tag:bump": "VERSION=$(nr git-cliff --bumped-version) && git tag $VERSION && git push origin $VERSION",
     "pr:deploy-old": "git push origin develop && gh pr create -H develop -B master --fill",
     "pr:deploy": "nr build && git push origin develop && gh pr create --head develop --base master --body \"$(nr git-cliff -u --strip all)\" --title pr:deploy",
     "pr:push": "gh pr create --body \"$(nr git-cliff -l)\" --title pr:for-develop --base develop -d --dry-run",
