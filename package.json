@@ -24,6 +24,7 @@
     "prettier:fix": "prettier --write . ",
     "clean": "rimraf .next out",
     "bump": "changeset version",
+    "cl": "nr git-cliff -u --strip all",
     "bumped:version": "git cliff --bumped-version",
     "tag:bump": "bun run scripts/bump.ts",
     "pr:deploy-old": "git push origin develop && gh pr create -H develop -B master --fill",
