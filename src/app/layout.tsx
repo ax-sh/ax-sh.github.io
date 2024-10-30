@@ -16,7 +16,7 @@ const JosefinFont = Josefin_Sans({
 export const metadata: Metadata = {
   title: "Axmin Shrestha | Portfolio",
   description:
-    "I Develop Creative Websites. Specialize In Aesthetics, Responsive Design, Simplicity, And Utility."
+    "Full-Stack Creative Developer. Specialize In Aesthetics, Responsive Design, Simplicity, And Utility."
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
