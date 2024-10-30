@@ -1,15 +1,79 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to ax-sh webpage will be documented in this file.
 
-## [[1.27.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.27.0)
+## [[1.34.0] - 2024-10-30](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.34.0)
+
+
+### 🚀 Features
+
+- Update config [`6f49f1c`](https://github.com/ax-sh/ax-sh.github.io/commit/6f49f1ce28f353ec415065a2f765a95f50c5c21a)
+- Update todo [`f5db38f`](https://github.com/ax-sh/ax-sh.github.io/commit/f5db38f35f1bee3db29ed0d41414d1537135ad40)
+
+### 🚜 Refactor
+
+- Simplify ESLint config and update imports [`983b4f6`](https://github.com/ax-sh/ax-sh.github.io/commit/983b4f610dfb1bbc8c639b92455e56616bd3f7d6)
+- *(next)* Rename config file and update typescript usage [`b8392ee`](https://github.com/ax-sh/ax-sh.github.io/commit/b8392eee1b6e6a8f28f25caf502c4ac75bd79de5)
+- Remove sonarjs from eslint configuration [`5862791`](https://github.com/ax-sh/ax-sh.github.io/commit/586279145d60671e762fb8e62955b441acdaecb4)
+- *(eslint)* Streamline eslint configuration files [`67ee829`](https://github.com/ax-sh/ax-sh.github.io/commit/67ee82950c7eda10a22a02f61e25fddd6fd5ffb1)
+
+### 📚 Documentation
+
+- Fix markdown formatting in cliff.toml file [`5dcf412`](https://github.com/ax-sh/ax-sh.github.io/commit/5dcf4129b9371cceb0f35c42d3774a3cdf667890)
+- Update changelog header for ax-sh webpage [`ffac0fe`](https://github.com/ax-sh/ax-sh.github.io/commit/ffac0fe3be46fa2f951b3cc46139c7ac86360266)
+- Update migration command in TODO.md [`5f317ca`](https://github.com/ax-sh/ax-sh.github.io/commit/5f317cad5660244a98902ac90ab49e6959fd9a4e)
+
+### 🎨 Styling
+
+- *(ci)* Fix formatting in release workflow and scripts [`e1320da`](https://github.com/ax-sh/ax-sh.github.io/commit/e1320da67285f7020b11d24ea27f7886db1cab04)
+- *(workflow)* Update step names with emojis [`845c73a`](https://github.com/ax-sh/ax-sh.github.io/commit/845c73a2e36db1dd87082155ea92b71bdf99cf89)
+- Update job names in release workflow for clarity [`f7c513f`](https://github.com/ax-sh/ax-sh.github.io/commit/f7c513f021f404d825860223327d81c9da3cd6c5)
+- Update formatting in layout and manifest files [`d032958`](https://github.com/ax-sh/ax-sh.github.io/commit/d0329582974ee3e0d1ade0f468fcf3340bc09bc2)
+
+### ⚙️ Miscellaneous Tasks
+
+- Add master branch to release workflow triggers [`5eeac96`](https://github.com/ax-sh/ax-sh.github.io/commit/5eeac96d25d5b20fd6ccd2c56e700c2fd1894311)
+- Update release workflow for manual trigger and cache [`359ac62`](https://github.com/ax-sh/ax-sh.github.io/commit/359ac6276d7843ac4298628ad688bdb6d18c023b)
+- Update Bun.js setup to version 2 in workflow [`7c27ddb`](https://github.com/ax-sh/ax-sh.github.io/commit/7c27ddba8dc8bf092bf4fd473f2863f82fed8e10)
+- Update CI workflow for spelling checks [`7957cec`](https://github.com/ax-sh/ax-sh.github.io/commit/7957cec3fa3e6c13c5c5bd66ec9545f164344114)
+- *(workflow)* Update deployment workflow names and permissions [`815d29b`](https://github.com/ax-sh/ax-sh.github.io/commit/815d29bcbe4ac33ada26963b34a4986d3957cc86)
+- Update release workflow permissions for write access [`6416baa`](https://github.com/ax-sh/ax-sh.github.io/commit/6416baaa3daceee03a74f5cb29640cb1d09bbe3b)
+- Update release workflow to install dependencies [`bbdec4a`](https://github.com/ax-sh/ax-sh.github.io/commit/bbdec4a12d2fc2dbb182ee4949b4f1c38d2a2ec3)
+- Update release workflow to include manual trigger [`9e8ddbb`](https://github.com/ax-sh/ax-sh.github.io/commit/9e8ddbbadd5a609b03bb02cbf246ed5d9219fc2a)
+- Fix syntax error in release workflow file [`fa63686`](https://github.com/ax-sh/ax-sh.github.io/commit/fa63686094caaa83f121c0a30288d36138a990f4)
+- Streamline deployment workflow and add tests [`b94338f`](https://github.com/ax-sh/ax-sh.github.io/commit/b94338f992b69e6e4b94f25e9dcdf3d1c0315a3b)
+- Update release script and add is-ci dependency [`36099b4`](https://github.com/ax-sh/ax-sh.github.io/commit/36099b43843a74b7ebcc20b3594786088658ef48)
+- Update checkout action to use main branch [`bce555c`](https://github.com/ax-sh/ax-sh.github.io/commit/bce555cf1a9bec4f005059f2c202397a6c7f9554)
+- Update dependencies in package.json [`567b84e`](https://github.com/ax-sh/ax-sh.github.io/commit/567b84e0623d707f007cc4be51769d883200924f)
+- Clean up commented code and whitespace in files [`9c43e1e`](https://github.com/ax-sh/ax-sh.github.io/commit/9c43e1e606eea942c0ac95ff005eda3bc5e48935)
+- Update dependencies in package.json [`989d0e0`](https://github.com/ax-sh/ax-sh.github.io/commit/989d0e060b0e37838b246169c0665586ed110ec8)
+- Update package dependencies to latest versions [`e7a9ea3`](https://github.com/ax-sh/ax-sh.github.io/commit/e7a9ea3c180287dae2146b11819ac47efa0821f4)
+- Rename eslint.config.mjs to ____eslint.config.mjs [`a05be5c`](https://github.com/ax-sh/ax-sh.github.io/commit/a05be5ccc92738c216e6bf037a5570d21bd8577e)
+- *(eslint)* Update ESLint configuration file structure [`441004d`](https://github.com/ax-sh/ax-sh.github.io/commit/441004de4d3257e98efaf5cb3c9555c5efc66f53)
+- Update ESLint configuration rules and files list [`45b1bc8`](https://github.com/ax-sh/ax-sh.github.io/commit/45b1bc8cc5317fbc15695fc512e22495fe84216e)
+- Update ESLint config to integrate Prettier rules [`f160c0f`](https://github.com/ax-sh/ax-sh.github.io/commit/f160c0f2c9066f6f5416bbb35eb3c59a80a3e7bb)
+- Update ESLint config for Tailwind support [`74f0eed`](https://github.com/ax-sh/ax-sh.github.io/commit/74f0eedb7acaa05fe931f5f00e1e602a7e09e0e3)
+- Update deploy script and rename manifest file [`725d2b5`](https://github.com/ax-sh/ax-sh.github.io/commit/725d2b5b6ff8f8a5706f46112efde1a71ed50f35)
+- Update tsconfig types for testing library support [`870bfbf`](https://github.com/ax-sh/ax-sh.github.io/commit/870bfbfe0f997edc52c2f28b87e0af80da5d8a0e)
+- Update version to 1.33.0 in package.json [`a259ab1`](https://github.com/ax-sh/ax-sh.github.io/commit/a259ab131ad0cc8b5277c8464650af2a0a4af7d1)
+
+### Build
+
+- Update package dependencies for next version [`cb7f510`](https://github.com/ax-sh/ax-sh.github.io/commit/cb7f5102b185288e796c5e7752f453997122fd13)
+- Update build command and add favicon icon info [`bb88486`](https://github.com/ax-sh/ax-sh.github.io/commit/bb8848621d55ab3c0d1e5ee5973edb3b27bd6e3b)
+
+## [[1.27.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.27.0)
 
 
 ### 🚀 Features
 
 - *(release-it)* Handle missing changelog in release notes [`63b4784`](https://github.com/ax-sh/ax-sh.github.io/commit/63b47847d01dbb9b61b97c3d6c91e39ada18a5a4)
 
-## [[1.26.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.26.0)
+### ⚙️ Miscellaneous Tasks
+
+- Release v1.27.0 [`b5424c7`](https://github.com/ax-sh/ax-sh.github.io/commit/b5424c773fe088a1c3ddba4870f7d2dabdd66410)
+
+## [[1.26.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.26.0)
 
 
 ### ⚙️ Miscellaneous Tasks
@@ -17,7 +81,7 @@ All notable changes to this project will be documented in this file.
 - *(release)* Update release workflow for pull requests [`8ec2597`](https://github.com/ax-sh/ax-sh.github.io/commit/8ec259789fc94e6a7d385d667c91bf47b6367a08)
 - Release v1.26.0 [`c0debb2`](https://github.com/ax-sh/ax-sh.github.io/commit/c0debb2611183a25357dd57a4e85cbaa0e4fa82d)
 
-## [[1.25.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.25.0)
+## [[1.25.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.25.0)
 
 
 ### 📚 Documentation
@@ -29,7 +93,7 @@ All notable changes to this project will be documented in this file.
 - Update lint:fix command to use .gitignore [`809a190`](https://github.com/ax-sh/ax-sh.github.io/commit/809a190ac450be72805b2e115b164a9ed9e12463)
 - Release v1.25.0 [`511c88d`](https://github.com/ax-sh/ax-sh.github.io/commit/511c88d93c1388e98ccb5fcecda67bc761c0b5ba)
 
-## [[1.24.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.24.0)
+## [[1.24.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.24.0)
 
 
 ### ⚙️ Miscellaneous Tasks
@@ -37,7 +101,7 @@ All notable changes to this project will be documented in this file.
 - Update changelog deployment note formatting [`06f154e`](https://github.com/ax-sh/ax-sh.github.io/commit/06f154e51d1e017c210b1bb617033d25160cc517)
 - Release v1.24.0 [`6f4fbc8`](https://github.com/ax-sh/ax-sh.github.io/commit/6f4fbc8cc5cb6382e753020548aa212555beb1e3)
 
-## [[1.23.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.23.0)
+## [[1.23.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.23.0)
 
 
 ### ⚙️ Miscellaneous Tasks
@@ -45,7 +109,7 @@ All notable changes to this project will be documented in this file.
 - Update release notes format and eslint config [`9e83499`](https://github.com/ax-sh/ax-sh.github.io/commit/9e83499863cc2b864e40772c092f05bcf3796488)
 - Release v1.23.0 [`db9c6c1`](https://github.com/ax-sh/ax-sh.github.io/commit/db9c6c1b7777ab2f0b3077d50348ebc412a28bff)
 
-## [[1.22.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.22.0)
+## [[1.22.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.22.0)
 
 
 ### 🚜 Refactor
@@ -56,7 +120,7 @@ All notable changes to this project will be documented in this file.
 
 - Release v1.22.0 [`417f26c`](https://github.com/ax-sh/ax-sh.github.io/commit/417f26c7d8ecae680d560f6871398d79718ffb87)
 
-## [[1.21.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.21.0)
+## [[1.21.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.21.0)
 
 
 ### ⚙️ Miscellaneous Tasks
@@ -64,7 +128,7 @@ All notable changes to this project will be documented in this file.
 - Update changelog command in release config [`0f7a2cb`](https://github.com/ax-sh/ax-sh.github.io/commit/0f7a2cb6198d0b87f10651350c6791307ee83d3e)
 - Release v1.21.0 [`fd683e3`](https://github.com/ax-sh/ax-sh.github.io/commit/fd683e3b575d7c07a6fedbd565ad838c436de0cf)
 
-## [[1.20.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.20.0)
+## [[1.20.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.20.0)
 
 
 ### ⚙️ Miscellaneous Tasks
@@ -73,7 +137,7 @@ All notable changes to this project will be documented in this file.
 - *(release)* Update changelog command for release-it [`a076ca8`](https://github.com/ax-sh/ax-sh.github.io/commit/a076ca8019c67de5e962fa03ce448b5ec20e7a24)
 - Release v1.20.0 [`1f7ed89`](https://github.com/ax-sh/ax-sh.github.io/commit/1f7ed8949ecbc13e8d4ed4e64b1acce92163341f)
 
-## [[1.19.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.19.0)
+## [[1.19.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.19.0)
 
 
 ### ⚙️ Miscellaneous Tasks
@@ -81,7 +145,7 @@ All notable changes to this project will be documented in this file.
 - Update changelog command in release config [`a796a52`](https://github.com/ax-sh/ax-sh.github.io/commit/a796a5237cfbda99668f948e63f63fc0b62df86f)
 - Release v1.19.0 [`3829c8d`](https://github.com/ax-sh/ax-sh.github.io/commit/3829c8d5837826cd3d5f3f0a0ef4c49f350e9140)
 
-## [[1.18.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.18.0)
+## [[1.18.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.18.0)
 
 
 ### ⚙️ Miscellaneous Tasks
@@ -98,7 +162,7 @@ All notable changes to this project will be documented in this file.
 - Update CHANGELOG generation command in release-it config [`ee1a3b7`](https://github.com/ax-sh/ax-sh.github.io/commit/ee1a3b72bc01f373ad5ceb9027ca45acf3321416)
 - Release v1.18.0 [`39137a4`](https://github.com/ax-sh/ax-sh.github.io/commit/39137a41ef4ea112629fc47e43d6b66fd0f8ea53)
 
-## [[1.15.0] - 2024-10-16] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.15.0)
+## [[1.15.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.15.0)
 
 
 ### 🚀 Features
@@ -184,7 +248,7 @@ All notable changes to this project will be documented in this file.
 - Add new scripts for pull request handling [`9ef7776`](https://github.com/ax-sh/ax-sh.github.io/commit/9ef7776613283d28172f06ec1a7a429fa9f46d6b)
 - Update react-query dependencies to latest version [`0e7b843`](https://github.com/ax-sh/ax-sh.github.io/commit/0e7b84301a2ee5f2c038eb6cdc4a91d401ab3304)
 
-## [[1.14.0] - 2024-09-03] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.14.0)
+## [[1.14.0] - 2024-09-03](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.14.0)
 
 
 ### ⚙️ Miscellaneous Tasks
@@ -200,7 +264,7 @@ All notable changes to this project will be documented in this file.
 - Update README for clarity on dev server command [`a530bd7`](https://github.com/ax-sh/ax-sh.github.io/commit/a530bd77b7a7052cf363b7ef3ca720e7d06ba4ca)
 - Release v1.14.0 https://ax-sh.github.io/ [`72d044d`](https://github.com/ax-sh/ax-sh.github.io/commit/72d044d848d1c2fa9ecf0fc5f369e3c2323799ba)
 
-## [[1.13.0] - 2024-07-29] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.13.0)
+## [[1.13.0] - 2024-07-29](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.13.0)
 
 
 ### 🎨 Styling
@@ -217,7 +281,7 @@ All notable changes to this project will be documented in this file.
 - Add @faker-js/faker dependency to package.json [`29c8b64`](https://github.com/ax-sh/ax-sh.github.io/commit/29c8b64bb13979d90b798c641324848a0e35b1ad)
 - Add tailwindcss-radix dependency to package.json [`e05993a`](https://github.com/ax-sh/ax-sh.github.io/commit/e05993a5a99d1d379f344561e6e18812cf06ac02)
 
-## [[1.11.0] - 2024-07-29] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.11.0)
+## [[1.11.0] - 2024-07-29](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.11.0)
 
 
 ### 🎨 Styling
@@ -229,7 +293,7 @@ All notable changes to this project will be documented in this file.
 
 - Update biome.json configuration and add biome:migrate script in package.json [`d23cd24`](https://github.com/ax-sh/ax-sh.github.io/commit/d23cd2461382b7901061b35f3c17c2ba0826c572)
 
-## [[1.10.0] - 2024-07-29] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.10.0)
+## [[1.10.0] - 2024-07-29](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.10.0)
 
 
 ### 🚀 Features
@@ -249,7 +313,7 @@ All notable changes to this project will be documented in this file.
 - Update CHANGELOG and fix typo in external links section comment [`1f15f0e`](https://github.com/ax-sh/ax-sh.github.io/commit/1f15f0ea1304c519a354d2713b9557bea0037194)
 - Add initial configuration for typo checking in .typos.toml [`084928c`](https://github.com/ax-sh/ax-sh.github.io/commit/084928cf3e4cf7639c6026a0791e1022127b4ecd)
 
-## [[1.9.0] - 2024-07-29] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.9.0)
+## [[1.9.0] - 2024-07-29](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.9.0)
 
 
 ### 🚀 Features
@@ -365,7 +429,7 @@ All notable changes to this project will be documented in this file.
 - Merge develop [`04c4b31`](https://github.com/ax-sh/ax-sh.github.io/commit/04c4b311795f5e014dc60fcf764446425c875ab4)
 - Rename use-data-query.tsx to use-data-query.ts [`f74527c`](https://github.com/ax-sh/ax-sh.github.io/commit/f74527c50cfff32d3b67d678a02caaf9d1c6d71a)
 
-## [[1.6.0] - 2024-01-15] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.6.0)
+## [[1.6.0] - 2024-01-15](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.6.0)
 
 
 ### 🚀 Features
@@ -381,7 +445,7 @@ All notable changes to this project will be documented in this file.
 
 - Release v1.5.0 https://ax-sh.github.io/ [`528d38b`](https://github.com/ax-sh/ax-sh.github.io/commit/528d38b3b4a666fc9dbe559dd8504be56c904094)
 
-## [[1.5.0] - 2024-01-15] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.5.0)
+## [[1.5.0] - 2024-01-15](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.5.0)
 
 
 ### ⚙️ Miscellaneous Tasks
@@ -390,7 +454,7 @@ All notable changes to this project will be documented in this file.
 - Update deps [`f4b1df1`](https://github.com/ax-sh/ax-sh.github.io/commit/f4b1df1d3aff182745c5b67c00810000b8542980)
 - Update eslint config [`bbd77f1`](https://github.com/ax-sh/ax-sh.github.io/commit/bbd77f1b2af0726f0b03e68e4a4a7911a58f6b38)
 
-## [[1.4.0] - 2024-01-15] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.4.0)
+## [[1.4.0] - 2024-01-15](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.4.0)
 
 
 ### 🚀 Features
@@ -413,7 +477,7 @@ All notable changes to this project will be documented in this file.
 
 - Release v1.3.0 https://ax-sh.github.io/ [`530c145`](https://github.com/ax-sh/ax-sh.github.io/commit/530c145cdf12459ca380b81ed2293b6140a08ef2)
 
-## [[1.3.0] - 2024-01-14] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.3.0)
+## [[1.3.0] - 2024-01-14](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.3.0)
 
 
 ### 🚀 Features
@@ -424,7 +488,7 @@ All notable changes to this project will be documented in this file.
 
 - Release v1.2.0 https://ax-sh.github.io/ [`b29f6bb`](https://github.com/ax-sh/ax-sh.github.io/commit/b29f6bb57df7f26b5dfb58fad0665377d6784579)
 
-## [[1.2.0] - 2024-01-14] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.2.0)
+## [[1.2.0] - 2024-01-14](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.2.0)
 
 
 ### 🚀 Features
@@ -436,7 +500,7 @@ All notable changes to this project will be documented in this file.
 
 - Release v1.1.0 https://ax-sh.github.io/ [`58444ac`](https://github.com/ax-sh/ax-sh.github.io/commit/58444ac44fb242c7a0b45e8d404ae6f3da3d91c7)
 
-## [[1.1.0] - 2024-01-14] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.1.0)
+## [[1.1.0] - 2024-01-14](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.1.0)
 
 
 ### 🚀 Features
@@ -447,7 +511,7 @@ All notable changes to this project will be documented in this file.
 
 - Release v1.0.0 https://ax-sh.github.io/ [`9a569fa`](https://github.com/ax-sh/ax-sh.github.io/commit/9a569fae8b9d25917ed00e88c0c363dfd1fd060a)
 
-## [[1.0.0] - 2024-01-14] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.0.0)
+## [[1.0.0] - 2024-01-14](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.0.0)
 
 
 ### 🚀 Features
@@ -458,7 +522,7 @@ All notable changes to this project will be documented in this file.
 
 - Release v0.37.0 https://ax-sh.github.io/ [`65fa81f`](https://github.com/ax-sh/ax-sh.github.io/commit/65fa81f66722db50e9b858979ca35cec00d763e8)
 
-## [[0.37.0] - 2024-01-14] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/0.37.0)
+## [[0.37.0] - 2024-01-14](https://github.com/ax-sh/ax-sh.github.io/releases/tag/0.37.0)
 
 
 ### 🚀 Features
@@ -471,7 +535,7 @@ All notable changes to this project will be documented in this file.
 
 - Release v0.36.0 [`85c38ef`](https://github.com/ax-sh/ax-sh.github.io/commit/85c38ef178f98de2c6a0da6d150a6db13d584ede)
 
-## [[0.36.0] - 2024-01-14] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/0.36.0)
+## [[0.36.0] - 2024-01-14](https://github.com/ax-sh/ax-sh.github.io/releases/tag/0.36.0)
 
 
 ### 🚀 Features
@@ -494,7 +558,7 @@ All notable changes to this project will be documented in this file.
 
 - Release v0.35.0 [`8a7b7a8`](https://github.com/ax-sh/ax-sh.github.io/commit/8a7b7a83cda6efc2406d66041ab07eda2d47a480)
 
-## [[0.35.0] - 2024-01-11] (https://github.com/ax-sh/ax-sh.github.io/releases/tag/0.35.0)
+## [[0.35.0] - 2024-01-11](https://github.com/ax-sh/ax-sh.github.io/releases/tag/0.35.0)
 
 
 ### 🚀 Features
