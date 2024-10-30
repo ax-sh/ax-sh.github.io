@@ -2,7 +2,7 @@
 
 All notable changes to ax-sh webpage will be documented in this file.
 
-## [[1.34.0] - 2024-10-30](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.34.0)
+## [[1.28.0] - 2024-10-30](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.28.0)
 
 
 ### 🚀 Features
@@ -56,11 +56,21 @@ All notable changes to ax-sh webpage will be documented in this file.
 - Update deploy script and rename manifest file [`725d2b5`](https://github.com/ax-sh/ax-sh.github.io/commit/725d2b5b6ff8f8a5706f46112efde1a71ed50f35)
 - Update tsconfig types for testing library support [`870bfbf`](https://github.com/ax-sh/ax-sh.github.io/commit/870bfbfe0f997edc52c2f28b87e0af80da5d8a0e)
 - Update version to 1.33.0 in package.json [`a259ab1`](https://github.com/ax-sh/ax-sh.github.io/commit/a259ab131ad0cc8b5277c8464650af2a0a4af7d1)
+- Release v1.34.0 [`f730bdc`](https://github.com/ax-sh/ax-sh.github.io/commit/f730bdc1e566d75e28acee0822c15258fee32ec6)
+- Add bumped version script to package.json [`dd18ae5`](https://github.com/ax-sh/ax-sh.github.io/commit/dd18ae503ba5db62ea818f7381285eaf58eb8886)
+- Add git tag bump script to package.json [`870695c`](https://github.com/ax-sh/ax-sh.github.io/commit/870695c106de39a2f6955b697995d1ee96680571)
+- Fix typo in package.json script name [`294dc6d`](https://github.com/ax-sh/ax-sh.github.io/commit/294dc6d34b9450058c1e45c99539d714183cc036)
+- Update tag:bump command in package.json [`45de8f1`](https://github.com/ax-sh/ax-sh.github.io/commit/45de8f152007baa90c8271513703298997471b06)
+- Add git-cliff command to package.json scripts [`51ab742`](https://github.com/ax-sh/ax-sh.github.io/commit/51ab742a78f660e970b8b88889629f8880b50372)
+- *(package.json)* Fix whitespace in scripts section [`7f17555`](https://github.com/ax-sh/ax-sh.github.io/commit/7f17555e986b637a7142bbaa3ef4a7d4ab1c6461)
 
 ### Build
 
 - Update package dependencies for next version [`cb7f510`](https://github.com/ax-sh/ax-sh.github.io/commit/cb7f5102b185288e796c5e7752f453997122fd13)
 - Update build command and add favicon icon info [`bb88486`](https://github.com/ax-sh/ax-sh.github.io/commit/bb8848621d55ab3c0d1e5ee5973edb3b27bd6e3b)
+- Update tag bump script and add cross-env dependency [`9ed49a9`](https://github.com/ax-sh/ax-sh.github.io/commit/9ed49a922a53ba1bfc105608f970cd457585fc70)
+- Update tag:bump script to push tags to origin [`5977cd3`](https://github.com/ax-sh/ax-sh.github.io/commit/5977cd3aa913bad50ca829354b8a06d3bf55e2b3)
+- Update tag bump script to use new TypeScript file [`904ca68`](https://github.com/ax-sh/ax-sh.github.io/commit/904ca686ac37818f3bb7c81c32e80da6fa29bd2b)
 
 ## [[1.27.0] - 2024-10-16](https://github.com/ax-sh/ax-sh.github.io/releases/tag/1.27.0)
 
