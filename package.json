@@ -70,7 +70,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@changesets/cli": "^2.27.9",
-    "@chromatic-com/storybook": "3.2.0",
+    "@chromatic-com/storybook": "3.2.6",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@eslint/compat": "^1.2.2",
