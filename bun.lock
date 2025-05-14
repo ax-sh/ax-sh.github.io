@@ -6,7 +6,7 @@
       "dependencies": {
         "@hookform/error-message": "^2.0.1",
         "@hookform/resolvers": "^5.0.1",
-        "@icons-pack/react-simple-icons": "^9.2.0",
+        "@icons-pack/react-simple-icons": "^10.0.0",
         "@tailwindcss/postcss": "^4.1.6",
         "@tanstack/react-query": "^5.76.1",
         "@tanstack/react-query-devtools": "^5.76.1",
@@ -521,7 +521,7 @@
 
     "@hutson/parse-repository-url": ["@hutson/parse-repository-url@5.0.0", "", {}, "sha512-e5+YUKENATs1JgYHMzTr2MW/NDcXGfYFAuOQU8gJgF/kEh4EqKgfGrfLI67bMD4tbhZVlkigz/9YYwWcbOFthg=="],
 
-    "@icons-pack/react-simple-icons": ["@icons-pack/react-simple-icons@9.7.0", "", { "peerDependencies": { "react": "^16.13 || ^17 || ^18" } }, "sha512-KvMwsHUD3mZSu5fCS7Jw3xH4mDqK94PcT39MoyBwtdbpyl5JEsB8kMZOInKsuzpIEb4XqSfsJ49K30j8s0uHpg=="],
+    "@icons-pack/react-simple-icons": ["@icons-pack/react-simple-icons@10.2.0", "", { "peerDependencies": { "react": "^16.13 || ^17 || ^18 || ^19" } }, "sha512-QDUxup8D3GdIIzwGpxQs6bjeFV5mJes25qqf4aqP/PaBYQNCar7AiyD8C14636TosCG0A/QqAUwm/Hviep4d4g=="],
 
     "@img/sharp-darwin-arm64": ["@img/sharp-darwin-arm64@0.33.5", "", { "optionalDependencies": { "@img/sharp-libvips-darwin-arm64": "1.0.4" }, "os": "darwin", "cpu": "arm64" }, "sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ=="],
 
